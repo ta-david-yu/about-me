@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import { Route, NavLink, HashRouter } from "react-router-dom";
-import { Grid, Paper, Tabs, Tab, Button } from "@material-ui/core";
+import { Grid, Button } from "@material-ui/core";
 
 import '../css/Main.css';
 
@@ -20,6 +20,12 @@ const contentList = [
         "Link": "/work",
         "LinkExact": false,
         "Header": "work" 
+    },
+    { 
+        "Component": Contact, 
+        "Link": "/blog",
+        "LinkExact": false,
+        "Header": "blog" 
     },
     { 
         "Component": Contact, 
@@ -49,8 +55,8 @@ class Main extends Component {
         {
             const obj = contentList[i];
             tabListItems.push(
-                <Grid item className="border-round-grey-x33">
-                    <NavLink exact={obj.LinkExact} to={obj.Link}>
+                <Grid item xs={12 / contentList.length} className="border-round-grey-x33 menu">
+                    <NavLink className="menu-bottom" exact={obj.LinkExact} to={obj.Link}>
                         {obj.Header}
                     </NavLink>
                 </Grid>);
@@ -66,31 +72,27 @@ class Main extends Component {
                         direction="column"
                         justify="center"
                         alignItems="center">
-                            <Grid item xs={12}>
+                            <Grid item>
                                 <img src="./img/ta-david-yu-mascot-x64.png" className="pixel-art"/>
                             </Grid>
-                            <Grid item xs={12}>
+                            <Grid item>
                                 <div className="header-text">ta david yu</div>
                             </Grid>
-                            <Grid item xs={6}>
+                            <Grid item>
                                 <div className="subheader-text">game developer, game programmer</div>
                             </Grid>
-                            <Grid item xs={12}></Grid>
-                        </Grid>
-                        <Grid container direction="row" justify="center">
-                            <Grid item xs={1} className="border-block-grey-x33">
-                                <div className="menu">
-                                    {tabListItems}
-                                </div>
+                            <Grid xs={4} container direction="row" justify="center">
+                                {tabListItems}
                             </Grid>
-                            <Grid item xs={6} className="border-block-grey-x33">
+                        </Grid>
+
+                        <Grid container direction="row" justify="center">
+                            <Grid item xs={7} className="border-block-grey-x33">
                                 <div className="content">
                                     {tabRouteItems}
                                 </div>
                             </Grid>
                         </Grid>
-
-                        <Button className="border-round-grey-x33">TEST</Button>
                     </div>
                 </HashRouter>
         );
