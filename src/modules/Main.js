@@ -48,7 +48,12 @@ class Main extends Component {
         for (let i = 0; i < contentList.length; i++)
         {
             const obj = contentList[i];
-            tabListItems.push(<Grid item className="border-round-grey-shad-x33"><NavLink exact={obj.LinkExact} to={obj.Link}>{obj.Header}</NavLink></Grid>);
+            tabListItems.push(
+                <Grid item className="border-round-grey-shad-x33">
+                    <NavLink exact={obj.LinkExact} to={obj.Link}>
+                        {obj.Header}
+                    </NavLink>
+                </Grid>);
             tabRouteItems.push(<Route exact={obj.LinkExact} key={obj.Header} path={obj.Link} component={obj.Component} />);
         }
 
