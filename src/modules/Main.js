@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import { Route, NavLink, HashRouter } from "react-router-dom";
-import { Grid, Row, Col, Media } from "react-bootstrap";
+import { Grid, Paper } from "@material-ui/core";
 
 import '../css/Main.css';
 
@@ -51,42 +51,43 @@ class Main extends Component {
             tabListItems.push(<li key={obj.Header}><NavLink to={obj.Link}>{obj.Header}</NavLink></li>);
             tabRouteItems.push(<Route exact={obj.LinkExact} key={obj.Header} path={obj.Link} component={obj.Component} />);
         }
-/*
-        const tabListItems = contentList.map(
-            (obj) => <li key={obj.Header}><NavLink to={obj.Link}>{obj.Header}</NavLink></li>
-        );
-
-        const tabRouteItems = contentList.map(
-            (obj) => <Route exact={obj.LinkExact} key={obj.Header} path={obj.Link} component={obj.Component} />
-        );
-*/
+        
         return (
                  <HashRouter>
-                    <Grid>
-                        <Row>
-                            <img src="./img/ta-david-yu-mascot-x64.png" className="pixel-art logo-img"/>
-                        </Row>
-
-                        <Row>
-                            <p className="title logo-text">ta david yu</p>
-                        </Row>
-                        <Row className="logo">
-                            <p className="subheader">ta david yu</p>
-                        </Row>
-                        
-                        <Row>
+                    
+                    <div>
+                        <Grid 
+                        container 
+                        spacing={12}
+                        direction="column"
+                        justify="center"
+                        alignItems="center">
+                            <Grid 
+                            item
+                            xs={12}
+                            className="header-upper-padding">
+                                <img src="./img/ta-david-yu-mascot-x64.png" className="pixel-art"/>
+                            </Grid>
+                            <Grid 
+                            item 
+                            xs={12}>
+                                <div className="header-text">ta david yu</div>
+                            </Grid>
+                            <Grid item xs={12}>
+                                <div className="subheader-text">game developer, game programmer</div>
+                            </Grid>
+                        </Grid>
+                        <Grid>
                             <ul className="header">
                                 {tabListItems}
                             </ul>
-                        </Row>
-
-                        <Row>
+                        </Grid>
+                        <Grid>
                             <div className="content">
                                 {tabRouteItems}
                             </div>
-                        </Row>
-                        
-                    </Grid>
+                        </Grid>
+                    </div>
                 </HashRouter>
         );
     }
