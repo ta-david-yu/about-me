@@ -39,11 +39,6 @@ const GridOffset = (props) => { return <Grid item></Grid>; }
 
 class Main extends Component {
 
-    constructor(props) {
-        super(props);
-        this.state = { m_CurrentTabIndex: 0 };
-    }
-
     handleOnClickTab(e) {
         this.state = { m_CurrentTabIndex: e.target.value };
     }
@@ -91,7 +86,7 @@ class Main extends Component {
 
                         
                         <Grid container direction="row" justify="center">
-                            <Grid item xs={7} className="border-block-grey-x33">
+                            <Grid item xs={4} className="border-block-grey-x33">
                                 <div className="content">
                                     {tabRouteItems}
                                 </div>
