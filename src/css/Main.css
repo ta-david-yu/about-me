@@ -21,7 +21,32 @@
          url("fonts/m6x11/m6x11.svg#filename");
 }
 
-.header {
+.pixel-art {
+    width: 128px;
+    height: 128px;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+}
+
+.logo-text {
+    text-align: center;
+}
+
+.logo-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+  
+.title {
+    font-family: "m6x11";
+    font-size: 32px;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.subheader {
     font-family: "m5x7";
     font-size: 32px;
     font-weight: normal;
@@ -29,7 +54,7 @@
 }
 
 .content {
-    font-family: "m5x7";
+    font-family: "m6x11";
     font-size: 32px;
     font-weight: normal;
     font-style: normal;

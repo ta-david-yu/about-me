@@ -12,7 +12,7 @@ class About extends Component {
         <h2>ABOUT ME</h2>
         <p>My name is Ta Yu. You can call me David Yu.</p>
         <p>I am a game developer and a programmer.</p>
- 
+        
         <p>Hope you have a good day!</p>
       </div>
     );

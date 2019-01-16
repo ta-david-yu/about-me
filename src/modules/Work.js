@@ -12,7 +12,7 @@ class Work extends Component {
         <h2>MY WORKS</h2>
         <p>Following are some of the games I made:</p>
         <ul>
-          <li>Nulla pulvinar diam</li>
+          <li>Gerritory</li>
           <li>Facilisis bibendum</li>
           <li>Vestibulum vulputate</li>
           <li>Eget erat</li>
