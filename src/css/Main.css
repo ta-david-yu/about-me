@@ -35,6 +35,10 @@
     font-style: normal;
 }
 
+ul {
+    list-style-type: square;
+}
+
 .content-enter {
     opacity: 0.01;
 }
