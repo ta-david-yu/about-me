@@ -48,7 +48,7 @@ class Main extends Component {
         for (let i = 0; i < contentList.length; i++)
         {
             const obj = contentList[i];
-            tabListItems.push(<Grid item><NavLink className="btn-fixed-size" to={obj.Link}>{obj.Header}</NavLink></Grid>);
+            tabListItems.push(<Grid item className="border-round-grey-shad-x33"><NavLink to={obj.Link}>{obj.Header}</NavLink></Grid>);
             tabRouteItems.push(<Route exact={obj.LinkExact} key={obj.Header} path={obj.Link} component={obj.Component} />);
         }
 
@@ -73,19 +73,18 @@ class Main extends Component {
                             </Grid>
                             <Grid item xs={12}></Grid>
                         </Grid>
-                        <Grid container spacing={24} direction="row" justify="center">
-                                {tabListItems}
-                        </Grid>
-                            <Grid 
-                            container
-                            justify="center"
-                            alignItems="center">
-                                <Grid item xs={6}>
-                                    <div className="content" id="border-light">
-                                        {tabRouteItems}
-                                    </div>
-                                </Grid>
+                        <Grid container direction="row" justify="center">
+                            <Grid item xs={1} className="border-block-grey-shad-x33">
+                                <div className="menu">
+                                    {tabListItems}
+                                </div>
                             </Grid>
+                            <Grid item xs={6} className="border-block-grey-shad-x33">
+                                <div className="content">
+                                    {tabRouteItems}
+                                </div>
+                            </Grid>
+                        </Grid>
                     </div>
                 </HashRouter>
         );

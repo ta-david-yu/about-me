@@ -9,7 +9,6 @@ class About extends Component {
   render() {
     return (
       <div>
-        <h2>ABOUT ME</h2>
         <div>My name is Ta Yu. You can call me David Yu.</div>
         <div>I am a game developer and a programmer.</div>
         
