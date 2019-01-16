@@ -43,9 +43,27 @@
     font-style: normal;
 }
 
-.header-upper-padding {
+.header-padding {
     padding-top: 24px;
     padding-bottom: 32px;
+}
+
+#border-light { 
+    border: 16px solid transparent;
+    padding: 16px;
+    border-image: url(./img/border-light-x32.png) 7.5;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+}
+
+#btn-border-light {
+    border: 16px solid transparent;
+    padding: 5px;
+    border-image: url(./img/border-light-x32.png) 7.5;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
 }
 
 .content {

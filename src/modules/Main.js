@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import { Route, NavLink, HashRouter } from "react-router-dom";
-import { Grid, Paper } from "@material-ui/core";
+import { Grid, Paper, Button } from "@material-ui/core";
 
 import '../css/Main.css';
 
@@ -48,10 +48,15 @@ class Main extends Component {
         for (let i = 0; i < contentList.length; i++)
         {
             const obj = contentList[i];
-            tabListItems.push(<li key={obj.Header}><NavLink to={obj.Link}>{obj.Header}</NavLink></li>);
+            tabListItems.push(
+                            <Grid item xs={1}>
+                                <Button id="btn-border-light" component={NavLink} to={obj.Link}>
+                                    {obj.Header}
+                                </Button>
+                            </Grid>);
             tabRouteItems.push(<Route exact={obj.LinkExact} key={obj.Header} path={obj.Link} component={obj.Component} />);
         }
-        
+
         return (
                  <HashRouter>
                     
@@ -62,28 +67,21 @@ class Main extends Component {
                         direction="column"
                         justify="center"
                         alignItems="center">
-                            <Grid 
-                            item
-                            xs={12}
-                            className="header-upper-padding">
+                            <Grid item xs={12} className="header-padding">
                                 <img src="./img/ta-david-yu-mascot-x64.png" className="pixel-art"/>
                             </Grid>
-                            <Grid 
-                            item 
-                            xs={12}>
+                            <Grid item xs={12}>
                                 <div className="header-text">ta david yu</div>
                             </Grid>
                             <Grid item xs={12}>
                                 <div className="subheader-text">game developer, game programmer</div>
                             </Grid>
                         </Grid>
-                        <Grid>
-                            <ul className="header">
-                                {tabListItems}
-                            </ul>
+                        <Grid container spacing={36} direction="row" justify="center">
+                            {tabListItems}
                         </Grid>
                         <Grid>
-                            <div className="content">
+                            <div className="content" id="border-light">
                                 {tabRouteItems}
                             </div>
                         </Grid>
