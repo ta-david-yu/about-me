@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import { Route, NavLink, HashRouter } from "react-router-dom";
-import { Grid, Paper, Tabs, Tab } from "@material-ui/core";
+import { Grid, Paper, Tabs, Tab, Button } from "@material-ui/core";
 
 import '../css/Main.css';
 
@@ -49,7 +49,7 @@ class Main extends Component {
         {
             const obj = contentList[i];
             tabListItems.push(
-                <Grid item className="border-round-grey-shad-x33">
+                <Grid item className="border-round-grey-x33">
                     <NavLink exact={obj.LinkExact} to={obj.Link}>
                         {obj.Header}
                     </NavLink>
@@ -78,17 +78,19 @@ class Main extends Component {
                             <Grid item xs={12}></Grid>
                         </Grid>
                         <Grid container direction="row" justify="center">
-                            <Grid item xs={1} className="border-block-grey-shad-x33">
+                            <Grid item xs={1} className="border-block-grey-x33">
                                 <div className="menu">
                                     {tabListItems}
                                 </div>
                             </Grid>
-                            <Grid item xs={6} className="border-block-grey-shad-x33">
+                            <Grid item xs={6} className="border-block-grey-x33">
                                 <div className="content">
                                     {tabRouteItems}
                                 </div>
                             </Grid>
                         </Grid>
+
+                        <Button className="border-round-grey-x33">TEST</Button>
                     </div>
                 </HashRouter>
         );

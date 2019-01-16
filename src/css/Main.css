@@ -21,11 +21,11 @@
          url("fonts/m6x11/m6x11.svg#filename");
 }
 
-.background {
+body {
     background-color: black;
     position: absolute;
     height: 100%;
-    width: 100%;
+    width: 99%;
 }
 
 .pixel-art {
@@ -78,7 +78,7 @@
     padding-left: 16px;
 }
 
-.border-block-grey-shad-x33 {
+.border-block-grey-x33 {
     border: 16px solid transparent;
     border-image: url(./img/border-block-grey-x33.png) 7.5 fill repeat;
     image-rendering: pixelated;
@@ -86,7 +86,7 @@
     image-rendering: crisp-edges;
 }
 
-.border-round-grey-shad-x33 {
+.border-round-grey-x33 {
     border: 16px solid transparent;
     border-image: url(./img/border-round-grey-x33.png) 7.5 fill repeat;
     image-rendering: pixelated;
