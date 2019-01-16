@@ -35,6 +35,8 @@ const contentList = [
     }
 ];
 
+const GridOffset = (props) => { return <Grid item></Grid>; }
+
 class Main extends Component {
 
     constructor(props) {
@@ -72,8 +74,9 @@ class Main extends Component {
                         direction="column"
                         justify="center"
                         alignItems="center">
+                            <GridOffset/><GridOffset/><GridOffset/><GridOffset/>
                             <Grid item>
-                                <img src="./img/ta-david-yu-mascot-x64.png" className="pixel-art"/>
+                                <img src="./img/ta-david-yu-mascot-x64.png" className="logo"/>
                             </Grid>
                             <Grid item>
                                 <div className="header-text">ta david yu</div>
@@ -86,6 +89,7 @@ class Main extends Component {
                             </Grid>
                         </Grid>
 
+                        
                         <Grid container direction="row" justify="center">
                             <Grid item xs={7} className="border-block-grey-x33">
                                 <div className="content">
