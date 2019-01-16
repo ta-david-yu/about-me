@@ -17,10 +17,6 @@ class Work extends Component {
           <li>Vestibulum vulputate</li>
           <li>Eget erat</li>
           <li>Id porttitor</li>
-          <li>Id porttitor</li>
-          <li>Id porttitor</li>
-          <li>Id porttitor</li>
-          <li>Id porttitor</li>
         </ul>
       </div>
     );

@@ -48,6 +48,15 @@
     padding-bottom: 32px;
 }
 
+.btn-fixed-size {
+    border: 16px solid transparent;
+    padding: 0px;
+    border-image: url(./img/border-light-x32.png) 7.5;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+}
+
 #border-light { 
     border: 16px solid transparent;
     padding: 16px;
