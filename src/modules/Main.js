@@ -52,7 +52,7 @@ class Main extends Component {
         {
             const obj = contentList[i];
             tabListItems.push(
-                <Grid item xs={12 / contentList.length} className="border-round-grey-x33 menu">
+                <Grid item xs className="border-round-grey-x33 menu">
                     <NavLink className="menu-bottom" exact={obj.LinkExact} to={obj.Link}>
                         {obj.Header}
                     </NavLink>
@@ -79,14 +79,14 @@ class Main extends Component {
                             <Grid item>
                                 <div className="subheader-text">game developer, game programmer</div>
                             </Grid>
-                            <Grid xs={4} container direction="row" justify="center">
+                            <Grid lg={6} md={10} sm={12} xs container direction="row" justify="center">
                                 {tabListItems}
                             </Grid>
                         </Grid>
 
                         
                         <Grid container direction="row" justify="center">
-                            <Grid item xs={4} className="border-block-grey-x33">
+                            <Grid item lg={6} md={10} sm={12} xs className="border-block-grey-x33">
                                 <div className="content">
                                     {tabRouteItems}
                                 </div>
