@@ -9,14 +9,15 @@ class Work extends Component {
   render() {
     return (
       <div>
-        <h2>My Works</h2>
-        <ol>
-          <li>Gerritory</li>
+        <h2>MY WORKS</h2>
+        <p>Following are some of the games I made:</p>
+        <ul>
+          <li>Nulla pulvinar diam</li>
           <li>Facilisis bibendum</li>
           <li>Vestibulum vulputate</li>
           <li>Eget erat</li>
           <li>Id porttitor</li>
-        </ol>
+        </ul>
       </div>
     );
   }

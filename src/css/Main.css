@@ -1,0 +1,55 @@
+
+:root {
+    --content-leave-transition-duration: 300ms;
+    --content-enter-transition-duration: 500ms;
+    --content-enter-transition-starttime: 350ms;
+}
+
+@font-face {
+    font-family: "m5x7";
+    src: url("fonts/m5x7/m5x7.ttf"),
+         url("fonts/m5x7/m5x7.woff"),
+         url("fonts/m5x7/m5x7.woff2"),
+         url("fonts/m5x7/m5x7.svg#filename");
+}
+
+@font-face {
+    font-family: "m6x11";
+    src: url("fonts/m6x11/m6x11.ttf"),
+         url("fonts/m6x11/m6x11.woff"),
+         url("fonts/m6x11/m6x11.woff2"),
+         url("fonts/m6x11/m6x11.svg#filename");
+}
+
+.header {
+    font-family: "m5x7";
+    font-size: 32px;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.content {
+    font-family: "m5x7";
+    font-size: 32px;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.content-enter {
+    opacity: 0.01;
+}
+
+.content-enter.content-enter-active {
+    opacity: 1;
+    transition-delay: var(--content-enter-transition-starttime);
+    transition: opacity var(--content-enter-transition-duration) ease-in;
+}
+
+.content-leave {
+    opacity: 1;
+}
+
+.content-leave.content-leave-active {
+    opacity: 0.01;
+    transition: opacity var(--content-leave-transition-duration) ease-in;
+}
