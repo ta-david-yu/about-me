@@ -21,6 +21,13 @@
          url("fonts/m6x11/m6x11.svg#filename");
 }
 
+.background {
+    background-color: black;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
 .pixel-art {
     width: 128px;
     height: 128px;
@@ -34,6 +41,8 @@
     font-size: 32px;
     font-weight: normal;
     font-style: normal;
+
+    color: rgb(238, 238, 238);
 }
 
 .subheader-text {
@@ -41,11 +50,8 @@
     font-size: 32px;
     font-weight: normal;
     font-style: normal;
-}
-
-.header-padding {
-    padding-top: 24px;
-    padding-bottom: 32px;
+    
+    color: rgb(204, 204, 204);
 }
 
 .menu {
@@ -86,4 +92,8 @@
     image-rendering: pixelated;
     image-rendering: -moz-crisp-edges;
     image-rendering: crisp-edges;
+}
+
+.active {
+    color: black;
 }

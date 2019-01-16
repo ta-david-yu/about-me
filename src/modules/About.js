@@ -11,10 +11,8 @@ class About extends Component {
       <div>
         <div>My name is Ta Yu. You can call me David Yu.</div>
         <div>I am a game developer and a programmer.</div>
-        
-        <p>Hope you have a good day!</p>
-        <p>Hope you have a good day!</p>
-        <p>Hope you have a good day!</p>
+        <div>I am a game developer and a programmer.</div>
+        <div>I am a game developer and a programmer.</div>
       </div>
     );
   }

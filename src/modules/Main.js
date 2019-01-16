@@ -13,19 +13,19 @@ const contentList = [
         "Component": About, 
         "Link": "/",
         "LinkExact": true,
-        "Header": "About" 
+        "Header": "about" 
     },
     { 
         "Component": Work, 
         "Link": "/work",
         "LinkExact": false,
-        "Header": "Work" 
+        "Header": "work" 
     },
     { 
         "Component": Contact, 
         "Link": "/contact",
         "LinkExact": false,
-        "Header": "Contact" 
+        "Header": "contact" 
     }
 ];
 
@@ -48,14 +48,13 @@ class Main extends Component {
         for (let i = 0; i < contentList.length; i++)
         {
             const obj = contentList[i];
-            tabListItems.push(<Grid item className="border-round-grey-shad-x33"><NavLink to={obj.Link}>{obj.Header}</NavLink></Grid>);
+            tabListItems.push(<Grid item className="border-round-grey-shad-x33"><NavLink exact={obj.LinkExact} to={obj.Link}>{obj.Header}</NavLink></Grid>);
             tabRouteItems.push(<Route exact={obj.LinkExact} key={obj.Header} path={obj.Link} component={obj.Component} />);
         }
 
         return (
                  <HashRouter>
-                    
-                    <div>
+                    <div className="background">
                         <Grid 
                         container 
                         spacing={8}
