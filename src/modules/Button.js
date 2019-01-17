@@ -6,6 +6,7 @@ class ToggleButton extends Component {
         const isHighlighted = (this.props.isHighlighted)? " highlighted" : "";
         return (
             <button
+                value={this.props.value}
                 type={this.props.type}
                 onClick={this.props.onClick}
                 className={this.props.className + isHighlighted}>
@@ -16,6 +17,7 @@ class ToggleButton extends Component {
 }
 
 ToggleButton.PropTypes = {
+    value: PropTypes.string,
     text: PropTypes.string,
     type: PropTypes.string,
     onClick: PropTypes.func,

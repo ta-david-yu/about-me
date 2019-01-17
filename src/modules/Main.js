@@ -1,6 +1,6 @@
 import React, { Component } from "react"
-import { Route, NavLink, HashRouter } from "react-router-dom";
-import { Grid } from "@material-ui/core";
+import { Route, NavLink, withRouter, BrowserRouter } from "react-router-dom";
+import { Grid, Tabs } from "@material-ui/core";
 
 import '../css/Main.css';
 import '../css/Button.css';
@@ -8,6 +8,7 @@ import '../css/Button.css';
 import About from "./About";
 import Work from "./Work";
 import Contact from "./Contact";
+import ToggleButton from "./Button";
 
 const contentList = [
     { 
@@ -40,12 +41,23 @@ const GridOffset = (props) => { return <Grid item></Grid>; }
 
 class Main extends Component {
 
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            redirectTo: "/",
+
+        }
+
+        this.handleOnClickTab = this.handleOnClickTab.bind(this);
+    }
+
     componentWillMount() {
         this.generateItems();
     }
 
     handleOnClickTab(e) {
-        this.state = { redirectTo: e.target.value };
+        this.props.history.push(e.target.value);
     }
 
     generateItems() {
@@ -57,10 +69,8 @@ class Main extends Component {
             const obj = contentList[i];
 
             this.tabListItems.push(
-                <Grid item lg xs={12} className="panel-border round-g204-x33 menu">
-                    <NavLink className="menu-bottom" exact={obj.LinkExact} to={obj.Link}>
-                        {obj.Header}
-                    </NavLink>
+                <Grid item lg xs>
+                    <ToggleButton text={obj.Header} value={obj.Link} onClick={this.handleOnClickTab} className="round-g255-btn"/>
                 </Grid>);
 
             this.tabRouteItems.push(
@@ -70,7 +80,6 @@ class Main extends Component {
 
     render() {
         return (
-                 <HashRouter>
                     <div className="background">
                         <Grid 
                         container 
@@ -100,9 +109,8 @@ class Main extends Component {
                             </Grid>
                         </Grid>
                     </div>
-                </HashRouter>
         );
     }
 }
 
-export default Main;
+export default withRouter(Main);

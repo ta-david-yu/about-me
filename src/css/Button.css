@@ -36,6 +36,8 @@
     font-style: normal;
     text-align: center;
     
+    width: 100%;
+
     transition: 0.1s;
 }
 
@@ -52,13 +54,13 @@
 }
 
 .round-g204-btn:active {
-    transform: translateY(1px);
+    transform: translateY(2px);
     
     transition: 0s;
 }
 
 .round-g255-btn:active {
-    transform: translateY(1px);
+    transform: translateY(2px);
 
     border-image: url(./img/border-round-g255-active-x33.png) 7.5 fill repeat;
     
