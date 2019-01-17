@@ -61,10 +61,6 @@ body {
     font-style: normal;
     
     text-align: center;
-    color: white;
-}
-
-.menu-item {
 }
 
 .content {
@@ -76,21 +72,21 @@ body {
     padding-left: 16px;
 }
 
-.border-block-grey-x33 {
+.panel-border {
     border: 16px solid transparent;
-    border-image: url(./img/border-block-grey-x33.png) 7.5 fill repeat;
     image-rendering: pixelated;
     image-rendering: -moz-crisp-edges;
     image-rendering: crisp-edges;
 }
 
-.border-round-grey-x33 {
-    border: 16px solid transparent;
-    border-image: url(./img/border-round-g204-x33.png) 7.5 fill repeat;
-    image-rendering: pixelated;
-    image-rendering: -moz-crisp-edges;
-    image-rendering: crisp-edges;
+.square-g204-x33 {
+    border-image: url(./img/border-square-g204-x33.png) 7.5 fill repeat;
 }
+
+.round-g204-x33 {
+    border-image: url(./img/border-round-g204-x33.png) 7.5 fill repeat;
+}
+
 
 .active {
     background-color: white;

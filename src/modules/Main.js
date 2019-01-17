@@ -1,8 +1,9 @@
 import React, { Component } from "react"
 import { Route, NavLink, HashRouter } from "react-router-dom";
-import { Grid, Button } from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 
 import '../css/Main.css';
+import '../css/Button.css';
 
 import About from "./About";
 import Work from "./Work";
@@ -39,27 +40,35 @@ const GridOffset = (props) => { return <Grid item></Grid>; }
 
 class Main extends Component {
 
-    handleOnClickTab(e) {
-        this.state = { m_CurrentTabIndex: e.target.value };
+    componentWillMount() {
+        this.generateItems();
     }
 
-    render() {
+    handleOnClickTab(e) {
+        this.state = { redirectTo: e.target.value };
+    }
 
-        const tabListItems = [];
-        const tabRouteItems = [];
+    generateItems() {
+        this.tabListItems = [];
+        this.tabRouteItems = [];
 
         for (let i = 0; i < contentList.length; i++)
         {
             const obj = contentList[i];
-            tabListItems.push(
-                <Grid item xs className="border-round-grey-x33 menu">
+
+            this.tabListItems.push(
+                <Grid item lg xs={12} className="panel-border round-g204-x33 menu">
                     <NavLink className="menu-bottom" exact={obj.LinkExact} to={obj.Link}>
                         {obj.Header}
                     </NavLink>
                 </Grid>);
-            tabRouteItems.push(<Route exact={obj.LinkExact} key={obj.Header} path={obj.Link} component={obj.Component} />);
-        }
 
+            this.tabRouteItems.push(
+                <Route exact={obj.LinkExact} key={obj.Header} path={obj.Link} component={obj.Component} />);
+        }
+    }
+
+    render() {
         return (
                  <HashRouter>
                     <div className="background">
@@ -79,17 +88,15 @@ class Main extends Component {
                             <Grid item>
                                 <div className="subheader-text">game developer, game programmer</div>
                             </Grid>
-                            <Grid lg={6} md={10} sm={12} xs container direction="row" justify="center">
-                                {tabListItems}
+                            <Grid lg={6} md={12} sm={12} xs container direction="row" justify="center">
+                                {this.tabListItems}
                             </Grid>
-                        </Grid>
-
-                        
-                        <Grid container direction="row" justify="center">
-                            <Grid item lg={6} md={10} sm={12} xs className="border-block-grey-x33">
-                                <div className="content">
-                                    {tabRouteItems}
-                                </div>
+                            <Grid container direction="row" justify="center">
+                                <Grid item lg={6} md={12} sm={12} xs className="panel-border square-g204-x33">
+                                    <div className="content">
+                                        {this.tabRouteItems}
+                                    </div>
+                                </Grid>
                             </Grid>
                         </Grid>
                     </div>

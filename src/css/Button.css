@@ -1,0 +1,74 @@
+
+.highlighted {
+    border: 8px solid transparent;
+}
+
+.round-g204-btn {
+    background-color: rgba(0, 0, 0, 0);
+
+    border: 16px solid transparent;
+    border-image: url(./img/border-round-g204-x33.png) 7.5 fill repeat;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+
+    font-family: "m6x11";
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    text-align: center;
+
+    transition: 0.1s;
+}
+
+.round-g255-btn {
+    background-color: rgba(0, 0, 0, 0);
+
+    border: 16px solid transparent;
+    border-image: url(./img/border-round-g255-x33.png) 7.5 fill repeat;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+
+    font-family: "m6x11";
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    text-align: center;
+    
+    transition: 0.1s;
+}
+
+.round-g204-btn:hover {
+    transform: translateY(-3px);
+    
+    transition: 0.1s;
+}
+
+.round-g255-btn:hover {
+    transform: translateY(-3px);
+    
+    transition: 0.1s;
+}
+
+.round-g204-btn:active {
+    transform: translateY(1px);
+    
+    transition: 0s;
+}
+
+.round-g255-btn:active {
+    transform: translateY(1px);
+
+    border-image: url(./img/border-round-g255-active-x33.png) 7.5 fill repeat;
+    
+    transition: 0s;
+}
+
+.round-g204-btn:focus {
+    outline: none;
+}
+
+.round-g255-btn:focus {
+    outline: none;
+}

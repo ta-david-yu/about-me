@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { Grid } from "@material-ui/core";
+import ToggleButton from "./Button";
  
 class Work extends Component {
 
@@ -18,6 +20,30 @@ class Work extends Component {
           <li>Eget erat</li>
           <li>Id porttitor</li>
         </ul>
+        <Grid 
+          container 
+          spacing={8}
+          direction="row"
+          justify="center"
+          alignItems="center"
+          className>
+            <Grid item xs>
+              <ToggleButton text="PREV" className="round-g255-btn" /> 
+            </Grid>
+            <Grid item xs>
+              <ToggleButton text="NEXT" className="round-g255-btn" /> 
+            </Grid>
+            <Grid item xs>
+              <ToggleButton text="NEXT" className="round-g255-btn" /> 
+            </Grid>
+            <Grid item xs>
+              <ToggleButton text="NEXT" className="round-g255-btn" /> 
+            </Grid>
+            <Grid item xs>
+              <ToggleButton text="NEXSDSDT" className="round-g255-btn" /> 
+            </Grid>
+
+        </Grid>
       </div>
     );
   }
