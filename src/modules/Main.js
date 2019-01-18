@@ -1,6 +1,6 @@
 import React, { Component } from "react"
-import { Route, NavLink, withRouter, BrowserRouter } from "react-router-dom";
-import { Grid, Tabs } from "@material-ui/core";
+import { Route, withRouter } from "react-router-dom";
+import { Grid } from "@material-ui/core";
 
 import '../css/Main.css';
 import '../css/Button.css';
@@ -46,7 +46,6 @@ class Main extends Component {
 
         this.state = {
             redirectTo: "/",
-
         }
 
         this.handleOnClickTab = this.handleOnClickTab.bind(this);
@@ -67,10 +66,19 @@ class Main extends Component {
         for (let i = 0; i < contentList.length; i++)
         {
             const obj = contentList[i];
+            
+            const isActive = this.props.location.pathname === obj.Link;
+            let className = "round-g204-btn";
 
             this.tabListItems.push(
                 <Grid item lg xs>
-                    <ToggleButton text={obj.Header} value={obj.Link} onClick={this.handleOnClickTab} className="round-g255-btn"/>
+                    <Route exact={obj.LinkExact} key={obj.Header} path={obj.Link} children={({ match }) => (
+                        <ToggleButton 
+                            text={obj.Header} 
+                            value={obj.Link} 
+                            onClick={this.handleOnClickTab} 
+                            className={match? className.concat('-active') : className}/>
+                    )}/>  
                 </Grid>);
 
             this.tabRouteItems.push(
@@ -89,7 +97,7 @@ class Main extends Component {
                         alignItems="center">
                             <GridOffset/><GridOffset/><GridOffset/><GridOffset/>
                             <Grid item>
-                                <img src="./img/ta-david-yu-mascot-x64.png" className="logo"/>
+                                <img alt="Oops! Image is missing!" src="./img/ta-david-yu-mascot-x64.png" className="logo"/>
                             </Grid>
                             <Grid item>
                                 <div className="header-text">ta david yu</div>
