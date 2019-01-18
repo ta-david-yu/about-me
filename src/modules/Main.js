@@ -78,7 +78,7 @@ class Main extends Component {
                             value={obj.Link} 
                             onClick={this.handleOnClickTab} 
                             className={match? className.concat('-active') : className}/>
-                    )}/>  
+                    )}/>
                 </Grid>);
 
             this.tabRouteItems.push(
