@@ -44,7 +44,7 @@
     image-rendering: crisp-edges;
 }
 
-.degree {
+.main-text {
     font-family: "m6x11";
     font-size: 16px;
     font-weight: normal;
@@ -54,7 +54,7 @@
     color: rgb(45, 45, 45);
 }
 
-.gpa {
+.sub-text {
     font-family: "m5x7";
     font-size: 24px;
     color: rgb(99, 99, 99);
