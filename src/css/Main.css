@@ -24,11 +24,11 @@
 body {
     background-color: black;
     position: absolute;
-    height: 100%;
+    height: 99%;
     width: 99%;
 }
 
-.pixel-art {
+.logo {
     width: 128px;
     height: 128px;
     image-rendering: pixelated;
@@ -61,12 +61,6 @@ body {
     font-style: normal;
     
     text-align: center;
-    padding-bottom: 8px;
-    color: white;
-}
-
-.menu:link {
-    color: white;
 }
 
 .content {
@@ -78,21 +72,21 @@ body {
     padding-left: 16px;
 }
 
-.border-block-grey-x33 {
+.panel-border {
     border: 16px solid transparent;
-    border-image: url(./img/border-block-grey-x33.png) 7.5 fill repeat;
     image-rendering: pixelated;
     image-rendering: -moz-crisp-edges;
     image-rendering: crisp-edges;
 }
 
-.border-round-grey-x33 {
-    border: 16px solid transparent;
-    border-image: url(./img/border-round-grey-x33.png) 7.5 fill repeat;
-    image-rendering: pixelated;
-    image-rendering: -moz-crisp-edges;
-    image-rendering: crisp-edges;
+.square-g204-x33 {
+    border-image: url(./img/border-square-g204-x33.png) 7.5 fill repeat;
 }
+
+.round-g204-x33 {
+    border-image: url(./img/border-round-g204-x33.png) 7.5 fill repeat;
+}
+
 
 .active {
     background-color: white;

@@ -1,12 +1,14 @@
 import React, { Component } from "react"
-import { Route, NavLink, HashRouter } from "react-router-dom";
-import { Grid, Paper, Tabs, Tab, Button } from "@material-ui/core";
+import { Route, withRouter } from "react-router-dom";
+import { Grid } from "@material-ui/core";
 
 import '../css/Main.css';
+import '../css/Button.css';
 
 import About from "./About";
 import Work from "./Work";
 import Contact from "./Contact";
+import ToggleButton from "./Button";
 
 const contentList = [
     { 
@@ -23,42 +25,69 @@ const contentList = [
     },
     { 
         "Component": Contact, 
+        "Link": "/blog",
+        "LinkExact": false,
+        "Header": "blog" 
+    },
+    { 
+        "Component": Contact, 
         "Link": "/contact",
         "LinkExact": false,
         "Header": "contact" 
     }
 ];
 
+const GridOffset = (props) => { return <Grid item></Grid>; }
+
 class Main extends Component {
 
     constructor(props) {
         super(props);
-        this.state = { m_CurrentTabIndex: 0 };
+
+        this.state = {
+            redirectTo: "/",
+        }
+
+        this.handleOnClickTab = this.handleOnClickTab.bind(this);
+    }
+
+    componentWillMount() {
+        this.generateItems();
     }
 
     handleOnClickTab(e) {
-        this.state = { m_CurrentTabIndex: e.target.value };
+        this.props.history.push(e.target.value);
     }
 
-    render() {
-
-        const tabListItems = [];
-        const tabRouteItems = [];
+    generateItems() {
+        this.tabListItems = [];
+        this.tabRouteItems = [];
 
         for (let i = 0; i < contentList.length; i++)
         {
             const obj = contentList[i];
-            tabListItems.push(
-                <Grid item className="border-round-grey-x33">
-                    <NavLink exact={obj.LinkExact} to={obj.Link}>
-                        {obj.Header}
-                    </NavLink>
-                </Grid>);
-            tabRouteItems.push(<Route exact={obj.LinkExact} key={obj.Header} path={obj.Link} component={obj.Component} />);
-        }
+            
+            const isActive = this.props.location.pathname === obj.Link;
+            let className = "round-g204-btn";
 
+            this.tabListItems.push(
+                <Grid item lg xs>
+                    <Route exact={obj.LinkExact} key={obj.Header} path={obj.Link} children={({ match }) => (
+                        <ToggleButton 
+                            text={obj.Header} 
+                            value={obj.Link} 
+                            onClick={this.handleOnClickTab} 
+                            className={match? className.concat('-active') : className}/>
+                    )}/>
+                </Grid>);
+
+            this.tabRouteItems.push(
+                <Route exact={obj.LinkExact} key={obj.Header} path={obj.Link} component={obj.Component} />);
+        }
+    }
+
+    render() {
         return (
-                 <HashRouter>
                     <div className="background">
                         <Grid 
                         container 
@@ -66,35 +95,30 @@ class Main extends Component {
                         direction="column"
                         justify="center"
                         alignItems="center">
-                            <Grid item xs={12}>
-                                <img src="./img/ta-david-yu-mascot-x64.png" className="pixel-art"/>
+                            <GridOffset/><GridOffset/><GridOffset/><GridOffset/>
+                            <Grid item>
+                                <img alt="Oops! Image is missing!" src="./img/ta-david-yu-mascot-x64.png" className="logo"/>
                             </Grid>
-                            <Grid item xs={12}>
+                            <Grid item>
                                 <div className="header-text">ta david yu</div>
                             </Grid>
-                            <Grid item xs={6}>
+                            <Grid item>
                                 <div className="subheader-text">game developer, game programmer</div>
                             </Grid>
-                            <Grid item xs={12}></Grid>
-                        </Grid>
-                        <Grid container direction="row" justify="center">
-                            <Grid item xs={1} className="border-block-grey-x33">
-                                <div className="menu">
-                                    {tabListItems}
-                                </div>
+                            <Grid lg={6} md={12} sm={12} xs container direction="row" justify="center">
+                                {this.tabListItems}
                             </Grid>
-                            <Grid item xs={6} className="border-block-grey-x33">
-                                <div className="content">
-                                    {tabRouteItems}
-                                </div>
+                            <Grid container direction="row" justify="center">
+                                <Grid item lg={6} md={12} sm={12} xs className="panel-border square-g204-x33">
+                                    <div className="content">
+                                        {this.tabRouteItems}
+                                    </div>
+                                </Grid>
                             </Grid>
                         </Grid>
-
-                        <Button className="border-round-grey-x33">TEST</Button>
                     </div>
-                </HashRouter>
         );
     }
 }
 
-export default Main;
+export default withRouter(Main);
