@@ -44,6 +44,8 @@
     color: rgb(45, 45, 45);
 
     transform: translateY(-2px);
+
+    cursor: pointer;
     
     transition: 0.3s;
 }
@@ -89,6 +91,8 @@
 .round-g255-btn:hover {
     transform: translateY(-3px);
     
+    cursor: pointer;
+
     transition: 0.1s;
 }
 
