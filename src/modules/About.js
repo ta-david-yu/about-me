@@ -111,16 +111,16 @@ class About extends Component {
     this.educations = educations.map(
       (edu) => {
         return(
-          <Grid item lg md sm xs className="content box-g255">
-            <div className="main-text">
-              <a href={edu.Link} target="_blank">
-              <img alt="+" src="./img/link-x13.png" className="icon"/>
-              </a> {edu.Degree} ({edu.Duration})
-            </div>
-            <div className="sub-text">
-              GPA {edu.GPA}
-            </div>
-          </Grid>
+          <a href={edu.Link} target="_blank">
+            <Grid item lg md sm xs className="content box-g255">
+              <div className="main-text">
+                <img alt="+" src="./img/link-x13.png" className="icon"/> {edu.Degree} ({edu.Duration})
+              </div>
+              <div className="sub-text">
+                GPA {edu.GPA}
+              </div>
+            </Grid>
+          </a>
         );
       }
     );
@@ -128,13 +128,13 @@ class About extends Component {
     this.experiences = experiences.map(
       (exp) => {
         return(
-          <Grid item lg md sm xs className="content box-g255">
-            <div className="main-text">
-              <a href={exp.Link} target="_blank">
-              <img alt="+" src="./img/link-x13.png" className="icon"/>
-              </a> {exp.Title} - {exp.Company} ({exp.Duration})
-            </div>
-          </Grid>
+          <a href={exp.Link} target="_blank">
+            <Grid item lg md sm xs className="content box-g255">
+              <div className="main-text">
+                <img alt="+" src="./img/link-x13.png" className="icon"/> {exp.Title} - {exp.Company} ({exp.Duration})
+              </div>
+            </Grid>
+          </a>
         );
       }
     );
