@@ -1,10 +1,4 @@
 
-:root {
-    --content-leave-transition-duration: 300ms;
-    --content-enter-transition-duration: 500ms;
-    --content-enter-transition-starttime: 350ms;
-}
-
 @font-face {
     font-family: "m5x7";
     src: url("fonts/m5x7/m5x7.ttf"),
@@ -54,22 +48,11 @@ body {
     color: rgb(204, 204, 204);
 }
 
-.menu {
-    font-family: "m6x11";
-    font-size: 16px;
-    font-weight: normal;
-    font-style: normal;
-    
-    text-align: center;
-}
-
-.content {
-    font-family: "m5x7";
-    font-size: 24px;
-    font-weight: normal;
-    font-style: normal;
-
+.panel-content {
+    padding-top: 16px;
     padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 24px;
 }
 
 .panel-border {
@@ -85,10 +68,4 @@ body {
 
 .round-g204-x33 {
     border-image: url(./img/border-round-g204-x33.png) 7.5 fill repeat;
-}
-
-
-.active {
-    background-color: white;
-    color: black;
 }

@@ -11,8 +11,8 @@ class Work extends Component {
   render() {
     return (
       <div>
-        <h2>MY WORKS</h2>
-        <p>Following are some of the games I made:</p>
+        <div>MY WORKS</div>
+        <div>Following are some of the games I made:</div>
         <ul>
           <li>Gerritory</li>
           <li>Facilisis bibendum</li>

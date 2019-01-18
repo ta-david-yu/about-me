@@ -1,0 +1,73 @@
+@import "Main.css";
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+.content-header {
+    font-family: "m6x11";
+    font-size: 24px;
+    font-weight: normal;
+    font-style: normal;
+    
+    text-align: center;
+
+    color: rgb(24, 24, 24);
+}
+
+.content {
+    font-family: 'Roboto', sans-serif;
+    font-family: "m5x7";
+    font-size: 24px;
+    font-weight: normal;
+    font-style: normal;
+    
+    text-align: center;
+    
+    color: rgb(30, 30, 30);
+}
+
+.region {
+    background-color: rgba(0, 0, 0, 0);
+
+    border: 16px solid transparent;
+    border-image: url(./img/region-border-x33.png) 7.5 fill repeat;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+}
+
+.box-g255 {
+    background-color: rgba(0, 0, 0, 0);
+
+    border: 16px solid transparent;
+    border-image: url(./img/border-round-g255-x33.png) 7.5 fill repeat;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+}
+
+.degree {
+    font-family: "m6x11";
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    text-align: center;
+
+    color: rgb(45, 45, 45);
+}
+
+.gpa {
+    font-family: "m5x7";
+    font-size: 24px;
+    color: rgb(99, 99, 99);
+}
+
+.icon {
+    width: 13px;
+    height: 13px;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+}
+
+.debug-outline {
+    outline: 1px;
+}
