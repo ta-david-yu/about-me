@@ -5,10 +5,26 @@ import '../css/About.css';
 
 const GridOffset = (props) => { return <Grid item></Grid>; }
 
+const skillTypeImgTable = {
+  "ProgrammingLanguage": "box-blue",
+  "Tools": "box-yellow",
+  "Language": "box-red",
+}
+
+const about = <div>
+    <div>My name is Ta Yu. You can call me David Yu.</div>
+    <div>I am a game developer from Taiwan.</div>
+    <p>
+      I started to make games in high school using RPG maker. 
+      After getting into college, I joined a game design club and began to use Unity3D as my primary game engine.
+    </p>
+    <p>Currently working on <a href="https://partygoosestudio.wixsite.com/gerritorythegame" target="_blank">Gerritory</a>, a multiplayer party game.</p>
+  </div>;
+
 const educations = [
   { 
       "Degree": "National Chiao Tung University - B.S. in Computer Science",
-      "Duration": "2014-2018",
+      "Duration": "2014.9-2018.6",
       "GPA": "3.97/4.3",
       "Link": "https://www.cs.nctu.edu.tw/"
   }
@@ -20,79 +36,83 @@ const experiences = [
     "Company": "Akatsuki Inc.",
     "Duration": "2017.8-2017.9",
     "Link": "https://aktsk.com.tw/intern/"
-  },
-  {
-    "Title": "Test",
-    "Company": "Akatsuki Inc.",
-    "Duration": "2017.8-2017.9",
-    "Link": "https://aktsk.com.tw/intern/"
   }
 ];
 
 const skills = [
   {
     "Name": "C/C++",
-    "Description": "Good",
+    "Description": "The mostly used language for non-Unity project",
     "Type": "ProgrammingLanguage"
   },
   {
     "Name": "C#",
-    "Description": "Good",
-    "Type": "ProgrammingLanguage"
-  },
-  {
-    "Name": "JavaScript",
-    "Description": "Good",
-    "Type": "ProgrammingLanguage"
-  },
-  {
-    "Name": "PHP",
-    "Description": "Good",
+    "Description": "As Unity scripting language",
     "Type": "ProgrammingLanguage"
   },
   {
     "Name": "GLSL/UnityShader",
-    "Description": "Good",
+    "Description": "With good understanding of Computer Graphics",
+    "Type": "ProgrammingLanguage"
+  },
+  {
+    "Name": "JavaScript",
+    "Description": "So I made this webpage",
+    "Type": "ProgrammingLanguage"
+  },
+  {
+    "Name": "PHP",
+    "Description": "Used in web backend, seldom used",
     "Type": "ProgrammingLanguage"
   },
   {
     "Name": "ReactJS",
-    "Description": "Good",
+    "Description": "So I made this webpage",
     "Type": "Tools"
   },
   {
     "Name": "Unity3D",
-    "Description": "Good",
+    "Description": "With 4+ years of development experience",
     "Type": "Tools"
   },
   {
     "Name": "git",
-    "Description": "Good",
+    "Description": "Yep, it's essential",
     "Type": "Tools"
   },
   {
-    "Name": "MySQL",
-    "Description": "Good",
+    "Name": "SocketProgramming",
+    "Description": "Have built a http server with C++ on Linux",
     "Type": "Tools"
   },
   {
     "Name": "VisualStudio",
-    "Description": "Good",
+    "Description": "The mostly used IDE for C++ & C#",
+    "Type": "Tools"
+  },
+  {
+    "Name": "SQL",
+    "Description": "Usable",
     "Type": "Tools"
   },
   {
     "Name": "Chinese",
-    "Description": "Good",
+    "Description": "Native language",
     "Type": "Language"
   },
   {
     "Name": "English",
-    "Description": "Good",
+    "Description": "High-intermediate",
     "Type": "Language"
   },
   {
     "Name": "Japanese",
-    "Description": "Good",
+    "Description": "Elementary",
+    "Type": "Language"
+  },
+  {
+    "Name": "German",
+    "Description": "Newborn baby",
     "Type": "Language"
   }
 ];
@@ -112,7 +132,7 @@ class About extends Component {
       (edu) => {
         return(
           <a href={edu.Link} target="_blank">
-            <Grid item lg md sm xs className="content box-g255">
+            <Grid item lg md sm xs className="content box-white">
               <div className="main-text">
                 <img alt="+" src="./img/link-x13.png" className="icon"/> {edu.Degree} ({edu.Duration})
               </div>
@@ -129,7 +149,7 @@ class About extends Component {
       (exp) => {
         return(
           <a href={exp.Link} target="_blank">
-            <Grid item lg md sm xs className="content box-g255">
+            <Grid item lg md sm xs className="content box-white">
               <div className="main-text">
                 <img alt="+" src="./img/link-x13.png" className="icon"/> {exp.Title} - {exp.Company} ({exp.Duration})
               </div>
@@ -143,8 +163,8 @@ class About extends Component {
       (skill) => {
         return(
           <Grid item>
-            <div className="main-text box-g255">
-              {skill.Name}
+            <div className={"main-text tooltip ".concat(skillTypeImgTable[skill.Type])}>
+              {skill.Name} <span className="tooltip-text tooltip-content box-tooltip">{skill.Description}</span>
             </div>
           </Grid>
         );
@@ -165,9 +185,7 @@ class About extends Component {
             I make games
           </Grid>
           <Grid item lg md sm xs className="content">
-            <div>My name is Ta Yu. You can call me David Yu.</div>
-            <div> I am a game developer from Taiwan.</div>
-            <p>Currently working on Gerritory, a multiplayer party game.</p>
+            {about}
           </Grid>
         </Grid>
 
