@@ -10,6 +10,8 @@ import Work from "./Work";
 import Contact from "./Contact";
 import ToggleButton from "./Button";
 
+const GridOffset = (props) => { return <Grid item></Grid>; }
+
 const contentList = [
     { 
         "Component": About, 
@@ -36,8 +38,6 @@ const contentList = [
         "Header": "contact" 
     }
 ];
-
-const GridOffset = (props) => { return <Grid item></Grid>; }
 
 class Main extends Component {
 
@@ -67,7 +67,6 @@ class Main extends Component {
         {
             const obj = contentList[i];
             
-            const isActive = this.props.location.pathname === obj.Link;
             let className = "round-g204-btn";
 
             this.tabListItems.push(
@@ -110,7 +109,7 @@ class Main extends Component {
                             </Grid>
                             <Grid container direction="row" justify="center">
                                 <Grid item lg={6} md={12} sm={12} xs className="panel-border square-g204-x33">
-                                    <div className="content">
+                                    <div className="panel-content">
                                         {this.tabRouteItems}
                                     </div>
                                 </Grid>
