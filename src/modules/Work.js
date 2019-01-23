@@ -12,13 +12,18 @@ class Work extends Component {
     return (
       <div>
         <div>MY WORKS</div>
-        <div>Following are some of the games I made:</div>
+        <div>Following are some of the games I made:  D</div>
         <ul>
           <li>Gerritory</li>
-          <li>Facilisis bibendum</li>
-          <li>Vestibulum vulputate</li>
-          <li>Eget erat</li>
-          <li>Id porttitor</li>
+          <li>Lead Designer and Programmer, Visual Feedback Design</li>
+          <li>EasingSystem: something simliar to DOTween, let users play easing animation easily (put a gif to show it)</li>
+          <li>LayeredAudioSystem: sort audio into layers so player can adjust volume for different layers (ex. sound effect, music)</li>
+          <li>CollectablesEditor: make use of Unity Editor API to create a Custom Editor for editing in game collectables</li>
+          <li>GenericFiniteStateMachine: base class for various systems that have complex state transitions</li>
+          <li>SceneLoadingSystem: besides Unity built-in scene management, add a task manager that can handle tasks assigned from other system during scene loading (ex. procedurally generating level, syncing level across internet)</li>
+          <li>Some special effects using shader</li>
+
+          <li>Oh! By the way, I made this trailer using Adobe Premiere</li>
         </ul>
         <Grid 
           container 

@@ -42,7 +42,7 @@ const experiences = [
 const skills = [
   {
     "Name": "C/C++",
-    "Description": "The mostly used language for non-Unity project",
+    "Description": "The most frequently used language for non-Unity project",
     "Type": "ProgrammingLanguage"
   },
   {
@@ -87,7 +87,7 @@ const skills = [
   },
   {
     "Name": "VisualStudio",
-    "Description": "The mostly used IDE for C++ & C#",
+    "Description": "The most frequently used IDE for C++ & C#",
     "Type": "Tools"
   },
   {
@@ -108,11 +108,6 @@ const skills = [
   {
     "Name": "Japanese",
     "Description": "Elementary",
-    "Type": "Language"
-  },
-  {
-    "Name": "German",
-    "Description": "Newborn baby",
     "Type": "Language"
   }
 ];
