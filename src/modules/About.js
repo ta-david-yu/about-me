@@ -18,7 +18,7 @@ const about = <div>
       I started to make games in high school using RPG maker. 
       After getting into college, I joined a game design club and began to use Unity3D as my primary game engine.
     </p>
-    <p>Currently working on <a href="https://partygoosestudio.wixsite.com/gerritorythegame" target="_blank">Gerritory</a>, a multiplayer party game.</p>
+    <p>Currently working on <a href="https://partygoosestudio.wixsite.com/gerritorythegame">Gerritory</a>, a multiplayer party game.</p>
   </div>;
 
 const educations = [
@@ -57,7 +57,7 @@ const skills = [
   },
   {
     "Name": "JavaScript",
-    "Description": "So I made this webpage",
+    "Description": "And somehow made this webpage",
     "Type": "ProgrammingLanguage"
   },
   {
@@ -67,7 +67,7 @@ const skills = [
   },
   {
     "Name": "ReactJS",
-    "Description": "So I made this webpage",
+    "Description": "And somehow made this webpage",
     "Type": "Tools"
   },
   {
@@ -126,7 +126,7 @@ class About extends Component {
     this.educations = educations.map(
       (edu) => {
         return(
-          <a href={edu.Link} target="_blank">
+          <a href={edu.Link}>
             <Grid item lg md sm xs className="content box-white">
               <div className="main-text">
                 <img alt="+" src="./img/link-x13.png" className="icon"/> {edu.Degree} ({edu.Duration})
@@ -143,7 +143,7 @@ class About extends Component {
     this.experiences = experiences.map(
       (exp) => {
         return(
-          <a href={exp.Link} target="_blank">
+          <a href={exp.Link}>
             <Grid item lg md sm xs className="content box-white">
               <div className="main-text">
                 <img alt="+" src="./img/link-x13.png" className="icon"/> {exp.Title} - {exp.Company} ({exp.Duration})

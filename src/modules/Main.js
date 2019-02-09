@@ -96,7 +96,7 @@ class Main extends Component {
                         alignItems="center">
                             <GridOffset/><GridOffset/><GridOffset/><GridOffset/>
                             <Grid item>
-                                <img alt="Oops! Image is missing!" src="./img/ta-david-yu-mascot-x64.png" className="logo"/>
+                                <img alt="Oops!" src="./img/ta-david-yu-mascot-x64.png" className="logo"/>
                             </Grid>
                             <Grid item>
                                 <div className="header-text">ta david yu</div>
