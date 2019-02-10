@@ -84,6 +84,7 @@ a {
     -webkit-transition: all 300ms cubic-bezier(.17,.89,.53,1.46);
     transition:         all 300ms cubic-bezier(.17,.89,.53,1.46);
     transform: scale(1.05);
+    cursor: pointer;
 }
 
 .work-img {
@@ -100,16 +101,28 @@ a {
     
     text-align: center;
     
-    color: rgb(30, 30, 30);
+    color: rgb(0, 0, 0);
 }
 
 .work-type {
-    font-family: "m5x7";
-    font-size: 24px;
-    font-weight: normal;
+    font-family: "Roboto";
+    font-size: 12px;
+    font-weight: bold;
     font-style: normal;
     
     text-align: center;
     
-    color: rgb(59, 59, 59);
+    color: rgb(27, 27, 27);
+}
+
+.work-job {
+    font-family: "Roboto";
+    font-size: 12px;
+    font-weight: bold;
+    font-style: normal;
+    
+    text-align: center;
+    padding: 6px;
+    
+    color: rgb(27, 27, 27);
 }

@@ -17,42 +17,34 @@ const works = [
     {
         "title": "Gerritory",
         "image": "./img/gerritory-gif-00.gif",
-        "type": "4-person Project",
+        "description": "A 4-player party game",
         "job": "Designer, Programmer, Visual Designer",
         "modal": "<div></div>"
     },
     {
-        "title": "Eagle & Rolling Rocker",
-        "image": "./img/gerritory-gif-00.gif",
-        "type": "Academic Projectssssssssssssss sssssssss",
-        "job": "Designer, Programmer",
-        "modal": "<div></div>"
-    },
-    {
         "title": "Eagle Simulator & Rolling Rocker",
         "image": "./img/gerritory-gif-00.gif",
-        "type": "Academic Project",
+        "description": "A 4-player party game",
         "job": "Designer, Programmer",
         "modal": "<div></div>"
     },
     {
         "title": "Eagle & Rolling Rocker",
         "image": "./img/gerritory-gif-00.gif",
-        "type": "Academic Project",
+        "description": "A 4-player party game",
         "job": "Designer, Programmer",
         "modal": "<div></div>"
     },
     {
         "title": "Eagle Simulator & Rolling Rocker",
         "image": "./img/gerritory-gif-00.gif",
-        "type": "Academic Project",
+        "description": "A 4-player party game",
         "job": "Designer, Programmer",
         "modal": "<div></div>"
     },
     {
         "title": "Gerritory",
         "image": "./img/gerritory-gif-00.gif",
-        "type": "4-person Project",
         "job": "Designer, Programmer, Visual Designer",
         "modal": "<div></div>"
     },
@@ -83,7 +75,7 @@ class Portoflio extends Component {
                             <Grid item className="work-type">
                                 {work.type}
                             </Grid>
-                            <Grid item className="work-type">
+                            <Grid item className="work-job">
                                 {work.job}
                             </Grid>
                         </div>
