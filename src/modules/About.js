@@ -25,7 +25,7 @@ const educations = [
   { 
       "Degree": "National Chiao Tung University - B.S. in Computer Science",
       "Duration": "2014.9-2018.6",
-      "GPA": "3.97/4.3",
+      "GPA": "3.86/4.3",
       "Link": "https://www.cs.nctu.edu.tw/"
   }
 ];

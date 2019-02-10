@@ -1,11 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { HashRouter } from "react-router-dom";
-import Main from "./modules/Main";
+import Portfolio from "./modules/Portfolio";
 
 ReactDOM.render(
-    <HashRouter>
-    <Main />
-    </HashRouter>,
+    <Portfolio />,
     document.getElementById("root")
 )
