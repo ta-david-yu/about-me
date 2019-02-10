@@ -64,8 +64,8 @@ class Portoflio extends Component {
             const work = works[i];
             this.worksTable.push(
                 <Grid item lg={3} md={3} sm={4} xs={12}>
-                    <Grid container direction="column" justify="center" alignItems="center">
-                        <div className="work-box">
+                    <Grid container direction="column" justify="center" alignItems="center" className="work-box">
+                        <div>
                             <Grid item className="work-title">
                                 <img alt="+" src={work.image} className="work-img"/>
                             </Grid>
