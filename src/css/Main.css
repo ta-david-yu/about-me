@@ -52,6 +52,10 @@ a {
     color: rgb(204, 204, 204);
 }
 
+.subheader-align {
+    text-align: center;
+}
+
 .panel-content {
     padding-top: 16px;
     padding-left: 16px;
