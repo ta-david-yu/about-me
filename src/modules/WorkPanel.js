@@ -32,7 +32,7 @@ class WorkPanel extends Component {
         const gifSrc = hasGif? work.gif : work.img;
 
         return (
-            <Grid item lg={3} md={3} sm={4} xs={12}>
+            <Grid item lg={3} md={4} sm={4} xs={12}>
                 <Grid container direction="column" alignItems="center">
                     <div className="work-box" onPointerEnter={this.handleOnPointerEnter} onPointerLeave={this.handleOnPointerLeave}>
                         <Grid item className="work-title">
@@ -50,6 +50,10 @@ class WorkPanel extends Component {
                         </Grid>
                         <Grid item className="work-description">
                             {work.description}
+                        </Grid>
+                        <Grid item className="work-team">
+                            <img alt={work.team} src="./img/person-x13.png" className="team-icon" />
+                            {work.team}
                         </Grid>
                     </div>
                 </Grid>

@@ -71,6 +71,7 @@ a {
 
     border: 16px solid transparent;
     border-image: url(./img/border-round-g255-x33.png) 7.5 fill repeat;
+    box-sizing: border-box;
     image-rendering: pixelated;
     image-rendering: -moz-crisp-edges;
     image-rendering: crisp-edges;
@@ -83,7 +84,7 @@ a {
     padding: 5%;
 
     max-height: 100%;
-    max-width: 100%;
+    max-width: 270px;
 }
 
 .work-box:hover {
@@ -101,7 +102,7 @@ a {
 .work-gif-note {
     position: absolute;
     top: 4px;
-    left: 6px;
+    left: 5px;
     z-index: 3;
 
     font-family: "Roboto";
@@ -113,7 +114,7 @@ a {
     padding: 2px 2px 2px 2px;
     border-radius: 3px;
 
-    color: rgb(211, 211, 211);
+    color: rgb(219, 219, 219);
 }
 
 .work-img {
@@ -126,6 +127,8 @@ a {
 
     opacity: 1;
     transition: 0.3s;
+
+    width: 200px;
 }
 
 .work-img:hover {
@@ -143,6 +146,8 @@ a {
     border: 2px solid #000000;
     padding: 2px;
     border-radius: 5px;
+
+    width: 200px;
 }
 
 .work-title {
@@ -152,7 +157,7 @@ a {
     font-style: normal;
     
     text-align: center;
-    
+
     color: rgb(0, 0, 0);
 }
 
@@ -171,11 +176,30 @@ a {
 .work-description {
     font-family: "m5x7";
     font-size: 16px;
-    font-weight: bold;
+    font-weight: normal;
     font-style: normal;
 
     text-align: center;
     padding-top: 12px;
     
     color: rgb(27, 27, 27);
+}
+
+.work-team {
+    font-family: "m5x7";
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+
+    text-align: left;
+    
+    color: rgb(27, 27, 27);
+}
+
+.team-icon {
+    width: 13px;
+    height: 13px;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
 }
