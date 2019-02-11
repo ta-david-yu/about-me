@@ -93,7 +93,35 @@ a {
     cursor: pointer;
 }
 
+.work-img-main {
+    position: relative;
+}
+
 .work-img {
+    position: absolute;
+
+    z-index: 9999;
+
+    border: 2px solid #000000;
+    padding: 2px;
+    border-radius: 5px;
+
+    opacity: 1;
+    transition: 0.3s;
+}
+
+.work-img:hover {
+    border: 2px solid #000000;
+    padding: 2px;
+    border-radius: 5px;
+
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.work-gif {
+    position: relative;
+
     border: 2px solid #000000;
     padding: 2px;
     border-radius: 5px;

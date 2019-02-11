@@ -27,15 +27,18 @@ class WorkPanel extends Component {
 
     render() {
         const work = this.props.information;
-        const hasGif = !(work.gif === "");
-        const imgSrc = (this.state.isHovered)? (hasGif)? work.gif : work.img : work.img;
+        const imgSrc = work.img;
+        const gifSrc = (work.gif !== "")? work.gif : work.img;
 
         return (
             <Grid item lg={3} md={3} sm={4} xs={12}>
                 <Grid container direction="column" alignItems="center">
                     <div className="work-box" onPointerEnter={this.handleOnPointerEnter} onPointerLeave={this.handleOnPointerLeave}>
                         <Grid item className="work-title">
-                            <img alt="+" src={imgSrc} className="work-img"/>
+                            <div className="work-img-main">
+                                <img alt={work.title} src={imgSrc} className="work-img" />
+                                <img alt={work.title} src={gifSrc} className="work-gif" />
+                            </div>
                         </Grid>
                         <Grid item className="work-title">
                             {work.title}
