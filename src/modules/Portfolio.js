@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import { Grid } from "@material-ui/core";
+import WorkPanel from "./WorkPanel";
 
 import '../css/Portfolio.css';
 
@@ -16,7 +17,7 @@ const about = (<div>
 const works = [
     {
         "title": "Gerritory",
-        "image": "./img/gerritory-gif-00.gif",
+        "image": "./img/gerritory-static.gif",
         "description": "2017.1 - present",
         "job": "Designer, Programmer, Visual Design",
         "modal": "<div></div>"
@@ -87,31 +88,9 @@ class Portoflio extends Component {
     }
 
     generateItems() {
-        this.worksTable = [];
-        
-        for (let i = 0; i < works.length; i++)
-        {
-            const work = works[i];
-            this.worksTable.push(
-                <Grid item lg={3} md={3} sm={4} xs={12}>
-                    <Grid container direction="column" alignItems="center">
-                        <div className="work-box">
-                            <Grid item className="work-title">
-                                <img alt="+" src={work.image} className="work-img"/>
-                            </Grid>
-                            <Grid item className="work-title">
-                                {work.title}
-                            </Grid>
-                            <Grid item className="work-job">
-                                {work.job}
-                            </Grid>
-                            <Grid item className="work-description">
-                                {work.description}
-                            </Grid>
-                        </div>
-                    </Grid>
-                </Grid>);
-        }
+        this.worksTable = works.map( (work) => {
+            return <WorkPanel information={work}/>;
+        });
     }
 
     render() {

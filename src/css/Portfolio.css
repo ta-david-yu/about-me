@@ -79,7 +79,7 @@ a {
     transition: 0.3s;
     z-index: 0;
 
-    padding: 3%;
+    padding: 5%;
 
     max-height: 100%;
     max-width: 100%;
@@ -87,7 +87,6 @@ a {
 
 .work-box:hover {
     z-index: 1;
-    border-image: url(./img/border-round-yellow-x33.png) 7.5 fill repeat;
     -webkit-transition: all 300ms cubic-bezier(.17,.89,.53,1.46);
     transition:         all 300ms cubic-bezier(.17,.89,.53,1.46);
     transform: translateY(-10px);
