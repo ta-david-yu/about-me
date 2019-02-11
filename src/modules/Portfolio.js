@@ -19,7 +19,7 @@ const works = [
         "title": "Gerritory",
         "img": "./img/gerritory-preview.png",
         "gif": "./img/gerritory-preview.gif",
-        "description": "2017.1 - present",
+        "description": "2017.1 - NOW",
         "job": "Designer, Programmer, Visual Design",
         "modal": "<div></div>"
     },
@@ -40,18 +40,18 @@ const works = [
         "modal": "<div></div>"
     },
     {
-        "title": "Boomeranger",
-        "img": "./img/gerritory-preview.png",
-        "gif": "",
-        "description": "2016.3 - 2016.6",
-        "job": "Designer, Programmer",
-        "modal": "<div></div>"
-    },
-    {
         "title": "SurvivorQ",
         "img": "./img/gerritory-preview.png",
         "gif": "",
         "description": "2016.1 - 2016.1",
+        "job": "Designer, Programmer",
+        "modal": "<div></div>"
+    },
+    {
+        "title": "Boomeranger",
+        "img": "./img/gerritory-preview.png",
+        "gif": "",
+        "description": "2016.3 - 2016.6",
         "job": "Designer, Programmer",
         "modal": "<div></div>"
     },
