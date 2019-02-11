@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Grid } from "@material-ui/core";
 
 import '../css/Portfolio.css';
+import { type } from "os";
 
 class WorkPanel extends Component {
 
@@ -27,14 +28,15 @@ class WorkPanel extends Component {
 
     render() {
         const work = this.props.information;
+        const boxClassName = "work-box ".concat(work.box);
         const hasGif = (work.gif !== "");
         const imgSrc = work.img;
         const gifSrc = hasGif? work.gif : work.img;
 
         return (
-            <Grid item lg={3} md={4} sm={4} xs={12}>
+            <Grid item lg={4} md={4} sm={4} xs={12}>
                 <Grid container direction="column" alignItems="center">
-                    <div className="work-box" onPointerEnter={this.handleOnPointerEnter} onPointerLeave={this.handleOnPointerLeave}>
+                    <div className={boxClassName} onPointerEnter={this.handleOnPointerEnter} onPointerLeave={this.handleOnPointerLeave}>
                         <Grid item className="work-title">
                             <div className="work-img-container">
                                 <img alt={work.title} src={imgSrc} className="work-img" />
@@ -48,12 +50,14 @@ class WorkPanel extends Component {
                         <Grid item className="work-job">
                             {work.job}
                         </Grid>
-                        <Grid item className="work-description">
-                            {work.description}
-                        </Grid>
-                        <Grid item className="work-team">
-                            <img alt={work.team} src="./img/person-x13.png" className="team-icon" />
-                            {work.team}
+                        <Grid container direction="row">
+                            <Grid item xs={3} className="work-team">
+                                <img alt={work.team} src="./img/person-x13.png" className="team-icon" />
+                                {work.team}
+                            </Grid>
+                            <Grid item xs={6} className="work-description">
+                                {work.description}
+                            </Grid>
                         </Grid>
                     </div>
                 </Grid>

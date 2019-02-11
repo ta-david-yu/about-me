@@ -16,7 +16,7 @@
 }
 
 body {
-    background-color: black;
+    background-color: #08141e;
     position: absolute;
     height: 99%;
     width: 99%;
@@ -24,7 +24,7 @@ body {
 
 a {
     text-decoration: none;
-    color: rgb(124, 255, 179);
+    color: #f6d6bd;
 }
 
 .logo {
@@ -50,7 +50,7 @@ a {
     font-weight: normal;
     font-style: normal;
     
-    color: rgb(199, 199, 199);
+    color: #f6d6bd;
 }
 
 .about-text {
@@ -59,18 +59,51 @@ a {
     font-weight: normal;
     font-style: normal;
     
-    color: rgb(225, 225, 225);
+    color: #c3a38a;
 }
 
 .center-align {
     text-align: center;
 }
 
+.box-white {
+    border: 16px solid transparent;
+    border-image: url(./img/border-round-g255-x33.png) 7.5 fill repeat;
+}
+
+.box-yellow {
+    border: 16px solid transparent;
+    border-image: url(./img/border-round-yellow-x33.png) 7.5 fill repeat;
+}
+
+.box-red {
+    border: 16px solid transparent;
+    border-image: url(./img/border-round-red-x33.png) 7.5 fill repeat;
+}
+
+.box-blue {
+    border: 16px solid transparent;
+    border-image: url(./img/border-round-blue-x33.png) 7.5 fill repeat;
+}
+
+.box-purple {
+    border: 16px solid transparent;
+    border-image: url(./img/border-round-purple-x33.png) 7.5 fill repeat;
+}
+
+.box-game {
+    border: 16px solid transparent;
+    border-image: url(./img/border-round-game-x33.png) 7.5 fill repeat;
+}
+
+.box-other {
+    border: 16px solid transparent;
+    border-image: url(./img/border-round-other-x33.png) 7.5 fill repeat;
+}
+
 .work-box {
     background-color: rgba(0, 0, 0, 0);
 
-    border: 16px solid transparent;
-    border-image: url(./img/border-round-g255-x33.png) 7.5 fill repeat;
     box-sizing: border-box;
     image-rendering: pixelated;
     image-rendering: -moz-crisp-edges;
@@ -81,10 +114,7 @@ a {
 
     z-index: 0;
 
-    padding: 5%;
-
-    max-height: 100%;
-    max-width: 270px;
+    max-width: 240px;
 }
 
 .work-box:hover {
@@ -102,7 +132,7 @@ a {
 .work-gif-note {
     position: absolute;
     top: 4px;
-    left: 5px;
+    left: 4px;
     z-index: 3;
 
     font-family: "Roboto";
@@ -121,7 +151,7 @@ a {
     position: absolute;
     z-index: 2;
 
-    border: 2px solid #000000;
+    border: 2px solid #f6d6bd;
     padding: 2px;
     border-radius: 5px;
 
@@ -132,7 +162,7 @@ a {
 }
 
 .work-img:hover {
-    border: 2px solid #000000;
+    border: 2px solid #f6d6bd;
     padding: 2px;
     border-radius: 5px;
 
@@ -143,7 +173,7 @@ a {
 .work-gif {
     position: relative;
 
-    border: 2px solid #000000;
+    border: 2px solid #f6d6bd;
     padding: 2px;
     border-radius: 5px;
 
@@ -153,24 +183,24 @@ a {
 .work-title {
     font-family: "Roboto";
     font-size: 15px;
-    font-weight: bold;
+    font-weight: normal;
     font-style: normal;
     
     text-align: center;
 
-    color: rgb(0, 0, 0);
+    color: #f6d6bd;
 }
 
 .work-job {
     font-family: "Roboto";
     font-size: 13px;
-    font-weight: bold;
+    font-weight: normal;
     font-style: normal;
     
     text-align: center;
     padding-top: 5px;
     
-    color: rgb(27, 27, 27);
+    color: #f6d6bd;
 }
 
 .work-description {
@@ -182,7 +212,7 @@ a {
     text-align: center;
     padding-top: 12px;
     
-    color: rgb(27, 27, 27);
+    color: #f6d6bd;
 }
 
 .work-team {
@@ -192,8 +222,9 @@ a {
     font-style: normal;
 
     text-align: left;
+    padding-top: 12px;
     
-    color: rgb(27, 27, 27);
+    color: #f6d6bd;
 }
 
 .team-icon {
