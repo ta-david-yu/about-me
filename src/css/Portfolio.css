@@ -71,26 +71,6 @@ a {
     border-image: url(./img/border-round-g255-x33.png) 7.5 fill repeat;
 }
 
-.box-yellow {
-    border: 16px solid transparent;
-    border-image: url(./img/border-round-yellow-x33.png) 7.5 fill repeat;
-}
-
-.box-red {
-    border: 16px solid transparent;
-    border-image: url(./img/border-round-red-x33.png) 7.5 fill repeat;
-}
-
-.box-blue {
-    border: 16px solid transparent;
-    border-image: url(./img/border-round-blue-x33.png) 7.5 fill repeat;
-}
-
-.box-purple {
-    border: 16px solid transparent;
-    border-image: url(./img/border-round-purple-x33.png) 7.5 fill repeat;
-}
-
 .box-game {
     border: 16px solid transparent;
     border-image: url(./img/border-round-game-x33.png) 7.5 fill repeat;
@@ -233,4 +213,14 @@ a {
     image-rendering: pixelated;
     image-rendering: -moz-crisp-edges;
     image-rendering: crisp-edges;
+}
+
+.icon-26 {
+    width: 26px;
+    height: 26px;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+
+    padding: 3px;
 }

@@ -130,10 +130,15 @@ class Portoflio extends Component {
                 alignItems="center">
                     <GridOffset/><GridOffset/><GridOffset/><GridOffset/>
                     <Grid item>
-                        <img alt="Oops!" src="./img/ta-david-yu-mascot-x64.png" className="logo"/>
+                        <img alt="ta-david-yu" src="./img/ta-david-yu-mascot-x64.png" className="logo"/>
                     </Grid>
                     <Grid item>
                         <div className="header-text">ta david yu</div>
+                    </Grid>
+                    <Grid item>
+                        <img alt="twitter" src="./img/twitter-x26.png" className="icon-26"/>
+                        <img alt="facebook" src="./img/facebook-x26.png" className="icon-26"/>
+                        <img alt="github" src="./img/github-x26.png" className="icon-26"/>
                     </Grid>
                     <Grid item lg={6} md={12} sm={12} xs>
                         <div className="center-align">{about}</div>
