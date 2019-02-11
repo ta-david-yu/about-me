@@ -9,7 +9,7 @@ const about = (<div>
     <div className="subheader-text">game developer, game programmer</div>
     <p className="about-text">
         <div>Currently working on <a href="https://partygoosestudio.wixsite.com/gerritorythegame">Gerritory</a>, a multiplayer party game.</div>
-        <div>Following are some of my works</div>
+        <div>Following are some of my works (roughly in order from best to worst)</div>
     </p>
 </div>);
 
@@ -17,35 +17,65 @@ const works = [
     {
         "title": "Gerritory",
         "image": "./img/gerritory-gif-00.gif",
-        "description": "A 4-player party game",
-        "job": "Designer, Programmer, Visual Designer",
+        "description": "2017.1 - present",
+        "job": "Designer, Programmer, Visual Design",
         "modal": "<div></div>"
     },
     {
         "title": "Eagle Simulator & Rolling Rocker",
         "image": "./img/gerritory-gif-00.gif",
-        "description": "A 4-player party game",
+        "description": "2017.3 - 2017.4",
         "job": "Designer, Programmer",
         "modal": "<div></div>"
     },
     {
-        "title": "Eagle & Rolling Rocker",
+        "title": "Chain Destroyer",
         "image": "./img/gerritory-gif-00.gif",
-        "description": "A 4-player party game",
+        "description": "2015.1 - 2015.1",
+        "job": "UI Programmer",
+        "modal": "<div></div>"
+    },
+    {
+        "title": "Boomeranger",
+        "image": "./img/gerritory-gif-00.gif",
+        "description": "2016.3 - 2016.6",
         "job": "Designer, Programmer",
         "modal": "<div></div>"
     },
     {
-        "title": "Eagle Simulator & Rolling Rocker",
+        "title": "SurvivorQ",
         "image": "./img/gerritory-gif-00.gif",
-        "description": "A 4-player party game",
+        "description": "2016.1 - 2016.1",
         "job": "Designer, Programmer",
         "modal": "<div></div>"
     },
     {
-        "title": "Gerritory",
+        "title": "Hee X Hoo",
         "image": "./img/gerritory-gif-00.gif",
-        "job": "Designer, Programmer, Visual Designer",
+        "description": "GGJ 2018",
+        "job": "Level Designer, Programmer",
+        "modal": "<div></div>"
+    },
+    {
+        "title": "Nothing Last Forever",
+        "image": "./img/gerritory-gif-00.gif",
+        "description": "GGJ 2016",
+        "job": "Programmer",
+        "modal": "<div></div>"
+    },
+
+    {
+        "title": "DY Engine",
+        "image": "./img/gerritory-gif-00.gif",
+        "description": "2017.9 - present",
+        "job": "Programmer",
+        "modal": "<div></div>"
+    },
+    {
+        "title": "Many-Worlds Browsing for Control of Multibody Dynamics in Unity",
+        "image": "./img/gerritory-gif-00.gif",
+        "description": "2017.6 - 2018.6",
+        "job": "Programmer",
         "modal": "<div></div>"
     },
 ];
@@ -64,19 +94,19 @@ class Portoflio extends Component {
             const work = works[i];
             this.worksTable.push(
                 <Grid item lg={3} md={3} sm={4} xs={12}>
-                    <Grid container direction="column" justify="center" alignItems="center" className="work-box">
-                        <div>
+                    <Grid container direction="column" alignItems="center">
+                        <div className="work-box">
                             <Grid item className="work-title">
                                 <img alt="+" src={work.image} className="work-img"/>
                             </Grid>
                             <Grid item className="work-title">
                                 {work.title}
                             </Grid>
-                            <Grid item className="work-type">
-                                {work.type}
-                            </Grid>
                             <Grid item className="work-job">
                                 {work.job}
+                            </Grid>
+                            <Grid item className="work-description">
+                                {work.description}
                             </Grid>
                         </div>
                     </Grid>
@@ -106,7 +136,7 @@ class Portoflio extends Component {
                     <Grid item lg={9} xs={12}>
                         <Grid 
                         container
-                        spacing={32}
+                        spacing={16}
                         direction="row">
                             {this.worksTable}
                         </Grid>

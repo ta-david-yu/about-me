@@ -76,18 +76,26 @@ a {
     image-rendering: crisp-edges;
 
     -webkit-transition: 0.3s;
+    transition: 0.3s;
     z-index: 0;
+
+    padding: 3%;
+
+    max-height: 100%;
+    max-width: 100%;
 }
 
 .work-box:hover {
     z-index: 1;
+    border-image: url(./img/border-round-yellow-x33.png) 7.5 fill repeat;
     -webkit-transition: all 300ms cubic-bezier(.17,.89,.53,1.46);
     transition:         all 300ms cubic-bezier(.17,.89,.53,1.46);
-    transform: scale(1.05);
+    transform: translateY(-10px);
     cursor: pointer;
 }
 
 .work-img {
+    width: 90%;
     border: 2px solid #000000;
     padding: 2px;
     border-radius: 5px;
@@ -95,7 +103,7 @@ a {
 
 .work-title {
     font-family: "Roboto";
-    font-size: 16px;
+    font-size: 15px;
     font-weight: bold;
     font-style: normal;
     
@@ -104,25 +112,26 @@ a {
     color: rgb(0, 0, 0);
 }
 
-.work-type {
+.work-job {
     font-family: "Roboto";
-    font-size: 12px;
+    font-size: 13px;
     font-weight: bold;
     font-style: normal;
     
     text-align: center;
+    padding-top: 5px;
     
     color: rgb(27, 27, 27);
 }
 
-.work-job {
-    font-family: "Roboto";
-    font-size: 12px;
+.work-description {
+    font-family: "m5x7";
+    font-size: 16px;
     font-weight: bold;
     font-style: normal;
     
     text-align: center;
-    padding: 6px;
+    padding-top: 12px;
     
-    color: rgb(27, 27, 27);
+    color: rgb(122, 122, 122);
 }
