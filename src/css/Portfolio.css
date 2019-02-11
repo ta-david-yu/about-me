@@ -131,8 +131,8 @@ a {
 
 .work-gif-note {
     position: absolute;
-    top: 4px;
-    left: 4px;
+    top: 5px;
+    left: 5px;
     z-index: 3;
 
     font-family: "Roboto";
