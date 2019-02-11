@@ -17,49 +17,56 @@ const about = (<div>
 const works = [
     {
         "title": "Gerritory",
-        "image": "./img/gerritory-static.gif",
+        "img": "./img/gerritory-preview.png",
+        "gif": "./img/gerritory-preview.gif",
         "description": "2017.1 - present",
         "job": "Designer, Programmer, Visual Design",
         "modal": "<div></div>"
     },
     {
         "title": "Eagle Simulator & Rolling Rocker",
-        "image": "./img/gerritory-gif-00.gif",
+        "img": "./img/gerritory-preview.png",
+        "gif": "",
         "description": "2017.3 - 2017.4",
         "job": "Designer, Programmer",
         "modal": "<div></div>"
     },
     {
         "title": "Chain Destroyer",
-        "image": "./img/gerritory-gif-00.gif",
+        "img": "./img/gerritory-preview.png",
+        "gif": "",
         "description": "2015.1 - 2015.1",
         "job": "UI Programmer",
         "modal": "<div></div>"
     },
     {
         "title": "Boomeranger",
-        "image": "./img/gerritory-gif-00.gif",
+        "img": "./img/gerritory-preview.png",
+        "gif": "",
         "description": "2016.3 - 2016.6",
         "job": "Designer, Programmer",
         "modal": "<div></div>"
     },
     {
         "title": "SurvivorQ",
-        "image": "./img/gerritory-gif-00.gif",
+        "img": "./img/gerritory-preview.png",
+        "gif": "",
         "description": "2016.1 - 2016.1",
         "job": "Designer, Programmer",
         "modal": "<div></div>"
     },
     {
         "title": "Hee X Hoo",
-        "image": "./img/gerritory-gif-00.gif",
+        "img": "./img/gerritory-preview.png",
+        "gif": "",
         "description": "GGJ 2018",
         "job": "Level Designer, Programmer",
         "modal": "<div></div>"
     },
     {
         "title": "Nothing Last Forever",
-        "image": "./img/gerritory-gif-00.gif",
+        "img": "./img/gerritory-preview.png",
+        "gif": "",
         "description": "GGJ 2016",
         "job": "Programmer",
         "modal": "<div></div>"
@@ -67,14 +74,16 @@ const works = [
 
     {
         "title": "DY Engine",
-        "image": "./img/gerritory-gif-00.gif",
+        "img": "./img/gerritory-preview.png",
+        "gif": "",
         "description": "2017.9 - present",
         "job": "Programmer",
         "modal": "<div></div>"
     },
     {
         "title": "Many-Worlds Browsing for Control of Multibody Dynamics in Unity",
-        "image": "./img/gerritory-gif-00.gif",
+        "img": "./img/gerritory-preview.png",
+        "gif": "",
         "description": "2017.6 - 2018.6",
         "job": "Programmer",
         "modal": "<div></div>"
