@@ -28,8 +28,6 @@
 body {
     background-color: #08141e;
     position: absolute;
-    height: 99%;
-    width: 99%;
 }
 
 a {
@@ -257,10 +255,19 @@ a {
     transform: translateY(-2px);
 }
 
-.toggle {
-    width: 208px;
-    height: 52px;
+.toggle-button {
+    width: 101px;
+    height: 49px;
     image-rendering: pixelated;
     image-rendering: -moz-crisp-edges;
     image-rendering: crisp-edges;
+}
+
+.toggle-button:hover {
+    transform: translateY(-1px);
+    cursor: pointer;
+}
+
+.toggle-button:active {
+    transform: translateY(1px);
 }

@@ -16,7 +16,7 @@ const about = (<div>
 
 const works = [
     {
-        "box": "box-other",
+        "type": "game",
         "title": "Gerritory",
         "img": "./img/gerritory-preview.png",
         "gif": "./img/gerritory-preview.gif",
@@ -26,7 +26,7 @@ const works = [
         "modal": "<div></div>"
     },
     {
-        "box": "box-other",
+        "type": "game",
         "title": "Eagle Simulator & Rolling Rocker",
         "img": "./img/gerritory-preview.png",
         "gif": "",
@@ -36,7 +36,7 @@ const works = [
         "modal": "<div></div>"
     },
     {
-        "box": "box-other",
+        "type": "game",
         "title": "Chain Destroyer",
         "img": "./img/gerritory-preview.png",
         "gif": "",
@@ -46,7 +46,7 @@ const works = [
         "modal": "<div></div>"
     },
     {
-        "box": "box-other",
+        "type": "game",
         "title": "SurvivorQ",
         "img": "./img/gerritory-preview.png",
         "gif": "",
@@ -56,7 +56,7 @@ const works = [
         "modal": "<div></div>"
     },
     {
-        "box": "box-other",
+        "type": "game",
         "title": "Boomeranger",
         "img": "./img/gerritory-preview.png",
         "gif": "",
@@ -66,7 +66,7 @@ const works = [
         "modal": "<div></div>"
     },
     {
-        "box": "box-other",
+        "type": "game",
         "title": "Hee X Hoo",
         "img": "./img/gerritory-preview.png",
         "gif": "",
@@ -76,7 +76,7 @@ const works = [
         "modal": "<div></div>"
     },
     {
-        "box": "box-other",
+        "type": "game",
         "title": "Nothing Last Forever",
         "img": "./img/gerritory-preview.png",
         "gif": "",
@@ -86,7 +86,7 @@ const works = [
         "modal": "<div></div>"
     },
     {
-        "box": "box-other",
+        "type": "tool",
         "title": "DY Engine",
         "img": "./img/gerritory-preview.png",
         "gif": "",
@@ -96,7 +96,7 @@ const works = [
         "modal": "<div></div>"
     },
     {
-        "box": "box-other",
+        "type": "tool",
         "title": "Many-Worlds Browsing for Control of Multibody Dynamics in Unity",
         "img": "./img/gerritory-preview.png",
         "gif": "",
@@ -154,7 +154,8 @@ class Portoflio extends Component {
                     justify="center"
                     alignItems="center">
                         <Grid item xs>
-                            <img alt="toggle" src="./img/toggle-game.png" className="toggle"/>
+                            <img alt="toggle-game" src="./img/game-button-inactive.png" className="toggle-button"/>
+                            <img alt="toggle-tool" src="./img/tool-button-active.png" className="toggle-button"/>
                         </Grid>
                         <Grid item lg={6} md={12} sm={12} xs>
                             <Grid 

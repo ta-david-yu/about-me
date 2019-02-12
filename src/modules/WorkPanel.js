@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { Grid } from "@material-ui/core";
 
 import '../css/Portfolio.css';
-import { type } from "os";
 
 class WorkPanel extends Component {
 
@@ -28,7 +27,7 @@ class WorkPanel extends Component {
 
     render() {
         const work = this.props.information;
-        const boxClassName = "work-box ".concat(work.box);
+        const boxClassName = "work-box box-other";
         const hasGif = (work.gif !== "");
         const imgSrc = work.img;
         const gifSrc = hasGif? work.gif : work.img;
