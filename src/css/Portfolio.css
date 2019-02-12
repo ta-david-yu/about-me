@@ -74,6 +74,18 @@ a {
     text-align: center;
 }
 
+.page-title {
+    font-family: "m6x11";
+    font-size: 24px;
+    font-weight: normal;
+    font-style: normal;
+
+    text-align: center;
+    padding-top: 12px;
+    
+    color: #f6d6bd;
+}
+
 .box-white {
     border: 16px solid transparent;
     border-image: url(./img/border-round-g255-x33.png) 7.5 fill repeat;

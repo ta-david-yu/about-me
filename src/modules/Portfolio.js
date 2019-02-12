@@ -170,9 +170,9 @@ class Portoflio extends Component {
                     justify="center"
                     alignItems="center">
                         <Grid item xs>
-                            <div className="work-title">{this.state.currPage}</div>
                             <PageTab pageName="game" isActive={this.state.currPage === "game"} onClick={this.changePage} />
                             <PageTab pageName="tool" isActive={this.state.currPage === "tool"} onClick={this.changePage} />
+                            <div className="page-title">{this.state.currPage}s</div>
                         </Grid>
                         <Grid item lg={6} md={12} sm={12} xs>
                             <Grid 
