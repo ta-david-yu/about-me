@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import { Grid } from "@material-ui/core";
 import WorkPanel from "./WorkPanel";
+import PageTab from "./PageTab";
 
 import '../css/Portfolio.css';
 
@@ -109,8 +110,23 @@ const works = [
 
 class Portoflio extends Component {
 
+    constructor(props) {
+        super(props);
+        this.state = { currPage: "game"};
+        this.changePage = this.changePage.bind(this);
+    }
+
     componentWillMount() {
         this.generateItems();
+    }
+
+    changePage(pageName)
+    {
+        this.setState(
+            {
+                currPage: pageName
+            }
+        );
     }
 
     generateItems() {
@@ -154,8 +170,9 @@ class Portoflio extends Component {
                     justify="center"
                     alignItems="center">
                         <Grid item xs>
-                            <img alt="toggle-game" src="./img/game-button-inactive.png" className="toggle-button"/>
-                            <img alt="toggle-tool" src="./img/tool-button-active.png" className="toggle-button"/>
+                            <div className="work-title">{this.state.currPage}</div>
+                            <PageTab pageName="game" isActive={this.state.currPage === "game"} onClick={this.changePage} />
+                            <PageTab pageName="tool" isActive={this.state.currPage === "tool"} onClick={this.changePage} />
                         </Grid>
                         <Grid item lg={6} md={12} sm={12} xs>
                             <Grid 

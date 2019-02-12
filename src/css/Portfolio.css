@@ -255,19 +255,46 @@ a {
     transform: translateY(-2px);
 }
 
-.toggle-button {
-    width: 101px;
-    height: 49px;
+.game-button {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
     image-rendering: pixelated;
     image-rendering: -moz-crisp-edges;
     image-rendering: crisp-edges;
+    background: url("./img/game-button-inactive.png") no-repeat;
+    width: 101px;
+    height: 49px;
+    padding-left: 101px;
 }
 
-.toggle-button:hover {
-    transform: translateY(-1px);
+.game-button:hover {
     cursor: pointer;
 }
 
-.toggle-button:active {
+.game-button.is-active {
+    transition: 0.3s;
     transform: translateY(1px);
+    background: url("./img/game-button-active.png") no-repeat;
+}
+
+.tool-button {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    background: url("./img/tool-button-inactive.png") no-repeat;
+    width: 101px;
+    height: 49px;
+    padding-left: 101px;
+}
+
+.tool-button:hover {
+    cursor: pointer;
+}
+
+.tool-button.is-active {
+    transition: 0.3s;
+    transform: translateY(1px);
+    background: url("./img/tool-button-active.png") no-repeat;
 }
