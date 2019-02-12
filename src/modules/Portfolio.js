@@ -122,36 +122,50 @@ class Portoflio extends Component {
     render() {
         return (
             <div className="background">
-                <Grid 
-                container 
-                spacing={8}
-                direction="column"
-                justify="center"
-                alignItems="center">
-                    <GridOffset/><GridOffset/><GridOffset/><GridOffset/>
-                    <Grid item>
-                        <img alt="ta-david-yu" src="./img/ta-david-yu-mascot-x64.png" className="logo"/>
-                    </Grid>
-                    <Grid item>
-                        <div className="header-text">ta david yu</div>
-                    </Grid>
-                    <Grid item>
-                        <a href="https://twitter.com/TaDavidYu"><img alt="twitter" src="./img/twitter-x26.png" className="icon-26"/></a>
-                        <a href="https://www.facebook.com/david.yu.7739814"><img alt="facebook" src="./img/facebook-x26.png" className="icon-26"/></a>
-                        <a href="https://github.com/ta-david-yu"><img alt="github" src="./img/github-x26.png" className="icon-26"/></a>
-                    </Grid>
-                    <Grid item lg={6} md={12} sm={12} xs>
-                        <div className="center-align">{about}</div>
-                    </Grid>
-                    <Grid item lg={6} md={9} xs={12}>
-                        <Grid 
-                        container
-                        spacing={16}
-                        direction="row">
-                            {this.worksTable}
+                <div className="top-content">
+                    <Grid 
+                    container 
+                    spacing={8}
+                    direction="column"
+                    justify="center"
+                    alignItems="center">
+                        <GridOffset/><GridOffset/><GridOffset/><GridOffset/>
+                        <Grid item>
+                            <img alt="ta-david-yu" src="./img/ta-david-yu-mascot-x64.png" className="logo"/>
+                        </Grid>
+                        <Grid item>
+                            <div className="header-text">ta david yu</div>
+                        </Grid>
+                        <Grid item>
+                            <a href="https://twitter.com/TaDavidYu"><img alt="twitter" src="./img/twitter-x26.png" className="icon-26"/></a>
+                            <a href="https://www.facebook.com/david.yu.7739814"><img alt="facebook" src="./img/facebook-x26.png" className="icon-26"/></a>
+                            <a href="https://github.com/ta-david-yu"><img alt="github" src="./img/github-x26.png" className="icon-26"/></a>
+                        </Grid>
+                        <Grid item lg={6} md={12} sm={12} xs>
+                            <div className="center-align">{about}</div>
                         </Grid>
                     </Grid>
-                </Grid>
+                </div>
+                <div className="bot-content">
+                    <Grid 
+                    container
+                    spacing={16}
+                    direction="column"
+                    justify="center"
+                    alignItems="center">
+                        <Grid item xs>
+                            <img alt="toggle" src="./img/toggle-game.png" className="toggle"/>
+                        </Grid>
+                        <Grid item lg={6} md={12} sm={12} xs>
+                            <Grid 
+                            container
+                            spacing={16}
+                            direction="row">
+                                {this.worksTable}
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                </div>
             </div>
         );
     }
