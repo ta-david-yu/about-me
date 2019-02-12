@@ -84,6 +84,30 @@ a {
     padding-top: 12px;
     
     color: #f6d6bd;
+
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+
+    opacity: 0;
+    visibility: hidden;
+}
+
+.page-title.left {
+    transform: translateX(-10px);
+}
+
+.page-title.right {
+    transform: translateX(10px);
+}
+
+.page-title.show {
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateX(0px);
 }
 
 .box-white {

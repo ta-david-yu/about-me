@@ -21,7 +21,6 @@ class PageTab extends Component {
  
     render() {
         const pageName = this.props.pageName;
-        const btnPrefix = pageName.concat("-button");
         const className = pageName + "-button".concat(this.props.isActive? " is-active" : "");
 
         return (

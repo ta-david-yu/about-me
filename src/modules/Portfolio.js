@@ -172,7 +172,9 @@ class Portoflio extends Component {
                         <Grid item xs>
                             <PageTab pageName="game" isActive={this.state.currPage === "game"} onClick={this.changePage} />
                             <PageTab pageName="tool" isActive={this.state.currPage === "tool"} onClick={this.changePage} />
-                            <div className="page-title">{this.state.currPage}s</div>
+
+                            {this.state.currPage === "game"? <div className="page-title left show">games</div> : <div className="page-title left">games</div>}
+                            {this.state.currPage === "tool"? <div className="page-title right show">tools</div> : <div className="page-title right">tools</div>}
                         </Grid>
                         <Grid item lg={6} md={12} sm={12} xs>
                             <Grid 
