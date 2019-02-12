@@ -265,6 +265,9 @@ a {
     width: 101px;
     height: 49px;
     padding-left: 101px;
+    
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
 }
 
 .game-button:hover {
@@ -273,7 +276,8 @@ a {
 
 .game-button.is-active {
     transition: 0.3s;
-    transform: translateY(1px);
+    -webkit-transition: 0.3s;
+    transform: translateY(3px);
     background: url("./img/game-button-active.png") no-repeat;
 }
 
@@ -287,6 +291,9 @@ a {
     width: 101px;
     height: 49px;
     padding-left: 101px;
+    
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
 }
 
 .tool-button:hover {
@@ -295,6 +302,7 @@ a {
 
 .tool-button.is-active {
     transition: 0.3s;
-    transform: translateY(1px);
+    -webkit-transition: 0.3s;
+    transform: translateY(3px);
     background: url("./img/tool-button-active.png") no-repeat;
 }
