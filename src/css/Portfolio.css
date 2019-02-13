@@ -344,3 +344,41 @@ a {
     transform: translateY(1px);
     background: url("./img/tool-button-active.png") no-repeat;
 }
+
+/* react css transition */
+
+.page-tab-transition-appear {
+    opacity: 0;
+    transform: translateY(-20px);
+    z-index: 1;
+}
+
+.page-tab-transition-appear.page-tab-transition-appear-active {
+    opacity: 1;
+    transform: translateY(0px);
+
+    -webkit-transition: 
+        opacity 300ms linear,
+        transform 600ms cubic-bezier(0.19, 1, 0.22, 1);
+    transition: 
+        opacity 300ms linear,
+        transform 600ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.page-transition-appear {
+    opacity: 0;
+    transform: translateX(-50px);
+    z-index: 1;
+}
+
+.page-transition-appear.page-transition-appear-active {
+    opacity: 1;
+    transform: translateX(0px);
+
+    -webkit-transition: 
+        opacity 300ms linear,
+        transform 600ms cubic-bezier(0.19, 1, 0.22, 1);
+    transition: 
+        opacity 300ms linear,
+        transform 600ms cubic-bezier(0.19, 1, 0.22, 1);
+}

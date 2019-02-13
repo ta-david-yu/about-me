@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Grid } from "@material-ui/core";
+import { CSSTransition } from "react-transition-group";
 
 import WorkPanel from "./WorkPanel";
 import PageTab from "./PageTab";
@@ -60,19 +61,36 @@ class Page extends Component {
             justify="center"
             alignItems="center">
                 <Grid item xs={12}>
-                    <PageTab pageName="game" isActive={currPage === "game"} onClick={this.changePage} />
-                    <PageTab pageName="tool" isActive={currPage === "tool"} onClick={this.changePage} />
 
-                    {currPage === "game"? <div className="page-title left show">games</div> : <div className="page-title left">games</div>}
-                    {currPage === "tool"? <div className="page-title right show">tools</div> : <div className="page-title right">tools</div>}
+                    <CSSTransition
+                    in={true}
+                    appear={true}
+                    timeout={600}
+                    classNames="page-tab-transition">
+                        <div>
+                            <PageTab pageName="game" isActive={currPage === "game"} onClick={this.changePage} />
+                            <PageTab pageName="tool" isActive={currPage === "tool"} onClick={this.changePage} />
+                        </div>
+                    </CSSTransition>
                 </Grid>
                 <Grid item lg={6} md={10} sm={12} xs={12}>
-                    <Grid 
-                    container
-                    spacing={16}
-                    direction="row">
-                        {worksItem}
-                    </Grid>
+                    <CSSTransition
+                    in={true}
+                    appear={true}
+                    timeout={600}
+                    classNames="page-transition">
+                        <div>
+                            {currPage === "game"? <div className="page-title left show">games</div> : <div className="page-title left">games</div>}
+                            {currPage === "tool"? <div className="page-title right show">tools</div> : <div className="page-title right">tools</div>}
+                            <Grid 
+                            container
+                            spacing={16}
+                            direction="row">
+                                {worksItem}
+                            </Grid>
+                        </div>
+                    </CSSTransition>
+
                 </Grid>
             </Grid>
         );
