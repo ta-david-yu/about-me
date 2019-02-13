@@ -8,17 +8,20 @@ const GridOffset = (props) => { return <Grid item></Grid>; }
 
 const about = (<div>
     <div className="subheader-text">game developer, game programmer</div>
-    <p className="about-text">
-        <div>Currently working on <a href="https://partygoosestudio.wixsite.com/gerritorythegame">Gerritory</a>, a multiplayer party game.</div>
-        <div>Following are some of my works</div>
-    </p>
+    <div className="about-text">
+        <p>
+            Currently working on <a href="https://partygoosestudio.wixsite.com/gerritorythegame">Gerritory</a>, a multiplayer party game.
+            <br />
+            Following are some of my works
+        </p>
+    </div>
 </div>);
 
 class Portoflio extends Component {
 
     render() {
         return (
-            <div className="background">
+            <div>
                 <div className="top-content">
                     <Grid 
                     container 

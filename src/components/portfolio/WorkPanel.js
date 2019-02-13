@@ -31,24 +31,24 @@ class WorkPanel extends Component {
         const hasGif = (work.gif !== "");
         const imgSrc = work.img;
         const gifSrc = hasGif? work.gif : work.img;
+        
+        const span = this.props.span;
 
         return (
-            <Grid item lg={4} md={4} sm={4} xs={12}>
+            <Grid item lg={span} md={span} sm={span} xs={12}>
                 <Grid container direction="column" alignItems="center">
                     <div className={boxClassName} onPointerEnter={this.handleOnPointerEnter} onPointerLeave={this.handleOnPointerLeave}>
-                        <Grid item className="work-title">
-                            <div className="work-img-container">
-                                <img alt={work.title} src={imgSrc} className="work-img" />
-                                <img alt={work.title} src={gifSrc} className="work-gif" />
-                                {(hasGif) && <div className="work-gif-note">GIF</div>}
-                            </div>
-                        </Grid>
-                        <Grid item className="work-title">
+                        <div className="work-img-container">
+                            <img alt={work.title} src={imgSrc} className="work-img" />
+                            <img alt={work.title} src={gifSrc} className="work-gif" />
+                            {(hasGif) && <div className="work-gif-note">GIF</div>}
+                        </div>
+                        <div className="work-title">
                             {work.title}
-                        </Grid>
-                        <Grid item className="work-job">
+                        </div>
+                        <div className="work-job">
                             {work.job}
-                        </Grid>
+                        </div>
                         <Grid container direction="row">
                             <Grid item xs={3} className="work-team">
                                 <img alt={work.team} src="./img/person-x13.png" className="team-icon" />
@@ -67,6 +67,7 @@ class WorkPanel extends Component {
 
 WorkPanel.propTypes = {
     information: PropTypes.object.isRequired,
+    span: PropTypes.number.isRequired
 };
 
 export default WorkPanel;

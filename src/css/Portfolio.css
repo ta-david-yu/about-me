@@ -17,7 +17,6 @@
 
 body {
     background-color: #08141e;
-    position: absolute;
 }
 
 a {
@@ -27,12 +26,13 @@ a {
 
 .top-content {
     background-color: #0f2a3f;
-    height: 100%;
     width: 100%;
 }
 
 .bot-content {
     padding-top: 30px;
+
+    min-height: 900px;
 }
 
 .logo {
