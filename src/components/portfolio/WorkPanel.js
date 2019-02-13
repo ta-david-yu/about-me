@@ -9,20 +9,11 @@ class WorkPanel extends Component {
     constructor(props) {
         super(props);
 
-        this.handleOnPointerEnter = this.handleOnPointerEnter.bind(this);
-        this.handleOnPointerLeave = this.handleOnPointerLeave.bind(this);
-
-        this.state = {
-            isHovered : false,
-        }
+        this.handleOnClick = this.handleOnClick.bind(this);
     }
 
-    handleOnPointerEnter(e) {
-        this.setState({isHovered : true})
-    }
-
-    handleOnPointerLeave(e) {
-        this.setState({isHovered : false})
+    handleOnClick(e) {
+        this.props.onClick(this.props.information);
     }
 
     render() {
@@ -37,7 +28,7 @@ class WorkPanel extends Component {
         return (
             <Grid item lg={span} md={span} sm={span} xs={12}>
                 <Grid container direction="column" alignItems="center">
-                    <div className={boxClassName} onPointerEnter={this.handleOnPointerEnter} onPointerLeave={this.handleOnPointerLeave}>
+                    <div className={boxClassName} onClick={this.handleOnClick}>
                         <div className="work-img-container">
                             <img alt={work.title} src={imgSrc} className="work-img" />
                             <img alt={work.title} src={gifSrc} className="work-gif" />
@@ -67,7 +58,8 @@ class WorkPanel extends Component {
 
 WorkPanel.propTypes = {
     information: PropTypes.object.isRequired,
-    span: PropTypes.number.isRequired
+    span: PropTypes.number.isRequired,
+    onClick: PropTypes.func
 };
 
 export default WorkPanel;
