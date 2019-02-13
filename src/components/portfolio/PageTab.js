@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from 'prop-types';
 
-import '../css/Portfolio.css';
+import '../../css/Portfolio.css';
 
 class PageTab extends Component {
 

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from 'prop-types';
 import { Grid } from "@material-ui/core";
 
-import '../css/Portfolio.css';
+import '../../css/Portfolio.css';
 
 class WorkPanel extends Component {
 
