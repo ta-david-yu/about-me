@@ -47,7 +47,7 @@ class Page extends Component {
                     {currPage === "game" && <div className="page-title left show">games</div>}
                     {currPage === "tool" && <div className="page-title right show">tools</div>}
                 </Grid>
-                <Grid item lg={6} md={10} sm={12} xs={12}>
+                <Grid item lg={7} md={10} sm={12} xs={12}>
                     <Grid 
                     container
                     spacing={16}
