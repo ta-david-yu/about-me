@@ -1,7 +1,9 @@
 import React, { Component } from "react"
 import { Grid } from "@material-ui/core";
+import { CSSTransition } from "react-transition-group";
 
 import Page from "./Page";
+import PageTab from "./PageTab";
 
 import "../../css/Portfolio.css";
 
@@ -20,7 +22,26 @@ const about = (<div>
 
 class Portoflio extends Component {
 
+    constructor(props) {
+        super(props);
+        this.changePage = this.changePage.bind(this);
+
+        const initialPage = "game";
+        this.state = { currPage: initialPage };
+    }
+
+    changePage(pageName)
+    {
+        this.setState(
+            {
+                currPage: pageName
+            }
+        );
+    }
+
     render() {
+        const currPage = this.state.currPage;
+
         return (
             <div>
                 <div className="top-content">
@@ -48,7 +69,17 @@ class Portoflio extends Component {
                     </Grid>
                 </div>
                 <div className="bot-content">
-                    <Page />
+                    <CSSTransition
+                    in={true}
+                    appear={true}
+                    timeout={600}
+                    classNames="page-tab-transition">
+                        <div className="center-align">
+                            <PageTab pageName="game" isActive={currPage === "game"} onClick={this.changePage} />
+                            <PageTab pageName="tool" isActive={currPage === "tool"} onClick={this.changePage} />
+                        </div>
+                    </CSSTransition>
+                    <Page currPage={currPage}/>
                 </div>
             </div>
         );

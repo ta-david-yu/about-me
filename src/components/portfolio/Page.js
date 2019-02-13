@@ -1,9 +1,9 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import { Grid } from "@material-ui/core";
 import { CSSTransition } from "react-transition-group";
 
 import WorkPanel from "./WorkPanel";
-import PageTab from "./PageTab";
 
 import works from "../../data/works"
 
@@ -13,23 +13,7 @@ class Page extends Component {
 
     constructor(props) {
         super(props);
-        this.changePage = this.changePage.bind(this);
-
-        const initialPage = "game";
-
-        const worksTable = this.generateWorksItem(initialPage);
-        this.state = { currPage: initialPage, worksTable: worksTable };
-    }
-
-    changePage(pageName)
-    {
-        const worksTable = this.generateWorksItem(pageName);
-        this.setState(
-            {
-                currPage: pageName,
-                worksTable: worksTable
-            }
-        );
+        this.generateWorksItem(props.currPage);
     }
 
     generateWorksItem(pageName) {
@@ -45,8 +29,8 @@ class Page extends Component {
     }
 
     render() {
-        const currPage = this.state.currPage;
-        const worksTable = this.state.worksTable;
+        const currPage = this.props.currPage;
+        const worksTable = this.generateWorksItem(currPage);
 
         const itemSpan = (worksTable.length >= 3)? 4 : 6;
         const worksItem = worksTable.map((work) => {
@@ -60,19 +44,6 @@ class Page extends Component {
             direction="column"
             justify="center"
             alignItems="center">
-                <Grid item xs={12}>
-
-                    <CSSTransition
-                    in={true}
-                    appear={true}
-                    timeout={600}
-                    classNames="page-tab-transition">
-                        <div>
-                            <PageTab pageName="game" isActive={currPage === "game"} onClick={this.changePage} />
-                            <PageTab pageName="tool" isActive={currPage === "tool"} onClick={this.changePage} />
-                        </div>
-                    </CSSTransition>
-                </Grid>
                 <Grid item lg={6} md={10} sm={12} xs={12}>
                     <CSSTransition
                     in={true}
@@ -96,5 +67,9 @@ class Page extends Component {
         );
     }
 }
+
+Page.propTypes = {
+    currPage: PropTypes.string.isRequired,
+};
 
 export default Page;
