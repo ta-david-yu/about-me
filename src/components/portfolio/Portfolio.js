@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import { Grid } from "@material-ui/core";
-import { CSSTransition } from "react-transition-group";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 import Page from "./Page";
 import PageTab from "./PageTab";
@@ -69,6 +69,7 @@ class Portoflio extends Component {
                     </Grid>
                 </div>
                 <div className="bot-content">
+                
                     <CSSTransition
                     in={true}
                     appear={true}
@@ -79,7 +80,21 @@ class Portoflio extends Component {
                             <PageTab pageName="tool" isActive={currPage === "tool"} onClick={this.changePage} />
                         </div>
                     </CSSTransition>
-                    <Page currPage={currPage}/>
+
+                    <TransitionGroup>
+                        <CSSTransition
+                        key={currPage}
+                        appear={true}
+                        timeout={{
+                            appear: 600,
+                            enter: 300,
+                            exit: 0
+                        }}
+                        classNames={currPage + "-page-transition"}>
+                            <Page currPage={currPage}/>
+                        </CSSTransition>
+                    </TransitionGroup>
+
                 </div>
             </div>
         );

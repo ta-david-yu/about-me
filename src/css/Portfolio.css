@@ -345,8 +345,7 @@ a {
     background: url("./img/tool-button-active.png") no-repeat;
 }
 
-/* react css transition */
-
+/* page-tab transition */
 .page-tab-transition-appear {
     opacity: 0;
     transform: translateY(-20px);
@@ -365,13 +364,14 @@ a {
         transform 600ms cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-.page-transition-appear {
+/* page transition */
+.game-page-transition-appear {
     opacity: 0;
     transform: translateX(-50px);
     z-index: 1;
 }
 
-.page-transition-appear.page-transition-appear-active {
+.game-page-transition-appear.game-page-transition-appear-active {
     opacity: 1;
     transform: translateX(0px);
 
@@ -381,4 +381,40 @@ a {
     transition: 
         opacity 300ms linear,
         transform 600ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.game-page-transition-enter {
+    opacity: 0;
+    transform: translateX(-50px);
+    z-index: 1;
+}
+
+.game-page-transition-enter.game-page-transition-enter-active {
+    opacity: 1;
+    transform: translateX(0px);
+
+    -webkit-transition: 
+        opacity 150ms linear,
+        transform 300ms cubic-bezier(0.19, 1, 0.22, 1);
+    transition: 
+        opacity 150ms linear,
+        transform 300ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.tool-page-transition-enter {
+    opacity: 0;
+    transform: translateX(50px);
+    z-index: 1;
+}
+
+.tool-page-transition-enter.tool-page-transition-enter-active {
+    opacity: 1;
+    transform: translateX(0px);
+
+    -webkit-transition: 
+        opacity 150ms linear,
+        transform 300ms cubic-bezier(0.19, 1, 0.22, 1);
+    transition: 
+        opacity 150ms linear,
+        transform 300ms cubic-bezier(0.19, 1, 0.22, 1);
 }

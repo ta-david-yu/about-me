@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { Grid } from "@material-ui/core";
-import { CSSTransition } from "react-transition-group";
 
 import WorkPanel from "./WorkPanel";
 
@@ -44,24 +43,17 @@ class Page extends Component {
             direction="column"
             justify="center"
             alignItems="center">
+                <Grid item xs={12}>
+                    {currPage === "game" && <div className="page-title left show">games</div>}
+                    {currPage === "tool" && <div className="page-title right show">tools</div>}
+                </Grid>
                 <Grid item lg={6} md={10} sm={12} xs={12}>
-                    <CSSTransition
-                    in={true}
-                    appear={true}
-                    timeout={600}
-                    classNames="page-transition">
-                        <div>
-                            {currPage === "game"? <div className="page-title left show">games</div> : <div className="page-title left">games</div>}
-                            {currPage === "tool"? <div className="page-title right show">tools</div> : <div className="page-title right">tools</div>}
-                            <Grid 
-                            container
-                            spacing={16}
-                            direction="row">
-                                {worksItem}
-                            </Grid>
-                        </div>
-                    </CSSTransition>
-
+                    <Grid 
+                    container
+                    spacing={16}
+                    direction="row">
+                        {worksItem}
+                    </Grid>
                 </Grid>
             </Grid>
         );
