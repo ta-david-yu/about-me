@@ -81,7 +81,7 @@ class Page extends Component {
                     </Grid>
                 </Grid>
                 <Modal 
-                contentLabel={this.state.modalWork.title}
+                contentLabel={"work-modal"}
                 isOpen={this.state.isModalShown}
                 onRequestClose={this.closeModal}
                 shouldCloseOnOverlayClick={true}
