@@ -411,6 +411,32 @@ a {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
+.modal-title-media {
+    background-color: #08141e;
+    width: 100%;
+    height: 100%;
+}
+
+.modal-media-loading {
+    position: inherit;
+
+    font-family: "m5x7";
+    font-size: 32px;
+    font-weight: normal;
+    font-style: normal;
+
+    text-align: center;
+    color: white;
+    background-color: #08141e;
+    opacity: 1;
+}
+
+.modal-media-loading.exit {
+    transform: translateY(-20px);
+    opacity: 0;
+    transition: transform 500ms ease-in, opacity 300ms linear;
+}
+
 /* page-tab transition */
 .page-tab-transition-appear {
     opacity: 0;

@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import { Grid } from "@material-ui/core";
 
 import WorkPanel from "./WorkPanel";
+import ModalTitle from "./ModalTitle";
 
 import works from "../../data/works"
 
@@ -16,7 +17,7 @@ class Page extends Component {
 
         this.state = {
             isModalShown: false,
-            modalContent: ""
+            work: null
         }
 
         this.openModal = this.openModal.bind(this);
@@ -26,16 +27,18 @@ class Page extends Component {
     }
 
     openModal(work) {
-        this.setState({
-            isModalShown: true, 
-            modalWork: work,
-            modalContent: 
-            <div>{work.title}</div>
-        })
+        const stateObj = this.state;
+        stateObj.isModalShown = true;
+        stateObj.work = work;
+
+        this.setState(stateObj);
     }
 
     closeModal() {
-        this.setState({ isModalShown: false })
+        const stateObj = this.state;
+        stateObj.isModalShown = false;
+
+        this.setState(stateObj);
     }
 
     generateWorksItem(pageName) {
@@ -88,7 +91,17 @@ class Page extends Component {
                 className="modal box-other"
                 overlayClassName="modal-overlay"
                 closeTimeoutMS={300}>
-                    {this.state.modalContent}
+                        <div>
+                            {this.state.work && 
+                                <ModalTitle 
+                                title={this.state.work.title}
+                                type={this.state.work.type}
+                                date={this.state.work.description}
+                                team={this.state.work.team}
+                                mediaTable={this.state.work.mediaTable}
+                                />}
+                            {this.state.work && this.state.work.modalContent}
+                        </div>
                 </Modal>
             </div>
         );

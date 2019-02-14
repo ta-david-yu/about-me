@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 const works = [
     {
         "type": "game",
@@ -10,6 +9,13 @@ const works = [
         "description": "2017.1 - NOW",
         "job": "Designer, Programmer, Visual Design",
         "team": "4",
+
+        "mediaTable": [
+            {
+                "type": "video",
+                "src": "https://youtu.be/wZ_4xxnEhlU"
+            }
+        ],
         "modal": <div></div>
     },
     {
@@ -20,6 +26,13 @@ const works = [
         "description": "2017.3 - 2017.4",
         "job": "Designer, Programmer",
         "team": "1",
+
+        "mediaTable": [
+            {
+                "type": "video",
+                "src": "https://youtu.be/wZ_4xxnEhlU"
+            }
+        ],
         "modal": <div></div>
     },
     {
@@ -30,6 +43,13 @@ const works = [
         "description": "2015.1 - 2015.1",
         "job": "UI Programmer",
         "team": "4",
+
+        "mediaTable": [
+            {
+                "type": "video",
+                "src": "https://youtu.be/wZ_4xxnEhlU"
+            }
+        ],
         "modal": <div></div>
     },
     {
@@ -40,6 +60,13 @@ const works = [
         "description": "2016.1 - 2016.1",
         "job": "Designer, Programmer",
         "team": "3",
+
+        "mediaTable": [
+            {
+                "type": "video",
+                "src": "https://youtu.be/wZ_4xxnEhlU"
+            }
+        ],
         "modal": <div></div>
     },
     {
@@ -50,6 +77,13 @@ const works = [
         "description": "2016.3 - 2016.6",
         "job": "Designer, Programmer",
         "team": "3",
+
+        "mediaTable": [
+            {
+                "type": "video",
+                "src": "https://youtu.be/wZ_4xxnEhlU"
+            }
+        ],
         "modal": <div></div>
     },
     {
@@ -60,6 +94,13 @@ const works = [
         "description": "GGJ 2018",
         "job": "Level Designer, Programmer",
         "team": "5",
+
+        "mediaTable": [
+            {
+                "type": "video",
+                "src": "https://youtu.be/wZ_4xxnEhlU"
+            }
+        ],
         "modal": <div></div>
     },
     {
@@ -70,6 +111,13 @@ const works = [
         "description": "GGJ 2016",
         "job": "Programmer",
         "team": "5",
+
+        "mediaTable": [
+            {
+                "type": "video",
+                "src": "https://youtu.be/wZ_4xxnEhlU"
+            }
+        ],
         "modal": <div></div>
     },
     {
@@ -80,6 +128,13 @@ const works = [
         "description": "2017.9 - present",
         "job": "Programmer",
         "team": "1",
+
+        "mediaTable": [
+            {
+                "type": "video",
+                "src": "https://youtu.be/wZ_4xxnEhlU"
+            }
+        ],
         "modal": <div></div>
     },
     {
@@ -90,6 +145,13 @@ const works = [
         "description": "2017.6 - 2018.6",
         "job": "Programmer",
         "team": "2",
+
+        "mediaTable": [
+            {
+                "type": "video",
+                "src": "https://youtu.be/wZ_4xxnEhlU"
+            }
+        ],
         "modal": <div></div>
     },
 ];
