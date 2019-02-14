@@ -345,13 +345,61 @@ a {
     background: url("./img/tool-button-active.png") no-repeat;
 }
 
+/* React Modal */
+.ReactModal__Content {
+    opacity: 0;
+    transform: scale(0);
+}
+
+.ReactModal__Content--after-open{
+    opacity: 1;
+    transform: scale(1);
+    transition: 
+        opacity 200ms ease-in-out,
+        transform 350ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.ReactModal__Content--before-close{
+    opacity: 0;
+    transform: scale(0);
+    transition: 
+        opacity 250ms ease-in-out,
+        transform 300ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+.ReactModal__Overlay {
+    opacity: 0;
+}
+
+.ReactModal__Overlay--after-open{
+    opacity: 1;
+    transition: 
+        opacity 200ms ease-in-out;
+}
+
+.ReactModal__Overlay--before-close{
+    opacity: 0;
+    transition: 
+        opacity 250ms ease-in-out;
+}
+
 .modal {
+    background-color: rgba(0, 0, 0, 0);
+
+    box-sizing: border-box;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+
     position: absolute;
     top: 20%;
     bottom: 20%;
     left: 20%;
     right: 20%;
-    background-color: #0f2a3f;
+}
+
+.modal:focus {
+    outline: none;
 }
 
 .modal-overlay {

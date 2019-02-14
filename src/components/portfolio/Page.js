@@ -81,8 +81,9 @@ class Page extends Component {
                 isOpen={this.state.isModalShown}
                 onRequestClose={this.closeModal}
                 shouldCloseOnOverlayClick={true}
-                className="modal"
-                overlayClassName="modal-overlay">
+                className="modal box-other"
+                overlayClassName="modal-overlay"
+                closeTimeoutMS={300}>
                     {this.state.modalContent}
                 </Modal>
             </div>
