@@ -26,7 +26,10 @@ class Page extends Component {
     }
 
     openModal(work) {
-        this.setState({isModalShown: true, modalContent: 
+        this.setState({
+            isModalShown: true, 
+            modalWork: work,
+            modalContent: 
             <div>{work.title}</div>
         })
     }
@@ -78,6 +81,7 @@ class Page extends Component {
                     </Grid>
                 </Grid>
                 <Modal 
+                contentLabel={this.state.modalWork.title}
                 isOpen={this.state.isModalShown}
                 onRequestClose={this.closeModal}
                 shouldCloseOnOverlayClick={true}
