@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Modal from "react-modal";
 import PropTypes from "prop-types";
 import { Grid } from "@material-ui/core";
+import withWindowSize from '../withWindowSize';
 
 import WorkPanel from "./WorkPanel";
 import ModalTitle from "./ModalTitle";
@@ -83,12 +84,13 @@ class Page extends Component {
                         </Grid>
                     </Grid>
                 </Grid>
+
                 <Modal 
                 contentLabel={"work-modal"}
                 isOpen={this.state.isModalShown}
                 onRequestClose={this.closeModal}
                 shouldCloseOnOverlayClick={true}
-                className="modal box-other"
+                className={((this.props.windowWidth < 1024)? "sm-modal-size" : "lg-modal-size") + " modal box-other"}
                 overlayClassName="modal-overlay"
                 closeTimeoutMS={300}>
                         <div>
@@ -112,4 +114,4 @@ Page.propTypes = {
     currPage: PropTypes.string.isRequired,
 };
 
-export default Page;
+export default withWindowSize(Page);
