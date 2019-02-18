@@ -50,7 +50,6 @@ class WorkPanel extends Component {
                             <img alt={work.title} src={imgSrc} className={(hasGif)? gifClassName : "work-img"} />
                             {(hasGif)? <img alt={work.title} src={gifSrc} className="work-gif" /> : <div className="work-gif"></div>}
                             {hasGif && (isHovered? <div className="work-gif-note hover">GIF</div> : <div className="work-gif-note">GIF</div>)}
-                            {hasGif && !isHovered && <div className="work-gif-note">GIF</div>}
                         </div>
                         <div className="work-title">
                             {work.title}
