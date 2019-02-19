@@ -450,9 +450,19 @@ a {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
+.column {
+    float: left;
+    padding: 0px;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
 .modal-title-media {
     position: relative;
-
     background-color: #08141e;
 }
 

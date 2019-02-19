@@ -34,13 +34,13 @@ class ModalTitle extends Component {
             let jsx = null;
             if (media.type === "video") {
                 jsx = 
-                <div className="modal-title-media">
+                <div className="modal-title-media column">
                     {!this.state.isVideoLoaded? 
                             <div className="modal-media-loading">loading video...</div> :
                             <div className="modal-media-loading exit">loading video...</div> }
                     <ReactPlayer
-                    width="100%"
-                    height={150}
+                    width={"100%"}
+                    height={"100%"}
                     onProgress={this.handleOnVideoProgress}
                     onReady={this.handleOnVideoReady}
                     light={false}
@@ -59,17 +59,11 @@ class ModalTitle extends Component {
         this.generateMediaJSX(this.props.mediaTable);
         return (
             <div>
-                <Grid container direction="column" justify="center" alignItems="left">
-                    <Scrollbars style={{width: "100%", height: 150}}>
-                        <Grid item container direction="row" justify="center" alignItems="center">
-                            {this.mediaJSX.map((jsx) =>
-                                {
-                                    return (
-                                    <Grid item>
-                                        {jsx}
-                                        </Grid>);
-                                })}
-                        </Grid>
+                <Grid container direction="column" justify="center" alignItems="center">
+                    <Scrollbars style={{width: "90%", height: 150}}>
+                        <div className="row">
+                            {this.mediaJSX}
+                        </div>
                     </Scrollbars>
                     <Grid item>
                         <div className="work-title">{this.props.title}</div>
