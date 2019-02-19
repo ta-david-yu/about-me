@@ -10,9 +10,14 @@ import '../../css/Portfolio.css';
 class ModalTitle extends Component {
     constructor(props) {
         super(props);
-        this.state = { isVideoLoaded: false, progressState: null };
+
+        this.state = { isVideoLoaded: false, progressState: null, currentMedia: 0 };
+
         this.handleOnVideoProgress = this.handleOnVideoProgress.bind(this);
         this.handleOnVideoReady = this.handleOnVideoReady.bind(this);
+        
+        this.handleOnMediaRight = this.handleOnMediaRight.bind(this);
+        this.handleOnMediaLeft = this.handleOnMediaLeft.bind(this);
     }
     
     handleOnVideoProgress(state) {
@@ -27,17 +32,33 @@ class ModalTitle extends Component {
         this.setState(stateObj);
     }
 
+    handleOnMediaRight(e) {
+        const stateObj = this.state;
+        stateObj.currentMedia = (stateObj.currentMedia + 1) % this.props.mediaTable.length;
+        this.setState(stateObj);
+    }
+
+    handleOnMediaLeft(e) {
+        const stateObj = this.state;
+        stateObj.currentMedia = (stateObj.currentMedia - 1);
+        if (stateObj.currentMedia < 0)
+            stateObj.currentMedia += this.props.mediaTable.length;
+
+        this.setState(stateObj);
+    }
+
     generateMediaJSX(mediaTable) {
         this.mediaJSX = [];
-        
+        const mediaClassName = (this.props.windowWidth < 1024)? "sm-media" : "lg-media";
+
         mediaTable.forEach(media => {
             let jsx = null;
             if (media.type === "video") {
                 jsx = 
-                <div className="modal-title-media">
+                <div className={"modal-title-media " + mediaClassName}>
                     {!this.state.isVideoLoaded? 
-                            <div className="modal-media-loading">loading video...</div> :
-                            <div className="modal-media-loading exit">loading video...</div> }
+                            <div className="modal-media-loading">loading video</div> :
+                            <div className="modal-media-loading exit">loading video</div> }
                     <ReactPlayer
                     width={"100%"}
                     height={"100%"}
@@ -49,7 +70,7 @@ class ModalTitle extends Component {
             }
             else if (media.type === "image") {
                 jsx = 
-                <div className="modal-title-media">
+                <div className={"modal-title-media " + mediaClassName}>
                     <img alt="work-img" src={media.src} className="modal-title-img" />
                 </div>;
             }
@@ -63,16 +84,11 @@ class ModalTitle extends Component {
         return (
             <div>
                 <Grid container direction="column" justify="center" alignItems="center">
-                    <Grid container direction="row" justify="center" alignItems="center">
-                        {
-                            this.mediaJSX.map((jsx) =>
-                            {
-                                return (<Grid item lg={4} md={4} xs={12}>
-                                        {jsx}
-                                    </Grid>);
-                            })
-                        }
-                    </Grid>
+                    {this.mediaJSX[this.state.currentMedia]}
+                    <div className="center-align">
+                        <img alt={"left-btn"} src={"./img/game-button-active.png"} className="tool-button" onClick={this.handleOnMediaLeft}/>
+                        <img alt={"right-btn"} src={"./img/game-button-active.png"} className="tool-button" onClick={this.handleOnMediaRight}/>
+                    </div>
                     <Grid item>
                         <div className="work-title">{this.props.title}</div>
                         <div className="work-title">{this.props.type}</div>
