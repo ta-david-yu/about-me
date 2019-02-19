@@ -422,7 +422,7 @@ a {
 .lg-modal-size {
     position: absolute;
 
-    width: 760px;
+    width: 780px;
     height: 480px;
 
     top: 45%;
@@ -470,6 +470,10 @@ a {
 
     width: 240px;
     height: 135px;
+
+    border: 2px solid #f6d6bd;
+    padding: 2px;
+    border-radius: 5px;
 }
 
 .modal-title-img {
