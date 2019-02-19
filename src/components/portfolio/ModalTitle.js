@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Grid } from '@material-ui/core';
 import ReactPlayer from 'react-player';
-import { Scrollbars } from 'react-custom-scrollbars';
+
 import withWindowSize from '../withWindowSize';
 
 import '../../css/Portfolio.css';
@@ -48,7 +48,10 @@ class ModalTitle extends Component {
                 </div>
             }
             else if (media.type === "image") {
-                jsx = <img alt="work-img" src={media.src}/>;
+                jsx = 
+                <div className="modal-title-media">
+                    <img alt="work-img" src={media.src} className="modal-title-img" />
+                </div>;
             }
 
             this.mediaJSX.push(jsx);
@@ -60,18 +63,16 @@ class ModalTitle extends Component {
         return (
             <div>
                 <Grid container direction="column" justify="center" alignItems="center">
-                    <Scrollbars style={{width: "90%", height: 155}}>
-                        <Grid container direction="row" justify="center" alignItems="center">
+                    <Grid container direction="row" justify="center" alignItems="center">
+                        {
+                            this.mediaJSX.map((jsx) =>
                             {
-                                this.mediaJSX.map((jsx) =>
-                                {
-                                    return (<Grid item lg={4} md={6} xs={12}>
-                                            {jsx}
-                                        </Grid>);
-                                })
-                            }
-                        </Grid>
-                    </Scrollbars>
+                                return (<Grid item lg={4} md={4} xs={12}>
+                                        {jsx}
+                                    </Grid>);
+                            })
+                        }
+                    </Grid>
                     <Grid item>
                         <div className="work-title">{this.props.title}</div>
                         <div className="work-title">{this.props.type}</div>
