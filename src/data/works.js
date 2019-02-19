@@ -14,6 +14,18 @@ const works = [
             {
                 "type": "video",
                 "src": "https://youtu.be/wZ_4xxnEhlU"
+            },
+            {
+                "type": "video",
+                "src": "https://youtu.be/wZ_4xxnEhlU"
+            },
+            {
+                "type": "video",
+                "src": "https://youtu.be/wZ_4xxnEhlU"
+            },
+            {
+                "type": "video",
+                "src": "https://youtu.be/wZ_4xxnEhlU"
             }
         ],
         "modal": <div></div>

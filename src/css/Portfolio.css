@@ -125,6 +125,11 @@ a {
     border-image: url(./img/border-round-other-x33.png) 7.5 fill repeat;
 }
 
+.box-s-other {
+    border: 16px solid transparent;
+    border-image: url(./img/border-square-other-x33.png) 7.5 fill repeat;
+}
+
 .work-box {
     background-color: rgba(0, 0, 0, 0);
 
@@ -417,10 +422,10 @@ a {
 .lg-modal-size {
     position: absolute;
 
-    top: 10%;
-    bottom: 10%;
-    left: 20%;
-    right: 20%;
+    top: 15%;
+    bottom: 30%;
+    left: 25%;
+    right: 25%;
 }
 
 .sm-modal-size {
@@ -442,13 +447,13 @@ a {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .modal-title-media {
+    position: relative;
+
     background-color: #08141e;
-    width: 100%;
-    height: 100%;
 }
 
 .modal-media-loading {

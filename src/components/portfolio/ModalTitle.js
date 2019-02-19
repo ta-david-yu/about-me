@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Grid } from '@material-ui/core';
 import ReactPlayer from 'react-player';
+import { Scrollbars } from 'react-custom-scrollbars';
+import withWindowSize from '../withWindowSize';
 
 import '../../css/Portfolio.css';
 
@@ -37,8 +39,8 @@ class ModalTitle extends Component {
                             <div className="modal-media-loading">loading video...</div> :
                             <div className="modal-media-loading exit">loading video...</div> }
                     <ReactPlayer
-                    width='100%'
-                    height='100%'
+                    width="100%"
+                    height={150}
                     onProgress={this.handleOnVideoProgress}
                     onReady={this.handleOnVideoReady}
                     light={false}
@@ -57,22 +59,24 @@ class ModalTitle extends Component {
         this.generateMediaJSX(this.props.mediaTable);
         return (
             <div>
-                <Grid container direction="row" justify="center" alignItems="center">
+                <Grid container direction="column" justify="center" alignItems="left">
+                    <Scrollbars style={{width: "100%", height: 150}}>
+                        <Grid item container direction="row" justify="center" alignItems="center">
+                            {this.mediaJSX.map((jsx) =>
+                                {
+                                    return (
+                                    <Grid item>
+                                        {jsx}
+                                        </Grid>);
+                                })}
+                        </Grid>
+                    </Scrollbars>
                     <Grid item>
-                        <div>{this.mediaJSX}</div>
+                        <div className="work-title">{this.props.title}</div>
+                        <div className="work-title">{this.props.type}</div>
+                        <div className="work-title">{this.props.date}</div>
+                        <div className="work-title">{this.props.team}</div>
                     </Grid>
-                    <Grid item>
-                        <div>{this.mediaJSX}</div>
-                    </Grid>
-                    <Grid item>
-                        <div>{this.mediaJSX}</div>
-                    </Grid>
-                </Grid>
-                <Grid item>
-                    <div className="work-title">{this.props.title}</div>
-                    <div className="work-title">{this.props.type}</div>
-                    <div className="work-title">{this.props.date}</div>
-                    <div className="work-title">{this.props.team}</div>
                 </Grid>
             </div>
         );
@@ -87,4 +91,4 @@ ModalTitle.propTypes = {
     mediaTable: PropTypes.array.isRequired,
 };
 
-export default ModalTitle;
+export default withWindowSize(ModalTitle);
