@@ -12,17 +12,13 @@ const works = [
 
         "mediaTable": [
             {
+                "type": "video",
+                "src": "https://youtu.be/wZ_4xxnEhlU"
+            },
+            {
                 "type": "image",
                 "src": "./img/work/gerritory-preview.png"
             },
-            {
-                "type": "video",
-                "src": "https://youtu.be/wZ_4xxnEhlU"
-            },
-            {
-                "type": "video",
-                "src": "https://youtu.be/wZ_4xxnEhlU"
-            }
         ],
         "modal": <div></div>
     },
