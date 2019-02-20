@@ -73,7 +73,7 @@ class Page extends Component {
                 alignItems="center">
                     <Grid item xs={12}>
                         {currPage === "game" && <div className="page-title left show">games</div>}
-                        {currPage === "tool" && <div className="page-title right show">tools</div>}
+                        {currPage === "tool" && <div className="page-title right show">tools/other</div>}
                     </Grid>
                     <Grid item lg={7} md={10} sm={12} xs={12}>
                         <Grid 
@@ -90,7 +90,7 @@ class Page extends Component {
                 isOpen={this.state.isModalShown}
                 onRequestClose={this.closeModal}
                 shouldCloseOnOverlayClick={true}
-                className={((this.props.windowWidth < 1024)? "sm-modal-size" : "lg-modal-size") + " modal box-s-other"}
+                className={((this.props.windowWidth < 1024)? "sm-modal-size" : "lg-modal-size") + " modal box-other"}
                 overlayClassName="modal-overlay"
                 closeTimeoutMS={300}>
                         <div>

@@ -15,6 +15,24 @@
          url("fonts/m6x11/m6x11.svg#filename");
 }
 
+footer {
+    font-family: "m5x7";
+    font-size: 24px;
+    font-weight: normal;
+    font-style: normal;
+    
+    color: #816271;
+
+    padding-top: 10px;
+
+    text-align: center;
+}
+
+.footer-link {
+    text-decoration-line: underline;
+    color: #816271;
+}
+
 body {
     background-color: #08141e;
 }

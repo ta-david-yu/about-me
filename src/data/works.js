@@ -17,7 +17,23 @@ const works = [
             },
             {
                 "type": "image",
-                "src": "./img/work/gerritory-preview.png"
+                "src": "./img/work/gerritory-media-00.png"
+            },
+            {
+                "type": "image",
+                "src": "./img/work/gerritory-media-01.png"
+            },
+            {
+                "type": "image",
+                "src": "./img/work/gerritory-media-02.png"
+            },
+            {
+                "type": "image",
+                "src": "./img/work/gerritory-media-03.png"
+            },
+            {
+                "type": "image",
+                "src": "./img/work/gerritory-media-04.png"
             },
         ],
         "modal": <div></div>
@@ -33,17 +49,17 @@ const works = [
 
         "mediaTable": [
             {
-                "type": "video",
-                "src": "https://youtu.be/wZ_4xxnEhlU"
+                "type": "image",
+                "src": "./img/work/es-rr-media-01.png"
             },
             {
-                "type": "video",
-                "src": "https://youtu.be/wZ_4xxnEhlU"
+                "type": "image",
+                "src": "./img/work/es-rr-media-02.png"
             },
             {
-                "type": "video",
-                "src": "https://youtu.be/wZ_4xxnEhlU"
-            }
+                "type": "image",
+                "src": "./img/work/es-rr-media-00.png"
+            },
         ],
         "modal": <div></div>
     },
@@ -58,8 +74,16 @@ const works = [
 
         "mediaTable": [
             {
-                "type": "video",
-                "src": "https://youtu.be/wZ_4xxnEhlU"
+                "type": "image",
+                "src": "./img/work/hee-hoo-media-00.png"
+            },
+            {
+                "type": "image",
+                "src": "./img/work/hee-hoo-media-01.png"
+            },
+            {
+                "type": "image",
+                "src": "./img/work/hee-hoo-media-02.png"
             }
         ],
         "modal": <div></div>
@@ -75,9 +99,21 @@ const works = [
 
         "mediaTable": [
             {
-                "type": "video",
-                "src": "https://youtu.be/wZ_4xxnEhlU"
-            }
+                "type": "image",
+                "src": "./img/work/boomeranger-media-00.png"
+            },
+            {
+                "type": "image",
+                "src": "./img/work/boomeranger-media-01.png"
+            },
+            {
+                "type": "image",
+                "src": "./img/work/boomeranger-media-02.png"
+            },
+            {
+                "type": "image",
+                "src": "./img/work/boomeranger-media-03.png"
+            },
         ],
         "modal": <div></div>
     },
@@ -92,8 +128,16 @@ const works = [
 
         "mediaTable": [
             {
-                "type": "video",
-                "src": "https://youtu.be/wZ_4xxnEhlU"
+                "type": "image",
+                "src": "./img/work/nothing-last-forever-media-00.png"
+            },
+            {
+                "type": "image",
+                "src": "./img/work/nothing-last-forever-media-01.png"
+            },
+            {
+                "type": "image",
+                "src": "./img/work/nothing-last-forever-media-02.png"
             }
         ],
         "modal": <div></div>
@@ -168,8 +212,12 @@ const works = [
 
         "mediaTable": [
             {
-                "type": "video",
-                "src": "https://youtu.be/wZ_4xxnEhlU"
+                "type": "image",
+                "src": "./img/work/survivor-q-media-00.png"
+            },
+            {
+                "type": "image",
+                "src": "./img/work/survivor-q-media-01.png"
             }
         ],
         "modal": <div></div>

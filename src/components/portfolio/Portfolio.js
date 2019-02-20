@@ -96,6 +96,10 @@ class Portoflio extends Component {
                     </TransitionGroup>
 
                 </div>
+                <footer>website by <span/>
+                    <a className="footer-link" href="mailto: d366095@gmail.com">David Yu</a>, fonts by <span/>
+                    <a className="footer-link" href="http://daniellinssen.net/">Daniel Linssen</a>
+                </footer>
             </div>
         );
     }
