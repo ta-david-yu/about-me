@@ -33,16 +33,27 @@ class ModalTitle extends Component {
     }
 
     handleOnMediaRight(e) {
+        const length = this.props.mediaTable.length;
+        if (length == 1) return;
+
         const stateObj = this.state;
-        stateObj.currentMedia = (stateObj.currentMedia + 1) % this.props.mediaTable.length;
+        stateObj.currentMedia = (stateObj.currentMedia + 1) % length;
+        stateObj.isVideoLoaded = false;
+
         this.setState(stateObj);
     }
 
     handleOnMediaLeft(e) {
+        const length = this.props.mediaTable.length;
+        if (length == 1) return;
+
         const stateObj = this.state;
         stateObj.currentMedia = (stateObj.currentMedia - 1);
         if (stateObj.currentMedia < 0)
-            stateObj.currentMedia += this.props.mediaTable.length;
+        {
+            stateObj.currentMedia += length;
+        }
+        stateObj.isVideoLoaded = false;
 
         this.setState(stateObj);
     }
@@ -51,11 +62,19 @@ class ModalTitle extends Component {
         this.mediaJSX = [];
         const mediaClassName = (this.props.windowWidth < 1024)? "sm-media" : "lg-media";
 
+        const pageNumber = this.state.currentMedia;
+        const pageCount = mediaTable.length;
+
         mediaTable.forEach(media => {
             let jsx = null;
             if (media.type === "video") {
                 jsx = 
                 <div className={"modal-title-media " + mediaClassName}>
+
+                    <img alt={"left-btn"} src={"./img/left-arrow-inactive.png"} className="left-button" onClick={this.handleOnMediaLeft}/>
+                    <img alt={"right-btn"} src={"./img/right-arrow-inactive.png"} className="right-button" onClick={this.handleOnMediaRight}/>
+                    <span className="media-page-number">{pageNumber + 1}/{pageCount}</span>
+
                     {!this.state.isVideoLoaded? 
                             <div className="modal-media-loading">loading video</div> :
                             <div className="modal-media-loading exit">loading video</div> }
@@ -71,6 +90,10 @@ class ModalTitle extends Component {
             else if (media.type === "image") {
                 jsx = 
                 <div className={"modal-title-media " + mediaClassName}>
+                    <img alt={"left-btn"} src={"./img/left-arrow-inactive.png"} className="left-button" onClick={this.handleOnMediaLeft}/>
+                    <img alt={"right-btn"} src={"./img/right-arrow-inactive.png"} className="right-button" onClick={this.handleOnMediaRight}/>
+                    <span className="media-page-number">{pageNumber + 1}/{pageCount}</span>
+
                     <img alt="work-img" src={media.src} className="modal-title-img" />
                 </div>;
             }
@@ -88,9 +111,7 @@ class ModalTitle extends Component {
                 <Grid container direction="column" justify="center" alignItems="center">
                     {this.mediaJSX[this.state.currentMedia]}
                     <div className="center-align media-page-box">
-                        <img alt={"left-btn"} src={"./img/left-arrow-inactive.png"} className="left-button" onClick={this.handleOnMediaLeft}/>
                         <span className="media-page-number">{pageNumber + 1}/{pageCount}</span>
-                        <img alt={"right-btn"} src={"./img/right-arrow-inactive.png"} className="right-button" onClick={this.handleOnMediaRight}/>
                     </div>
                     <Grid item>
                         <div className="work-title">{this.props.title}</div>
