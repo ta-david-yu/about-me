@@ -143,8 +143,16 @@ const works = [
 
         "mediaTable": [
             {
-                "type": "video",
-                "src": "https://youtu.be/wZ_4xxnEhlU"
+                "type": "image",
+                "src": "./img/work/chain-destroyer-media-00.png"
+            },
+            {
+                "type": "image",
+                "src": "./img/work/chain-destroyer-media-01.png"
+            },
+            {
+                "type": "image",
+                "src": "./img/work/chain-destroyer-media-02.png"
             }
         ],
         "modal": <div></div>

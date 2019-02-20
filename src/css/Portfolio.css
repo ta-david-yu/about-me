@@ -499,8 +499,6 @@ a {
     position: absolute;
     top: 50%;
     left: 50%;
-    
-    height: 100%;
 
     transform: translate(-50%, -50%);
 }
@@ -511,22 +509,18 @@ a {
 
     z-index: 2;
 
-    left: 50%;
+    left: 100%;
     top: 100%;
-    transform: translate(-50%, -100%);
+    transform: translate(-100%, -100%);
 
-    font-family: "m6x11";
-    font-size: 24px;
-    font-weight: normal;
-    font-style: normal;
+    font-family: "Roboto";
+    font-size: 12px;
+    letter-spacing: 0.5px;
 
-    text-align: center;
-    padding-left: 10px;
-    padding-right: 9px;
-    padding-top: 5px;
+    background-color: #00000090;
 
-    text-shadow: 0px 3px #997577;
-    
+    padding: 2px 2px 2px 2px;
+    border-radius: 3px;
     color: #f6d6bd;
 }
 
