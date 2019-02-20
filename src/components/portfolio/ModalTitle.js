@@ -94,7 +94,7 @@ class ModalTitle extends Component {
                     <img alt={"right-btn"} src={"./img/right-arrow-inactive.png"} className="right-button" onClick={this.handleOnMediaRight}/>
                     <span className="media-page-number">{pageNumber + 1}/{pageCount}</span>
 
-                    <img alt="work-img" src={media.src} className="modal-title-img" />
+                    <img alt="work-img" src={media.src} className={"modal-title-img " + mediaClassName} />
                 </div>;
             }
 
