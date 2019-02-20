@@ -145,7 +145,7 @@ const works = [
     {
         "type": "tool",
         "title": "DY Engine",
-        "img": "./img/work/gerritory-preview.png",
+        "img": "./img/work/_temp-preview.png",
         "gif": "",
         "date": "2017.9 - present",
         "job": "Programmer",
@@ -162,7 +162,7 @@ const works = [
     {
         "type": "tool",
         "title": "Many-Worlds Browsing for Control of Multibody Dynamics in Unity",
-        "img": "./img/work/gerritory-preview.png",
+        "img": "./img/work/_temp-preview.png",
         "gif": "",
         "date": "2017.6 - 2018.6",
         "job": "Programmer",
