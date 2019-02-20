@@ -81,13 +81,16 @@ class ModalTitle extends Component {
 
     render() {
         this.generateMediaJSX(this.props.mediaTable);
+        const pageNumber = this.state.currentMedia;
+        const pageCount = this.props.mediaTable.length;
         return (
             <div>
                 <Grid container direction="column" justify="center" alignItems="center">
                     {this.mediaJSX[this.state.currentMedia]}
-                    <div className="center-align">
-                        <img alt={"left-btn"} src={"./img/game-button-active.png"} className="tool-button" onClick={this.handleOnMediaLeft}/>
-                        <img alt={"right-btn"} src={"./img/game-button-active.png"} className="tool-button" onClick={this.handleOnMediaRight}/>
+                    <div className="center-align media-page-box">
+                        <img alt={"left-btn"} src={"./img/left-arrow-inactive.png"} className="left-button" onClick={this.handleOnMediaLeft}/>
+                        <span className="media-page-number">{pageNumber + 1}/{pageCount}</span>
+                        <img alt={"right-btn"} src={"./img/right-arrow-inactive.png"} className="right-button" onClick={this.handleOnMediaRight}/>
                     </div>
                     <Grid item>
                         <div className="work-title">{this.props.title}</div>
