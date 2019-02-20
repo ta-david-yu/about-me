@@ -98,7 +98,7 @@ class Page extends Component {
                                 <ModalTitle 
                                 title={this.state.work.title}
                                 type={this.state.work.type}
-                                date={this.state.work.description}
+                                date={this.state.work.date}
                                 team={this.state.work.team}
                                 mediaTable={this.state.work.mediaTable}
                                 />}

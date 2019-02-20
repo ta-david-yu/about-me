@@ -73,11 +73,11 @@ class ModalTitle extends Component {
 
                     <img alt={"left-btn"} src={"./img/left-arrow-inactive.png"} className="left-button" onClick={this.handleOnMediaLeft}/>
                     <img alt={"right-btn"} src={"./img/right-arrow-inactive.png"} className="right-button" onClick={this.handleOnMediaRight}/>
-                    <span className="media-page-number">{pageNumber + 1}/{pageCount}</span>
+                    <div className="media-page-number">{pageNumber + 1}/{pageCount}</div>
 
                     {!this.state.isVideoLoaded? 
-                            <div className="modal-media-loading">loading video</div> :
-                            <div className="modal-media-loading exit">loading video</div> }
+                            <span className="modal-media-loading">loading video</span> :
+                            <span className="modal-media-loading exit">loading video</span> }
                     <ReactPlayer
                     width={"100%"}
                     height={"100%"}
@@ -110,9 +110,6 @@ class ModalTitle extends Component {
             <div>
                 <Grid container direction="column" justify="center" alignItems="center">
                     {this.mediaJSX[this.state.currentMedia]}
-                    <div className="center-align media-page-box">
-                        <span className="media-page-number">{pageNumber + 1}/{pageCount}</span>
-                    </div>
                     <Grid item>
                         <div className="work-title">{this.props.title}</div>
                         <div className="work-title">{this.props.type}</div>

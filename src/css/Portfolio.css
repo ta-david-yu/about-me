@@ -258,6 +258,18 @@ a {
     color: #f6d6bd;
 }
 
+.work-date {
+    font-family: "m5x7";
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+
+    text-align: center;
+    padding-top: 12px;
+    
+    color: #f6d6bd;
+}
+
 .work-description {
     font-family: "m5x7";
     font-size: 16px;

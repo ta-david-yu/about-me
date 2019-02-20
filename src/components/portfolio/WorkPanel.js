@@ -62,8 +62,8 @@ class WorkPanel extends Component {
                                 <img alt={work.team} src="./img/person-x13.png" className="team-icon" />
                                 {work.team}
                             </Grid>
-                            <Grid item xs={6} className="work-description">
-                                {work.description}
+                            <Grid item xs={6} className="work-date">
+                                {work.date}
                             </Grid>
                         </Grid>
                     </div>
