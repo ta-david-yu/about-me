@@ -36,7 +36,16 @@ const works = [
                 "src": "./img/work/gerritory-media-04.png"
             },
         ],
-        "modal": <div></div>
+        "modal": 
+        <div>
+            <div>EasingSystem: something simliar to DOTween, let users play easing animation easily (put a gif to show it)</div>
+            <div>LayeredAudioSystem: sort audio into layers so player can adjust volume for different layers (ex. sound effect, music)</div>
+            <div>CollectablesEditor: make use of Unity Editor API to create a Custom Editor for editing in game collectables</div>
+            <div>GenericFiniteStateMachine: base class for various systems that have complex state transitions</div>
+            <div>SceneLoadingSystem: besides Unity built-in scene management, add a task manager that can handle tasks assigned from other system during scene loading (ex. procedurally generating level, syncing level across internet)</div>
+            <div>Some special effects using shader</div>
+            <div>Oh! By the way, I made this trailer using Adobe Premiere</div>
+        </div>
     },
     {
         "type": "game",

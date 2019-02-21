@@ -109,17 +109,14 @@ class ModalTitle extends Component {
             <div>
                 <Grid container direction="column" justify="center" alignItems="center">
                     {this.mediaJSX[this.state.currentMedia]}
-
-                    <div className={"modal-description-box box-s-no-top-other " + (this.props.windowWidth < 1024? "sm" : "lg")}>
-                        <div className="modal-game-title">{this.props.title}</div>
-                        <Grid container direction="row">
-                            <Grid item xs={6} className="modal-team-size">
-                                {this.props.team}
-                            </Grid>
-                            <Grid item xs={6} className="modal-date">
-                                {this.props.date}
-                            </Grid>
-                        </Grid>
+                    <div className={"modal-description-box box-s-other " + (this.props.windowWidth < 1024? "sm" : "lg")}>
+                        <div className="modal-game-title">
+                            {this.props.title.toLowerCase()}
+                            <span className="modal-date">
+                                <span className="modal-team-size">{this.props.team}</span> {this.props.date.toLowerCase()}
+                            </span>
+                        </div>
+                        <div className="modal-description">{this.props.description}</div>
                     </div>
                 </Grid>
             </div>
@@ -132,7 +129,7 @@ ModalTitle.propTypes = {
     title: PropTypes.string.isRequired,
     date: PropTypes.string.isRequired,
     team: PropTypes.string.isRequired,
-    mediaTable: PropTypes.array.isRequired,
+    mediaTable: PropTypes.array.isRequired
 };
 
 export default withWindowSize(ModalTitle);

@@ -415,8 +415,42 @@ a {
     background: url("./img/tool-button-active.png") no-repeat;
 }
 
+.lg-media {
+    width: var(--lg-media-width);
+    height: var(--lg-media-height);
+    transform: translateX(-100px);
+}
+
+.sm-media {
+    width: var(--sm-media-width);
+    height: var(--sm-media-height);
+    transform: translateX(-40px);
+}
+
+.modal-title-media {
+    position: relative;
+    background-color: #08141e;
+
+    border-left: 2px solid #0f2a3f;
+    border-right: 2px solid #0f2a3f;
+    border-top: 2px solid #0f2a3f;
+    border-bottom: 2px solid #0f2a3f;
+    
+    padding: 2px;
+}
+
+.modal-title-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
 .modal-description-box {
-    margin-top: -2px;
+    margin-top: 5px;
+    padding-left: 5px;
+    padding-bottom: 5px;
 
     background-color: rgba(0, 0, 0, 0);
 
@@ -427,27 +461,20 @@ a {
 }
 
 .modal-description-box.lg {
-    width: calc(var(--lg-media-width) + 12px);
+    width: calc(var(--lg-media-width) + 200px);
+    transform: translateX(-100px);
 }
 
 .modal-description-box.sm {
-    width: calc(var(--sm-media-width) + 12px);
+    width: calc(var(--sm-media-width) + 80px);
+    transform: translateX(-40px);
 }
 
 .modal-game-title {
-    font-family: "Roboto";
-    font-size: 20px;
-    font-weight: normal;
-    font-style: normal;
-    
-    text-align: center;
+    margin-top: -5px;
 
-    color: #f6d6bd;
-}
-
-.modal-team-size {
-    font-family: "Roboto";
-    font-size: 12px;
+    font-family: "m6x11";
+    font-size: 32px;
     font-weight: normal;
     font-style: normal;
     
@@ -456,15 +483,39 @@ a {
     color: #f6d6bd;
 }
 
-.modal-date {
-    font-family: "Roboto";
-    font-size: 12px;
+.modal-team-size {
+    font-family: "m5x7";
+    font-size: 16px;
     font-weight: normal;
     font-style: normal;
     
-    text-align: right;
+    text-align: center;
 
     color: #f6d6bd;
+}
+
+.modal-date {
+    padding-top: 10px;
+
+    font-family: "m5x7";
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    
+    text-align: center;
+
+    color: #f6d6bd;
+}
+
+.modal-description {
+    font-family: "Roboto";
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+
+    text-align: left;
+
+    color: #c3a38a;
 }
 
 /* React Modal */
@@ -506,7 +557,7 @@ a {
 }
 
 .modal {
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgb(255, 0, 0);
 
     box-sizing: border-box;
     image-rendering: pixelated;
@@ -520,7 +571,7 @@ a {
     width: var(--lg-media-width);   /*deprecated: 600 */
     height: 600px;
 
-    top: 48%;
+    top: 50%;
     bottom: auto;
 
     left: 50%;
@@ -559,38 +610,6 @@ a {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-.lg-media {
-    width: var(--lg-media-width);
-    height: var(--lg-media-height);
-}
-
-.sm-media {
-    width: var(--sm-media-width);
-    height: var(--sm-media-height);
-}
-
-.modal-title-media {
-    position: relative;
-    background-color: #08141e;
-
-    border: 2px solid #20394f;
-    border-left: 2px solid #0f2a3f;
-    border-right: 2px solid #0f2a3f;
-    border-top: 2px solid #0f2a3f;
-    border-bottom: 0px;
-    
-    padding: 2px;
-    border-radius: 0px;
-}
-
-.modal-title-img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-
-    transform: translate(-50%, -50%);
-}
-
 .media-page-number {
     position: absolute;
     display: block;
@@ -619,7 +638,7 @@ a {
     z-index: 2;
 
     top: 50%;
-    transform: translate(0, -50%);
+    transform: translate(calc(-100% - 8px), -50%);
 
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -645,7 +664,7 @@ a {
     cursor: pointer;
     transition: 0.2s;
     -webkit-transition: 0.2s;
-    transform: translate(calc(0% - 1px), -50%);
+    transform: translate(calc(-100% - 10px), -50%);
 }
 
 .right-button {
@@ -656,7 +675,7 @@ a {
     
     top: 50%;
     left: 100%;
-    transform: translate(-100%, -50%);
+    transform: translate(8px, -50%);
 
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -682,7 +701,7 @@ a {
     cursor: pointer;
     transition: 0.2s;
     -webkit-transition: 0.2s;
-    transform: translate(calc(-100% + 1px), -50%);
+    transform: translate(calc(0% + 10px), -50%);
 }
 
 .modal-media-loading {

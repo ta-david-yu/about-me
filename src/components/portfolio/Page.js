@@ -101,6 +101,7 @@ class Page extends Component {
                                 date={this.state.work.date}
                                 team={this.state.work.team}
                                 mediaTable={this.state.work.mediaTable}
+                                description={this.state.work.modal}
                                 />}
                             {this.state.work && this.state.work.modalContent}
                         </div>
