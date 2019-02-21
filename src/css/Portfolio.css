@@ -15,6 +15,14 @@
          url("fonts/m6x11/m6x11.svg#filename");
 }
 
+:root {
+    --lg-media-width: 400px;
+    --lg-media-height: 225px;
+
+    --sm-media-width: 250px;
+    --sm-media-height: 140px;  
+}
+
 footer {
     font-family: "m5x7";
     font-size: 24px;
@@ -146,6 +154,11 @@ a {
 .box-s-other {
     border: 16px solid transparent;
     border-image: url(./img/border-square-other-x33.png) 7.5 fill repeat;
+}
+
+.box-s-no-top-other {
+    border: 16px solid transparent;
+    border-image: url(./img/border-square-other-no-top-x33.png) 7.5 fill repeat;
 }
 
 .work-box {
@@ -288,18 +301,6 @@ a {
     color: #f6d6bd;
 }
 
-.work-description {
-    font-family: "m5x7";
-    font-size: 16px;
-    font-weight: normal;
-    font-style: normal;
-
-    text-align: center;
-    padding-top: 12px;
-    
-    color: #f6d6bd;
-}
-
 .work-team {
     font-family: "m5x7";
     font-size: 16px;
@@ -307,6 +308,18 @@ a {
     font-style: normal;
 
     text-align: left;
+    padding-top: 12px;
+    
+    color: #f6d6bd;
+}
+
+.work-description {
+    font-family: "m5x7";
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+
+    text-align: center;
     padding-top: 12px;
     
     color: #f6d6bd;
@@ -402,6 +415,58 @@ a {
     background: url("./img/tool-button-active.png") no-repeat;
 }
 
+.modal-description-box {
+    margin-top: -2px;
+
+    background-color: rgba(0, 0, 0, 0);
+
+    box-sizing: border-box;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+}
+
+.modal-description-box.lg {
+    width: calc(var(--lg-media-width) + 12px);
+}
+
+.modal-description-box.sm {
+    width: calc(var(--sm-media-width) + 12px);
+}
+
+.modal-game-title {
+    font-family: "Roboto";
+    font-size: 20px;
+    font-weight: normal;
+    font-style: normal;
+    
+    text-align: center;
+
+    color: #f6d6bd;
+}
+
+.modal-team-size {
+    font-family: "Roboto";
+    font-size: 12px;
+    font-weight: normal;
+    font-style: normal;
+    
+    text-align: left;
+
+    color: #f6d6bd;
+}
+
+.modal-date {
+    font-family: "Roboto";
+    font-size: 12px;
+    font-weight: normal;
+    font-style: normal;
+    
+    text-align: right;
+
+    color: #f6d6bd;
+}
+
 /* React Modal */
 .ReactModal__Content {
     opacity: 0;
@@ -452,7 +517,7 @@ a {
 .lg-modal-size {
     position: absolute;
 
-    width: 600px;
+    width: var(--lg-media-width);   /*deprecated: 600 */
     height: 600px;
 
     top: 48%;
@@ -468,7 +533,7 @@ a {
 .sm-modal-size {
     position: absolute;
 
-    width: 100%;
+    width: var(--sm-media-width);    /*deprecated: 100% */
     height: 80%;
 
     top: 48%;
@@ -495,22 +560,27 @@ a {
 }
 
 .lg-media {
-    width: 400px;
-    height: 225px;
+    width: var(--lg-media-width);
+    height: var(--lg-media-height);
 }
 
 .sm-media {
-    width: 250px;
-    height: 140px;
+    width: var(--sm-media-width);
+    height: var(--sm-media-height);
 }
 
 .modal-title-media {
     position: relative;
     background-color: #08141e;
 
-    border: 2px solid #f6d6bd;
+    border: 2px solid #20394f;
+    border-left: 2px solid #0f2a3f;
+    border-right: 2px solid #0f2a3f;
+    border-top: 2px solid #0f2a3f;
+    border-bottom: 0px;
+    
     padding: 2px;
-    border-radius: 3px;
+    border-radius: 0px;
 }
 
 .modal-title-img {

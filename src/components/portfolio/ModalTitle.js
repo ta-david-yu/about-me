@@ -34,7 +34,7 @@ class ModalTitle extends Component {
 
     handleOnMediaRight(e) {
         const length = this.props.mediaTable.length;
-        if (length == 1) return;
+        if (length === 1) return;
 
         const stateObj = this.state;
         stateObj.currentMedia = (stateObj.currentMedia + 1) % length;
@@ -45,7 +45,7 @@ class ModalTitle extends Component {
 
     handleOnMediaLeft(e) {
         const length = this.props.mediaTable.length;
-        if (length == 1) return;
+        if (length === 1) return;
 
         const stateObj = this.state;
         stateObj.currentMedia = (stateObj.currentMedia - 1);
@@ -104,18 +104,23 @@ class ModalTitle extends Component {
 
     render() {
         this.generateMediaJSX(this.props.mediaTable);
-        const pageNumber = this.state.currentMedia;
-        const pageCount = this.props.mediaTable.length;
+
         return (
             <div>
                 <Grid container direction="column" justify="center" alignItems="center">
                     {this.mediaJSX[this.state.currentMedia]}
-                    <Grid item>
-                        <div className="work-title">{this.props.title}</div>
-                        <div className="work-title">{this.props.type}</div>
-                        <div className="work-title">{this.props.date}</div>
-                        <div className="work-title">{this.props.team}</div>
-                    </Grid>
+
+                    <div className={"modal-description-box box-s-no-top-other " + (this.props.windowWidth < 1024? "sm" : "lg")}>
+                        <div className="modal-game-title">{this.props.title}</div>
+                        <Grid container direction="row">
+                            <Grid item xs={6} className="modal-team-size">
+                                {this.props.team}
+                            </Grid>
+                            <Grid item xs={6} className="modal-date">
+                                {this.props.date}
+                            </Grid>
+                        </Grid>
+                    </div>
                 </Grid>
             </div>
         );
