@@ -640,24 +640,6 @@ a {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-.media-page-number-plate {
-    position: absolute;
-    z-index: 2;
-
-    left: 50%;
-    top: 100%;
-    transform: translate(-50%, calc(0% + 3px));
-
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    image-rendering: pixelated;
-    image-rendering: -moz-crisp-edges;
-    image-rendering: crisp-edges;
-    background: url("./img/page-number-plate.png") no-repeat;
-    width: 60px;
-    height: 32px;
-}
-
 .media-page-number {
     position: absolute;
 
@@ -676,42 +658,6 @@ a {
     padding: 2px 2px 2px 2px;
     border-radius: 3px;
     color: #f6d6bd;
-}
-
-.media-page-left {
-    position: absolute;
-    z-index: 2;
-
-    left: 50%;
-    top: 100%;
-    transform: translate(calc(-50% - 40px), calc(0% + 4px));
-
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    image-rendering: pixelated;
-    image-rendering: -moz-crisp-edges;
-    image-rendering: crisp-edges;
-    background: url("./img/right-btn-active.png") no-repeat;
-    width: 32px;
-    height: 32px;
-}
-
-.media-page-right {
-    position: absolute;
-    z-index: 2;
-
-    left: 50%;
-    top: 100%;
-    transform: translate(calc(-50% + 40px), calc(0% + 4px));
-
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    image-rendering: pixelated;
-    image-rendering: -moz-crisp-edges;
-    image-rendering: crisp-edges;
-    background: url("./img/right-btn-active.png") no-repeat;
-    width: 32px;
-    height: 32px;
 }
 
 .left-button {
