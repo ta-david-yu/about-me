@@ -170,7 +170,7 @@ const works = [
     },
     {
         "type": "tool",
-        "title": "Many-Worlds Browsing for Control of Multibody Dynamics in Unity",
+        "title": "mwb in Unity",
         "img": "./img/work/_temp-preview.png",
         "gif": "",
         "date": "2017.6 - 2018.6",

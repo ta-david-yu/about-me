@@ -60,7 +60,7 @@ class ModalTitle extends Component {
 
     generateMediaJSX(mediaTable) {
         this.mediaJSX = [];
-        const mediaClassName = (this.props.windowWidth < 1024)? "sm-media" : "lg-media";
+        const mediaClassName = (this.props.windowWidth < 1024)? "sm" : "lg";
 
         const pageNumber = this.state.currentMedia;
         const pageCount = mediaTable.length;
@@ -69,11 +69,11 @@ class ModalTitle extends Component {
             let jsx = null;
             if (media.type === "video") {
                 jsx = 
-                <div className={"modal-title-media " + mediaClassName}>
+                <div className={"modal-media " + mediaClassName}>
 
                     <img alt={"left-btn"} src={"./img/left-arrow-inactive.png"} className="left-button" onClick={this.handleOnMediaLeft}/>
                     <img alt={"right-btn"} src={"./img/right-arrow-inactive.png"} className="right-button" onClick={this.handleOnMediaRight}/>
-                    <div className="media-page-number">{pageNumber + 1}/{pageCount}</div>
+                    <span className={"media-page-number"}>{pageNumber + 1}/{pageCount}</span>
 
                     {!this.state.isVideoLoaded? 
                             <span className="modal-media-loading">loading video</span> :
@@ -89,12 +89,12 @@ class ModalTitle extends Component {
             }
             else if (media.type === "image") {
                 jsx = 
-                <div className={"modal-title-media " + mediaClassName}>
+                <div className={"modal-media " + mediaClassName}>
                     <img alt={"left-btn"} src={"./img/left-arrow-inactive.png"} className="left-button" onClick={this.handleOnMediaLeft}/>
                     <img alt={"right-btn"} src={"./img/right-arrow-inactive.png"} className="right-button" onClick={this.handleOnMediaRight}/>
-                    <span className="media-page-number">{pageNumber + 1}/{pageCount}</span>
+                    <span className={"media-page-number"}>{pageNumber + 1}/{pageCount}</span>
 
-                    <img alt="work-img" src={media.src} className={"modal-title-img " + mediaClassName} />
+                    <img alt="work-img" src={media.src} className={"modal-img " + mediaClassName} />
                 </div>;
             }
 
@@ -105,20 +105,27 @@ class ModalTitle extends Component {
     render() {
         this.generateMediaJSX(this.props.mediaTable);
 
+        const isSmallScreen = this.props.windowWidth < 1024;
+
         return (
             <div>
-                <Grid container direction="column" justify="center" alignItems="center">
+                <div className={"modal-media-box box-s-other-left " + (isSmallScreen? " sm" : "lg")}>
                     {this.mediaJSX[this.state.currentMedia]}
-                    <div className={"modal-description-box box-s-other " + (this.props.windowWidth < 1024? "sm" : "lg")}>
-                        <div className="modal-game-title">
-                            {this.props.title.toLowerCase()}
-                            <span className="modal-date">
-                                <span className="modal-team-size">{this.props.team}</span> {this.props.date.toLowerCase()}
-                            </span>
-                        </div>
-                        <div className="modal-description">{this.props.description}</div>
+                    <div className="modal-game-title">
+                        {this.props.title}
                     </div>
-                </Grid>
+                    <div className="center-align">
+                        <span className="modal-team-size">{this.props.team}</span>
+                        <span className="modal-date">{this.props.date}</span>
+                    </div>
+                </div>
+                <div>
+                    <div className={"modal-description-box box-s-other-right " + (isSmallScreen? "sm" : "lg")}>
+                        <div className="modal-description">
+                            {this.props.description}
+                        </div>
+                    </div>
+                </div>
             </div>
         );
     }
