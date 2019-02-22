@@ -4,6 +4,7 @@ import { Grid } from '@material-ui/core';
 import ReactPlayer from 'react-player';
 
 import withWindowSize from '../withWindowSize';
+import CustomScrollbar from './CustomScrollbar';
 
 import '../../css/Portfolio.css';
 
@@ -114,16 +115,27 @@ class ModalTitle extends Component {
                     <div className="modal-game-title">
                         {this.props.title}
                     </div>
+                    <div className="modal-job">
+                        {this.props.job}
+                    </div>
                     <div className="center-align">
-                        <span className="modal-team-size">{this.props.team}</span>
-                        <span className="modal-date">{this.props.date}</span>
+                        <span className="modal-date">
+                            <img alt="date-icon" src="./img/clock-x13.png" className="modal-time-icon"/>
+                            {this.props.date} 
+                        </span>
+                        <span className="modal-team-size">
+                            <img alt="date-icon" src="./img/person-x13.png" className="modal-team-icon"/>
+                            team size of {this.props.team}
+                        </span>
                     </div>
                 </div>
                 <div>
                     <div className={"modal-description-box box-s-other-right " + (isSmallScreen? "sm" : "lg")}>
-                        <div className="modal-description">
-                            {this.props.description}
-                        </div>
+                        <CustomScrollbar>
+                            <div className="modal-description">
+                                {this.props.description}
+                            </div>
+                        </CustomScrollbar>
                     </div>
                 </div>
             </div>
@@ -136,6 +148,7 @@ ModalTitle.propTypes = {
     title: PropTypes.string.isRequired,
     date: PropTypes.string.isRequired,
     team: PropTypes.string.isRequired,
+    job: PropTypes.string.isRequired,
     mediaTable: PropTypes.array.isRequired
 };
 

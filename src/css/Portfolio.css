@@ -495,6 +495,7 @@ a {
 
     background-color: rgba(0, 0, 0, 0);
 
+    padding-bottom: 5px;
     box-sizing: border-box;
     image-rendering: pixelated;
     image-rendering: -moz-crisp-edges;
@@ -502,10 +503,35 @@ a {
 }
 
 .modal-game-title {
-    padding-top: 10px;
+    padding-left: 5px;
+    padding-top: 5px;
 
-    font-family: "m6x11";
-    font-size: 32px;
+    font-family: "Roboto";
+    font-size: 20px;
+    font-weight: normal;
+    font-style: normal;
+    
+    text-align: center;
+
+    color: #f6d6bd;
+}
+
+.modal-job {
+    padding-top: 8px;
+
+    font-family: "Roboto";
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+
+    text-align: center;
+
+    color: #f6d6bd;
+}
+
+.modal-date {
+    font-family: "Roboto";
+    font-size: 12px;
     font-weight: normal;
     font-style: normal;
     
@@ -515,8 +541,8 @@ a {
 }
 
 .modal-team-size {
-    font-family: "m5x7";
-    font-size: 24px;
+    font-family: "Roboto";
+    font-size: 12px;
     font-weight: normal;
     font-style: normal;
     
@@ -525,26 +551,41 @@ a {
     color: #f6d6bd;
 }
 
-.modal-date {
-    font-family: "m5x7";
-    font-size: 24px;
-    font-weight: normal;
-    font-style: normal;
-    
-    text-align: center;
+.modal-time-icon {
+    width: 13px;
+    height: 13px;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
 
-    color: #f6d6bd;
+    padding-right: 5px;
+}
+
+.modal-team-icon {
+    width: 13px;
+    height: 13px;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+
+    padding-left: 5px;
+    padding-right: 3px;
 }
 
 .modal-description {
     font-family: "Roboto";
-    font-size: 16px;
+    font-size: 14px;
     font-weight: normal;
     font-style: normal;
 
     text-align: left;
 
-    color: #c3a38a;
+    color: #f6d6bd;
+    /*color: #c3a38a;*/
+}
+
+.modal-description-inner {
+    margin-left: 10px;
 }
 
 /* React Modal */

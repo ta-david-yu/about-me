@@ -6,7 +6,7 @@ const works = [
         "title": "Gerritory",
         "img": "./img/work/gerritory-preview.png",
         "gif": "./img/work/gerritory-preview.gif",
-        "date": "2017.1 - NOW",
+        "date": "2017.1 - present",
         "job": "Designer, Programmer, Visual Design",
         "team": "4",
 
@@ -38,12 +38,14 @@ const works = [
         ],
         "modal": 
         <div>
-            <div>EasingSystem: something simliar to DOTween, let users play easing animation easily (put a gif to show it)</div>
-            <div>LayeredAudioSystem: sort audio into layers so player can adjust volume for different layers (ex. sound effect, music)</div>
-            <div>CollectablesEditor: make use of Unity Editor API to create a Custom Editor for editing in game collectables</div>
-            <div>GenericFiniteStateMachine: base class for various systems that have complex state transitions</div>
-            <div>SceneLoadingSystem: besides Unity built-in scene management, add a task manager that can handle tasks assigned from other system during scene loading (ex. procedurally generating level, syncing level across internet)</div>
-            <div>Some special effects using shader</div>
+            <div>Gerritory is a multiplayer party game.</div>
+            <div>Following are some of my contribution related to programming: </div>
+            <div className="modal-description-inner">- EasingSystem: something simliar to DOTween, let users play easing animation easily (put a gif to show it)</div>
+            <div className="modal-description-inner">- LayeredAudioSystem: sort audio into layers so player can adjust volume for different layers (ex. sound effect, music)</div>
+            <div className="modal-description-inner">- CollectablesEditor: make use of Unity Editor API to create a Custom Editor for editing in game collectables</div>
+            <div className="modal-description-inner">- GenericFiniteStateMachine: base class for various systems that have complex state transitions</div>
+            <div className="modal-description-inner">- SceneLoadingSystem: besides Unity built-in scene management, add a task manager that can handle tasks assigned from other system during scene loading (ex. procedurally generating level, syncing level across internet)</div>
+            <div className="modal-description-inner">- Some special effects using shader</div>
             <div>Oh! By the way, I made this trailer using Adobe Premiere</div>
         </div>
     },
@@ -70,7 +72,20 @@ const works = [
                 "src": "./img/work/es-rr-media-00.png"
             },
         ],
-        "modal": <div></div>
+        "modal": 
+        <div>
+            <div>EasingSystem: something simliar to DOTween, let users play easing animation easily (put a gif to show it)</div>
+            <div>LayeredAudioSystem: sort audio into layers so player can adjust volume for different layers (ex. sound effect, music)</div>
+            <div>CollectablesEditor: make use of Unity Editor API to create a Custom Editor for editing in game collectables</div>
+            <div>GenericFiniteStateMachine: base class for various systems that have complex state transitions</div>
+            <div>SceneLoadingSystem: besides Unity built-in scene management, add a task manager that can handle tasks assigned from other system during scene loading (ex. procedurally generating level, syncing level across internet)</div>
+            <div>Some special effects using shaders</div>
+            <div>Oh! By the way, I made this trailer using Adobe Premiere</div>
+            <div>Oh! By the way, I made this trailer using Adobe Premiere</div>
+            <div>Oh! By the way, I made this trailer using Adobe Premiere</div>
+            <div>Oh! By the way, I made this trailer using Adobe Premiere</div>
+            <div>Oh! By the way, I made this trailer using Adobe Premiere</div>
+        </div>
     },
     {
         "type": "game",

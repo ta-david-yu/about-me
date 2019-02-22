@@ -100,6 +100,7 @@ class Page extends Component {
                                 type={this.state.work.type}
                                 date={this.state.work.date}
                                 team={this.state.work.team}
+                                job={this.state.work.job}
                                 mediaTable={this.state.work.mediaTable}
                                 description={this.state.work.modal}
                                 />}
