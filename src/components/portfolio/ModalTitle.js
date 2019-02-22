@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Grid } from '@material-ui/core';
 import ReactPlayer from 'react-player';
+import Markdown from 'react-markdown';
 
 import withWindowSize from '../withWindowSize';
 import CustomScrollbar from './CustomScrollbar';
@@ -71,7 +71,6 @@ class ModalTitle extends Component {
             if (media.type === "video") {
                 jsx = 
                 <div className={"modal-media " + mediaClassName}>
-
                     <img alt={"left-btn"} src={"./img/left-arrow-inactive.png"} className="left-button" onClick={this.handleOnMediaLeft}/>
                     <img alt={"right-btn"} src={"./img/right-arrow-inactive.png"} className="right-button" onClick={this.handleOnMediaRight}/>
                     <span className={"media-page-number"}>{pageNumber + 1}/{pageCount}</span>
@@ -132,9 +131,7 @@ class ModalTitle extends Component {
                 <div>
                     <div className={"modal-description-box box-s-other-right " + (isSmallScreen? "sm" : "lg")}>
                         <CustomScrollbar>
-                            <div className="modal-description">
-                                {this.props.description}
-                            </div>
+                            <Markdown source={this.props.description} className="modal-description"/>
                         </CustomScrollbar>
                     </div>
                 </div>

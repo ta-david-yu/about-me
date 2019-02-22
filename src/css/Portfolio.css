@@ -17,7 +17,7 @@
 
 :root {
     --lg-modal-width: 1000px;
-    --lg-modal-height: 345px;
+    --lg-modal-height: 525px;
 
     --lg-media-box-width: 440px;
 
@@ -573,19 +573,38 @@ a {
 }
 
 .modal-description {
-    font-family: "Roboto";
-    font-size: 14px;
-    font-weight: normal;
-    font-style: normal;
-
-    text-align: left;
-
+    font-family: "Open Sans";
     color: #f6d6bd;
+    font-size: 12px;
     /*color: #c3a38a;*/
 }
 
-.modal-description-inner {
-    margin-left: 10px;
+table {
+    width: 100%;
+}
+
+th {
+    margin: 0;
+    background: #4e495f;
+    padding: 6px 13px;
+}
+
+td {
+    margin: 0;
+    text-align: left;
+    padding: 4px 11px;
+}
+
+td:first-child {
+    width: 35%;
+}
+
+tr:nth-child(even) {
+    background: #4e495f;
+}
+
+tr:nth-child(odd) {
+    background: #816271;
 }
 
 /* React Modal */

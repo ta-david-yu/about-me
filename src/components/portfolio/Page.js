@@ -102,7 +102,7 @@ class Page extends Component {
                                 team={this.state.work.team}
                                 job={this.state.work.job}
                                 mediaTable={this.state.work.mediaTable}
-                                description={this.state.work.modal}
+                                description={this.state.work.description.src}
                                 />}
                             {this.state.work && this.state.work.modalContent}
                         </div>
