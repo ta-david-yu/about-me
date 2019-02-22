@@ -107,9 +107,9 @@ class ModalTitle extends Component {
 
         const isSmallScreen = this.props.windowWidth < 1024;
 
-        return (
+        return (!isSmallScreen?
             <div>
-                <div className={"modal-media-box box-s-other-left " + (isSmallScreen? " sm" : "lg")}>
+                <div className={"modal-media-box box-s-other-left lg"}>
                     {this.mediaJSX[this.state.currentMedia]}
                     <div className="modal-game-title">
                         {this.props.title}
@@ -124,18 +124,18 @@ class ModalTitle extends Component {
                         </span>
                         <span className="modal-team-size">
                             <img alt="date-icon" src="./img/person-x13.png" className="modal-team-icon"/>
-                            team size of {this.props.team}
+                            {(parseInt(this.props.team) > 1)? this.props.team + "-person team" : "Solo"} 
                         </span>
                     </div>
                 </div>
                 <div>
-                    <div className={"modal-description-box box-s-other-right " + (isSmallScreen? "sm" : "lg")}>
+                    <div className={"modal-description-box box-s-other-right lg"}>
                         <CustomScrollbar>
                             <Markdown source={this.props.description} className="modal-description"/>
                         </CustomScrollbar>
                     </div>
                 </div>
-            </div>
+            </div> : <div></div>
         );
     }
 }

@@ -17,7 +17,7 @@
 
 :root {
     --lg-modal-width: 1000px;
-    --lg-modal-height: 525px;
+    --lg-modal-height: 425px;
 
     --lg-media-box-width: 440px;
 
@@ -575,7 +575,7 @@ a {
 .modal-description {
     font-family: "Open Sans";
     color: #f6d6bd;
-    font-size: 12px;
+    font-size: 14px;
     /*color: #c3a38a;*/
 }
 
