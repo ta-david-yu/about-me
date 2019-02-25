@@ -135,7 +135,8 @@ class ModalTitle extends Component {
                         </CustomScrollbar>
                     </div>
                 </div>
-            </div> : <div></div>
+            </div> : 
+            <div></div>
         );
     }
 }

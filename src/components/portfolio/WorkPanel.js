@@ -32,6 +32,7 @@ class WorkPanel extends Component {
         const work = this.props.information;
         const boxClassName = "work-box box-other";
 
+        const hasImg = (work.img !== "");
         const hasGif = (work.gif !== "");
         const imgSrc = work.img;
         const gifSrc = work.gif;
@@ -47,7 +48,7 @@ class WorkPanel extends Component {
                     <div className={boxClassName} 
                     onClick={this.handleOnClick} onPointerEnter={this.onPointerEnter} onPointerLeave={this.onPointerLeave}>
                         <div className="work-img-container">
-                            <img alt={work.title} src={imgSrc} className={(hasGif)? gifClassName : "work-img"} />
+                            {(hasImg)? <img alt={work.title} src={imgSrc} className={(hasGif)? gifClassName : "work-img"} /> : <div className="work-empty-img"><div className="work-empty-img-text">no preview image</div></div>}
                             {(hasGif)? <img alt={work.title} src={gifSrc} className="work-gif" /> : <div className="work-gif"></div>}
                             {hasGif && (isHovered? <div className="work-gif-note hover">GIF</div> : <div className="work-gif-note">GIF</div>)}
                         </div>
