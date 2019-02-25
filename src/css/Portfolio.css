@@ -723,12 +723,18 @@ tr:nth-child(odd) {
     image-rendering: pixelated;
     image-rendering: -moz-crisp-edges;
     image-rendering: crisp-edges;
-    
+
     transform: translate(calc(10px), calc(-100% - 8px));
 }
 
 .modal-close-button:hover {
     cursor: pointer;
+
+    transform: translate(calc(10px), calc(-100% - 10px));
+}
+
+.modal-close-button:active {
+    transform: translate(calc(10px), calc(-100% - 8px));
 }
 
 .modal:focus {
@@ -781,21 +787,14 @@ tr:nth-child(odd) {
     width: 14px;
     height: 32px;
     padding-left: 14px;
-    
-    transition: 0.2s;
-    -webkit-transition: 0.2s;
 }
 
 .left-button:active {
-    transition: 0.2s;
-    -webkit-transition: 0.2s;
     background: url("./img/left-arrow-active.png") no-repeat;
 }
 
 .left-button:hover {
     cursor: pointer;
-    transition: 0.2s;
-    -webkit-transition: 0.2s;
 }
 
 .right-button {
@@ -816,21 +815,14 @@ tr:nth-child(odd) {
     width: 14px;
     height: 32px;
     padding-left: 14px;
-    
-    transition: 0.2s;
-    -webkit-transition: 0.2s;
 }
 
 .right-button:active {
-    transition: 0.2s;
-    -webkit-transition: 0.2s;
     background: url("./img/right-arrow-active.png") no-repeat;
 }
 
 .right-button:hover {
     cursor: pointer;
-    transition: 0.2s;
-    -webkit-transition: 0.2s;
 }
 
 .modal-media-loading {
