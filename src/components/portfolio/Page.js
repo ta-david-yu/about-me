@@ -103,9 +103,10 @@ class Page extends Component {
                                 job={this.state.work.job}
                                 mediaTable={this.state.work.mediaTable}
                                 description={this.state.work.description.src}
+                                information={this.state.work.information.src}
                                 />}
                         </div>
-                        <img alt="return" className="modal-close-button" onClick={this.closeModal} src="/img/return-x40.png" />
+                        <img alt="return" className="modal-close-button" onClick={this.closeModal} src="/img/return-btn.png" />
                 </Modal>
             </div>
         );

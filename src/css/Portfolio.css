@@ -685,7 +685,7 @@ tr:nth-child(odd) {
     width: var(--lg-modal-width);   /*deprecated: 600 */
     height: var(--lg-modal-height);
 
-    top: 45%;
+    top: 40%;
     bottom: auto;
 
     left: 50%;

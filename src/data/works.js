@@ -3,7 +3,7 @@ import React from 'react';
 const works = [
     {
         "type": "game",
-        "title": "Gerritory  (WIP)",
+        "title": "Gerritory",
         "img": "./img/work/gerritory-preview.png",
         "gif": "./img/work/gerritory-preview.gif",
         "date": "2017.1 - present",
@@ -36,9 +36,9 @@ const works = [
                 "src": "./img/work/gerritory-media-04.png"
             },
         ],
-        "description": {
-            "type": "file",
-            "src": 
+"description": {
+    "type": "file",
+    "src": 
 `Gerritory is a multiplayer party game I made with three of my friends using Unity Engine. This is my first commercial project and will be released on Steam.
 Some of the notable features implemented by me:
 
@@ -65,12 +65,10 @@ Some in-game icons in Gerritory are from [Flaticon](https://www.flaticon.com/).
 Musics used in Gerritory are composed by [Waterflame](https://www.waterflame.com/) with a non-exclusive license.
 
 `},
-        "information": {
-            "type": "file",
-            "src": 
-`MWB in Unity is an Unity tool made with two of my classmates as an academic project.
-We implement an animation system in Unity Engine based on the paper [Many-worlds browsing for control of multibody dynamics](http://graphics.cs.cmu.edu/projects/mwb/). Users are able to transfer the simulated animation result into Unity built-in animation clip.
-`}
+"information": {
+    "type": "file",
+    "src": 
+`MWB in Unity is an Unity tool made with two of my classmates as an academic project. ![img](./img/link-x13.png)`}
     },
     {
         "type": "game",
@@ -95,9 +93,9 @@ We implement an animation system in Unity Engine based on the paper [Many-worlds
                 "src": "./img/work/es-rr-media-00.png"
             },
         ],
-        "description": {
-            "type": "file",
-            "src": 
+"description": {
+    "type": "file",
+    "src": 
 `Eagle Simulator & Rolling Rocker is an acedmic project for my human-computer interaction class in college. It includes two arcade games.
 Everything by myself using modern C++ and OpenCV. This is an alt-ctrl game using custom controller and a RGB camera.
 
@@ -110,7 +108,11 @@ Everything by myself using modern C++ and OpenCV. This is an alt-ctrl game using
 
 Some art assets are
 
-`}
+`},
+"information": {
+    "type": "file",
+    "src": 
+`MWB in Unity is an Unity tool made with two of my classmates as an academic project.`}
     },
     {
         "type": "game",
@@ -135,9 +137,9 @@ Some art assets are
                 "src": "./img/work/hee-hoo-media-02.png"
             }
         ],
-        "description": {
-            "type": "file",
-            "src": 
+"description": {
+    "type": "file",
+    "src": 
 `Hee X Hoo is a 2D adventure game made for Global Game Jam 2018 "TRANSMISSION" using Unity Engine.
 This is an alt-ctrl game using BOSS-ME-80, but it is also playable with mouse & keyboard.
 I did most of the programming and level design, reused some systems I made for Gerritory, e.g., Audio System and Tween Manager.
@@ -146,7 +148,11 @@ I did most of the programming and level design, reused some systems I made for G
 | --------- | ------- |
 | Steering AI | Control autonomous character using steering behaviour such as Pursuit and Wander. |
 
-`}
+`},
+"information": {
+    "type": "file",
+    "src": 
+`MWB in Unity is an Unity tool made with two of my classmates as an academic project.`}
     },
     {
         "type": "game",
@@ -175,9 +181,9 @@ I did most of the programming and level design, reused some systems I made for G
                 "src": "./img/work/boomeranger-media-03.png"
             },
         ],
-        "description": {
-            "type": "file",
-            "src": 
+"description": {
+    "type": "file",
+    "src": 
 `Boomeranger is a 3D action roguelike game made for 3D game programming class in college with two of my classmates using Unity Engine. 
 My first attempt to implement a proper 3d character controller.
 
@@ -193,7 +199,11 @@ Other non-programming stuff:
 | Character Modeling | Character models using MagicaVoxel. |
 | Character Animation | Character animations using Unity builtin animation system. |
 
-`}
+`},
+"information": {
+    "type": "file",
+    "src": 
+`MWB in Unity is an Unity tool made with two of my classmates as an academic project.`}
     },
     {
         "type": "game",
@@ -218,9 +228,9 @@ Other non-programming stuff:
                 "src": "./img/work/nothing-last-forever-media-02.png"
             }
         ],
-        "description": {
-            "type": "file",
-            "src": 
+"description": {
+    "type": "file",
+    "src": 
 `Nothing Last Forever is a 2D platformer game made for Global Game Jam 2016 "RITUAL" using Unity Engine. My first game jam project.
 Since there is only one artist in our team and the rest of us are programmers, I spent all my time implementing 2D lighting system.
 
@@ -228,7 +238,11 @@ Since there is only one artist in our team and the rest of us are programmers, I
 | --------- | ------- |
 | 2D dynamic lighting system | A raycast-based 2D lighting system. |
 
-`}
+`},
+"information": {
+    "type": "file",
+    "src": 
+`MWB in Unity is an Unity tool made with two of my classmates as an academic project.`}
     },
     {
         "type": "tool",
@@ -245,9 +259,9 @@ Since there is only one artist in our team and the rest of us are programmers, I
                 "src": "https://youtu.be/wZ_4xxnEhlU"
             }
         ],
-        "description": {
-            "type": "file",
-            "src": 
+"description": {
+    "type": "file",
+    "src": 
 `DYEngine is a 3D/2D Game Engine written in C++ that I develop during my leisure time.
 During the making of "Eagle Simulator & Rolling Rocker", I implemented a component-based engine. However, after some researches, I discovered the model I used is not a pure Entity-Component-System model. 
 Therefore, I started this project to learn the core fundamentals of game engineering and the popular ECS model.
@@ -270,7 +284,11 @@ Third-party libraries used in this project: [GLFW][glfw-link], [glad][glad-link]
 [glm-link]: https://github.com/g-truc/glm
 [tinyxml2-link]: https://github.com/leethomason/tinyxml2
 [stb-link]: https://github.com/nothings/stb
-`}
+`},
+"information": {
+    "type": "file",
+    "src": 
+`MWB in Unity is an Unity tool made with two of my classmates as an academic project.`}
     },
     {
         "type": "tool",
@@ -291,9 +309,9 @@ Third-party libraries used in this project: [GLFW][glfw-link], [glad][glad-link]
                 "src": "./img/work/mwb-media-01.png"
             }
         ],
-        "description": {
-            "type": "file",
-            "src": 
+"description": {
+    "type": "file",
+    "src": 
 `MWB in Unity is an Unity tool made with two of my classmates as an academic project.
 We implement an animation system in Unity Engine based on the paper [Many-worlds browsing for control of multibody dynamics](http://graphics.cs.cmu.edu/projects/mwb/). Users are able to transfer the simulated animation result into Unity built-in animation clip.
 
@@ -309,7 +327,11 @@ Although the tool is not as powerful as the original implementation, I acquired 
 
 Citation:
 Christopher D. Twigg and Doug L. James. Many-worlds browsing for control of multibody dynamics. ACM Transactions on Graphics (SIGGRAPH 2007), 26(3), August 2007.
-`}
+`},
+"information": {
+    "type": "file",
+    "src": 
+`MWB in Unity is an Unity tool made with two of my classmates as an academic project.`}
     },
     {
         "type": "game",
@@ -334,9 +356,9 @@ Christopher D. Twigg and Doug L. James. Many-worlds browsing for control of mult
                 "src": "./img/work/chain-destroyer-media-02.png"
             }
         ],
-        "description": {
-            "type": "file",
-            "src": 
+"description": {
+    "type": "file",
+    "src": 
 `Chain Destroyer is a strategy game with RPG element made with three of my friends in 1 week. The core game mechanic is based on Chinese Blind Chess. My first Unity project and also my first complete game.
 I was quite new to Unity at the time so I only did UI programming and checkerboard system.
 
@@ -344,7 +366,11 @@ I was quite new to Unity at the time so I only did UI programming and checkerboa
 | --------- | ------- |
 | UI animation | Make use of DOTween to animate UI elements. |
 
-`}
+`},
+"information": {
+    "type": "file",
+    "src": 
+`MWB in Unity is an Unity tool made with two of my classmates as an academic project.`}
     },
     {
         "type": "game",
@@ -365,16 +391,20 @@ I was quite new to Unity at the time so I only did UI programming and checkerboa
                 "src": "./img/work/survivor-q-media-01.png"
             }
         ],
-        "description": {
-            "type": "file",
-            "src": 
+"description": {
+    "type": "file",
+    "src": 
 `SurvivorQ is a 1v1 3D fighting game made with three of my friends in 1 week. It is my second game made with Unity.
 
 | Feature   | Description |
 | --------- | ------- |
 | 3D Character Controller | A simple raycast-based character controller. |
 
-`}
+`},
+"information": {
+    "type": "file",
+    "src": 
+`MWB in Unity is an Unity tool made with two of my classmates as an academic project.`}
     }
 ];
 

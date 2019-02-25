@@ -127,6 +127,7 @@ class ModalTitle extends Component {
                             {(parseInt(this.props.team) > 1)? this.props.team + "-person team" : "Solo"} 
                         </span>
                     </div>
+                    <Markdown source={this.props.information} className="modal-description"/>
                 </div>
                 <div>
                     <div className={"modal-description-box box-s-other-right lg"}>
@@ -147,7 +148,9 @@ ModalTitle.propTypes = {
     date: PropTypes.string.isRequired,
     team: PropTypes.string.isRequired,
     job: PropTypes.string.isRequired,
-    mediaTable: PropTypes.array.isRequired
+    mediaTable: PropTypes.array.isRequired,
+    description: PropTypes.string.isRequired,
+    information: PropTypes.string.isRequired
 };
 
 export default withWindowSize(ModalTitle);
