@@ -190,7 +190,7 @@ Other non-programming stuff:
 
 | Feature   | Description |
 | --------- | ------- |
-| Character Modeling | Character models using Magica Voxel. |
+| Character Modeling | Character models using MagicaVoxel. |
 | Character Animation | Character animations using Unity builtin animation system. |
 
 `}
