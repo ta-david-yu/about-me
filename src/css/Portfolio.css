@@ -16,16 +16,16 @@
 }
 
 :root {
-    --lg-modal-width: 1000px;
-    --lg-modal-height: 400px;
+    --lg-modal-width: 90vw;
+    --lg-modal-height: 90vh;
 
-    --lg-media-box-width: 440px;
+    --lg-media-box-width: 680px;
 
-    --lg-media-width: 400px;
-    --lg-media-height: 225px;
+    --lg-media-width: 640px;
+    --lg-media-height: 360px;
 
 
-    --sm-modal-width: 300px;
+    --sm-modal-width: 500px;
     --sm-modal-height: 300px;
 
     --sm-media-box-width: 300;
@@ -330,7 +330,7 @@ a {
 }
 
 .work-date {
-    font-family: "m5x7";
+    font-family: "m6x11";
     font-size: 16px;
     font-weight: normal;
     font-style: normal;
@@ -338,7 +338,7 @@ a {
     text-align: center;
     padding-top: 12px;
     
-    color: #f6d6bd;
+    color: #c3a38a;
 }
 
 .work-team {
@@ -723,7 +723,7 @@ tr:nth-child(odd) {
     width: var(--lg-modal-width);   /*deprecated: 600 */
     height: var(--lg-modal-height);
 
-    top: 40%;
+    top: 50%;
     bottom: auto;
 
     left: 50%;

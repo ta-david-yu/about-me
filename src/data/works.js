@@ -131,7 +131,7 @@ Some art materials are free assets from the internet.
         "title": "Hee X Hoo",
         "img": "./img/work/hee-hoo-preview.png",
         "gif": "./img/work/hee-hoo-preview.gif",
-        "date": "GGJ 2018",
+        "date": "global game jam 2018",
         "job": "Level Designer, Programmer",
         "team": "5",
 
@@ -223,10 +223,10 @@ Some art assets are from Unity Asset Store.
     },
     {
         "type": "game",
-        "title": "Nothing Last Forever",
+        "title": "Nothing Lasts Forever",
         "img": "./img/work/nothing-last-forever-preview.png",
         "gif": "./img/work/nothing-last-forever-preview.gif",
-        "date": "GGJ 2016",
+        "date": "global game jam 2016",
         "job": "Programmer",
         "team": "5",
 
@@ -247,7 +247,7 @@ Some art assets are from Unity Asset Store.
 "description": {
     "type": "file",
     "src": 
-`Nothing Last Forever is a 2D platformer game made for Global Game Jam 2016 "RITUAL" using Unity Engine. My first game jam project.
+`Nothing Lasts Forever is a 2D platformer game made for Global Game Jam 2016 "RITUAL" using Unity Engine. My first game jam project.
 Since there is only one artist in our team and the rest of us are programmers, I spent all my time implementing 2D lighting system.
 
 | Feature   | Description |
@@ -260,50 +260,6 @@ Since there is only one artist in our team and the rest of us are programmers, I
     "src": 
     <div>
         <a href="https://globalgamejam.org/2016/games/nothing-lasts-forever"><img alt="ggj-icon" src="./img/ggj-x26.png" className="icon-26" /></a>
-    </div>}
-    },
-    {
-        "type": "tool",
-        "title": "DY Engine (WIP)",
-        "img": "",
-        "gif": "",
-        "date": "2017.9 - present",
-        "job": "Programmer",
-        "team": "1",
-
-        "mediaTable": [
-        ],
-"description": {
-    "type": "file",
-    "src": 
-`DYEngine is a 3D/2D Game Engine written in C++ that I develop during my leisure time.
-During the making of "Eagle Simulator & Rolling Rocker", I implemented a component-based engine. However, after some researches, I discovered the model I used is not a pure Entity-Component-System model. 
-Therefore, I started this project to learn the core fundamentals of game engineering and the popular ECS model.
-
-The project is still in an very early stage of development. 
-Following are some of the finished / under construction features:
-
-| Feature   | Description |
-| --------- | ------- |
-| Resource Manager | In charge of allocation and release of memory for game assets. Using reference counting technique to decide whether a resource should be released from memory. |
-| Scene Graph | Game level is stored as Scene. Each scene has a tree structure with nodes representing object transforms. |
-| Logging System | A custom text logger for debugging. |
-| Entity-Component-System Model (WIP) | Currently logics and datas are both held by Components which are updated by Systems. Logics should be moved into Systems in later development process to achieve pure ECS model. |
-| Object-oriented wrapper for OpenGL (WIP) | Wrap the functionality of OpenGL API into objects such as Shader Program, Material, Mesh, Uniform Variable, Rendering Context, Rendering Pipeline etc. |
-
-Third-party libraries used in this project: [GLFW][glfw-link], [glad][glad-link], [glm][glm-link], [tinyxml2][tinyxml2-link], [stb][stb-link]
-
-[glfw-link]: https://github.com/glfw/glfw
-[glad-link]: https://github.com/Dav1dde/glad
-[glm-link]: https://github.com/g-truc/glm
-[tinyxml2-link]: https://github.com/leethomason/tinyxml2
-[stb-link]: https://github.com/nothings/stb
-`},
-"information": {
-    "type": "file",
-    "src": 
-    <div>
-        <a href="https://github.com/ta-david-yu/DYEngine"><img alt="gh-icon" src="./img/github-x26.png" className="icon-26" /></a>
     </div>}
     },
     {
@@ -350,81 +306,6 @@ Christopher D. Twigg and Doug L. James. Many-worlds browsing for control of mult
     <div>
         <a href="https://github.com/alan0201tw/Unity_Many-Worlds_Browsing"><img alt="gh-icon" src="./img/github-x26.png" className="icon-26" /></a>
     </div>}
-    },
-    {
-        "type": "game",
-        "title": "Chain Destroyer",
-        "img": "./img/work/chain-destroyer-preview.png",
-        "gif": "./img/work/chain-destroyer-preview.gif",
-        "date": "2015.1 - 2015.1",
-        "job": "UI Programmer",
-        "team": "4",
-
-        "mediaTable": [
-            {
-                "type": "image",
-                "src": "./img/work/chain-destroyer-media-00.png"
-            },
-            {
-                "type": "image",
-                "src": "./img/work/chain-destroyer-media-01.png"
-            },
-            {
-                "type": "image",
-                "src": "./img/work/chain-destroyer-media-02.png"
-            }
-        ],
-"description": {
-    "type": "file",
-    "src": 
-`Chain Destroyer is a strategy game with RPG element made with three of my friends in 1 week. The core game mechanic is based on Chinese Blind Chess. My first Unity project and also my first complete game.
-I was quite new to Unity at the time so I only did UI programming and checkerboard system.
-
-| Feature   | Description |
-| --------- | ------- |
-| UI animation | Make use of DOTween to animate UI elements. |
-
-`},
-"information": {
-    "type": "file",
-    "src": 
-``}
-    },
-    {
-        "type": "game",
-        "title": "SurvivorQ",
-        "img": "./img/work/survivor-q-preview.png",
-        "gif": "./img/work/survivor-q-preview.gif",
-        "date": "2016.1 - 2016.1",
-        "job": "Designer, Programmer",
-        "team": "4",
-
-        "mediaTable": [
-            {
-                "type": "image",
-                "src": "./img/work/survivor-q-media-00.png"
-            },
-            {
-                "type": "image",
-                "src": "./img/work/survivor-q-media-01.png"
-            }
-        ],
-"description": {
-    "type": "file",
-    "src": 
-`SurvivorQ is a 1v1 3D fighting game made with three of my friends in 1 week. It is my second game made with Unity.
-
-| Feature   | Description |
-| --------- | ------- |
-| 3D Character Controller | A simple raycast-based character controller. |
-
-Some art assets are from Unity Asset Store.
-
-`},
-"information": {
-    "type": "file",
-    "src": 
-``}
     }
 ];
 
