@@ -17,7 +17,7 @@
 
 :root {
     --lg-modal-width: 90vw;
-    --lg-modal-height: 90vh;
+    --lg-modal-height: 80vh;
 
     --lg-media-box-width: 680px;
 
@@ -330,15 +330,16 @@ a {
 }
 
 .work-date {
-    font-family: "m6x11";
-    font-size: 16px;
+    font-family: "Roboto";
+    font-size: 12px;
     font-weight: normal;
     font-style: normal;
 
     text-align: center;
     padding-top: 12px;
     
-    color: #c3a38a;
+    color: #f6d6bd;
+    /* color: #c3a38a; */
 }
 
 .work-team {
@@ -387,6 +388,20 @@ a {
     -webkit-transition: 0.2s;
 
     transform: translateY(-2px);
+}
+
+.icon-26-no-hover {
+    width: 26px;
+    height: 26px;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+
+    padding: 3px;
+}
+
+.icon-26-no-hover:hover {
+    cursor: pointer;
 }
 
 .icon-13 {
@@ -472,6 +487,8 @@ a {
 }
 
 .modal-media-box.lg {
+    float: left;
+
     width: var(--lg-media-box-width);
     height: var(--lg-modal-height);
 }
@@ -482,7 +499,6 @@ a {
 }
 
 .modal-media-box {
-    float: left;
 
     background-color: rgba(0, 0, 0, 0);
 
@@ -533,6 +549,8 @@ a {
 }
 
 .modal-description-box.lg {
+    float: right;
+
     width: calc(var(--lg-modal-width) - var(--lg-media-box-width));
     height: var(--lg-modal-height);
 }
@@ -543,8 +561,6 @@ a {
 }
 
 .modal-description-box {
-    float: right;
-
     background-color: rgba(0, 0, 0, 0);
 
     padding-bottom: 5px;
