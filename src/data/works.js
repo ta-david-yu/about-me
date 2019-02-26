@@ -39,9 +39,10 @@ const works = [
 "description": {
     "type": "file",
     "src": 
-`Gerritory is a multiplayer party game I made with three of my friends using Unity Engine. This is my first commercial project and will be released on Steam.  
+`Gerritory is a multiplayer party game I made with three of my friends using Unity Engine. This is my first commercial project and will be released on Steam. 
+Although four of us are all programmers, another teammate and I are also in charge of the in-game art materials.
 
-The game rules are simple:  
+The rules of Gerritory are simple:  
 **1. Get your territory**: Move your cube character and color as many tiles as possible. The player who owns the most territory wins.   
 **2. Small > Big**: Player with less territory can kill players with more territory by stepping on them.
 
@@ -49,22 +50,22 @@ Some of the notable features implemented by me:
 
 | Feature   | Description |
 | --------- | ------- |
-| Tween Manager | Simliar to DOTween but simplified, allow users to play easing animation sequence easily. |
-| Layered Audio System | Sort audio into layers so player can adjust volume for different layers. |
+| Tween Manager | A small library simliar to DOTween but simplified, allow users to play easing animation sequence easily. Make use of object pooling to improve performance. |
+| Layered Audio System | Sort audio into layers so player can adjust volume for different layers. Make use of audio request queue to avoid overlapping sound effects. |
 | Collectables Editor | Make use of the Unity Editor API to create a custom editor for editing in-game collectables. |
 | Asynchornous Task Queue | Users can push task to task queue which will be executed during scene loading asynchornously, e.g., loading assetbundles, procedural content generation, runtime navmesh baking. |
 | Shader Effects | Some special effects using UnityShader. |
 
-Other non-programming stuff:
+Other notable non-programming stuff:
 
 | Feature   | Description |
 | --------- | ------- |
-| Gameplay Design | Design the core game mechanics. |
-| Visual Design | In game model design & ui design. |
+| Core Mechanics | Design the core game mechanics. |
+| Visual Design | Design the overall visual style of the game including in-game model design & UI design. |
 | Visual Feedback | Add subtle motions in game to make it feel juicy. |
-| 3D Modeling | Some simple cubic character models made with blender. |
-| Sound Effect | Audio recording & mixing for several in-game sound effects. |
-| Game Trailer Editing | Edit a game teaser using Adobe Premiere. |
+| 3D Modeling | Model some of the cubic models with blender. |
+| Sound Design | Record & mix several in-game sound effects. |
+| Game Trailer Editing | Edit the game teaser using Adobe Premiere. |
 
 Gerritory has won several game awards since making its debute:  
 [![trophy](./img/trophy-x13.png) 2018 Vision Get Wild - Sliver in PC game genre and several sponsor awards](https://dcaward-vgw.org.tw/About/AwardDetail/20838?year=2018&type=1052)  
@@ -112,21 +113,21 @@ In-game musics are composed by [Waterflame](https://www.waterflame.com/) with a 
     "type": "file",
     "src": 
 `Eagle Simulator & Rolling Rocker is an acedmic project for my human-computer interaction class in college. It includes two arcade games.
-Everything by myself using modern C++ and OpenCV. This is an alt-ctrl game using custom controller and a RGB camera.
+Everything by myself using modern C++ and OpenCV. This is an alt-ctrl game using a custom wand controller and a RGB camera.
+The wand controller can actaully be anything that has two colors. Each color acts as one end of the wand.
 
 **Eagle Simulator** is a running game which you control a eagle to gather coins and avoid obstacles. The sooner you finish the level, the more extra points you get. 
 The angle of the wand controller determines the moving direction of the eagle. Player can swing the wand controller to accelerate the eagle.
 
 **Rolling Rocker** is an endless running game which you control a ball character on a stick by rotating the wand controller. 
-Player has to keep the ball from dropping into holes. The angle of the wand controller determines the angle of the stick.
+Player has to balance and keep the ball from dropping into holes. The angle of the wand controller determines the angle of the stick.
 
 | Feature   | Description |
 | --------- | ------- |
 | Component-based Engine | A simple component-based game engine all built from scratch. |
-| RGB Camera Color Tracking | Track a custom controller as input using OpenCV. |
-| Optimization using Multithreading | Separate input thread with game loop thread to avoid possible frame rate drops due to camera capturing delay. |
+| RGB Camera Color Tracking | Track colored area as input using OpenCV. |
+| Optimization using Multithreading | Separate input thread with main game loop thread to avoid possible frame rate drops due to camera capturing delay. |
 | 2D World Streaming | Split 2D tile worlds into chunks to improve performance. |
-
 
 Some art materials are free assets from the internet.
 
@@ -167,6 +168,7 @@ Some art materials are free assets from the internet.
 `Hee X Hoo is a 2D adventure game made for Global Game Jam 2018 "TRANSMISSION" using Unity Engine.
 This is an alt-ctrl game using BOSS-ME-80, but it is also playable with mouse & keyboard.
 I did most of the programming and level design, reused some systems I made for Gerritory, e.g., Audio System and Tween Manager.
+There are two artists, two sound designers in our team.
 
 In Hee X Hoo, you play as a plankton that can only move by inhaling and exhaling. Throughout the journey, you will encounter several hostiles and obstacles. 
 Your goal is to keep your plankton alive and reach the goal.
@@ -214,8 +216,11 @@ Your goal is to keep your plankton alive and reach the goal.
 "description": {
     "type": "file",
     "src": 
-`Boomeranger is a 3D action roguelike game made for 3D game programming class in college with two of my classmates using Unity Engine. 
+`Boomeranger is a 3D action roguelike game made for 3D game programming class in college with two of my classmates, which are both programmers, using Unity Engine. 
 My first attempt to implement a proper 3d character controller.
+
+You play as a bounty hunter who uses a boomerange as weapon, hunting powerful monsters in a procedurally generated dungeon.
+In each playthrough, the dungeon is randomly generated. Once your character dies, you will have to start all over again in a new dungeon.
 
 | Feature   | Description |
 | --------- | ------- |
@@ -236,7 +241,6 @@ Some art assets are from Unity Asset Store.
     "type": "file",
     "src": ``}
     },
-
     {
         "type": "game",
         "title": "Nothing Lasts Forever",
@@ -264,13 +268,14 @@ Some art assets are from Unity Asset Store.
     "type": "file",
     "src": 
 `Nothing Lasts Forever is a 2D platformer game made for Global Game Jam 2016 "RITUAL" using Unity Engine. My first game jam project.
-Since there is only one artist in our team and the rest of us are programmers, I spent all my time implementing 2D lighting system.
+Since there is only one artist and four programmers in our team, I spent all my time implementing 2D lighting system.
 
-
+You play as a girl wandering in the forest. Every rule reverses under the light. Player shoot black bullets in shadow but white bullets in light. 
+White monsters will be damaged by black bullets while healed by white bullets, and vice versa. Vines are harmful in shadow but elastic in light.
 
 | Feature   | Description |
 | --------- | ------- |
-| 2D dynamic lighting system | A raycast-based 2D lighting system. |
+| 2D dynamic lighting system | A raycast-based 2D lighting system. A light area polygon is constructed by raycast hit points and triangulated to renderable mesh. |
 
 `},
 "information": {
@@ -303,15 +308,23 @@ Since there is only one artist in our team and the rest of us are programmers, I
     "type": "file",
     "src": 
 `MWB in Unity is an Unity tool made with two of my classmates as an academic project.
-We implement an animation system in Unity Engine based on the paper [Many-worlds browsing for control of multibody dynamics](http://graphics.cs.cmu.edu/projects/mwb/). Users are able to transfer the simulated animation result into Unity built-in animation clip.
+We implement an animation system in Unity Engine based on the paper [Many-worlds browsing for control of multibody dynamics](http://graphics.cs.cmu.edu/projects/mwb/).
+In order to create physically plausible and desired animations in a multibody system, animators have to spend a lot of time tweaking and adjusting each objects. 
+MWB uses physics engine to simulate numerous plausible examples parallelly for users to choose from. 
 
-I'm in charge of UI of the tool. Following is my contribution to the project:
+The algorithm is simple: on each collision, a simulation is forked into more simulations.
+In each new simulation, the objects that are colliding are applied with a force with a slightly different direction and a small magnitude. 
+The magnitude is so small that the collision is still plausible. However, after a sequence of collision, there will be a big difference between each simulation.
+As a result, there will be a tons of plausible animation sequences for users to select and edit from. 
+Each simulation is represented with lines indicating the moving path of objects. Users can choose a simulation result by selecting the path.
+
+In this project, I am in charge of the UI/UX design. Following is my contribution to the project:
 
 | Feature   | Description |
 | --------- | ------- |
-| Editor UI | Make use of Unity Editor API to create a user-friendly interface. Including a hierarchy window inside scene view for simulated object selection and a custom animation player window. |
-| Lines Rendering using Geometry Shader | There are tons of line segments needed to be rendered during the use of this tool, therefore lines rendering is done in one geometry shader to imporve performance. |
-| GPU-Accelerated Computing | In the system, users pick their desired worlds by selecting simulated path. Since there are thousands or even millions of possible worlds, there will also be the same amounts of lines representing each world. It's impossible to calculate which line users are currently selecting instantly on CPU. Therefore, line selection computation are moved to GPU using compute shader. |
+| Editor UI | Make use of Unity Editor API to create a user-friendly interface. Including a simulated object hierarchy window inside scene view and a custom animation player window. |
+| Lines Rendering using Geometry Shader | Lines are rendered in one geometry shader to achieve better performance which further improves the user experience. |
+| GPU-Accelerated Computing | Use compute shader to calculate line selection result in GPU to acieve better performance which further improves the user experience. |
 
 Although the tool is not as powerful as the original implementation, I acquired a lot of knowledge about how to build a tool in Unity Editor.
 

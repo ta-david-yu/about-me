@@ -84,6 +84,8 @@ class ModalTitle extends Component {
                         height={"100%"}
                         onProgress={this.handleOnVideoProgress}
                         onReady={this.handleOnVideoReady}
+                        playing={true}
+                        volume={0.3}
                         light={false}
                         url={media.src} />
                     </div>
