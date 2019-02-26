@@ -66,40 +66,46 @@ class ModalTitle extends Component {
         const pageNumber = this.state.currentMedia;
         const pageCount = mediaTable.length;
 
-        mediaTable.forEach(media => {
-            let jsx = null;
-            if (media.type === "video") {
-                jsx = 
-                <div className={"modal-media " + mediaClassName}>
-                    <img alt={"left-btn"} src={"./img/left-arrow-inactive.png"} className="left-button" onClick={this.handleOnMediaLeft}/>
-                    <img alt={"right-btn"} src={"./img/right-arrow-inactive.png"} className="right-button" onClick={this.handleOnMediaRight}/>
-                    <span className={"media-page-number"}>{pageNumber + 1}/{pageCount}</span>
+        if (mediaTable.length > 0) {
+            mediaTable.forEach(media => {
+                let jsx = null;
+                if (media.type === "video") {
+                    jsx = 
+                    <div className={"modal-media " + mediaClassName}>
+                        <img alt={"left-btn"} src={"./img/left-arrow-inactive.png"} className="left-button" onClick={this.handleOnMediaLeft}/>
+                        <img alt={"right-btn"} src={"./img/right-arrow-inactive.png"} className="right-button" onClick={this.handleOnMediaRight}/>
+                        <span className={"media-page-number"}>{pageNumber + 1}/{pageCount}</span>
 
-                    {!this.state.isVideoLoaded? 
-                            <span className="modal-media-loading">loading video</span> :
-                            <span className="modal-media-loading exit">loading video</span> }
-                    <ReactPlayer
-                    width={"100%"}
-                    height={"100%"}
-                    onProgress={this.handleOnVideoProgress}
-                    onReady={this.handleOnVideoReady}
-                    light={false}
-                    url={media.src} />
-                </div>
-            }
-            else if (media.type === "image") {
-                jsx = 
-                <div className={"modal-media " + mediaClassName}>
-                    <img alt={"left-btn"} src={"./img/left-arrow-inactive.png"} className="left-button" onClick={this.handleOnMediaLeft}/>
-                    <img alt={"right-btn"} src={"./img/right-arrow-inactive.png"} className="right-button" onClick={this.handleOnMediaRight}/>
-                    <span className={"media-page-number"}>{pageNumber + 1}/{pageCount}</span>
+                        {!this.state.isVideoLoaded? 
+                                <span className="modal-media-loading">loading video</span> :
+                                <span className="modal-media-loading exit">loading video</span> }
+                        <ReactPlayer
+                        width={"100%"}
+                        height={"100%"}
+                        onProgress={this.handleOnVideoProgress}
+                        onReady={this.handleOnVideoReady}
+                        light={false}
+                        url={media.src} />
+                    </div>
+                }
+                else if (media.type === "image") {
+                    jsx = 
+                    <div className={"modal-media " + mediaClassName}>
+                        <img alt={"left-btn"} src={"./img/left-arrow-inactive.png"} className="left-button" onClick={this.handleOnMediaLeft}/>
+                        <img alt={"right-btn"} src={"./img/right-arrow-inactive.png"} className="right-button" onClick={this.handleOnMediaRight}/>
+                        <span className={"media-page-number"}>{pageNumber + 1}/{pageCount}</span>
 
-                    <img alt="work-img" src={media.src} className={"modal-img " + mediaClassName} />
-                </div>;
-            }
+                        <img alt="work-img" src={media.src} className={"modal-img " + mediaClassName} />
+                    </div>;
+                }
 
-            this.mediaJSX.push(jsx);
-        });
+                this.mediaJSX.push(jsx);
+            });
+        }
+        else {
+            this.mediaJSX.push(
+                <div className={"modal-media " + mediaClassName}></div>);
+        }
     }
 
     render() {
@@ -127,7 +133,7 @@ class ModalTitle extends Component {
                             {(parseInt(this.props.team) > 1)? this.props.team + "-person team" : "Solo"} 
                         </span>
                     </div>
-                    <Markdown source={this.props.information} className="modal-description"/>
+                    <div className="modal-information">{this.props.information}</div>
                 </div>
                 <div>
                     <div className={"modal-description-box box-s-other-right lg"}>

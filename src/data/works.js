@@ -61,14 +61,24 @@ Other non-programming stuff:
 | Sound Effect | Audio recording & mixing for several in-game sound effects. |
 | Game Trailer Editing | Using Adobe Premiere. |
 
-Some in-game icons in Gerritory are from [Flaticon](https://www.flaticon.com/).  
-Musics used in Gerritory are composed by [Waterflame](https://www.waterflame.com/) with a non-exclusive license.
+Gerritory has won several game awards since making its debute:  
+[![trophy](./img/trophy-x13.png) 2018 Vision Get Wild - Sliver in PC game genre and several sponsor awards](https://dcaward-vgw.org.tw/About/AwardDetail/20838?year=2018&type=1052)  
+[![trophy](./img/trophy-x13.png) 2018 IndiePlay China IGA - 2nd place in Best Student Game](https://www.ciga.me/blog/2018-indieplay?categoryId=80866)  
+[![trophy](./img/trophy-x13.png) 2019 Taipei Game Show IGA - Best Design](http://tgs.tca.org.tw/indie_award_winners.php?b=2b_e)  
+
+Some in-game icons are from [Flaticon](https://www.flaticon.com/).  
+UI sound effects are bought from Unity Asset Store.  
+In-game musics are composed by [Waterflame](https://www.waterflame.com/) with a non-exclusive license.
 
 `},
 "information": {
     "type": "file",
     "src": 
-`MWB in Unity is an Unity tool made with two of my classmates as an academic project. ![img](./img/link-x13.png)`}
+    <div>
+        <a href="https://twitter.com/gerritory"><img alt="tw-icon" src="./img/twitter-x26.png" className="icon-26" /></a>
+        <a href="https://www.facebook.com/Gerritory/"><img alt="fb-icon" src="./img/facebook-x26.png" className="icon-26" /></a>
+        <a href="https://partygoosestudio.wixsite.com/gerritorythegame"><img alt="globe-icon" src="./img/globe-x26.png" className="icon-26" /></a>
+    </div>}
     },
     {
         "type": "game",
@@ -106,13 +116,15 @@ Everything by myself using modern C++ and OpenCV. This is an alt-ctrl game using
 | Optimization using Multithreading | Separate input thread with game loop thread to avoid possible frame rate drops due to camera capturing delay. |
 | 2D World Streaming | Split 2D tile worlds into chunks to improve performance. |
 
-Some art assets are
+Some art materials are free assets from the internet.
 
 `},
 "information": {
     "type": "file",
-    "src": 
-`MWB in Unity is an Unity tool made with two of my classmates as an academic project.`}
+    "src":  
+    <div>
+        <a href="https://github.com/ta-david-yu/HCI_OpenCVproj"><img alt="gh-icon" src="./img/github-x26.png" className="icon-26" /></a>
+    </div>}
     },
     {
         "type": "game",
@@ -152,7 +164,10 @@ I did most of the programming and level design, reused some systems I made for G
 "information": {
     "type": "file",
     "src": 
-`MWB in Unity is an Unity tool made with two of my classmates as an academic project.`}
+    <div>
+        <a href="https://globalgamejam.org/2018/games/hee-x-hoo"><img alt="ggj-icon" src="./img/ggj-x26.png" className="icon-26" /></a>
+    </div>
+}
     },
     {
         "type": "game",
@@ -199,11 +214,12 @@ Other non-programming stuff:
 | Character Modeling | Character models using MagicaVoxel. |
 | Character Animation | Character animations using Unity builtin animation system. |
 
+Some art assets are from Unity Asset Store.
+
 `},
 "information": {
     "type": "file",
-    "src": 
-`MWB in Unity is an Unity tool made with two of my classmates as an academic project.`}
+    "src": ``}
     },
     {
         "type": "game",
@@ -242,7 +258,9 @@ Since there is only one artist in our team and the rest of us are programmers, I
 "information": {
     "type": "file",
     "src": 
-`MWB in Unity is an Unity tool made with two of my classmates as an academic project.`}
+    <div>
+        <a href="https://globalgamejam.org/2016/games/nothing-lasts-forever"><img alt="ggj-icon" src="./img/ggj-x26.png" className="icon-26" /></a>
+    </div>}
     },
     {
         "type": "tool",
@@ -254,10 +272,6 @@ Since there is only one artist in our team and the rest of us are programmers, I
         "team": "1",
 
         "mediaTable": [
-            {
-                "type": "video",
-                "src": "https://youtu.be/wZ_4xxnEhlU"
-            }
         ],
 "description": {
     "type": "file",
@@ -288,7 +302,9 @@ Third-party libraries used in this project: [GLFW][glfw-link], [glad][glad-link]
 "information": {
     "type": "file",
     "src": 
-`MWB in Unity is an Unity tool made with two of my classmates as an academic project.`}
+    <div>
+        <a href="https://github.com/ta-david-yu/DYEngine"><img alt="gh-icon" src="./img/github-x26.png" className="icon-26" /></a>
+    </div>}
     },
     {
         "type": "tool",
@@ -331,7 +347,9 @@ Christopher D. Twigg and Doug L. James. Many-worlds browsing for control of mult
 "information": {
     "type": "file",
     "src": 
-`MWB in Unity is an Unity tool made with two of my classmates as an academic project.`}
+    <div>
+        <a href="https://github.com/alan0201tw/Unity_Many-Worlds_Browsing"><img alt="gh-icon" src="./img/github-x26.png" className="icon-26" /></a>
+    </div>}
     },
     {
         "type": "game",
@@ -370,7 +388,7 @@ I was quite new to Unity at the time so I only did UI programming and checkerboa
 "information": {
     "type": "file",
     "src": 
-`MWB in Unity is an Unity tool made with two of my classmates as an academic project.`}
+``}
     },
     {
         "type": "game",
@@ -400,11 +418,13 @@ I was quite new to Unity at the time so I only did UI programming and checkerboa
 | --------- | ------- |
 | 3D Character Controller | A simple raycast-based character controller. |
 
+Some art assets are from Unity Asset Store.
+
 `},
 "information": {
     "type": "file",
     "src": 
-`MWB in Unity is an Unity tool made with two of my classmates as an academic project.`}
+``}
     }
 ];
 

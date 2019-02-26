@@ -17,7 +17,7 @@
 
 :root {
     --lg-modal-width: 1000px;
-    --lg-modal-height: 425px;
+    --lg-modal-height: 400px;
 
     --lg-media-box-width: 440px;
 
@@ -389,6 +389,34 @@ a {
     transform: translateY(-2px);
 }
 
+.icon-13 {
+    width: 13px;
+    height: 13px;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+
+    padding: 3px;
+
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+}
+
+.icon-13:hover {
+    width: 13px;
+    height: 13px;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+
+    padding: 3px;
+
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+
+    transform: translateY(-1px);
+}
+
 .game-button {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -601,6 +629,16 @@ a {
     color: #f6d6bd;
     font-size: 14px;
     /*color: #c3a38a;*/
+}
+
+.modal-information {
+    padding-top: 5px;
+
+    font-family: "m5x7";
+    color: #f6d6bd;
+    font-size: 24px;
+
+    text-align: center;
 }
 
 table {

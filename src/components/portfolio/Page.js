@@ -106,7 +106,7 @@ class Page extends Component {
                                 information={this.state.work.information.src}
                                 />}
                         </div>
-                        <img alt="return" className="modal-close-button" onClick={this.closeModal} src="/img/return-btn.png" />
+                        <img alt="return" className="modal-close-button" onClick={this.closeModal} src="./img/return-btn.png" />
                 </Modal>
             </div>
         );
