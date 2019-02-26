@@ -175,7 +175,7 @@ Your goal is to keep your plankton alive and reach the goal.
 
 | Feature   | Description |
 | --------- | ------- |
-| Steering AI | Control autonomous character using steering behaviour such as Pursuit and Wander.  |
+| Steering Behaviour AI | Control autonomous characters using steering behaviour such as Pursuit and Wander.  |
 
 `},
 "information": {
@@ -224,15 +224,15 @@ In each playthrough, the dungeon is randomly generated. Once your character dies
 
 | Feature   | Description |
 | --------- | ------- |
-| Character Behaviour | Including a 3D raycast-based controller that can handle on-slope movement / external force physics and an airborne boss character controller. |
+| 3D Character Controller | Including a 3D raycast-based controller that can handle on-slope movement / external force physics and an airborne boss character controller. |
 | Camera Controller | A 3D camera system that can be switched between MMORPG style camera and TPS style camera. |
 
 Other non-programming stuff:
 
 | Feature   | Description |
 | --------- | ------- |
-| Character Modeling | Character models using MagicaVoxel. |
-| Character Animation | Character animations using Unity builtin animation system. |
+| Character Modeling | Build character models using MagicaVoxel. |
+| Character Animation | Create character animations using Unity built-in animation system. |
 
 Some art assets are from Unity Asset Store.
 
