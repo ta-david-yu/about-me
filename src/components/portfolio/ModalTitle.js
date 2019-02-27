@@ -151,7 +151,35 @@ class ModalTitle extends Component {
                     </div>
                 </div>
             </div> : 
-            <div></div>
+            <div>
+                <div className={"modal-media-box box-s-other-left " + size}>
+                    {this.mediaJSX[this.state.currentMedia]}
+                    <div className="modal-game-title">
+                        {this.props.title}
+                    </div>
+                    <div className="modal-job">
+                        {this.props.job}
+                    </div>
+                    <div className="center-align">
+                        <span className="modal-date">
+                            <img alt="date-icon" src="./img/clock-x13.png" className="modal-time-icon"/>
+                            {this.props.date} 
+                        </span>
+                        <span className="modal-team-size">
+                            <img alt="date-icon" src="./img/person-x13.png" className="modal-team-icon"/>
+                            {(parseInt(this.props.team) > 1)? this.props.team + "-person team" : "Solo"} 
+                        </span>
+                    </div>
+                    <div className="modal-information">{this.props.information}</div>
+                </div>
+                <div>
+                    <div className={"modal-description-box box-s-other-right " + size}>
+                        <CustomScrollbar>
+                            <Markdown source={this.props.description} className="modal-description"/>
+                        </CustomScrollbar>
+                    </div>
+                </div>
+            </div>
         );
     }
 }
@@ -164,7 +192,7 @@ ModalTitle.propTypes = {
     job: PropTypes.string.isRequired,
     mediaTable: PropTypes.array.isRequired,
     description: PropTypes.string.isRequired,
-    information: PropTypes.string.isRequired
+    information: PropTypes.object.isRequired
 };
 
 export default withWindowSize(ModalTitle);

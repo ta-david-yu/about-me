@@ -11,6 +11,8 @@ import works from "../../data/works"
 
 import '../../css/Portfolio.css';
 
+Modal.setAppElement(document.getElementById("root"));
+
 class Page extends Component {
 
     constructor(props) {

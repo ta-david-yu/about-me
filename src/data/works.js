@@ -265,7 +265,7 @@ Some art assets are from Unity Asset Store.
 `},
 "information": {
     "type": "file",
-    "src": ``}
+    "src": <div></div>}
     },
     {
         "type": "game",
@@ -344,8 +344,8 @@ Following are the features:
 | On-Slope Movement | Character controller can move on slope stably. User can also setup the max slope angle for each character controller. |
 | Air Jump | User can configure how many times a character controller can jump in mid air, or assign a function delegate to determine whether the character can do air jump or not. |
 | Wall Jump | Controller is able to perform wall jump and the wall jump force is adjustable. |
-| Climbing | User can setup a climbing area that a character controller can enter and move freely inside. The area includes three sub-zone: top, middle, bottom. In top zone, player can enter the area by pressing down input. In other zones, player can enter the area by pressing up input. |
-| Restricted Climbing Area | User can restrict the climbing area but still keep the triggerable area. Controller will be smoothly interpolated from triggered position to restricted area on enter. |
+| Climbing Area | User can setup climbing areas that a character controller can enter and move freely inside (ladder climbing behaviour). An climbing area includes three sub-zone: top, middle, bottom. When a controller overlaps with top zone, player can enter climbing state by pressing down input. While with other zones, player can enter climbing state by pressing up input. |
+| Restricted Climbing Area | User can separate the actual movable area in climbing state with the trigger area. Controller will be smoothly interpolated from triggered position to restricted area when entering climbing state. |
 | One-Way Platform | Controller is able to fall through one-way platform and move through it. |
 | Moving Platform | A platform moving motor that can transport character motor or transform. |
 | Dash | User is able to customize dash modules that can be applied to a controller. A dash module describes how a controller moves during a dash action. It can either be a dodging movement or a teleport action. |
