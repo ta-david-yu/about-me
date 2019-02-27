@@ -25,7 +25,7 @@ export default class CustomScrollbar extends Component {
     renderThumb({ style, ...props }) {
         const thumbStyle = {
             width: "10px",
-            backgroundColor: "#f6d6bd"
+            backgroundColor: "#f6d6bdb9"
         };
         return (
             <div
