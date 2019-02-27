@@ -16,20 +16,27 @@
 }
 
 :root {
+    /*  */
     --lg-modal-width: 90vw;
     --lg-modal-height: 80vh;
 
     --lg-media-box-width: 680px;
-
     --lg-media-width: 640px;
     --lg-media-height: 360px;
 
+    /*  */
+    --md-modal-width: 90vw;
+    --md-modal-height: 80vh;
 
+    --md-media-box-width: 440px;
+    --md-media-width: 400px;
+    --md-media-height: 225px;
+
+    /*  */
     --sm-modal-width: 500px;
     --sm-modal-height: 300px;
 
     --sm-media-box-width: 300;
-
     --sm-media-width: 250px;
     --sm-media-height: 140px;  
 }
@@ -493,6 +500,13 @@ a {
     height: var(--lg-modal-height);
 }
 
+.modal-media-box.md {
+    float: left;
+
+    width: var(--md-media-box-width);
+    height: var(--md-modal-height);
+}
+
 .modal-media-box.sm {
     width: var(--sm-media-box-width);
     height: var(--sm-modal-height);
@@ -513,6 +527,11 @@ a {
     height: var(--lg-media-height);
 }
 
+.modal-media.md {
+    width: var(--md-media-width);
+    height: var(--md-media-height);
+}
+
 .modal-media.sm {
     width: var(--sm-media-width);
     height: var(--sm-media-height);
@@ -530,6 +549,21 @@ a {
     padding: 2px;
 }
 
+.modal-img.lg {
+    width: var(--lg-media-width);
+    height: var(--lg-media-height);
+}
+
+.modal-img.md {
+    width: var(--md-media-width);
+    height: var(--md-media-height);
+}
+
+.modal-img.sm {
+    width: var(--sm-media-width);
+    height: var(--sm-media-height);
+}
+
 .modal-img {
     position: absolute;
     top: 50%;
@@ -543,6 +577,13 @@ a {
 
     width: calc(var(--lg-modal-width) - var(--lg-media-box-width));
     height: var(--lg-modal-height);
+}
+
+.modal-description-box.md {
+    float: right;
+
+    width: calc(var(--md-modal-width) - var(--md-media-box-width));
+    height: var(--md-modal-height);
 }
 
 .modal-description-box.sm {
@@ -739,6 +780,22 @@ tr:nth-child(odd) {
     transform: translate(-50%, -50%);
 }
 
+.md-modal-size {
+    position: absolute;
+
+    width: var(--md-modal-width);   /*deprecated: 600 */
+    height: var(--md-modal-height);
+
+    top: 50%;
+    bottom: auto;
+
+    left: 50%;
+    right: auto;
+    margin-right: -50%;
+
+    transform: translate(-50%, -50%);
+}
+
 .sm-modal-size {
     position: absolute;
 
@@ -817,6 +874,10 @@ tr:nth-child(odd) {
     width: 100%;
 }
 
+.media-comment.md {
+    width: 100%;
+}
+
 .media-comment.sm {
     width: var(--sm-media-width);
 }
@@ -827,8 +888,8 @@ tr:nth-child(odd) {
     z-index: 2;
 
     left: 100%;
-    top: 0%;
-    transform: translate(-100%, 0%);
+    top: 100%;
+    transform: translate(-100%, -100%);
 
     font-family: "Roboto";
     font-size: 12px;

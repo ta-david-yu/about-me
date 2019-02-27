@@ -47,9 +47,10 @@ const works = [
 `Gerritory is a multiplayer party game I made with three of my friends using Unity Engine. This is my first commercial project and will be released on Steam. 
 Although four of us are all programmers, another teammate and I are also in charge of the in-game art materials.
 
-The rules of Gerritory are simple:  
-**1. Get your territory**: Move your cube character and color as many tiles as possible. The player who owns the most territory wins.   
-**2. Small > Big**: Player with less territory can kill players with more territory by stepping on them.
+The rules of Gerritory are simple:
+
+1. Get your territory - Move your cube character and color as many tiles as possible. The player who owns the most territory wins.
+2. Small > Big - Player with less territory can kill players with more territory by stepping on them.
 
 Some of the notable features implemented by me:
 
@@ -158,6 +159,11 @@ Some art materials are free assets from the internet.
 
         "mediaTable": [
             {
+                "type": "video",
+                "src": "https://youtu.be/B7yiWtzCjZo",
+                "comment": "Level 1 demo video"
+            },
+            {
                 "type": "image",
                 "src": "./img/work/hee-hoo-media-00.png",
                 "comment": ""
@@ -187,6 +193,11 @@ Your goal is to keep your plankton alive and reach the goal.
 | Feature   | Description |
 | --------- | ------- |
 | Steering Behaviour AI | Control autonomous characters using steering behaviour such as Pursuit and Wander.  |
+
+Diversifiers:
+* I can see clearly now - The game has high contrast visuals.
+* Beatbox - All sounds for your game must be created using your voice or body.
+* Otamatone For Your Sins - Use an Otamatone as the lead instrument in your soundtrack.
 
 `},
 "information": {
@@ -301,6 +312,52 @@ White monsters will be damaged by black bullets while healed by white bullets, a
     "src": 
     <div>
         <a href="https://globalgamejam.org/2016/games/nothing-lasts-forever"><img alt="ggj-icon" src="./img/ggj-x26.png" className="icon-26-no-hover" /></a>
+    </div>}
+    },
+    {
+        "type": "tool",
+        "title": "2D Platformer Hunter",
+        "img": "./img/work/platformer-preview.png",
+        "gif": "./img/work/platformer-preview.gif",
+        "date": "2018.8 - present",
+        "job": "Programmer",
+        "team": "1",
+
+        "mediaTable": [
+            {
+                "type": "image",
+                "src": "./img/work/mwb-media-00.png",
+                "comment": ""
+            }
+        ],
+"description": {
+    "type": "file",
+    "src": 
+`2D Platformer Hunter is a cusomtizable 2D platformer controller using reliable raycast-based detection method for Unity Engine.
+The code is well-structured and can be easily customized.
+
+Following are the features:
+
+| Feature   | Description |
+| --------- | ------- |
+| Controllable Jump Height | Player can control the jump height of the controller by releasing the jump input in the middle of jump. |
+| On-Slope Movement | Character controller can move on slope stably. User can also setup the max slope angle for each character controller. |
+| Air Jump | User can configure how many times a character controller can jump in mid air, or assign a function delegate to determine whether the character can do air jump or not. |
+| Wall Jump | Controller is able to perform wall jump and the wall jump force is adjustable. |
+| Climbing | User can setup a climbing area that a character controller can enter and move freely inside. The area includes three sub-zone: top, middle, bottom. In top zone, player can enter the area by pressing down input. In other zones, player can enter the area by pressing up input. |
+| Restricted Climbing Area | User can restrict the climbing area but still keep the triggerable area. Controller will be smoothly interpolated from triggered position to restricted area on enter. |
+| One-Way Platform | Controller is able to fall through one-way platform and move through it. |
+| Moving Platform | A platform moving motor that can transport character motor or transform. |
+| Dash | User is able to customize dash modules that can be applied to a controller. A dash module describes how a controller moves during a dash action. It can either be a dodging movement or a teleport action. |
+
+Art materials by rvros - [Animated Pixel Adventurer](https://rvros.itch.io/animated-pixel-hero)
+
+`},
+"information": {
+    "type": "file",
+    "src": 
+    <div>
+        <a href="https://github.com/ta-david-yu/2D-Platformer-Hunter"><img alt="gh-icon" src="./img/github-x26.png" className="icon-26-no-hover" /></a>
     </div>}
     },
     {

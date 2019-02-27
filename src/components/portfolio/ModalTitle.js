@@ -62,7 +62,7 @@ class ModalTitle extends Component {
     generateMediaJSX(mediaTable) {
         this.mediaJSX = [];
         this.mediaComment = [];
-        const mediaClassName = (this.props.windowWidth < 1024)? "sm" : "lg";
+        const mediaClassName = (this.props.windowWidth < 1023)? "sm" : (this.props.windowWidth < 1280)? "md" : "lg";
 
         const pageNumber = this.state.currentMedia;
         const pageCount = mediaTable.length;
@@ -89,6 +89,8 @@ class ModalTitle extends Component {
                         volume={0.3}
                         light={false}
                         url={media.src} />
+
+                        {(typeof media.comment !== "undefined" && media.comment !== "")? <div className={"media-comment " + mediaClassName}>{media.comment}</div> : <div></div>}
                     </div>
                 }
                 else if (media.type === "image") {
@@ -100,7 +102,7 @@ class ModalTitle extends Component {
 
                         <img alt="work-img" src={media.src} className={"modal-img " + mediaClassName} />
                         
-                        {media.comment !== ""? <div className="media-comment lg">{media.comment}</div> : <div></div>}
+                        {(typeof media.comment !== "undefined" && media.comment !== "")? <div className={"media-comment " + mediaClassName}>{media.comment}</div> : <div></div>}
                     </div>;
                 }
 
@@ -116,11 +118,12 @@ class ModalTitle extends Component {
     render() {
         this.generateMediaJSX(this.props.mediaTable);
 
-        const isSmallScreen = this.props.windowWidth < 1024;
+        const isSmallScreen = this.props.windowWidth < 1023;
+        const size = (this.props.windowWidth < 1023)? "sm" : (this.props.windowWidth < 1280)? "md" : "lg";
 
         return (!isSmallScreen?
             <div>
-                <div className={"modal-media-box box-s-other-left lg"}>
+                <div className={"modal-media-box box-s-other-left " + size}>
                     {this.mediaJSX[this.state.currentMedia]}
                     <div className="modal-game-title">
                         {this.props.title}
@@ -141,7 +144,7 @@ class ModalTitle extends Component {
                     <div className="modal-information">{this.props.information}</div>
                 </div>
                 <div>
-                    <div className={"modal-description-box box-s-other-right lg"}>
+                    <div className={"modal-description-box box-s-other-right " + size}>
                         <CustomScrollbar>
                             <Markdown source={this.props.description} className="modal-description"/>
                         </CustomScrollbar>
