@@ -17,23 +17,28 @@ const works = [
             },
             {
                 "type": "image",
-                "src": "./img/work/gerritory-media-00.png"
+                "src": "./img/work/gerritory-media-00.png",
+                "comment": "One of the levels in the game with Blackout environment. The light is being turned off"
             },
             {
                 "type": "image",
-                "src": "./img/work/gerritory-media-01.png"
+                "src": "./img/work/gerritory-media-02.png",
+                "comment": "In-game level editor"
             },
             {
                 "type": "image",
-                "src": "./img/work/gerritory-media-02.png"
+                "src": "./img/work/gerritory-media-03.png",
+                "comment": "Game results"
             },
             {
                 "type": "image",
-                "src": "./img/work/gerritory-media-03.png"
+                "src": "./img/work/gerritory-media-01.png",
+                "comment": ""
             },
             {
                 "type": "image",
-                "src": "./img/work/gerritory-media-04.png"
+                "src": "./img/work/gerritory-media-04.png",
+                "comment": ""
             },
         ],
 "description": {
@@ -98,15 +103,18 @@ In-game musics are composed by [Waterflame](https://www.waterflame.com/) with a 
         "mediaTable": [
             {
                 "type": "image",
-                "src": "./img/work/es-rr-media-01.png"
+                "src": "./img/work/es-rr-media-01.png",
+                "comment": "Eagle Simulator"
             },
             {
                 "type": "image",
-                "src": "./img/work/es-rr-media-02.png"
+                "src": "./img/work/es-rr-media-02.png",
+                "comment": "Rolling Rocker"
             },
             {
                 "type": "image",
-                "src": "./img/work/es-rr-media-00.png"
+                "src": "./img/work/es-rr-media-00.png",
+                "comment": "Controller setup"
             },
         ],
 "description": {
@@ -151,15 +159,18 @@ Some art materials are free assets from the internet.
         "mediaTable": [
             {
                 "type": "image",
-                "src": "./img/work/hee-hoo-media-00.png"
+                "src": "./img/work/hee-hoo-media-00.png",
+                "comment": ""
             },
             {
                 "type": "image",
-                "src": "./img/work/hee-hoo-media-01.png"
+                "src": "./img/work/hee-hoo-media-01.png",
+                "comment": ""
             },
             {
                 "type": "image",
-                "src": "./img/work/hee-hoo-media-02.png"
+                "src": "./img/work/hee-hoo-media-02.png",
+                "comment": ""
             }
         ],
 "description": {
@@ -198,19 +209,23 @@ Your goal is to keep your plankton alive and reach the goal.
         "mediaTable": [
             {
                 "type": "image",
-                "src": "./img/work/boomeranger-media-00.png"
+                "src": "./img/work/boomeranger-media-00.png",
+                "comment": "Main menu"
             },
             {
                 "type": "image",
-                "src": "./img/work/boomeranger-media-01.png"
+                "src": "./img/work/boomeranger-media-01.png",
+                "comment": ""
             },
             {
                 "type": "image",
-                "src": "./img/work/boomeranger-media-02.png"
+                "src": "./img/work/boomeranger-media-02.png",
+                "comment": ""
             },
             {
                 "type": "image",
-                "src": "./img/work/boomeranger-media-03.png"
+                "src": "./img/work/boomeranger-media-03.png",
+                "comment": ""
             },
         ],
 "description": {
@@ -253,29 +268,32 @@ Some art assets are from Unity Asset Store.
         "mediaTable": [
             {
                 "type": "image",
-                "src": "./img/work/nothing-last-forever-media-00.png"
+                "src": "./img/work/nothing-last-forever-media-00.png",
+                "comment": "A reference to a famous sightseeing spot in Taiwan"
             },
             {
                 "type": "image",
-                "src": "./img/work/nothing-last-forever-media-01.png"
+                "src": "./img/work/nothing-last-forever-media-01.png",
+                "comment": "The altar at the end of the forest"
             },
             {
                 "type": "image",
-                "src": "./img/work/nothing-last-forever-media-02.png"
+                "src": "./img/work/nothing-last-forever-media-02.png",
+                "comment": "2D dynamic light system"
             }
         ],
 "description": {
     "type": "file",
     "src": 
 `Nothing Lasts Forever is a 2D platformer game made for Global Game Jam 2016 "RITUAL" using Unity Engine. My first game jam project.
-Since there is only one artist and four programmers in our team, I spent all my time implementing 2D lighting system.
+Since there is only one artist and four programmers in our team, I spent all my time implementing 2D light system.
 
 You play as a girl wandering in the forest. Every rule reverses under the light. Player shoot black bullets in shadow but white bullets in light. 
 White monsters will be damaged by black bullets while healed by white bullets, and vice versa. Vines are harmful in shadow but elastic in light.
 
 | Feature   | Description |
 | --------- | ------- |
-| 2D dynamic lighting system | A raycast-based 2D lighting system. A light area polygon is constructed by raycast hit points and triangulated to renderable mesh. |
+| 2D dynamic light system | A raycast-based 2D lighting system. A light area polygon is constructed by raycast hit points and triangulated to renderable mesh. |
 
 `},
 "information": {
@@ -297,11 +315,13 @@ White monsters will be damaged by black bullets while healed by white bullets, a
         "mediaTable": [
             {
                 "type": "image",
-                "src": "./img/work/mwb-media-00.png"
+                "src": "./img/work/mwb-media-00.png",
+                "comment": ""
             },
             {
                 "type": "image",
-                "src": "./img/work/mwb-media-01.png"
+                "src": "./img/work/mwb-media-01.png",
+                "comment": ""
             }
         ],
 "description": {

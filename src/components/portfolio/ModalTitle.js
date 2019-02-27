@@ -61,6 +61,7 @@ class ModalTitle extends Component {
 
     generateMediaJSX(mediaTable) {
         this.mediaJSX = [];
+        this.mediaComment = [];
         const mediaClassName = (this.props.windowWidth < 1024)? "sm" : "lg";
 
         const pageNumber = this.state.currentMedia;
@@ -98,6 +99,8 @@ class ModalTitle extends Component {
                         <span className={"media-page-number"}>{pageNumber + 1}/{pageCount}</span>
 
                         <img alt="work-img" src={media.src} className={"modal-img " + mediaClassName} />
+                        
+                        {media.comment !== ""? <div className="media-comment lg">{media.comment}</div> : <div></div>}
                     </div>;
                 }
 
