@@ -143,16 +143,14 @@ class ModalTitle extends Component {
                     </div>
                     <div className="modal-information">{this.props.information}</div>
                 </div>
-                <div>
-                    <div className={"modal-description-box box-s-other-right " + size}>
-                        <CustomScrollbar>
-                            <Markdown source={this.props.description} className="modal-description"/>
-                        </CustomScrollbar>
-                    </div>
+                <div className={"modal-description-box box-s-other-right " + size}>
+                    <CustomScrollbar>
+                        <Markdown source={this.props.description} className="modal-description"/>
+                    </CustomScrollbar>
                 </div>
             </div> : 
             <div>
-                <div className={"modal-media-box box-s-other-left " + size}>
+                <div className={"modal-media-box box-s-other " + size}>
                     {this.mediaJSX[this.state.currentMedia]}
                     <div className="modal-game-title">
                         {this.props.title}
@@ -172,12 +170,10 @@ class ModalTitle extends Component {
                     </div>
                     <div className="modal-information">{this.props.information}</div>
                 </div>
-                <div>
-                    <div className={"modal-description-box box-s-other-right " + size}>
-                        <CustomScrollbar>
-                            <Markdown source={this.props.description} className="modal-description"/>
-                        </CustomScrollbar>
-                    </div>
+                <div className={"modal-description-box box-s-other " + size}>
+                    <CustomScrollbar>
+                        <Markdown source={this.props.description} className="modal-description"/>
+                    </CustomScrollbar>
                 </div>
             </div>
         );

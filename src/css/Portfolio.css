@@ -768,7 +768,7 @@ tr:nth-child(odd) {
     position: absolute;
 
     width: var(--lg-modal-width);   /*deprecated: 600 */
-    height: var(--lg-modal-height);
+    height: calc(var(--lg-modal-height));
 
     top: 50%;
     bottom: auto;
@@ -783,8 +783,8 @@ tr:nth-child(odd) {
 .md-modal-size {
     position: absolute;
 
-    width: var(--md-modal-width);   /*deprecated: 600 */
-    height: var(--md-modal-height);
+    width: var(--md-modal-width);
+    height: calc(var(--md-modal-height));
 
     top: 50%;
     bottom: auto;
