@@ -219,6 +219,11 @@ Diversifiers:
 
         "mediaTable": [
             {
+                "type": "video",
+                "src": "https://youtu.be/wDHdpRW1-F0",
+                "comment": "Boss fight demo video"
+            },
+            {
                 "type": "image",
                 "src": "./img/work/boomeranger-media-00.png",
                 "comment": "Main menu"
@@ -261,6 +266,7 @@ Other non-programming stuff:
 | Character Animation | Create character animations using Unity built-in animation system. |
 
 Some art assets are from Unity Asset Store.
+Musics and sound effects are from the internet.
 
 `},
 "information": {
