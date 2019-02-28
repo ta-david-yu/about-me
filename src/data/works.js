@@ -194,6 +194,12 @@ Your goal is to keep your plankton alive and reach the goal.
 | --------- | ------- |
 | Steering Behaviour AI | Control autonomous characters using steering behaviour such as Pursuit and Wander.  |
 
+Other non-programming stuff:
+
+| Feature   | Description |
+| --------- | ------- |
+| Level Design | Design 4 levels during game jam. |
+
 Diversifiers:
 * I can see clearly now - The game has high contrast visuals.
 * Beatbox - All sounds for your game must be created using your voice or body.
@@ -255,7 +261,7 @@ In each playthrough, the dungeon is randomly generated. Once your character dies
 
 | Feature   | Description |
 | --------- | ------- |
-| 3D Character Controller | Including a 3D raycast-based controller that can handle on-slope movement / external force physics and an airborne boss character controller. |
+| 3D Character Controller | Including a custom 3D rigidbody controller that can handle on-slope movement / external force physics and an airborne boss character controller. |
 | Camera Controller | A 3D camera system that can be switched between MMORPG style camera and TPS style camera. |
 
 Other non-programming stuff:
@@ -310,7 +316,7 @@ White monsters will be damaged by black bullets while healed by white bullets, a
 
 | Feature   | Description |
 | --------- | ------- |
-| 2D dynamic light system | A raycast-based 2D lighting system. A light area polygon is constructed by raycast hit points and triangulated to renderable mesh. |
+| 2D Dynamic Light System | A raycast-based 2D lighting system. A light area polygon is constructed by raycast hit points and triangulated to renderable mesh. |
 
 `},
 "information": {
@@ -331,14 +337,19 @@ White monsters will be damaged by black bullets while healed by white bullets, a
 
         "mediaTable": [
             {
-                "type": "image",
-                "src": "./img/work/platformer-media-00.gif",
-                "comment": "2D waypoint editor"
+                "type": "video",
+                "src": "https://youtu.be/wnalr3_RULU",
+                "comment": ""
             },
             {
                 "type": "image",
                 "src": "./img/work/platformer-media-01.gif",
                 "comment": "Platform Controller (pink box) controlled by Player Input Driver can still carry other motor"
+            },
+            {
+                "type": "image",
+                "src": "./img/work/platformer-media-00.gif",
+                "comment": "2D waypoint editor"
             }
         ],
 "description": {
@@ -351,17 +362,15 @@ Following are the features:
 
 | Feature   | Description |
 | --------- | ------- |
-| Controllable Jump Height | Player can control the jump height of the controller by releasing the jump input in the middle of jump. |
+| Variable Jump Height | Player can control the jump height of the controller by releasing the jump input in the middle of jump. |
 | On-Slope Movement | Character controller can move on slope stably. User can also setup the max slope angle for each character controller. |
 | Air Jump | User can configure how many times a character controller can jump in mid air, or assign a function delegate to determine whether the character can do air jump or not. |
 | Wall Jump | Controller is able to perform wall jump and the wall jump force is adjustable. |
 | Climbing Area | User can setup climbing areas that a character controller can enter and move freely inside (ladder climbing behaviour). An climbing area includes three sub-zone: top, middle, bottom. When a controller overlaps with top zone, player can enter climbing state by pressing down input. While with other zones, player can enter climbing state by pressing up input. |
 | Restricted Climbing Area | User can separate the actual movable area in climbing state with the trigger area. Controller will be smoothly interpolated from triggered position to restricted area when entering climbing state. |
-| One-Way Platform | Controller is able to fall through one-way platform and move through it. Including a waypoint node editor. |
-| Moving Platform | A platform moving motor that can transport character motor or transform. |
+| One-Way Platform | Controller is able to fall through one-way platform and move through it. |
+| Moving Platform | A platform moving motor that can transport character motor or transform, including a waypoint node editor. |
 | Dash | User is able to customize dash modules that can be applied to a controller. A dash module describes how a controller moves during a dash action. It can either be a dodging movement or a teleport action. |
-
-
 
 Art materials by rvros - [Animated Pixel Adventurer](https://rvros.itch.io/animated-pixel-hero)
 

@@ -16,7 +16,8 @@ const about = (<div>
         <p>
             Currently working on <a href="https://partygoosestudio.wixsite.com/gerritorythegame">Gerritory</a>, a multiplayer party game.
             <br />
-            Following are some of my works
+            <br />
+            Following are some of my games & related tools <br />(roughly in order from my most favorite to least favorite)
         </p>
     </div>
 </div>);
