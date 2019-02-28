@@ -57,7 +57,7 @@ Some of the notable features implemented by me:
 | Feature   | Description |
 | --------- | ------- |
 | Tween Manager | A small library simliar to DOTween but simplified, allow users to play easing animation sequence easily. Make use of object pooling to improve performance. |
-| Layered Audio System | Sort audio into layers so player can adjust volume for different layers. Make use of audio request queue to avoid overlapping sound effects. |
+| Layered Audio System | Sort audio into layers so player can adjust volume for different layers. Make use of event queue to avoid duplicate sound effects in the same frame. |
 | Collectables Editor | Make use of the Unity Editor API to create a custom editor for editing in-game collectables. |
 | Asynchornous Task Queue | Users can push task to task queue which will be executed during scene loading asynchornously, e.g., loading assetbundles, procedural content generation, runtime navmesh baking. |
 | Shader Effects | Some special effects using UnityShader. |
@@ -332,8 +332,13 @@ White monsters will be damaged by black bullets while healed by white bullets, a
         "mediaTable": [
             {
                 "type": "image",
-                "src": "./img/work/mwb-media-00.png",
-                "comment": ""
+                "src": "./img/work/platformer-media-00.gif",
+                "comment": "2D waypoint editor"
+            },
+            {
+                "type": "image",
+                "src": "./img/work/platformer-media-01.gif",
+                "comment": "Platform Controller (pink box) controlled by Player Input Driver can still carry other motor"
             }
         ],
 "description": {
@@ -352,9 +357,11 @@ Following are the features:
 | Wall Jump | Controller is able to perform wall jump and the wall jump force is adjustable. |
 | Climbing Area | User can setup climbing areas that a character controller can enter and move freely inside (ladder climbing behaviour). An climbing area includes three sub-zone: top, middle, bottom. When a controller overlaps with top zone, player can enter climbing state by pressing down input. While with other zones, player can enter climbing state by pressing up input. |
 | Restricted Climbing Area | User can separate the actual movable area in climbing state with the trigger area. Controller will be smoothly interpolated from triggered position to restricted area when entering climbing state. |
-| One-Way Platform | Controller is able to fall through one-way platform and move through it. |
+| One-Way Platform | Controller is able to fall through one-way platform and move through it. Including a waypoint node editor. |
 | Moving Platform | A platform moving motor that can transport character motor or transform. |
 | Dash | User is able to customize dash modules that can be applied to a controller. A dash module describes how a controller moves during a dash action. It can either be a dodging movement or a teleport action. |
+
+
 
 Art materials by rvros - [Animated Pixel Adventurer](https://rvros.itch.io/animated-pixel-hero)
 
