@@ -4,6 +4,7 @@ import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 import Page from "./Page";
 import PageTab from "./PageTab";
+import withWindowSize from '../withWindowSize';
 
 import "../../css/Portfolio.css";
 
@@ -69,7 +70,7 @@ class Portoflio extends Component {
                     </Grid>
                 </div>
                 <div className="bot-content">
-                
+                    {this.props.windowWidth < 720 && <div className="device-warning">** Browsing website on desktop device is recommended. **</div> }
                     <CSSTransition
                     in={true}
                     appear={true}
@@ -105,4 +106,4 @@ class Portoflio extends Component {
     }
 }
 
-export default Portoflio;
+export default withWindowSize(Portoflio);
