@@ -62,7 +62,7 @@ class ModalTitle extends Component {
     generateMediaJSX(mediaTable) {
         this.mediaJSX = [];
         this.mediaComment = [];
-        const mediaClassName = (this.props.windowWidth < 1023)? "sm" : (this.props.windowWidth < 1280)? "md" : "lg";
+        const mediaClassName = (this.props.windowWidth < 720)? "sm" : (this.props.windowWidth < 1280)? "md" : "lg";
 
         const pageNumber = this.state.currentMedia;
         const pageCount = mediaTable.length;
@@ -118,8 +118,8 @@ class ModalTitle extends Component {
     render() {
         this.generateMediaJSX(this.props.mediaTable);
 
-        const isSmallScreen = this.props.windowWidth < 1023;
-        const size = (this.props.windowWidth < 1023)? "sm" : (this.props.windowWidth < 1280)? "md" : "lg";
+        const isSmallScreen = this.props.windowWidth < 720;
+        const size = (this.props.windowWidth < 720)? "sm" : (this.props.windowWidth < 1280)? "md" : "lg";
 
         return (!isSmallScreen?
             <div>
@@ -150,7 +150,7 @@ class ModalTitle extends Component {
                 </div>
             </div> : 
             <div>
-                <div className={"modal-media-box box-s-other " + size}>
+                <div className={"modal-media-box " + size}>
                     {this.mediaJSX[this.state.currentMedia]}
                     <div className="modal-game-title">
                         {this.props.title}
@@ -170,7 +170,7 @@ class ModalTitle extends Component {
                     </div>
                     <div className="modal-information">{this.props.information}</div>
                 </div>
-                <div className={"modal-description-box box-s-other " + size}>
+                <div className={"modal-description-box " + size}>
                     <CustomScrollbar>
                         <Markdown source={this.props.description} className="modal-description"/>
                     </CustomScrollbar>

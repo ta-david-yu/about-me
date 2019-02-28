@@ -92,7 +92,7 @@ class Page extends Component {
                 isOpen={this.state.isModalShown}
                 onRequestClose={this.closeModal}
                 shouldCloseOnOverlayClick={true}
-                className={((this.props.windowWidth < 1024)? "sm-modal-size" : (this.props.windowWidth < 1280)? "md-modal-size" : "lg-modal-size") + " modal"}
+                className={((this.props.windowWidth < 720)? "sm-modal-size" : (this.props.windowWidth < 1280)? "md-modal-size" : "lg-modal-size") + " modal"}
                 overlayClassName="modal-overlay"
                 closeTimeoutMS={300}>
                         <div>
