@@ -56,10 +56,10 @@ Some of the notable features implemented by me:
 
 | Feature   | Description |
 | --------- | ------- |
-| Tween Manager | A small library simliar to DOTween but simplified, allow users to play easing animation sequence easily. Make use of object pooling to improve performance. |
-| Layered Audio System | Sort audio into layers so player can adjust volume for different layers. Make use of event queue to avoid duplicate sound effects in the same frame. |
+| Tween Manager | A small library simliar to DOTween but simplified. Allow users to play easing animation sequence easily. Make use of object pooling to improve performance. |
+| Layered Audio System | Sort audio sources into layers so player can adjust volume for different layers. Make use of event queue to avoid duplicated sound effects in the same frame. |
 | Collectables Editor | Make use of the Unity Editor API to create a custom editor for editing in-game collectables. |
-| Asynchornous Task Queue | Users can push task to task queue which will be executed during scene loading asynchornously, e.g., loading assetbundles, procedural content generation, runtime navmesh baking. |
+| Asynchornous Task Queue | Users can push task to task queue which will be executed during scene loading asynchornously. Most of these tasks would take over a second to complete such as loading assetbundles, procedural content generation, runtime navmesh baking. |
 | Shader Effects | Some special effects using UnityShader. |
 
 Other notable non-programming stuff:
@@ -371,6 +371,8 @@ Following are the features:
 | One-Way Platform | Controller is able to fall through one-way platform and move through it. |
 | Moving Platform | A platform moving motor that can transport character motor or transform, including a waypoint node editor. |
 | Dash | User is able to customize dash modules that can be applied to a controller. A dash module describes how a controller moves during a dash action. It can either be a dodging movement or a teleport action. |
+
+
 
 Art materials by rvros - [Animated Pixel Adventurer](https://rvros.itch.io/animated-pixel-hero)
 
