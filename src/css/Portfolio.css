@@ -879,7 +879,7 @@ tr:nth-child(odd) {
     font-family: "Roboto";
     font-size: 12px;
 
-    background-color: #00000090;
+    background-image: linear-gradient(to right, #00000000, #00000090, #00000090, #00000000);
     color: #f6d6bd;
 
     text-align: center;
@@ -995,10 +995,11 @@ tr:nth-child(odd) {
 
     text-align: center;
     color: white;
-    background-color: #0000003d;
+    background-image: linear-gradient(to right, #00000000, #00000090, #00000090, #00000000);
+    /* background-color: #0000003d; */
 
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
     padding-bottom: 5px;
 
     transform: translate(-50%, -50%);
