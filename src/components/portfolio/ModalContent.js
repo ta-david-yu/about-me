@@ -80,8 +80,8 @@ class ModalContent extends Component {
                         <span className={"media-page-number"}>{pageNumber + 1}/{pageCount}</span>
 
                         {!this.state.isMediaLoaded? 
-                                <span className="modal-media-loading">loading video</span> :
-                                <span className="modal-media-loading exit">loading video</span> }
+                                <span className={"modal-media-loading " + mediaClassName}>loading video</span> :
+                                <span className={"modal-media-loading exit " + mediaClassName}>loading video</span> }
                         <ReactPlayer
                         width={"100%"}
                         height={"100%"}

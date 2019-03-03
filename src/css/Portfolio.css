@@ -993,17 +993,32 @@ tr:nth-child(odd) {
     font-weight: normal;
     font-style: normal;
 
+    display: inline-flex;
     text-align: center;
+    align-items: center;
+    justify-content: center;
+    
     color: white;
-    background-image: linear-gradient(to right, #00000000, #00000090, #00000090, #00000000);
+    background-image: linear-gradient(to right, #000000, #000000b2, #000000b2, #000000);
     /* background-color: #0000003d; */
-
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-bottom: 5px;
 
     transform: translate(-50%, -50%);
     opacity: 1;
+}
+
+.modal-media-loading.lg {
+    width: var(--lg-media-width);
+    height: var(--lg-media-height);
+}
+
+.modal-media-loading.md {
+    width: var(--md-media-width);
+    height: var(--md-media-height);
+}
+
+.modal-media-loading.sm {
+    width: var(--sm-media-width);
+    height: var(--sm-media-height);
 }
 
 .modal-media-loading.exit {
