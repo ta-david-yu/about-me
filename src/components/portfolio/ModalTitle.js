@@ -101,11 +101,12 @@ class ModalTitle extends Component {
                         <img alt={"right-btn"} src={"./img/right-arrow-inactive.png"} className="right-button" onClick={this.handleOnMediaRight}/>
                         <span className={"media-page-number"}>{pageNumber + 1}/{pageCount}</span>
 
+                        <img alt="work-img" src={media.src} onLoad={this.handleOnMediaReady} className={"modal-img " + mediaClassName} />
+                        
                         {!this.state.isMediaLoaded? 
                                 <span className="modal-media-loading">loading image</span> :
                                 <span className="modal-media-loading exit">loading image</span> }
-                        <img alt="work-img" src={media.src} onLoad={this.handleOnVideoReady} className={"modal-img " + mediaClassName} />
-                        
+
                         {(typeof media.comment !== "undefined" && media.comment !== "")? <div className={"media-comment " + mediaClassName}>{media.comment}</div> : <div></div>}
                     </div>;
                 }
