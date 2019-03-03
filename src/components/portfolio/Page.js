@@ -5,7 +5,7 @@ import { Grid } from "@material-ui/core";
 import withWindowSize from '../withWindowSize';
 
 import WorkPanel from "./WorkPanel";
-import ModalTitle from "./ModalTitle";
+import ModalContent from "./ModalContent";
 
 import works from "../../data/works"
 
@@ -97,7 +97,7 @@ class Page extends Component {
                 closeTimeoutMS={300}>
                         <div>
                             {this.state.work && 
-                                <ModalTitle 
+                                <ModalContent 
                                 title={this.state.work.title}
                                 type={this.state.work.type}
                                 date={this.state.work.date}

@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ReactPlayer from 'react-player';
 import Markdown from 'react-markdown';
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 import withWindowSize from '../withWindowSize';
 import CustomScrollbar from './CustomScrollbar';
 
 import '../../css/Portfolio.css';
 
-class ModalTitle extends Component {
+class ModalContent extends Component {
     constructor(props) {
         super(props);
 
@@ -68,11 +69,12 @@ class ModalTitle extends Component {
         const pageCount = mediaTable.length;
 
         if (mediaTable.length > 0) {
+            let index = 0;
             mediaTable.forEach(media => {
                 let jsx = null;
                 if (media.type === "video") {
                     jsx = 
-                    <div className={"modal-media " + mediaClassName}>
+                    <div id={index} className={"modal-media " + mediaClassName}>
                         <img alt={"left-btn"} src={"./img/left-arrow-inactive.png"} className="left-button" onClick={this.handleOnMediaLeft}/>
                         <img alt={"right-btn"} src={"./img/right-arrow-inactive.png"} className="right-button" onClick={this.handleOnMediaRight}/>
                         <span className={"media-page-number"}>{pageNumber + 1}/{pageCount}</span>
@@ -104,14 +106,15 @@ class ModalTitle extends Component {
                         <img alt="work-img" src={media.src} onLoad={this.handleOnMediaReady} className={"modal-img " + mediaClassName} />
                         
                         {!this.state.isMediaLoaded? 
-                                <span className="modal-media-loading">loading image</span> :
-                                <span className="modal-media-loading exit">loading image</span> }
+                                <span className={"modal-media-loading " + mediaClassName}>loading image</span> :
+                                <span className={"modal-media-loading exit " + mediaClassName}>loading image</span> }
 
                         {(typeof media.comment !== "undefined" && media.comment !== "")? <div className={"media-comment " + mediaClassName}>{media.comment}</div> : <div></div>}
                     </div>;
                 }
 
                 this.mediaJSX.push(jsx);
+                index += 1;
             });
         }
         else {
@@ -185,7 +188,7 @@ class ModalTitle extends Component {
     }
 }
 
-ModalTitle.propTypes = {
+ModalContent.propTypes = {
     type: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     date: PropTypes.string.isRequired,
@@ -196,4 +199,4 @@ ModalTitle.propTypes = {
     information: PropTypes.object.isRequired
 };
 
-export default withWindowSize(ModalTitle);
+export default withWindowSize(ModalContent);

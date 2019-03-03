@@ -983,7 +983,10 @@ tr:nth-child(odd) {
     top: 50%;
     left: 50%;
 
-    transform: translate(-50%, -50%);
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 
     font-family: "m5x7";
     font-size: 32px;
@@ -992,14 +995,19 @@ tr:nth-child(odd) {
 
     text-align: center;
     color: white;
-    /*background-color: #08141e;*/
+    background-color: #0000003d;
+
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+
+    transform: translate(-50%, -50%);
     opacity: 1;
 }
 
 .modal-media-loading.exit {
-    transform: translate(-50%, -100%);
     opacity: 0;
-    transition: transform 500ms ease-in, opacity 300ms linear;
+    transition: opacity 230ms linear;
 }
 
 /* page-tab transition */
