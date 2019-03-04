@@ -145,7 +145,7 @@ The angle of the wand controller determines the moving direction of the eagle. P
 | 2D World Streaming | Split 2D tile worlds into chunks to improve performance. |
 
 Some art materials are free assets from the internet.  
-Music in the video by [Monplaisir](http://loyaltyfreakmusic.com/about), Poupi Great Adventures : The Arcade Game
+Music in the video is composed by [Monplaisir](http://loyaltyfreakmusic.com/about), Poupi Great Adventures : The Arcade Game
 
 `},
 "information": {
@@ -356,12 +356,17 @@ White monsters will be damaged by black bullets while healed by white bullets, a
             {
                 "type": "image",
                 "src": "./img/work/platformer-media-01.gif",
-                "comment": "Platform Controller (pink box) controlled by Player Input Driver can still carry other motor"
+                "comment": "Moving Platform Controller (pink box) controlled by Player Input Driver can still carry other motor"
             },
             {
                 "type": "image",
                 "src": "./img/work/platformer-media-00.gif",
                 "comment": "2D waypoint editor"
+            },
+            {
+                "type": "image",
+                "src": "./img/work/platformer-media-02.gif",
+                "comment": "The same Character Controller with different animation"
             }
         ],
 "description": {
@@ -370,6 +375,15 @@ White monsters will be damaged by black bullets while healed by white bullets, a
 `2D Platformer Hunter is a cusomtizable 2D platformer controller using reliable raycast-based detection method for Unity Engine.
 The code is well-structured and can be easily customized.
 
+The code structure is based on a model that I call Input-Controller-Motor modal. Each controller consists of three modules: Input, Controller and Motor.
+Each module can be replaced with user-customized module to achieve various gameplay mechanics.
+* **Input** represents the brain of a controller. The brain can be player's input or an AI. Waypoint navigation for moving platform is also a type of Input module.
+* **Controller** represents the body of a controller. The body decides what a character can do, such as, double jumpping, dasing.
+* **Motor** represents the physics law of a controller. For example, a character motor collides with obstacles; a platform motor can carry other motors or transforms.
+
+Any other behaviours that do not belong to these three modules should instead be implemented in a different components and listen to events sent by three main modules.
+For instance, a sprite animation controller that changes sprite when a character jumps should subscribe to OnJump event of the CharacterController.
+ 
 Following are the features:
 
 | Feature   | Description |
@@ -384,8 +398,8 @@ Following are the features:
 | Moving Platform | A platform moving motor that can transport character motor or transform, including a waypoint node editor. |
 | Dash | User is able to customize dash modules that can be applied to a controller. A dash module describes how a controller moves during a dash action. It can either be a dodging movement or a teleport action. |
 
-Art materials by rvros - [Animated Pixel Adventurer](https://rvros.itch.io/animated-pixel-hero)  
-Music in the video by [Monplaisir](http://loyaltyfreakmusic.com/about), Tale on the Late - The road we use to travel when we were kids
+Example art materials is made by rvros - [Animated Pixel Adventurer](https://rvros.itch.io/animated-pixel-hero)  
+Music in the video composed by [Monplaisir](http://loyaltyfreakmusic.com/about), Tale on the Late - The road we use to travel when we were kids
 
 `},
 "information": {
