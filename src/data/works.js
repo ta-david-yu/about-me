@@ -126,14 +126,14 @@ In-game musics are composed by [Waterflame](https://www.waterflame.com/) with a 
 "description": {
     "type": "file",
     "src": 
-`Rolling Rocker & Eagle Simulator is an acedmic project for my human-computer interaction class in college. It includes two arcade games.
-Everything by myself using modern C++ and OpenCV. This is an alt-ctrl game using a custom wand controller and a RGB camera.
-The wand controller can actaully be anything that has two colors. Each color acts as one end of the wand.
+`Rolling Rocker & Eagle Simulator is a personal academic project for my human-computer interaction class in college. It includes two arcade games.
+Everything was made by myself using modern C++ and OpenCV. This is an alt-ctrl game using a custom wand controller and a RGB camera.
+The wand controller can actually be anything that has two colors. Each color acts as one end of the wand.
 
-**Rolling Rocker** is an endless running game which you control a ball character on a stick by rotating the wand controller. 
+**Rolling Rocker** is an endless running game where you control a ball character on a stick by rotating the wand controller. 
 Player has to balance and keep the ball from dropping into holes. The angle of the wand controller determines the angle of the stick.
 
-**Eagle Simulator** is a running game which you control a eagle to gather coins and avoid obstacles. The sooner you finish the level, the more extra points you get. 
+**Eagle Simulator** is a running game where you control a eagle to gather coins and avoid obstacles. The sooner you finish the level, the more extra points you get. 
 The angle of the wand controller determines the moving direction of the eagle. Player can swing the wand controller to accelerate the eagle.
 
 | Feature   | Description |
@@ -143,7 +143,7 @@ The angle of the wand controller determines the moving direction of the eagle. P
 | Optimization using Multithreading | Separate input thread with main game loop thread to avoid possible frame rate drops due to camera capturing delay. |
 | 2D World Streaming | Split 2D tile worlds into chunks to improve performance. |
 
-Some art materials are free assets from the internet.  
+Some art materials are assets from RPG maker forums.  
 Music in the video is composed by [Monplaisir](http://loyaltyfreakmusic.com/about), Poupi Great Adventures : The Arcade Game
 
 `},
@@ -264,7 +264,7 @@ Diversifiers:
 `Boomeranger is a 3D action roguelike game made for 3D game programming class in college with two of my classmates, which are both programmers, using Unity Engine. 
 My first attempt to implement a proper 3d character controller.
 
-You play as a bounty hunter who uses a boomerange as weapon, hunting powerful monsters in a procedurally generated dungeon.
+You play as a bounty hunter who uses a boomerang as weapon, hunting powerful monsters in a procedurally generated dungeon.
 In each playthrough, the dungeon is randomly generated. Once your character dies, you will have to start all over again in a new dungeon.
 
 | Feature   | Description |
@@ -279,8 +279,9 @@ Other non-programming stuff:
 | Character Modeling | Build character models using MagicaVoxel. |
 | Character Animation | Create character animations using Unity built-in animation system. |
 
-Some art assets are from Unity Asset Store.
-Musics and sound effects are from the internet.
+Dungeon floor texture is from [Stone Floor Texture](https://assetstore.unity.com/packages/2d/textures-materials/stone/stone-floor-texture-20336)  
+Some dungeon props are from [PolyWorks: Free Pack (Sample)](https://assetstore.unity.com/packages/3d/environments/polyworks-free-pack-sample-58821) and [Voxel Dungeon Environment Set 1](https://assetstore.unity.com/packages/3d/environments/dungeons/voxel-dungeon-environment-set-1-57394)  
+Musics and some sound effects are from the internet and [魔王魂](https://maoudamashii.jokersounds.com/)  
 
 `},
 "information": {
@@ -463,6 +464,37 @@ Christopher D. Twigg and Doug L. James. Many-worlds browsing for control of mult
     "src": 
     <div>
         <a href="https://github.com/alan0201tw/Unity_Many-Worlds_Browsing"><img alt="gh-icon" src="./img/github-x26.png" className="icon-26-no-hover" /></a>
+    </div>}
+    },
+
+    {
+        "appearance": "tiny",
+        "type": "tool",
+        "title": "About This Website",
+        "img": "./img/work/about-me-preview.png",
+        "gif": "",
+        "date": "2019.1 - 2019.3",
+        "job": "Designer, Programmer",
+        "team": "1",
+
+        "mediaTable": [
+            {
+                "type": "image",
+                "src": "./img/work/mwb-media-00.png",
+                "comment": ""
+            }
+        ],
+"description": {
+    "type": "file",
+    "src": 
+`
+
+`},
+"information": {
+    "type": "file",
+    "src": 
+    <div>
+        <a href="https://github.com/ta-david-yu/about-me"><img alt="gh-icon" src="./img/github-x26.png" className="icon-26-no-hover" /></a>
     </div>}
     }
 ];

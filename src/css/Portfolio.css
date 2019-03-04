@@ -115,7 +115,8 @@ a {
     font-weight: normal;
     font-style: normal;
     
-    color: #f6d6bd;
+    /* color: #f6d6bd; */
+    color: #c3a38a;
 }
 
 .about-text {
@@ -124,7 +125,16 @@ a {
     font-weight: normal;
     font-style: normal;
     
-    color: #c3a38a;
+    color: #f6d6bd;
+}
+
+.following-text {
+    font-family: 'm5x7';
+    font-size: 24px;
+    font-weight: normal;
+    font-style: normal;
+    
+    color: #f6d6bd;
 }
 
 .center-align {
