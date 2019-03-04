@@ -45,7 +45,7 @@ const works = [
     "type": "file",
     "src": 
 `Gerritory is a multiplayer party game I made with three of my friends using Unity Engine. This is my first commercial project and will be released on Steam. 
-Although four of us are all programmers, another teammate and I are also in charge of the in-game art materials.
+Although four of us are all programmers, another teammate and I are also in charge of the art materials in game.
 
 The rules of Gerritory are simple:
 
@@ -68,7 +68,6 @@ Other notable non-programming stuff:
 | --------- | ------- |
 | Core Mechanics | Design the core game mechanics. |
 | Level Design | Design some of the built-in levels in game. |
-| Game Trailer Editing | Edit the game teaser using Adobe Premiere. |
 | Visual Feedback | Add subtle motions in game to make it feel juicy. |
 | 3D Modeling | Model some of the cubic models with blender. |
 | Sound Design | Record & mix several in-game sound effects. |
@@ -192,8 +191,8 @@ Music in the video is composed by [Monplaisir](http://loyaltyfreakmusic.com/abou
     "src": 
 `Hee X Hoo is a 2D adventure game made for Global Game Jam 2018 "TRANSMISSION" using Unity Engine.
 This is an alt-ctrl game using BOSS-ME-80, but it is also playable with mouse & keyboard.
-I did most of the programming and level design, reused some systems I made for Gerritory, e.g., Audio System and Tween Manager.
-There are two artists, two sound designers in our team.
+I did most of the programming and level design, reused systems I made for Gerritory, e.g., Audio System and Tween Manager.
+Besides myself, there are two artists and two sound designers in our team.
 
 In Hee X Hoo, you play as a plankton that can only move by inhaling and exhaling. Throughout the journey, you will encounter several hostiles and obstacles. 
 Your goal is to keep your plankton alive and reach the goal.
