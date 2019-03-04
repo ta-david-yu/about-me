@@ -374,7 +374,7 @@ White monsters will be damaged by black bullets while healed by white bullets, a
 `2D Platformer Hunter is a cusomtizable 2D platformer controller using reliable raycast-based detection method for Unity Engine.
 The code is well-structured and can be easily customized.
 
-The code structure is based on a model that I call Input-Controller-Motor modal. Each controller consists of three modules: Input, Controller and Motor.
+The code structure is based on a model that I call Input-Controller-Motor model. Each controller consists of three modules: Input, Controller and Motor.
 Each module can be replaced with user-customized module to achieve various gameplay mechanics.
 * **Input** represents the brain of a controller. The brain can be player's input or an AI. Waypoint navigation for moving platform is also a type of Input module.
 * **Controller** represents the body of a controller. The body decides what a character can do, such as, double jumpping, dasing.
