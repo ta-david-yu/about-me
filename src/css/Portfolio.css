@@ -997,7 +997,7 @@ tr:nth-child(odd) {
     text-align: center;
     align-items: center;
     justify-content: center;
-    
+
     color: white;
     background-image: linear-gradient(to right, #000000, #000000b2, #000000b2, #000000);
     /* background-color: #0000003d; */
@@ -1022,8 +1022,9 @@ tr:nth-child(odd) {
 }
 
 .modal-media-loading.exit {
+    pointer-events: none;
     opacity: 0;
-    transition: opacity 230ms linear;
+    transition: opacity 350ms linear;
 }
 
 /* page-tab transition */

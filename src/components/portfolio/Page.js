@@ -49,7 +49,9 @@ class Page extends Component {
 
         works.forEach((work) => {
             if (work.type === pageName) {
-                worksTable.push(work);
+                if (typeof work.ignore === "undefined" || work.ignore === false) {
+                    worksTable.push(work);
+                }
             }
         });
         

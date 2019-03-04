@@ -59,7 +59,7 @@ Some of the notable features implemented by me:
 | Tween Manager | A small library simliar to DOTween but simplified. Allow users to play easing animation sequence easily. Make use of object pooling to improve performance. |
 | Layered Audio System | Sort audio sources into layers so player can adjust volume for different layers. Make use of event queue to avoid duplicated sound effects in the same frame. |
 | Collectables Editor | Make use of the Unity Editor API to create a custom editor for editing in-game collectables. |
-| Asynchornous Task Queue | Users can push task to task queue which will be executed during scene loading asynchornously. Most of these tasks would take over a second to complete such as loading assetbundles, procedural content generation, runtime navmesh baking. |
+| Asynchornous Task Queue | Users can push task to task queue which will be executed during scene loading asynchornously. Most of these tasks would take over a second to complete such as loading assetbundles, procedural content generation, internet connection. |
 | Shader Effects | Some special effects using UnityShader. |
 
 Other notable non-programming stuff:
@@ -67,7 +67,8 @@ Other notable non-programming stuff:
 | Feature   | Description |
 | --------- | ------- |
 | Core Mechanics | Design the core game mechanics. |
-| Visual Design | Design the overall visual style of the game including in-game model design & UI design. |
+| Level Design | Design some of the built-in levels in game. |
+| Game Trailer Editing | Edit the game teaser using Adobe Premiere. |
 | Visual Feedback | Add subtle motions in game to make it feel juicy. |
 | 3D Modeling | Model some of the cubic models with blender. |
 | Sound Design | Record & mix several in-game sound effects. |
@@ -92,9 +93,10 @@ In-game musics are composed by [Waterflame](https://www.waterflame.com/) with a 
         <a href="https://partygoosestudio.wixsite.com/gerritorythegame"><img alt="globe-icon" src="./img/globe-x26.png" className="icon-26-no-hover" /></a>
     </div>}
     },
+
     {
         "type": "game",
-        "title": "Eagle Simulator & Rolling Rocker",
+        "title": "Rolling Rocker & Eagle Simulator",
         "img": "./img/work/es-rr-preview.png",
         "gif": "./img/work/es-rr-preview.gif",
         "date": "2017.3 - 2017.4",
@@ -102,6 +104,10 @@ In-game musics are composed by [Waterflame](https://www.waterflame.com/) with a 
         "team": "1",
 
         "mediaTable": [
+            {
+                "type": "video",
+                "src": "https://youtu.be/qq86Y2gozus"
+            },
             {
                 "type": "image",
                 "src": "./img/work/es-rr-media-01.png",
@@ -121,15 +127,15 @@ In-game musics are composed by [Waterflame](https://www.waterflame.com/) with a 
 "description": {
     "type": "file",
     "src": 
-`Eagle Simulator & Rolling Rocker is an acedmic project for my human-computer interaction class in college. It includes two arcade games.
+`Rolling Rocker & Eagle Simulator is an acedmic project for my human-computer interaction class in college. It includes two arcade games.
 Everything by myself using modern C++ and OpenCV. This is an alt-ctrl game using a custom wand controller and a RGB camera.
 The wand controller can actaully be anything that has two colors. Each color acts as one end of the wand.
 
-**Eagle Simulator** is a running game which you control a eagle to gather coins and avoid obstacles. The sooner you finish the level, the more extra points you get. 
-The angle of the wand controller determines the moving direction of the eagle. Player can swing the wand controller to accelerate the eagle.
-
 **Rolling Rocker** is an endless running game which you control a ball character on a stick by rotating the wand controller. 
 Player has to balance and keep the ball from dropping into holes. The angle of the wand controller determines the angle of the stick.
+
+**Eagle Simulator** is a running game which you control a eagle to gather coins and avoid obstacles. The sooner you finish the level, the more extra points you get. 
+The angle of the wand controller determines the moving direction of the eagle. Player can swing the wand controller to accelerate the eagle.
 
 | Feature   | Description |
 | --------- | ------- |
@@ -138,7 +144,8 @@ Player has to balance and keep the ball from dropping into holes. The angle of t
 | Optimization using Multithreading | Separate input thread with main game loop thread to avoid possible frame rate drops due to camera capturing delay. |
 | 2D World Streaming | Split 2D tile worlds into chunks to improve performance. |
 
-Some art materials are free assets from the internet.
+Some art materials are free assets from the internet.  
+Music in the video by [Monplaisir](http://loyaltyfreakmusic.com/about), Poupi Great Adventures : The Arcade Game
 
 `},
 "information": {
@@ -148,6 +155,7 @@ Some art materials are free assets from the internet.
         <a href="https://github.com/ta-david-yu/HCI_OpenCVproj"><img alt="gh-icon" src="./img/github-x26.png" className="icon-26-no-hover" /></a>
     </div>}
     },
+
     {
         "type": "game",
         "title": "Hee X Hoo",
@@ -214,6 +222,7 @@ Diversifiers:
     </div>
 }
     },
+
     {
         "type": "game",
         "title": "Boomeranger",
@@ -279,7 +288,9 @@ Musics and sound effects are from the internet.
     "type": "file",
     "src": <div></div>}
     },
+
     {
+        "ignore": true,
         "type": "game",
         "title": "Nothing Lasts Forever",
         "img": "./img/work/nothing-last-forever-preview.png",
@@ -326,6 +337,7 @@ White monsters will be damaged by black bullets while healed by white bullets, a
         <a href="https://globalgamejam.org/2016/games/nothing-lasts-forever"><img alt="ggj-icon" src="./img/ggj-x26.png" className="icon-26-no-hover" /></a>
     </div>}
     },
+
     {
         "type": "tool",
         "title": "2D Platformer Hunter",
@@ -372,9 +384,8 @@ Following are the features:
 | Moving Platform | A platform moving motor that can transport character motor or transform, including a waypoint node editor. |
 | Dash | User is able to customize dash modules that can be applied to a controller. A dash module describes how a controller moves during a dash action. It can either be a dodging movement or a teleport action. |
 
-
-
-Art materials by rvros - [Animated Pixel Adventurer](https://rvros.itch.io/animated-pixel-hero)
+Art materials by rvros - [Animated Pixel Adventurer](https://rvros.itch.io/animated-pixel-hero)  
+Music in the video by [Monplaisir](http://loyaltyfreakmusic.com/about), Tale on the Late - The road we use to travel when we were kids
 
 `},
 "information": {
@@ -384,7 +395,9 @@ Art materials by rvros - [Animated Pixel Adventurer](https://rvros.itch.io/anima
         <a href="https://github.com/ta-david-yu/2D-Platformer-Hunter"><img alt="gh-icon" src="./img/github-x26.png" className="icon-26-no-hover" /></a>
     </div>}
     },
+
     {
+        "ignore": true,
         "type": "tool",
         "title": "MWB in Unity",
         "img": "./img/work/mwb-preview.png",
