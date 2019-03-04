@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ReactPlayer from 'react-player';
 import Markdown from 'react-markdown';
-import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 import withWindowSize from '../withWindowSize';
 import CustomScrollbar from './CustomScrollbar';
