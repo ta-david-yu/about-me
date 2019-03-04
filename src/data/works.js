@@ -45,12 +45,12 @@ const works = [
     "type": "file",
     "src": 
 `Gerritory is a multiplayer party game I made with three of my friends using Unity Engine. This is my first commercial project and will be released on Steam. 
-Although four of us are all programmers, another teammate and I are also in charge of the art materials in game.
+Although four of us are all programmers, another teammate and I are also in charge of the art materials in the game.
 
 The rules of Gerritory are simple:
 
 1. Get your territory - Move your cube character and color as many tiles as possible. The player who owns the most territory wins.
-2. Small > Big - Player with less territory can kill players with more territory by stepping on them.
+2. Small > Big - Players with less territory can kill players with more territory by stepping on them.
 
 Some of the notable features implemented by me:
 
@@ -127,14 +127,14 @@ In-game musics are composed by [Waterflame](https://www.waterflame.com/) with a 
     "type": "file",
     "src": 
 `Rolling Rocker & Eagle Simulator is a personal academic project for my human-computer interaction class in college. It includes two arcade games.
-Everything was made by myself using modern C++ and OpenCV. This is an alt-ctrl game using a custom wand controller and a RGB camera.
+Everything was made by myself using modern C++ and OpenCV. This is an alt-ctrl game using a custom wand controller and an RGB camera.
 The wand controller can actually be anything that has two colors. Each color acts as one end of the wand.
 
 **Rolling Rocker** is an endless running game where you control a ball character on a stick by rotating the wand controller. 
 Player has to balance and keep the ball from dropping into holes. The angle of the wand controller determines the angle of the stick.
 
-**Eagle Simulator** is a running game where you control a eagle to gather coins and avoid obstacles. The sooner you finish the level, the more extra points you get. 
-The angle of the wand controller determines the moving direction of the eagle. Player can swing the wand controller to accelerate the eagle.
+**Eagle Simulator** is a running game where you control an eagle to gather coins and avoid obstacles. The sooner you finish the level, the more extra points you get. 
+The angle of the wand controller determines the moving direction of the eagle. Players can swing the wand controller to accelerate the eagle.
 
 | Feature   | Description |
 | --------- | ------- |
@@ -264,7 +264,7 @@ Diversifiers:
 `Boomeranger is a 3D action roguelike game made for 3D game programming class in college with two of my classmates, which are both programmers, using Unity Engine. 
 My first attempt to implement a proper 3d character controller.
 
-You play as a bounty hunter who uses a boomerang as weapon, hunting powerful monsters in a procedurally generated dungeon.
+You play as a bounty hunter who uses a boomerang as the weapon, hunting powerful monsters in a procedurally generated dungeon.
 In each playthrough, the dungeon is randomly generated. Once your character dies, you will have to start all over again in a new dungeon.
 
 | Feature   | Description |
@@ -372,7 +372,7 @@ White monsters will be damaged by black bullets while healed by white bullets, a
 "description": {
     "type": "file",
     "src": 
-`2D Platformer Hunter is a cusomtizable 2D platformer controller using reliable raycast-based detection method for Unity Engine.
+`2D Platformer Hunter is a customizable 2D platformer controller using reliable raycast-based detection method for Unity Engine.
 The code is well-structured and can be easily customized.
 
 The code structure is based on a model that I call Input-Controller-Motor model. Each controller consists of three modules: Input, Controller and Motor.
@@ -381,7 +381,7 @@ Each module can be replaced with user-customized module to achieve various gamep
 * **Controller** represents the body of a controller. The body decides what a character can do, such as, double jumpping, dasing.
 * **Motor** represents the physics law of a controller. For example, a character motor collides with obstacles; a platform motor can carry other motors or transforms.
 
-Any other behaviours that do not belong to these three modules should instead be implemented in a different components and listen to events sent by three main modules.
+Any other behaviours that do not belong to these three modules should instead be implemented in different components and listen to events sent by three main modules.
 For instance, a sprite animation controller that changes sprite when a character jumps should subscribe to OnJump event of the CharacterController.
  
 Following are the features:
