@@ -20,7 +20,7 @@ class Page extends Component {
 
         this.state = {
             isModalShown: false,
-            work: null
+            currentModalWork: works[0]
         }
 
         this.openModal = this.openModal.bind(this);
@@ -32,7 +32,7 @@ class Page extends Component {
     openModal(work) {
         const stateObj = this.state;
         stateObj.isModalShown = true;
-        stateObj.work = work;
+        stateObj.currentModalWork = work;
 
         this.setState(stateObj);
     }
@@ -67,6 +67,8 @@ class Page extends Component {
             return <WorkPanel key={work.title} information={work} span={itemSpan} onClick={this.openModal}/>
         });
 
+        const isSmall = (typeof this.state.currentModalWork.isSmall !== "undefined" && this.state.currentModalWork.isSmall);
+
         return (
             <div>
                 <Grid 
@@ -94,20 +96,21 @@ class Page extends Component {
                 isOpen={this.state.isModalShown}
                 onRequestClose={this.closeModal}
                 shouldCloseOnOverlayClick={true}
-                className={((this.props.windowWidth < 720)? "sm-modal-size" : (this.props.windowWidth < 1280)? "md-modal-size" : "lg-modal-size") + " modal"}
+                className={((this.props.windowWidth < 720 || isSmall)? "sm-modal-size" : (this.props.windowWidth < 1280)? "md-modal-size" : "lg-modal-size") + " modal"}
                 overlayClassName="modal-overlay"
                 closeTimeoutMS={300}>
                         <div>
-                            {this.state.work && 
+                            {this.state.currentModalWork && 
                                 <ModalContent 
-                                title={this.state.work.title}
-                                type={this.state.work.type}
-                                date={this.state.work.date}
-                                team={this.state.work.team}
-                                job={this.state.work.job}
-                                mediaTable={this.state.work.mediaTable}
-                                description={this.state.work.description.src}
-                                information={this.state.work.information.src}
+                                title={this.state.currentModalWork.title}
+                                type={this.state.currentModalWork.type}
+                                date={this.state.currentModalWork.date}
+                                team={this.state.currentModalWork.team}
+                                job={this.state.currentModalWork.job}
+                                mediaTable={this.state.currentModalWork.mediaTable}
+                                description={this.state.currentModalWork.description.src}
+                                information={this.state.currentModalWork.information.src}
+                                isSmall={isSmall}
                                 />}
                         </div>
                         <img alt="return" className="modal-close-button" onClick={this.closeModal} src="./img/return-btn.png" />

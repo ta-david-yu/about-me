@@ -62,7 +62,7 @@ class ModalContent extends Component {
     generateMediaJSX(mediaTable) {
         this.mediaJSX = [];
         this.mediaComment = [];
-        const mediaClassName = (this.props.windowWidth < 720)? "sm" : (this.props.windowWidth < 1280)? "md" : "lg";
+        const mediaClassName = (this.props.windowWidth < 720 || this.props.isSmall)? "sm" : (this.props.windowWidth < 1280)? "md" : "lg";
 
         const pageNumber = this.state.currentMedia;
         const pageCount = mediaTable.length;
@@ -126,9 +126,9 @@ class ModalContent extends Component {
         this.generateMediaJSX(this.props.mediaTable);
 
         const isSmallScreen = this.props.windowWidth < 720;
-        const size = (this.props.windowWidth < 720)? "sm" : (this.props.windowWidth < 1280)? "md" : "lg";
+        const size = (this.props.windowWidth < 720 || this.props.isSmall)? "sm" : (this.props.windowWidth < 1280)? "md" : "lg";
 
-        return (!isSmallScreen?
+        return (!(isSmallScreen || this.props.isSmall)?
             <div>
                 <div className={"modal-media-box box-s-other-left " + size}>
                     {this.mediaJSX[this.state.currentMedia]}
