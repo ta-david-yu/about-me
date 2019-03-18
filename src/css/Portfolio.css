@@ -40,7 +40,12 @@
     --sm-media-box-height: 30vh;
 
     --sm-media-width: 256px;
-    --sm-media-height: 144px;  
+    --sm-media-height: 144px; 
+    
+    /* */
+    
+    --sp-modal-width: 100vw;
+    --sp-modal-height: 80vh;
 }
 
 footer {
@@ -535,6 +540,10 @@ a {
     min-height: var(--sm-media-box-height);
 }
 
+.modal-media-box.sp {
+    width: var(--sm-media-box-width);
+}
+
 .modal-media-box {
 
     background-color: rgba(0, 0, 0, 0);
@@ -619,6 +628,17 @@ a {
     height: calc(var(--sm-modal-height) - var(--sm-media-box-height));
 
     padding-bottom: 0px;
+}
+
+.modal-description-box.sp {
+
+    text-align: center;
+
+    width: 80vw;
+    height: 30vh;
+
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .modal-description-box {
@@ -843,6 +863,23 @@ tr:nth-child(odd) {
     transform: translate(-50%, -50%);
 }
 
+.sp-modal-size {
+    background-color: #20394f00;
+    
+    position: absolute;
+
+    width: var(--sm-modal-width);    /*deprecated: 100% */
+
+    top: 53%;
+    bottom: auto;
+
+    left: 50%;
+    right: auto;
+    margin-right: -50%;
+
+    transform: translate(-50%, -50%);
+}
+
 .modal-close-button {
     font-family: "m6x11";
     font-size: 8px;
@@ -867,6 +904,33 @@ tr:nth-child(odd) {
 
 .modal-close-button:active {
     transform: translate(calc(10px), calc(-100% - 8px));
+}
+
+.sp-modal-close-button {
+    font-family: "m6x11";
+    font-size: 8px;
+    color: #f6d6bd;
+
+    width: 40px;
+    height: 40px;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+}
+
+.sp-modal-close-button:hover {
+    cursor: pointer;
+
+    transform: translate(0, -2px);
+}
+
+.sp-modal-close-button:active {
+    transform: translate(0, 0px);
 }
 
 .modal:focus {

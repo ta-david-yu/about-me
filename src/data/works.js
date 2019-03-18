@@ -476,16 +476,21 @@ Christopher D. Twigg and Doug L. James. Many-worlds browsing for control of mult
         "img": "./img/work/about-me-preview.png",
         "gif": "",
         "date": "2019.1 - 2019.3",
-        "job": "Designer, Programmer",
+        "job": "Visual Designer, Programmer",
         "team": "1",
 
         "mediaTable": [
         ],
 "description": {
     "type": "file",
-    "src": 
-`
+    "src":
+`After finishing my military service in January 2019,   
+I began to learn JavaScript / ReactJS in one month in order to build this website. 
+It is built from scratch without any page template code.  
+Most of the pixel art icons are made by myself in Aseprite.
 
+Most social media icons are made by [Davit Masia](https://kronbits.itch.io/matriax-free-assets)  
+Retro fonts are made by [Daniel Linssen](http://daniellinssen.net/)  
 `},
 "information": {
     "type": "file",

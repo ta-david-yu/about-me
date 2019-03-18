@@ -67,7 +67,11 @@ class Page extends Component {
             return <WorkPanel key={work.title} information={work} span={itemSpan} onClick={this.openModal}/>
         });
 
-        const isSmall = (typeof this.state.currentModalWork.isSmall !== "undefined" && this.state.currentModalWork.isSmall);
+        const isSpecialFormat = (typeof this.state.currentModalWork.isSmall !== "undefined" && this.state.currentModalWork.isSmall);
+        let modalClassName = (isSpecialFormat)? "sp-modal-size" :
+                               (this.props.windowWidth < 720)? "sm-modal-size" :
+                               (this.props.windowWidth < 1280)? "md-modal-size" : "lg-modal-size";
+        modalClassName += " modal";
 
         return (
             <div>
@@ -90,13 +94,12 @@ class Page extends Component {
                         </Grid>
                     </Grid>
                 </Grid>
-
                 <Modal 
                 contentLabel={"work-modal"}
                 isOpen={this.state.isModalShown}
                 onRequestClose={this.closeModal}
                 shouldCloseOnOverlayClick={true}
-                className={((this.props.windowWidth < 720 || isSmall)? "sm-modal-size" : (this.props.windowWidth < 1280)? "md-modal-size" : "lg-modal-size") + " modal"}
+                className={modalClassName}
                 overlayClassName="modal-overlay"
                 closeTimeoutMS={300}>
                         <div>
@@ -110,10 +113,10 @@ class Page extends Component {
                                 mediaTable={this.state.currentModalWork.mediaTable}
                                 description={this.state.currentModalWork.description.src}
                                 information={this.state.currentModalWork.information.src}
-                                isSmall={isSmall}
+                                SmallFormat={isSpecialFormat}
                                 />}
                         </div>
-                        <img alt="return" className="modal-close-button" onClick={this.closeModal} src="./img/return-btn.png" />
+                        <img alt="return" className={isSpecialFormat? "sp-modal-close-button" : "modal-close-button"} onClick={this.closeModal} src="./img/return-btn.png" />
                 </Modal>
             </div>
         );
