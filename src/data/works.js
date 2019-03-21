@@ -60,6 +60,7 @@ Some of the notable features implemented by me:
 | Layered Audio System | Sort audio sources into layers so player can adjust volume for different layers. Make use of event queue to avoid duplicated sound effects in the same frame. |
 | Collectables Editor | Make use of the Unity Editor API to create a custom editor for editing in-game collectables. |
 | Asynchronous Task Queue | Users can push tasks to task queue which will be executed during scene loading asynchronously. Most of these tasks would take over a second to complete such as loading assetbundles, procedural content generation, internet connection. |
+| Level Editor Undo / Redo function | Implement Undo / Redo feature in Level Editor with Command pattern. |
 | Shader Effects | Some special effects using UnityShader. |
 
 Other notable non-programming stuff:
