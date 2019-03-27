@@ -208,11 +208,6 @@ Other non-programming stuff:
 | --------- | ------- |
 | Level Design | Design 4 levels during game jam. |
 
-Diversifiers:
-* I can see clearly now - The game has high contrast visuals.
-* Beatbox - All sounds for your game must be created using your voice or body.
-* Otamatone For Your Sins - Use an Otamatone as the lead instrument in your soundtrack.
-
 `},
 "information": {
     "type": "file",
@@ -378,28 +373,14 @@ The code is well-structured and can be easily customized.
 
 The code structure is based on a model that I call Input-Controller-Motor model. Each controller consists of three modules: Input, Controller and Motor.
 Each module can be replaced with user-customized module to achieve various gameplay mechanics.
-* **Input** represents the brain of a controller. The brain can be player's input or an AI. Waypoint navigation for moving platform is also a type of Input module.
-* **Controller** represents the body of a controller. The body decides what a character can do, such as, double jumpping, dasing.
-* **Motor** represents the physics law of a controller. For example, a character motor collides with obstacles; a platform motor can carry other motors or transforms.
 
-Any other behaviours that do not belong to these three modules should instead be implemented in different components and listen to events sent by the three main modules.
-For instance, a sprite animation controller that changes sprite when a character jumps should subscribe to OnJump event of the CharacterController.
- 
-Following are the features:
-
-| Feature   | Description |
+| Module   | Description |
 | --------- | ------- |
-| Variable Jump Height | Players can control the jump height of the controller by releasing the jump input in the middle of a jump. |
-| Air Jump | Users can configure how many times a character controller can jump in mid air, or assign a function delegate to determine whether the character can do air jump or not. |
-| Wall Jump | Character controllers are able to perform wall jump and the wall jump force is adjustable. |
-| On-Slope Movement | Character controllers can move on slope stably. Users can also setup the max slope angle for each character controller. |
-| Climbing Area | Users can setup climbing areas that a character controller can enter and move freely inside (ladder/rope climbing behaviour). An climbing area includes three sub-zone: top, middle, bottom. When a controller overlaps with top zone, player can enter climbing state by pressing down input. While with other zones, player can enter climbing state by pressing up input. |
-| Restricted Climbing Area | Users can separate the actual movable area in climbing state with the trigger area. Controller will be smoothly interpolated from triggered position to restricted area when entering climbing state. |
-| One-Way Platform | Character controllers are able to fall through one-way platforms and jump on it from below. |
-| Moving Platform | A moving platform motor that can transport character motors or transforms. There is also a node editor for editing waypoints. |
-| Dash | Users are able to customize dash modules that can be applied to a controller. A dash module describes how a controller moves during a dash action. It can either be a dodging movement or a teleport action. |
-| Jump Input Buffering | The jump input will be buffered for a period of time when the character controller is still in the air. Once the controller hits the ground, the buffered jump will be executed. |
-| Coyote Time | The term is also known as grace period jumping. It allows players to register jump input in a small period of time even after moving off ledges. |
+| Input | It represents the brain of a controller. The brain can be player's input or an AI. Waypoint navigation for moving platform is also a type of Input module. |
+| Controller | It represents the body of a controller. The body decides what a character can do, such as, double jumpping, dasing. |
+| Motor | It represents the physics law of a controller. For example, a character motor collides with obstacles; a platform motor can carry other motors or transforms. |
+
+Any other behaviours that do not belong to these three modules should instead be implemented in different components and listen to events sent by the three main modules.  
 
 Example art materials is made by rvros - [Animated Pixel Adventurer](https://rvros.itch.io/animated-pixel-hero)  
 Music in the video composed by [Monplaisir](http://loyaltyfreakmusic.com/about), Tale on the Late - The road we use to travel when we were kids
