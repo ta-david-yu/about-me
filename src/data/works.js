@@ -56,6 +56,7 @@ Some of the notable features implemented by me:
 
 | Feature   | Description |
 | --------- | ------- |
+| Switch Porting | Optimize and port Gerritory to nintendo switch in Unity. |
 | Tween Manager | A small library simliar to DOTween but simplified. Allow users to play easing animation sequence easily. Make use of object pooling to improve performance. |
 | Layered Audio System | Sort audio sources into layers so player can adjust volume for different layers. Make use of event queue to avoid duplicated sound effects in the same frame. |
 | Collectables Editor | Make use of the Unity Editor API to create a custom editor for editing in-game collectables. |
