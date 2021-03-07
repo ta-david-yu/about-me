@@ -1121,23 +1121,35 @@ tr:nth-child(odd) {
 }
 
 /* page transition */
-.game-page-transition-appear {
+.generic-page-transition-enter {
     opacity: 0;
     transform: translateX(-50px);
     z-index: 1;
 }
 
-.game-page-transition-appear.game-page-transition-appear-active {
+.generic-page-transition-enter.generic-page-transition-enter-active {
     opacity: 1;
     transform: translateX(0px);
 
     -webkit-transition: 
-        opacity 300ms linear,
-        transform 600ms cubic-bezier(0.19, 1, 0.22, 1);
+        opacity 150ms linear,
+        transform 300ms cubic-bezier(0.19, 1, 0.22, 1);
     transition: 
-        opacity 300ms linear,
-        transform 600ms cubic-bezier(0.19, 1, 0.22, 1);
+        opacity 150ms linear,
+        transform 300ms cubic-bezier(0.19, 1, 0.22, 1);
 }
+
+.generic-page-transition-exit {
+    opacity: 1;
+    transform: translateX(0px);
+    z-index: 0;
+}
+
+.generic-page-transition-exit.generic-page-transition-exit-active {
+    opacity: 0;
+    transform: translateX(-50px);
+}
+
 
 .game-page-transition-enter {
     opacity: 0;

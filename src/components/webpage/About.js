@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Grid } from "@material-ui/core";
 
-import '../css/About.css';
+import '../../css/About.css';
 
 const GridOffset = (props) => { return <Grid item></Grid>; }
 

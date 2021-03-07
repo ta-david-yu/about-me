@@ -62,7 +62,7 @@ class Portoflio extends Component {
                         </Grid>
                         <Grid item>
                             <a href="https://twitter.com/TaDavidYu"><img alt="twitter" src="./img/twitter-x26.png" className="icon-26"/></a>
-                            <a href="https://www.facebook.com/david.yu.7739814"><img alt="facebook" src="./img/facebook-x26.png" className="icon-26"/></a>
+                            
                             <a href="https://github.com/ta-david-yu"><img alt="github" src="./img/github-x26.png" className="icon-26"/></a>
                             <a href="https://www.youtube.com/channel/UCnssNbnUqxsbZZoSDuN0ZoA"><img alt="youtube" src="./img/youtube-x26.png" className="icon-26"/></a>
                         </Grid>
@@ -89,11 +89,10 @@ class Portoflio extends Component {
                         key={currPage}
                         appear={true}
                         timeout={{
-                            appear: 600,
                             enter: 300,
                             exit: 0
                         }}
-                        classNames={currPage + "-page-transition"}>
+                        classNames={"generic-page-transition"}>
                             <Page currPage={currPage}/>
                         </CSSTransition>
                     </TransitionGroup>
