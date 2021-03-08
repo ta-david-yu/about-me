@@ -1,5 +1,3 @@
-import React from 'react';
-
 import Gerritory from './Gerritory';
 import RollingRocker_EagleSimulator from './RollingRocker_EagleSimulator';
 import HeeXHoo from './HeeXHoo';
@@ -147,37 +145,6 @@ const works = [
             "type": "file",
             "src": ""
         }
-    },
-
-    {
-        "isSmall": true,
-        "type": "tool",
-        "title": "About This Website",
-        "img": "./img/work/about-me-preview.png",
-        "gif": "",
-        "date": "2019.1 - 2019.3",
-        "job": "Visual Designer, Programmer",
-        "team": "1",
-
-        "mediaTable": [
-        ],
-"description": {
-    "type": "file",
-    "src":
-`After finishing my military service in January 2019,   
-I began to learn JavaScript / ReactJS in one month in order to build this website. 
-It is built from scratch without any page template code.  
-Most of the pixel art icons are made by myself in Aseprite.
-
-Most social media icons are made by [Davit Masia](https://kronbits.itch.io/matriax-free-assets)  
-Retro fonts are made by [Daniel Linssen](http://daniellinssen.net/)  
-`},
-"information": {
-    "type": "file",
-    "src": 
-    <div>
-        <a href="https://github.com/ta-david-yu/about-me"><img alt="gh-icon" src="./img/github-x26.png" className="icon-26-no-hover" /></a>
-    </div>}
     }
 ];
 

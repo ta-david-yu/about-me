@@ -62,9 +62,9 @@ class Portoflio extends Component {
                         </Grid>
                         <Grid item>
                             <a href="https://twitter.com/TaDavidYu"><img alt="twitter" src="./img/twitter-x26.png" className="icon-26"/></a>
-                            
                             <a href="https://github.com/ta-david-yu"><img alt="github" src="./img/github-x26.png" className="icon-26"/></a>
-                            <a href="https://www.youtube.com/channel/UCnssNbnUqxsbZZoSDuN0ZoA"><img alt="youtube" src="./img/youtube-x26.png" className="icon-26"/></a>
+                            <a href="https://www.linkedin.com/in/ta-david-yu/"><img alt="linkedin" src="./img/linkedin-x26.png" className="icon-26"/></a>
+                            <a href="mailto: ta.yu.gamedev@gmail.com"><img alt="email" src="./img/gmail-x26.png" className="icon-26"/></a>
                         </Grid>
                         <Grid item lg={6} md={12} sm={12} xs>
                             <div className="center-align">{about}</div>
@@ -98,9 +98,12 @@ class Portoflio extends Component {
                     </TransitionGroup>
 
                 </div>
-                <footer>website by <span/>
-                    <a className="footer-link" href="mailto: d366095@gmail.com">David Yu</a>, fonts by <span/>
-                    <a className="footer-link" href="http://daniellinssen.net/">Daniel Linssen</a>
+                <footer>website designed & created by Ta David Yu ~ <span/>
+                    <a className="footer-link" href="https://github.com/ta-david-yu/about-me"> view source</a>
+                </footer>
+                <footer>fonts made by <span/>
+                    <a className="footer-link" href="https://managore.itch.io/">Daniel Linssen</a>, social icons made by <span/>
+                    <a className="footer-link" href="https://kronbits.itch.io/matriax-free-assets">Davit Masia</a>
                 </footer>
             </div>
         );
