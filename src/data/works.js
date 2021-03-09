@@ -10,7 +10,7 @@ const works = [
         "title": "Gerritory",
         "img": "./img/work/gerritory-preview.png",
         "gif": "./img/work/gerritory-preview.gif",
-        "date": "2017.1 - present",
+        "date": "2017 - 2020",
         "job": "Designer, Programmer, Visual Design",
         "team": "4",
 

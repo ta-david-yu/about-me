@@ -17,7 +17,7 @@
 
 :root {
     /*  */
-    --lg-description-width: 50vw;
+    --lg-description-width: 680px;
     --lg-description-height: 60vh;
 
     --lg-media-box-width: 660px;
@@ -25,7 +25,7 @@
     --lg-media-height: 360px;
 
     /*  */
-    --md-description-width: 90vw;
+    --md-description-width: 460px;
     --md-description-height: 60vh;
 
     --md-media-box-width: 440px;
@@ -778,13 +778,14 @@ a {
     line-height: 1.5;
 }
 
+/* Table */
 table {
     width: 100%;
 }
 
 th {
     margin: 0;
-    background: #4e495f;
+    /*background: #4e495f;*/
     padding: 6px 13px;
 }
 
@@ -795,15 +796,17 @@ td {
 }
 
 td:first-child {
-    width: 35%;
+    width: 15%;
+    text-align: right;
+    font-weight: bold;
 }
 
 tr:nth-child(even) {
-    background: #4e495f;
+    /*background: #4e495f;*/
 }
 
 tr:nth-child(odd) {
-    background: #816271;
+    /*background: #816271;*/
 }
 
 /* React Modal */

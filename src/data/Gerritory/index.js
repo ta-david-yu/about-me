@@ -1,10 +1,20 @@
 import React from 'react';
+import Markdown from 'react-markdown';
+
+const spec = `
+| | |
+| --------- | ------- |
+| Status | Released |
+| Platforms | Windows PC, Nintendo Switch |
+| Genre | 4-player action party game |
+| Made with | Unity3D |
+| Team | Record & mix several in-game sound effects. |`;
 
 export default {
 medias: [
     {
         "type": "video",
-        "src": "https://youtu.be/wZ_4xxnEhlU"
+        "src": "https://youtu.be/IvNOn7oHE7s"
     },
     {
         "type": "image",
@@ -76,17 +86,32 @@ In-game musics are composed by [Waterflame](https://www.waterflame.com/) with a 
 `,
 
 information:
-<div>
-    <div style={{textAlign: 'center'}}>
-        <a href="https://twitter.com/gerritory"><img alt="tw-icon" src="./img/twitter-x26.png" className="icon-26" /></a>
-        <a href="https://www.facebook.com/Gerritory/"><img alt="fb-icon" src="./img/facebook-x26.png" className="icon-26" /></a>
+<div style={{textAlign: 'center'}}>
+    <div>
+        <a href="https://store.steampowered.com/app/1175720/Gerritory/"><img alt="steam-icon" src="./img/steam-x26.png" className="icon-26" /></a>
+        <a href="https://www.nintendo.com/games/detail/gerritory-switch/"><img alt="switch-icon" src="./img/switch-x26.png" className="icon-26" /></a>
         <a href="https://partygoosestudio.wixsite.com/gerritorythegame"><img alt="globe-icon" src="./img/globe-x26.png" className="icon-26" /></a>
     </div>
-    <div>Gerritory is a multiplayer party game three of my friends and I made using Unity Engine. This is my first commercial project and has been released on both Switch and Steam. 
-        Although four of us are all programmers, another teammate and I were also in charge of the art assets in the game.</div>
+    <div>Gerritory is a 4-player action party game with unique game rules and minimalistic visuals.</div>
+    <div>You and your friends move cube characters in various levels and color tiles to score points.</div>
+
     <span style={{margin: '50px'}} />
-    <div>The rules of Gerritory are simple:</div>
-    <div>1. Get your territory - Move your cube character and color as many tiles as possible. The player who owns the most territory wins.</div>
-    <div>2. Small > Big - Players with less territory can kill players with more territory by stepping on them.</div>
+    <div style={{fontWeight: 'bold'}}>There are two rules in the game</div>
+
+    <div>** Get Your Territory **</div>
+    <div>Move your cube character and color as many tiles as possible.</div>
+    <div>The player who owns the most territory wins.</div>
+
+    <div>** Small > Big **</div>
+    <div>Players with less territory can kill players with more territory by stepping on them.</div>
+
+    <div>--</div>
+    <div>Gerritory is made by three of my friends and I made using Unity Engine. </div>
+    <div>This is my first commercial project and has been released on both Steam and Switch. </div>
+    
+    <div>--</div>
+    <div style={{textAlign: 'left', fontSize: '14px'}}>
+        <Markdown children={spec}/>
+    </div>
 </div>
 }

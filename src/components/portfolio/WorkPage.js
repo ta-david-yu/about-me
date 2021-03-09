@@ -18,8 +18,6 @@ class WorkPage extends Component {
         const currWorkData = this.props.currWorkData;
         return (
             <div>
-                <div className="page-title left show">{currWorkData.title}</div>
-                
                 <ModalContent 
                     title={currWorkData.title}
                     type={currWorkData.type}
