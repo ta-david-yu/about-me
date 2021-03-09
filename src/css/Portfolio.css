@@ -779,6 +779,16 @@ a {
 }
 
 /* Table */
+
+.Collapsible {
+    text-align: center;
+}
+
+.Collapsible__trigger {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 table {
     width: 100%;
 }

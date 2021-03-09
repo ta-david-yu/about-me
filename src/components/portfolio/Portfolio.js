@@ -15,7 +15,19 @@ const about = (<div>
     <div className="subheader-text">game developer, game programmer</div>
     <div className="about-text">
         <p>
-            <span className="following-text">Following are some of my games & related tools <br />(roughly in order from my most favorite to least favorite)</span>
+            <span className="following-text">
+                Hello! I am from Taiwan. I have a bachelor's degree in Computer Science (NCTU) 
+                <br />Currently studying B.A. Digital Games in Cologne Game Lab
+            </span>
+        </p>
+        <p>
+            <span className="following-text">
+                I've been using Unity3D to make games for over 4 years, 
+                <br />and have experience in shipping games on Steam + porting games to Nintendo Switch
+            </span>
+        </p>
+        <p>
+            <span className="following-text">Following are some of my games & tools & artworks <br />(roughly in order of completeness)</span>
         </p>
     </div>
 </div>);

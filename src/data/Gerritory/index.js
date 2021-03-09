@@ -1,14 +1,16 @@
 import React from 'react';
 import Markdown from 'react-markdown';
+import Collapsible from 'react-collapsible';
 
 const spec = `
 | | |
 | --------- | ------- |
 | Status | Released |
 | Platforms | Windows PC, Nintendo Switch |
-| Genre | 4-player action party game |
+| Genre | 4-player online (steam only) & local party game |
 | Made with | Unity3D |
-| Team | Record & mix several in-game sound effects. |`;
+| Team | Ta David Yu, Cheng-Kai Chiu, Yu-Han Lu, Yun-Xuan Lin |
+| Additional | Glen Zhang, Paus Chen, Ken Wei, Waterflame |`;
 
 export default {
 medias: [
@@ -109,9 +111,15 @@ information:
     <div>Gerritory is made by three of my friends and I made using Unity Engine. </div>
     <div>This is my first commercial project and has been released on both Steam and Switch. </div>
     
-    <div>--</div>
-    <div style={{textAlign: 'left', fontSize: '14px'}}>
-        <Markdown children={spec}/>
+    <span style={{margin: '50px'}} />
+    <div style={{textAlign: 'left', fontSize: '16px'}}>
+        <Collapsible 
+        trigger="more information +" 
+        triggerWhenOpen="more information -"
+        transitionTime='100'
+        transitionCloseTime='100'>
+            <Markdown children={spec}/>
+        </Collapsible>
     </div>
 </div>
 }
