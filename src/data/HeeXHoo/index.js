@@ -47,6 +47,8 @@ Other non-programming stuff:
 
 information:
 <div>
-    <a href="https://globalgamejam.org/2018/games/hee-x-hoo"><img alt="ggj-icon" src="./img/ggj-x26.png" className="icon-26-no-hover" /></a>
+    <div style={{textAlign: 'center'}}>
+        <a href="https://globalgamejam.org/2018/games/hee-x-hoo"><img alt="ggj-icon" src="./img/ggj-x26.png" className="icon-26-no-hover" /></a>
+    </div>
 </div>
 }

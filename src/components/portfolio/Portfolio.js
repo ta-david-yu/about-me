@@ -2,7 +2,8 @@ import React, { Component } from "react"
 import { Grid } from "@material-ui/core";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 
-import Page from "./Page";
+import ListPage from "./ListPage";
+import WorkPage from "./WorkPage";
 import PageTab from "./PageTab";
 import withWindowSize from '../withWindowSize';
 
@@ -14,9 +15,6 @@ const about = (<div>
     <div className="subheader-text">game developer, game programmer</div>
     <div className="about-text">
         <p>
-            Currently working on <a href="https://partygoosestudio.wixsite.com/gerritorythegame">Gerritory</a>, a multiplayer party game.
-            <br />
-            <br />
             <span className="following-text">Following are some of my games & related tools <br />(roughly in order from my most favorite to least favorite)</span>
         </p>
     </div>
@@ -26,23 +24,52 @@ class Portoflio extends Component {
 
     constructor(props) {
         super(props);
-        this.changePage = this.changePage.bind(this);
+        
+        this.changePageType = this.changePageType.bind(this);
+        this.changeListName = this.changeListName.bind(this);
+        this.handleOnClickOnWorkListItem = this.handleOnClickOnWorkListItem.bind(this);
 
-        const initialPage = "game";
-        this.state = { currPage: initialPage };
+        const initialPageType = "list";
+        const initialListName = "game";
+        this.state = { 
+            currPageType: initialPageType,
+            currListName: initialListName,
+            currWorkData: ""
+        };
     }
 
-    changePage(pageName)
+    changePageType(pageType)
     {
         this.setState(
             {
-                currPage: pageName
+                currPageType: pageType
+            }
+        );
+    }
+
+    changeListName(listName)
+    {
+        this.setState(
+            {
+                currListName: listName
+            }
+        );
+    }
+
+    handleOnClickOnWorkListItem(workData)
+    {
+        this.setState(
+            {
+                currPageType: "work",
+                currWorkData: workData
             }
         );
     }
 
     render() {
-        const currPage = this.state.currPage;
+        const currPageType = this.state.currPageType;
+        const currListName = this.state.currListName;
+        const currWorkData = this.state.currWorkData;
 
         return (
             <div>
@@ -73,27 +100,48 @@ class Portoflio extends Component {
                 </div>
                 <div className="bot-content">
                     {this.props.windowWidth < 720 && <div className="device-warning">** Browsing website on desktop device is recommended. **</div> }
-                    <CSSTransition
-                    in={true}
-                    appear={true}
-                    timeout={600}
-                    classNames="page-tab-transition">
-                        <div className="center-align">
-                            <PageTab pageName="game" isActive={currPage === "game"} onClick={this.changePage} />
-                            <PageTab pageName="tool" isActive={currPage === "tool"} onClick={this.changePage} />
-                        </div>
-                    </CSSTransition>
+                    
+                    <TransitionGroup>
+                        <CSSTransition
+                        key={currPageType}
+                        in={true}
+                        appear={true}
+                        timeout={{
+                            appear: 600,
+                            enter: 300,
+                            exit: 0
+                        }}
+                        classNames="page-tab-transition">
+                            <div className="center-align">
+                                {currPageType === "list" &&
+                                    <div>
+                                        <PageTab tabName="game" imgName="game" isActive={currListName === "game"} onClick={this.changeListName} />
+                                        <PageTab tabName="tool" imgName="tool" isActive={currListName === "tool"} onClick={this.changeListName} />
+                                        <PageTab tabName="art" imgName="art" isActive={currListName === "art"} onClick={this.changeListName} />
+                                    </div>
+                                }
+                                {currPageType === "work" &&
+                                    <div>
+                                        <PageTab tabName="list" imgName="home" isActive={false} onClick={this.changePageType} />
+                                    </div>
+                                }
+                            </div>
+                        </CSSTransition>
+                    </TransitionGroup>
 
                     <TransitionGroup>
                         <CSSTransition
-                        key={currPage}
+                        key={currPageType + currListName}
                         appear={true}
                         timeout={{
                             enter: 300,
                             exit: 0
                         }}
-                        classNames={"generic-page-transition"}>
-                            <Page currPage={currPage}/>
+                        classNames={currPageType + "-page-transition"}>
+                            <div>
+                                {currPageType === "list" && <ListPage currListName={currListName} onClickOnListItem={this.handleOnClickOnWorkListItem}/>}
+                                {currPageType === "work" && <WorkPage currWorkData={currWorkData}/>}
+                            </div>
                         </CSSTransition>
                     </TransitionGroup>
 

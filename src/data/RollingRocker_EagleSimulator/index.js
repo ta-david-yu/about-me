@@ -48,6 +48,8 @@ Music in the video is composed by [Monplaisir](http://loyaltyfreakmusic.com/abou
 
 information:
 <div>
-    <a href="https://github.com/ta-david-yu/HCI_OpenCVproj"><img alt="gh-icon" src="./img/github-x26.png" className="icon-26-no-hover" /></a>
+    <div style={{textAlign: 'center'}}>
+        <a href="https://github.com/ta-david-yu/HCI_OpenCVproj"><img alt="gh-icon" src="./img/github-x26.png" className="icon-26-no-hover" /></a>
+    </div>
 </div>
 }

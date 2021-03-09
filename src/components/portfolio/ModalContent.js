@@ -2,11 +2,14 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ReactPlayer from 'react-player';
 import Markdown from 'react-markdown';
+import { Grid } from "@material-ui/core";
 
 import withWindowSize from '../withWindowSize';
 import CustomScrollbar from './CustomScrollbar';
 
 import '../../css/Portfolio.css';
+
+const GridOffset = (props) => { return <Grid item></Grid>; }
 
 class ModalContent extends Component {
     constructor(props) {
@@ -74,9 +77,9 @@ class ModalContent extends Component {
                 if (media.type === "video") {
                     jsx = 
                     <div id={index} className={"modal-media " + mediaClassName}>
-                        <img alt={"left-btn"} src={"./img/left-arrow-inactive.png"} className="left-button" onClick={this.handleOnMediaLeft}/>
-                        <img alt={"right-btn"} src={"./img/right-arrow-inactive.png"} className="right-button" onClick={this.handleOnMediaRight}/>
-                        <span className={"media-page-number"}>{pageNumber + 1}/{pageCount}</span>
+                        {mediaTable.length > 1 && <img alt={"left-btn"} src={"./img/left-arrow-inactive.png"} className="left-button" onClick={this.handleOnMediaLeft}/>}
+                        {mediaTable.length > 1 && <img alt={"right-btn"} src={"./img/right-arrow-inactive.png"} className="right-button" onClick={this.handleOnMediaRight}/>}
+                        {mediaTable.length > 1 && <span className={"media-page-number"}>{pageNumber + 1}/{pageCount}</span>}
 
                         {!this.state.isMediaLoaded? 
                                 <span className={"modal-media-loading " + mediaClassName}>loading video</span> :
@@ -97,10 +100,10 @@ class ModalContent extends Component {
                 }
                 else if (media.type === "image") {
                     jsx = 
-                    <div className={"modal-media " + mediaClassName}>
-                        <img alt={"left-btn"} src={"./img/left-arrow-inactive.png"} className="left-button" onClick={this.handleOnMediaLeft}/>
-                        <img alt={"right-btn"} src={"./img/right-arrow-inactive.png"} className="right-button" onClick={this.handleOnMediaRight}/>
-                        <span className={"media-page-number"}>{pageNumber + 1}/{pageCount}</span>
+                    <div id={index} className={"modal-media " + mediaClassName}>
+                        {mediaTable.length > 1 && <img alt={"left-btn"} src={"./img/left-arrow-inactive.png"} className="left-button" onClick={this.handleOnMediaLeft}/>}
+                        {mediaTable.length > 1 && <img alt={"right-btn"} src={"./img/right-arrow-inactive.png"} className="right-button" onClick={this.handleOnMediaRight}/>}
+                        {mediaTable.length > 1 && <span className={"media-page-number"}>{pageNumber + 1}/{pageCount}</span>}
 
                         <img alt="work-img" src={media.src} onLoad={this.handleOnMediaReady} className={"modal-img " + mediaClassName} />
                         
@@ -127,38 +130,43 @@ class ModalContent extends Component {
 
         const isSmallScreen = this.props.windowWidth < 720;
         const size = (this.props.windowWidth < 720 || this.props.SmallFormat)? "sm" : (this.props.windowWidth < 1280)? "md" : "lg";
-        
-        if (!isSmallScreen && !this.props.SmallFormat)
+
+        if (!this.props.SmallFormat)
         {
-            return <div>
-                        <div className={"modal-media-box box-s-other-left " + size}>
-                            {this.mediaJSX[this.state.currentMedia]}
-                            <div className="modal-game-title">
-                                {this.props.title}
-                            </div>
-                            <div className="modal-job">
-                                {this.props.job}
-                            </div>
-                            <div className="center-align">
-                                <span className="modal-date">
-                                    <img alt="date-icon" src="./img/clock-x13.png" className="modal-time-icon"/>
-                                    {this.props.date} 
-                                </span>
-                                <span className="modal-team-size">
-                                    <img alt="date-icon" src="./img/person-x13.png" className="modal-team-icon"/>
-                                    {(parseInt(this.props.team) > 1)? this.props.team + "-person team" : "Solo"} 
-                                </span>
-                            </div>
-                            <div className="modal-information">{this.props.information}</div>
-                        </div>
-                        <div className={"modal-description-box box-s-other-right " + size}>
-                            <CustomScrollbar>
-                                <Markdown source={this.props.description} className="modal-description"/>
-                            </CustomScrollbar>
-                        </div>
+            return  <div>
+                        <Grid 
+                        container 
+                        spacing={8}
+                        direction="column"
+                        justify="center"
+                        alignItems="center">
+                            <GridOffset/><GridOffset/><GridOffset/><GridOffset/>
+                            <Grid item className={"modal-media-box " + size}>
+                                {this.mediaJSX[this.state.currentMedia]}
+                                <div className="modal-game-title">
+                                    {this.props.title}
+                                </div>
+                                <div className="modal-job">
+                                    {this.props.job}
+                                </div>
+                                <div className="center-align">
+                                    <span className="modal-date">
+                                        <img alt="date-icon" src="./img/clock-x13.png" className="modal-time-icon"/>
+                                        {this.props.date} 
+                                    </span>
+                                    <span className="modal-team-size">
+                                        <img alt="date-icon" src="./img/person-x13.png" className="modal-team-icon"/>
+                                        {(parseInt(this.props.team) > 1)? this.props.team + "-person team" : "Solo"} 
+                                    </span>
+                                </div>
+                            </Grid>
+                            <Grid item className={"modal-description-box " + size}>
+                                <div className="modal-information">{this.props.information}</div>
+                            </Grid>
+                        </Grid>
                     </div>;
         }
-        else if (this.props.SmallFormat)
+        else
         {
             return <div>
                         <div className={"modal-media-box sp"}>
@@ -181,36 +189,6 @@ class ModalContent extends Component {
                             </div>
                         </div>
                         <div className={"modal-description-box sp"}>
-                            <CustomScrollbar>
-                                <Markdown source={this.props.description} className="modal-description"/>
-                            </CustomScrollbar>
-                        </div>
-                    </div>;
-        }
-        else
-        {
-            return <div>
-                        <div className={"modal-media-box " + size}>
-                            {this.mediaJSX[this.state.currentMedia]}
-                            <div className="modal-game-title">
-                                {this.props.title}
-                            </div>
-                            <div className="modal-job">
-                                {this.props.job}
-                            </div>
-                            <div className="center-align">
-                                <span className="modal-date">
-                                    <img alt="date-icon" src="./img/clock-x13.png" className="modal-time-icon"/>
-                                    {this.props.date} 
-                                </span>
-                                <span className="modal-team-size">
-                                    <img alt="date-icon" src="./img/person-x13.png" className="modal-team-icon"/>
-                                    {(parseInt(this.props.team) > 1)? this.props.team + "-person team" : "Solo"} 
-                                </span>
-                            </div>
-                            <div className="modal-information">{this.props.information}</div>
-                        </div>
-                        <div className={"modal-description-box " + size}>
                             <CustomScrollbar>
                                 <Markdown source={this.props.description} className="modal-description"/>
                             </CustomScrollbar>

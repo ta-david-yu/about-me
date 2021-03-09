@@ -19,6 +19,8 @@ White monsters will be damaged by black bullets while healed by white bullets, a
 
 information:
 <div>
-    <a href="https://globalgamejam.org/2016/games/nothing-lasts-forever"><img alt="ggj-icon" src="./img/ggj-x26.png" className="icon-26-no-hover" /></a>
+    <div style={{textAlign: 'center'}}>
+        <a href="https://globalgamejam.org/2016/games/nothing-lasts-forever"><img alt="ggj-icon" src="./img/ggj-x26.png" className="icon-26-no-hover" /></a>
+    </div>
 </div>
 }

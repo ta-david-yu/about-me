@@ -4,8 +4,8 @@ import PropTypes from "prop-types";
 import { Grid } from "@material-ui/core";
 import withWindowSize from '../withWindowSize';
 
-import WorkPanel from "./WorkPanel";
-import ModalContent from "./ModalContent";
+import WorkListItem from "./WorkListItem";
+//import ModalContent from "./ModalContent";
 
 import works from "../../data/works"
 
@@ -13,7 +13,7 @@ import '../../css/Portfolio.css';
 
 Modal.setAppElement(document.getElementById("root"));
 
-class Page extends Component {
+class ListPage extends Component {
 
     constructor(props) {
         super(props);
@@ -29,10 +29,10 @@ class Page extends Component {
         this.generateWorksItem(props.currPage);
     }
 
-    openModal(work) {
+    openModal(workData) {
         const stateObj = this.state;
         stateObj.isModalShown = true;
-        stateObj.currentModalWork = work;
+        stateObj.currentModalWork = workData;
 
         this.setState(stateObj);
     }
@@ -59,19 +59,23 @@ class Page extends Component {
     }
 
     render() {
-        const currPage = this.props.currPage;
-        const worksTable = this.generateWorksItem(currPage);
+        const currListName = this.props.currListName;
+        const worksTable = this.generateWorksItem(currListName);
 
-        const itemSpan = (worksTable.length >= 3)? 4 : 6;
+        const itemSpan = (worksTable.length >= 4)? 3 : 6;
         const worksItem = worksTable.map((work) => {
-            return <WorkPanel key={work.title} information={work} span={itemSpan} onClick={this.openModal}/>
+            //return <WorkListItem key={work.title} workData={work} span={itemSpan} onClick={this.openModal}/>
+            return <WorkListItem key={work.title} workData={work} span={itemSpan} onClick={this.props.onClickOnListItem}/>
         });
 
-        const isSpecialFormat = (typeof this.state.currentModalWork.isSmall !== "undefined" && this.state.currentModalWork.isSmall);
-        let modalClassName = (isSpecialFormat)? "sp-modal-size" :
+        //const isSpecialFormat = (typeof this.state.currentModalWork.isSmall !== "undefined" && this.state.currentModalWork.isSmall);
+        
+        /*let modalClassName = (isSpecialFormat)? "sp-modal-size" :
                                (this.props.windowWidth < 720)? "sm-modal-size" :
                                (this.props.windowWidth < 1280)? "md-modal-size" : "lg-modal-size";
-        modalClassName += " modal";
+        modalClassName += " modal";*/
+
+        let lgContainerSpan = (this.props.windowWidth > 1600)? 7 : 12;
 
         return (
             <div>
@@ -81,11 +85,24 @@ class Page extends Component {
                 direction="column"
                 justify="center"
                 alignItems="center">
-                    <Grid item xs={12}>
-                        {currPage === "game" && <div className="page-title left show">games</div>}
-                        {currPage === "tool" && <div className="page-title right show">tools/other</div>}
+                    <Grid item lg={lgContainerSpan} md={12} sm={12} xs={12}>
+                        {currListName === "game" && 
+                            <div>
+                                <div className="page-title left show">games</div>
+                                <div className="page-description">big games</div>
+                            </div>}
+                        {currListName === "tool" && 
+                            <div>
+                                <div className="page-title left show">tools/other</div>
+                                <div className="page-description">hahaha</div>
+                            </div>}
+                        {currListName === "art" && 
+                            <div>
+                                <div className="page-title left show">artworks</div>
+                                <div className="page-description">art shits</div>
+                            </div>}
                     </Grid>
-                    <Grid item lg={7} md={10} sm={12} xs={12}>
+                    <Grid item lg={lgContainerSpan} md={12} sm={12} xs={12}>
                         <Grid 
                         container
                         spacing={16}
@@ -94,6 +111,8 @@ class Page extends Component {
                         </Grid>
                     </Grid>
                 </Grid>
+            </div>
+            /*
                 <Modal 
                 contentLabel={"work-modal"}
                 isOpen={this.state.isModalShown}
@@ -118,13 +137,14 @@ class Page extends Component {
                         </div>
                         <img alt="return" className={isSpecialFormat? "sp-modal-close-button" : "modal-close-button"} onClick={this.closeModal} src="./img/return-btn.png" />
                 </Modal>
-            </div>
+            */
         );
     }
 }
 
-Page.propTypes = {
-    currPage: PropTypes.string.isRequired,
+ListPage.propTypes = {
+    currListName: PropTypes.string.isRequired,
+    onClickOnListItem: PropTypes.func.isRequired,
 };
 
-export default withWindowSize(Page);
+export default withWindowSize(ListPage);

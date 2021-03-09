@@ -17,24 +17,24 @@
 
 :root {
     /*  */
-    --lg-modal-width: 90vw;
-    --lg-modal-height: 80vh;
+    --lg-description-width: 50vw;
+    --lg-description-height: 60vh;
 
-    --lg-media-box-width: 680px;
+    --lg-media-box-width: 660px;
     --lg-media-width: 640px;
     --lg-media-height: 360px;
 
     /*  */
-    --md-modal-width: 90vw;
-    --md-modal-height: 80vh;
+    --md-description-width: 90vw;
+    --md-description-height: 60vh;
 
     --md-media-box-width: 440px;
     --md-media-width: 400px;
     --md-media-height: 225px;
 
     /*  */
-    --sm-modal-width: 100vw;
-    --sm-modal-height: 80vh;
+    --sm-description-width: 100vw;
+    --sm-description-height: 60vh;
 
     --sm-media-box-width: 100vw;
     --sm-media-box-height: 30vh;
@@ -44,8 +44,8 @@
     
     /* */
     
-    --sp-modal-width: 100vw;
-    --sp-modal-height: 80vh;
+    --sp-description-width: 100vw;
+    --sp-description-height: 55vh;
 }
 
 footer {
@@ -182,6 +182,17 @@ a {
     transform: translateX(0px);
 }
 
+.page-description {
+    font-family: 'm5x7';
+    font-size: 24px;
+    font-weight: normal;
+    font-style: normal;
+    
+    text-align: center;
+
+    color: #f6d6bd;
+}
+
 .box-white {
     border: 16px solid transparent;
     border-image: url(./img/border-round-g255-x33.png) 7.5 fill repeat;
@@ -246,7 +257,7 @@ a {
     left: 5px;
     z-index: 3;
 
-    font-family: "Roboto";
+    font-family: 'Anonymous Pro', monospace;
     font-size: 12px;
     letter-spacing: 0.5px;
 
@@ -342,7 +353,7 @@ a {
 }
 
 .work-title {
-    font-family: "Roboto";
+    font-family: 'Anonymous Pro', monospace;;
     font-size: 15px;
     font-weight: normal;
     font-style: normal;
@@ -353,7 +364,7 @@ a {
 }
 
 .work-job {
-    font-family: "Roboto";
+    font-family: 'Anonymous Pro', monospace;;
     font-size: 13px;
     font-weight: normal;
     font-style: normal;
@@ -365,7 +376,7 @@ a {
 }
 
 .work-date {
-    font-family: "Roboto";
+    font-family: 'Anonymous Pro', monospace;;
     font-size: 12px;
     font-weight: normal;
     font-style: normal;
@@ -521,23 +532,63 @@ a {
     background: url("./img/tool-button-active.png") no-repeat;
 }
 
-.modal-media-box.lg {
-    float: left;
+.art-button {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    background: url("./img/art-button-inactive.png") no-repeat;
+    width: 101px;
+    height: 49px;
+    padding-left: 101px;
+    
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+}
 
+.art-button:hover {
+    cursor: pointer;
+    transform: translateY(-1px);
+}
+
+.art-button.is-active {
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    transform: translateY(1px);
+    background: url("./img/art-button-active.png") no-repeat;
+}
+
+.home-button {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    background: url("./img/home-button-inactive.png") no-repeat;
+    width: 101px;
+    height: 49px;
+    padding-left: 101px;
+    
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+}
+
+.home-button:hover {
+    cursor: pointer;
+    transform: translateY(-1px);
+}
+
+.modal-media-box.lg {
     width: var(--lg-media-box-width);
-    height: var(--lg-modal-height);
 }
 
 .modal-media-box.md {
-    float: left;
-
     width: var(--md-media-box-width);
-    height: var(--md-modal-height);
 }
 
 .modal-media-box.sm {
     width: var(--sm-media-box-width);
-    min-height: var(--sm-media-box-height);
 }
 
 .modal-media-box.sp {
@@ -545,7 +596,6 @@ a {
 }
 
 .modal-media-box {
-
     background-color: rgba(0, 0, 0, 0);
 
     box-sizing: border-box;
@@ -578,12 +628,13 @@ a {
     position: relative;
     background-color: #08141e;
 
-    border-left: 3px solid #4e495f;
-    border-right: 3px solid #4e495f;
-    border-top: 4px solid #4e495f;
-    border-bottom: 4px solid #4e495f;
+    border-left: 3px solid #000000;
+    border-right: 3px solid #000000;
+    border-top: 3px solid #000000;
+    border-bottom: 3px solid #000000;
 
-    padding: 2px;
+    /*border-top: 1px solid #4e495f;*/
+    /*padding: 2px;*/
 }
 
 .modal-img.lg {
@@ -610,32 +661,21 @@ a {
 }
 
 .modal-description-box.lg {
-    float: right;
-
-    width: calc(var(--lg-modal-width) - var(--lg-media-box-width));
-    height: var(--lg-modal-height);
+    width: var(--lg-description-width);
 }
 
 .modal-description-box.md {
-    float: right;
-
-    width: calc(var(--md-modal-width) - var(--md-media-box-width));
-    height: var(--md-modal-height);
+    width: var(--md-description-width);
 }
 
 .modal-description-box.sm {
-    width: calc(var(--sm-modal-width));
-    height: calc(var(--sm-modal-height) - var(--sm-media-box-height));
-
+    width: calc(var(--sm-description-width));
     padding-bottom: 0px;
 }
 
 .modal-description-box.sp {
 
     text-align: center;
-
-    width: 80vw;
-    height: 30vh;
 
     margin-left: auto;
     margin-right: auto;
@@ -655,7 +695,7 @@ a {
     padding-left: 5px;
     padding-top: 5px;
 
-    font-family: "Roboto";
+    font-family: 'Anonymous Pro', monospace;
     font-size: 20px;
     font-weight: normal;
     font-style: normal;
@@ -668,7 +708,7 @@ a {
 .modal-job {
     padding-top: 8px;
 
-    font-family: "Roboto";
+    font-family: 'Anonymous Pro', monospace;
     font-size: 14px;
     font-weight: normal;
     font-style: normal;
@@ -679,7 +719,7 @@ a {
 }
 
 .modal-date {
-    font-family: "Roboto";
+    font-family: 'Anonymous Pro', monospace;
     font-size: 12px;
     font-weight: normal;
     font-style: normal;
@@ -690,7 +730,7 @@ a {
 }
 
 .modal-team-size {
-    font-family: "Roboto";
+    font-family: 'Anonymous Pro', monospace;
     font-size: 12px;
     font-weight: normal;
     font-style: normal;
@@ -731,11 +771,11 @@ a {
 .modal-information {
     padding-top: 5px;
 
-    font-family: "m5x7";
+    font-family: 'Ubuntu', sans-serif;
     color: #f6d6bd;
-    font-size: 24px;
+    font-size: 16px;
 
-    text-align: center;
+    line-height: 1.5;
 }
 
 table {
@@ -817,8 +857,8 @@ tr:nth-child(odd) {
 .lg-modal-size {
     position: absolute;
 
-    width: var(--lg-modal-width);   /*deprecated: 600 */
-    height: calc(var(--lg-modal-height));
+    width: var(--lg-description-width);   /*deprecated: 600 */
+    height: calc(var(--lg-description-height));
 
     top: 50%;
     bottom: auto;
@@ -833,8 +873,8 @@ tr:nth-child(odd) {
 .md-modal-size {
     position: absolute;
 
-    width: var(--md-modal-width);
-    height: calc(var(--md-modal-height));
+    width: var(--md-description-width);
+    height: calc(var(--md-description-height));
 
     top: 50%;
     bottom: auto;
@@ -851,7 +891,7 @@ tr:nth-child(odd) {
     
     position: absolute;
 
-    width: var(--sm-modal-width);    /*deprecated: 100% */
+    width: var(--sm-description-width);    /*deprecated: 100% */
 
     top: 53%;
     bottom: auto;
@@ -868,7 +908,7 @@ tr:nth-child(odd) {
     
     position: absolute;
 
-    width: var(--sm-modal-width);    /*deprecated: 100% */
+    width: var(--sm-description-width);    /*deprecated: 100% */
 
     top: 53%;
     bottom: auto;
@@ -950,7 +990,7 @@ tr:nth-child(odd) {
 .media-comment {
     position: absolute;
 
-    font-family: "Roboto";
+    font-family: 'Anonymous Pro', monospace;
     font-size: 12px;
 
     background-image: linear-gradient(to right, #00000000, #00000090, #00000090, #00000000);
@@ -986,7 +1026,7 @@ tr:nth-child(odd) {
     top: 100%;
     transform: translate(-100%, -100%);
 
-    font-family: "Roboto";
+    font-family: 'Anonymous Pro', monospace;
     font-size: 12px;
     letter-spacing: 0.5px;
 
@@ -1120,6 +1160,35 @@ tr:nth-child(odd) {
         transform 600ms cubic-bezier(0.19, 1, 0.22, 1);
 }
 
+.page-tab-transition-enter {
+    opacity: 0;
+    transform: translateY(-20px);
+    z-index: 1;
+}
+
+.page-tab-transition-enter.page-tab-transition-enter-active {
+    opacity: 1;
+    transform: translateY(0px);
+
+    -webkit-transition: 
+        opacity 150ms linear,
+        transform 300ms cubic-bezier(0.19, 1, 0.22, 1);
+    transition: 
+        opacity 150ms linear,
+        transform 300ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.page-tab-transition-exit {
+    opacity: 1;
+    transform: translateY(0px);
+    z-index: 0;
+}
+
+.page-tab-transition-exit.page-tab-transition-exit-active {
+    opacity: 0;
+    transform: translateY(0px);
+}
+
 /* page transition */
 .generic-page-transition-enter {
     opacity: 0;
@@ -1151,13 +1220,14 @@ tr:nth-child(odd) {
 }
 
 
-.game-page-transition-enter {
+/* right to left */
+.list-page-transition-enter {
     opacity: 0;
     transform: translateX(-50px);
     z-index: 1;
 }
 
-.game-page-transition-enter.game-page-transition-enter-active {
+.list-page-transition-enter.list-page-transition-enter-active {
     opacity: 1;
     transform: translateX(0px);
 
@@ -1169,13 +1239,25 @@ tr:nth-child(odd) {
         transform 300ms cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-.tool-page-transition-enter {
+.list-page-transition-exit {
+    opacity: 1;
+    transform: translateX(0px);
+    z-index: 0;
+}
+
+.list-page-transition-exit.list-page-transition-exit-active {
+    opacity: 0;
+    transform: translateX(-50px);
+}
+
+/* left to right */
+.work-page-transition-enter {
     opacity: 0;
     transform: translateX(50px);
     z-index: 1;
 }
 
-.tool-page-transition-enter.tool-page-transition-enter-active {
+.work-page-transition-enter.work-page-transition-enter-active {
     opacity: 1;
     transform: translateX(0px);
 
@@ -1185,4 +1267,15 @@ tr:nth-child(odd) {
     transition: 
         opacity 150ms linear,
         transform 300ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.work-page-transition-exit {
+    opacity: 1;
+    transform: translateX(0px);
+    z-index: 0;
+}
+
+.work-page-transition-exit.work-page-transition-exit-active {
+    opacity: 0;
+    transform: translateX(50px);
 }

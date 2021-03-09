@@ -86,6 +86,26 @@ const works = [
     },
 
     {
+        "type": "game",
+        "title": "Boomeranger",
+        "img": "./img/work/boomeranger-preview.png",
+        "gif": "./img/work/boomeranger-preview.gif",
+        "date": "2016.3 - 2016.6",
+        "job": "Designer, Programmer",
+        "team": "3",
+
+        "mediaTable": Boomeranger.medias,
+        "description": {
+            "type": "file",
+            "src": Boomeranger.description 
+        },
+        "information": {
+            "type": "file",
+            "src": Boomeranger.information
+        }
+    },
+
+    {
         "ignore": true,
         "type": "game",
         "title": "Nothing Lasts Forever",
@@ -126,6 +146,26 @@ const works = [
         }
     },
 
+    {
+        "type": "tool",
+        "title": "2D Platformer Hunter",
+        "img": "./img/work/platformer-preview.png",
+        "gif": "./img/work/platformer-preview.gif",
+        "date": "2018.8 - present",
+        "job": "Programmer",
+        "team": "1",
+
+        "mediaTable": TwoDPlatformerHunter.medias,
+        "description": {
+            "type": "file",
+            "src": TwoDPlatformerHunter.description
+        },
+        "information": {
+            "type": "file",
+            "src": TwoDPlatformerHunter.information
+        }
+    },
+    
     {
         "ignore": true,
         "type": "tool",

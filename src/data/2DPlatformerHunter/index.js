@@ -46,6 +46,8 @@ Music in the video composed by [Monplaisir](http://loyaltyfreakmusic.com/about),
 
 information:
 <div>
-    <a href="https://github.com/ta-david-yu/2D-Platformer-Hunter"><img alt="gh-icon" src="./img/github-x26.png" className="icon-26-no-hover" /></a>
+    <div style={{textAlign: 'center'}}>
+        <a href="https://github.com/ta-david-yu/2D-Platformer-Hunter"><img alt="gh-icon" src="./img/github-x26.png" className="icon-26-no-hover" /></a>
+    </div>
 </div>
 }

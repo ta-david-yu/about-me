@@ -77,8 +77,16 @@ In-game musics are composed by [Waterflame](https://www.waterflame.com/) with a 
 
 information:
 <div>
-    <a href="https://twitter.com/gerritory"><img alt="tw-icon" src="./img/twitter-x26.png" className="icon-26-no-hover" /></a>
-    <a href="https://www.facebook.com/Gerritory/"><img alt="fb-icon" src="./img/facebook-x26.png" className="icon-26-no-hover" /></a>
-    <a href="https://partygoosestudio.wixsite.com/gerritorythegame"><img alt="globe-icon" src="./img/globe-x26.png" className="icon-26-no-hover" /></a>
+    <div style={{textAlign: 'center'}}>
+        <a href="https://twitter.com/gerritory"><img alt="tw-icon" src="./img/twitter-x26.png" className="icon-26" /></a>
+        <a href="https://www.facebook.com/Gerritory/"><img alt="fb-icon" src="./img/facebook-x26.png" className="icon-26" /></a>
+        <a href="https://partygoosestudio.wixsite.com/gerritorythegame"><img alt="globe-icon" src="./img/globe-x26.png" className="icon-26" /></a>
+    </div>
+    <div>Gerritory is a multiplayer party game three of my friends and I made using Unity Engine. This is my first commercial project and has been released on both Switch and Steam. 
+        Although four of us are all programmers, another teammate and I were also in charge of the art assets in the game.</div>
+    <span style={{margin: '50px'}} />
+    <div>The rules of Gerritory are simple:</div>
+    <div>1. Get your territory - Move your cube character and color as many tiles as possible. The player who owns the most territory wins.</div>
+    <div>2. Small > Big - Players with less territory can kill players with more territory by stepping on them.</div>
 </div>
 }
