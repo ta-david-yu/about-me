@@ -22,8 +22,8 @@ const about = (<div>
         </p>
         <p>
             <span className="following-text">
-                I've been using Unity3D to make games for over 4 years, 
-                <br />and have experience in shipping games on Steam + porting games to Nintendo Switch
+                I mostly use Unity to make games and have been doing so for more than 4 years, 
+                <br />I also have experience in shipping games on Steam + porting games to Nintendo Switch
             </span>
         </p>
         <p>
