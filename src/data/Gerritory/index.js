@@ -11,25 +11,25 @@ Factsheet
 | Status | Released |
 | Platforms | Windows PC, Nintendo Switch |
 | Genre | 4-player online (steam only) & local party game |
-| Made with | Unity3D |
-| Team | Ta David Yu, Cheng-Kai Chiu, Yu-Han Lu, Yun-Xuan Lin |
-| Additional Developers | Glen Zhang, Paus Chen, Ken Wei, Waterflame |
+| Made with | Unity |
+| Team | Cheng-Kai Chiu, Ta David Yu, Yu-Han Lu, Yun-Xuan Lin |
+| Additional Developers | Glen Zhang, Ken Wei, Paus Chen, Waterflame |
 
-Some of the notable features implemented by me  
+Some of the notable features I implemented  
 
-| Feature   | Description |
+|  | Description |
 | --------- | ------- |
 | Switch Porting | Optimize and port Gerritory to nintendo switch in Unity. |
 | Tween Manager | A small library simliar to DOTween but simplified. Allow users to play easing animation sequence easily. Make use of object pooling to improve performance. |
 | Layered Audio System | Sort audio sources into layers so player can adjust volume for different layers. Make use of event queue to avoid duplicated sound effects in the same frame. |
 | Collectables Editor | Make use of the Unity Editor API to create a custom editor for editing in-game collectables. |
 | Asynchronous Task Queue | Users can push tasks to task queue which will be executed during scene loading asynchronously. Most of these tasks would take over a second to complete such as loading assetbundles, procedural content generation, internet connection. |
-| Level Editor Undo / Redo function | Implement Undo / Redo feature in Level Editor with Command pattern. |
+| Runtime Level Editor | Implement an in-game level editor with undo / redo feature using Command pattern. |
 | Shader Effects | Some special effects using UnityShader. |
 
-Other notable non-programming stuff  
+Other notable non-programming stuff I did  
 
-| Feature   | Description |
+|  | Description |
 | --------- | ------- |
 | Core Mechanics | Design the core game mechanics. |
 | Level Design | Design some of the built-in levels in game. |
@@ -81,7 +81,7 @@ The rules of Gerritory are simple:
 1. Get your territory - Move your cube character and color as many tiles as possible. The player who owns the most territory wins.
 2. Small > Big - Players with less territory can kill players with more territory by stepping on them.
 
-Some of the notable features implemented by me:
+Some of the notable features I implemented:
 
 | Feature   | Description |
 | --------- | ------- |
@@ -142,8 +142,10 @@ information:
 [![trophy](./img/trophy-x13.png) 2019 Taipei Game Show IGA - Best Design](http://tgs.tca.org.tw/indie_award_winners.php?b=2b_e)  `} />
 
     <div>--</div>
-    <div>Gerritory is made by three of my friends and I made using Unity Engine. </div>
-    <div>This is my first commercial project and has been released on both Steam and Switch. </div>
+    <div>Gerritory is made by three of my friends and I in our leisure time</div>
+    <div>during our study in National Chiao Tung University. </div>
+    <div>This is our first commercial project and has been released on both Steam and Switch. </div>
+    <div>Although four of us are all programmers, another teammate and I were also in charge of the art materials in the game.</div>
 
     <span style={{margin: '50px'}} />
     <div style={{textAlign: 'left', fontSize: '16px'}}>
