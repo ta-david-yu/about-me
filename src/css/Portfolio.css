@@ -795,7 +795,7 @@ table {
 
 th {
     margin: 0;
-    /*background: #4e495f;*/
+    background: #4e495f;
     padding: 6px 13px;
 }
 
@@ -806,17 +806,16 @@ td {
 }
 
 td:first-child {
-    width: 15%;
+    width: 30%;
     text-align: right;
-    font-weight: bold;
 }
 
 tr:nth-child(even) {
-    /*background: #4e495f;*/
+    background: #4e495f;
 }
 
 tr:nth-child(odd) {
-    /*background: #816271;*/
+    background: #816271;
 }
 
 /* React Modal */
