@@ -35,7 +35,7 @@ MediaDot.propTypes = {
     onClickDot: PropTypes.func
 }
 
-class ModalContent extends Component {
+class ProjectWorkContent extends Component {
     constructor(props) {
         super(props);
 
@@ -207,7 +207,7 @@ class ModalContent extends Component {
     }
 }
 
-ModalContent.propTypes = {
+ProjectWorkContent.propTypes = {
     type: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     date: PropTypes.string.isRequired,
@@ -218,4 +218,4 @@ ModalContent.propTypes = {
     information: PropTypes.object.isRequired
 };
 
-export default withWindowSize(ModalContent);
+export default withWindowSize(ProjectWorkContent);

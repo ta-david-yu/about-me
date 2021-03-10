@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Modal from "react-modal";
 import PropTypes from "prop-types";
-import ModalContent from './ModalContent';
+import ProjectWorkContent from './ProjectWorkContent';
 import withWindowSize from '../withWindowSize';
 
 import '../../css/Portfolio.css';
@@ -14,7 +14,7 @@ class WorkPage extends Component {
         const currWorkData = this.props.currWorkData;
         return (
             <div>
-                <ModalContent 
+                <ProjectWorkContent 
                     title={currWorkData.title}
                     type={currWorkData.type}
                     date={currWorkData.date}
