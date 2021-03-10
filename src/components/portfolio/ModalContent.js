@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ReactPlayer from 'react-player';
-import Markdown from 'react-markdown';
 import { Grid } from "@material-ui/core";
 
 import withWindowSize from '../withWindowSize';
-import CustomScrollbar from './CustomScrollbar';
 
 import '../../css/Portfolio.css';
 
@@ -15,7 +13,7 @@ class ModalContent extends Component {
     constructor(props) {
         super(props);
 
-        this.state = { isMediaLoaded: false, progressState: null, currentMedia: 0 };
+        this.state = { isMediaLoaded: false, progressState: null, currentMediaIndex: 0 };
 
         this.handleOnVideoProgress = this.handleOnVideoProgress.bind(this);
         this.handleOnMediaReady = this.handleOnMediaReady.bind(this);
@@ -41,7 +39,7 @@ class ModalContent extends Component {
         if (length === 1) return;
 
         const stateObj = this.state;
-        stateObj.currentMedia = (stateObj.currentMedia + 1) % length;
+        stateObj.currentMediaIndex = (stateObj.currentMediaIndex + 1) % length;
         stateObj.isMediaLoaded = false;
 
         this.setState(stateObj);
@@ -52,10 +50,10 @@ class ModalContent extends Component {
         if (length === 1) return;
 
         const stateObj = this.state;
-        stateObj.currentMedia = (stateObj.currentMedia - 1);
-        if (stateObj.currentMedia < 0)
+        stateObj.currentMediaIndex = (stateObj.currentMediaIndex - 1);
+        if (stateObj.currentMediaIndex < 0)
         {
-            stateObj.currentMedia += length;
+            stateObj.currentMediaIndex += length;
         }
         stateObj.isMediaLoaded = false;
 
@@ -67,7 +65,7 @@ class ModalContent extends Component {
         this.mediaComment = [];
         const mediaClassName = (this.props.windowWidth < 720 || this.props.SmallFormat)? "sm" : (this.props.windowWidth < 1280)? "md" : "lg";
 
-        const pageNumber = this.state.currentMedia;
+        const pageNumber = this.state.currentMediaIndex;
         const pageCount = mediaTable.length;
 
         if (mediaTable.length > 0) {
@@ -128,10 +126,20 @@ class ModalContent extends Component {
     render() {
         this.generateMediaJSX(this.props.mediaTable);
 
+        const mediaTable = this.props.mediaTable;
+        const currentMediaIndex = this.state.currentMediaIndex;
+        const numOfMedia = mediaTable.length;
+        
+        const mediaIndexDots = mediaTable.map((media, index) => { 
+            return (index === currentMediaIndex)? 
+                    <img alt={"left-btn"} className={"media-index-dot"} src={"./img/media-index-dot-active.png"}/> :
+                    <img alt={"left-btn"} className={"media-index-dot"} src={"./img/media-index-dot-inactive.png"}/>;
+        });
+
         const isSmallScreen = this.props.windowWidth < 720;
         const size = (this.props.windowWidth < 720 || this.props.SmallFormat)? "sm" : (this.props.windowWidth < 1280)? "md" : "lg";
 
-        if (!this.props.SmallFormat)
+        //if (!this.props.SmallFormat)
         {
             return  <div>
                         <Grid 
@@ -142,7 +150,12 @@ class ModalContent extends Component {
                         alignItems="center">
                             <GridOffset/><GridOffset/><GridOffset/><GridOffset/>
                             <Grid item className={"modal-media-box " + size}>
-                                {this.mediaJSX[this.state.currentMedia]}
+                                {this.mediaJSX[this.state.currentMediaIndex]}
+                                <div className="media-index-set">
+                                    {mediaTable.length > 1 && <img alt={"left-btn"} className="media-left-button" src={"./img/left-arrow-inactive.png"} onClick={this.handleOnMediaLeft}/>}
+                                    {mediaTable.length > 1 && mediaIndexDots}
+                                    {mediaTable.length > 1 && <img alt={"right-btn"} className="media-right-button" src={"./img/right-arrow-inactive.png"} onClick={this.handleOnMediaRight}/>}
+                                </div>
                                 <div className="modal-game-title">
                                     {this.props.title}
                                 </div>
@@ -166,6 +179,7 @@ class ModalContent extends Component {
                         </Grid>
                     </div>;
         }
+        /*
         else
         {
             return <div>
@@ -194,7 +208,7 @@ class ModalContent extends Component {
                             </CustomScrollbar>
                         </div>
                     </div>;
-        }
+        }*/
     }
 }
 

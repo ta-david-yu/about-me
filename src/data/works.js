@@ -1,4 +1,5 @@
 import Gerritory from './Gerritory';
+import OutOfTheMist from './OutOfTheMist';
 import RollingRocker_EagleSimulator from './RollingRocker_EagleSimulator';
 import HeeXHoo from './HeeXHoo';
 import Boomeranger from './Boomeranger';
@@ -27,6 +28,26 @@ const works = [
 
     {
         "type": "game",
+        "title": "Out Of the Mist",
+        "img": "./img/work/ootm-preview.png",
+        "gif": "./img/work/ootm-preview.gif",
+        "date": "2020 - present",
+        "job": "Programmer",
+        "team": "5",
+
+        "mediaTable": OutOfTheMist.medias,
+        "description": {
+            "type": "file",
+            "src": OutOfTheMist.description
+        },
+        "information": {
+            "type": "file",
+            "src": OutOfTheMist.information
+        }
+    },
+
+    {
+        "type": "tool",
         "title": "Rolling Rocker & Eagle Simulator",
         "img": "./img/work/es-rr-preview.png",
         "gif": "./img/work/es-rr-preview.gif",
@@ -46,7 +67,7 @@ const works = [
     },
 
     {
-        "type": "game",
+        "type": "tool",
         "title": "Hee X Hoo",
         "img": "./img/work/hee-hoo-preview.png",
         "gif": "./img/work/hee-hoo-preview.gif",
@@ -66,7 +87,7 @@ const works = [
     },
 
     {
-        "type": "game",
+        "type": "tool",
         "title": "Boomeranger",
         "img": "./img/work/boomeranger-preview.png",
         "gif": "./img/work/boomeranger-preview.gif",
@@ -86,7 +107,7 @@ const works = [
     },
 
     {
-        "type": "game",
+        "type": "tool",
         "title": "Boomeranger",
         "img": "./img/work/boomeranger-preview.png",
         "gif": "./img/work/boomeranger-preview.gif",
@@ -107,7 +128,7 @@ const works = [
 
     {
         "ignore": true,
-        "type": "game",
+        "type": "tool",
         "title": "Nothing Lasts Forever",
         "img": "./img/work/nothing-last-forever-preview.png",
         "gif": "./img/work/nothing-last-forever-preview.gif",
@@ -127,11 +148,11 @@ const works = [
     },
 
     {
-        "type": "tool",
-        "title": "2D Platformer Hunter",
+        "type": "game",
+        "title": "2D Platformer Hunter (Unity Plugin)",
         "img": "./img/work/platformer-preview.png",
         "gif": "./img/work/platformer-preview.gif",
-        "date": "2018.8 - present",
+        "date": "2018 - present",
         "job": "Programmer",
         "team": "1",
 
@@ -143,47 +164,6 @@ const works = [
         "information": {
             "type": "file",
             "src": TwoDPlatformerHunter.information
-        }
-    },
-
-    {
-        "type": "tool",
-        "title": "2D Platformer Hunter",
-        "img": "./img/work/platformer-preview.png",
-        "gif": "./img/work/platformer-preview.gif",
-        "date": "2018.8 - present",
-        "job": "Programmer",
-        "team": "1",
-
-        "mediaTable": TwoDPlatformerHunter.medias,
-        "description": {
-            "type": "file",
-            "src": TwoDPlatformerHunter.description
-        },
-        "information": {
-            "type": "file",
-            "src": TwoDPlatformerHunter.information
-        }
-    },
-    
-    {
-        "ignore": true,
-        "type": "tool",
-        "title": "MWB in Unity",
-        "img": "./img/work/mwb-preview.png",
-        "gif": "./img/work/mwb-preview.gif",
-        "date": "2017.6 - 2018.6",
-        "job": "Programmer",
-        "team": "3",
-
-        "mediaTable": [],
-        "description": {
-            "type": "file",
-            "src": ""
-        },
-        "information": {
-            "type": "file",
-            "src": ""
         }
     }
 ];

@@ -25,22 +25,20 @@
     --lg-media-height: 360px;
 
     /*  */
-    --md-description-width: 460px;
+    --md-description-width: 95vw;
     --md-description-height: 60vh;
 
-    --md-media-box-width: 440px;
-    --md-media-width: 400px;
-    --md-media-height: 225px;
+    --md-media-box-width: 85vw;
+    --md-media-width: 80vw;
+    --md-media-height: calc(var(--md-media-width) * 9 / 16); 
 
     /*  */
-    --sm-description-width: 100vw;
+    --sm-description-width: 90vw;
     --sm-description-height: 60vh;
 
-    --sm-media-box-width: 100vw;
-    --sm-media-box-height: 30vh;
-
-    --sm-media-width: 256px;
-    --sm-media-height: 144px; 
+    --sm-media-box-width: 95vw;
+    --sm-media-width: 90vw;
+    --sm-media-height: calc(var(--sm-media-width) * 9 / 16); 
     
     /* */
     
@@ -1103,6 +1101,77 @@ tr:nth-child(odd) {
 .right-button:hover {
     cursor: pointer;
 }
+
+.media-index-set {
+    padding-left: 10%;
+    padding-right: 10%;
+    margin: 0 auto;
+}
+
+.media-index-dot {
+    z-index: 2;
+    
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+
+    width: 32px;
+    height: 32px;
+
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+
+.media-left-button {
+    z-index: 2;
+
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    background: url("./img/left-arrow-inactive.png") no-repeat;
+    width: 14px;
+    height: 32px;
+    padding-left: 14px;
+}
+
+.media-left-button:active {
+    background: url("./img/left-arrow-active.png") no-repeat;
+}
+
+.media-left-button:hover {
+    cursor: pointer;
+}
+
+.media-right-button {
+    z-index: 2;
+
+    float: right;
+    transform: translate(-6px, 0);
+
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+    background: url("./img/right-arrow-inactive.png") no-repeat;
+    width: 14px;
+    height: 32px;
+    padding-left: 14px;
+}
+
+.media-right-button:active {
+    background: url("./img/right-arrow-active.png") no-repeat;
+}
+
+.media-right-button:hover {
+    cursor: pointer;
+}
+
 
 .modal-media-loading {
     position: absolute;

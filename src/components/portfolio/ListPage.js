@@ -62,19 +62,13 @@ class ListPage extends Component {
         const currListName = this.props.currListName;
         const worksTable = this.generateWorksItem(currListName);
 
-        const itemSpan = (worksTable.length >= 4)? 3 : 6;
+        const itemSpan = (worksTable.length >= 3)? ((worksTable.length >= 4)? 3 : 4) : 
+        6;
         const worksItem = worksTable.map((work) => {
             //return <WorkListItem key={work.title} workData={work} span={itemSpan} onClick={this.openModal}/>
             return <WorkListItem key={work.title} workData={work} span={itemSpan} onClick={this.props.onClickOnListItem}/>
         });
-
-        //const isSpecialFormat = (typeof this.state.currentModalWork.isSmall !== "undefined" && this.state.currentModalWork.isSmall);
         
-        /*let modalClassName = (isSpecialFormat)? "sp-modal-size" :
-                               (this.props.windowWidth < 720)? "sm-modal-size" :
-                               (this.props.windowWidth < 1280)? "md-modal-size" : "lg-modal-size";
-        modalClassName += " modal";*/
-
         let lgContainerSpan = (this.props.windowWidth > 1600)? 7 : 12;
 
         return (
@@ -88,18 +82,18 @@ class ListPage extends Component {
                     <Grid item lg={lgContainerSpan} md={12} sm={12} xs={12}>
                         {currListName === "game" && 
                             <div>
-                                <div className="page-title left show">games</div>
-                                <div className="page-description">big games</div>
+                                <div className="page-title left show">long-term projects</div>
+                                <div className="page-description">a list of projects with longer development cycles or released commercially</div>
                             </div>}
                         {currListName === "tool" && 
                             <div>
-                                <div className="page-title left show">tools/other</div>
-                                <div className="page-description">hahaha</div>
+                                <div className="page-title left show">small-but-sweet games</div>
+                                <div className="page-description">a list of small and quirky games, most of them are short or experimental prototypes</div>
                             </div>}
                         {currListName === "art" && 
                             <div>
                                 <div className="page-title left show">artworks</div>
-                                <div className="page-description">art shits</div>
+                                <div className="page-description">some pixel art pieces I made</div>
                             </div>}
                     </Grid>
                     <Grid item lg={lgContainerSpan} md={12} sm={12} xs={12}>
