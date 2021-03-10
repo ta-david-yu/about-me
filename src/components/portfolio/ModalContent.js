@@ -9,6 +9,32 @@ import '../../css/Portfolio.css';
 
 const GridOffset = (props) => { return <Grid item></Grid>; }
 
+class MediaDot extends Component {
+    constructor(props) {
+        super(props);
+
+        this.handleOnClickImg = this.handleOnClickImg.bind(this);
+    }
+
+    handleOnClickImg(e) {
+        this.props.onClickDot(this.props.index);
+    }
+
+    render() {
+        return (<img 
+                    key={this.props.index}
+                    alt={"media-dot"} 
+                    className={"media-index-dot"} 
+                    src={"./img/media-index-dot-inactive.png"} 
+                    onClick={this.handleOnClickImg}/>);
+    }
+}
+
+MediaDot.propTypes = {
+    index: PropTypes.number.isRequired,
+    onClickDot: PropTypes.func
+}
+
 class ModalContent extends Component {
     constructor(props) {
         super(props);
@@ -20,6 +46,8 @@ class ModalContent extends Component {
         
         this.handleOnMediaRight = this.handleOnMediaRight.bind(this);
         this.handleOnMediaLeft = this.handleOnMediaLeft.bind(this);
+
+        this.handleOnClickMediaDot = this.handleOnClickMediaDot.bind(this);
     }
     
     handleOnVideoProgress(state) {
@@ -55,6 +83,14 @@ class ModalContent extends Component {
         {
             stateObj.currentMediaIndex += length;
         }
+        stateObj.isMediaLoaded = false;
+
+        this.setState(stateObj);
+    }
+
+    handleOnClickMediaDot(index) {
+        const stateObj = this.state;
+        stateObj.currentMediaIndex = index;
         stateObj.isMediaLoaded = false;
 
         this.setState(stateObj);
@@ -128,19 +164,19 @@ class ModalContent extends Component {
 
         const mediaTable = this.props.mediaTable;
         const currentMediaIndex = this.state.currentMediaIndex;
-        const numOfMedia = mediaTable.length;
+        //const numOfMedia = mediaTable.length;
         
         const mediaIndexDots = mediaTable.map((media, index) => { 
             return (index === currentMediaIndex)? 
-                    <img alt={"left-btn"} className={"media-index-dot"} src={"./img/media-index-dot-active.png"}/> :
-                    <img alt={"left-btn"} className={"media-index-dot"} src={"./img/media-index-dot-inactive.png"}/>;
+                    <img key={index} alt={"media-dot"} className={"media-index-dot.active"} src={"./img/media-index-dot-active.png"} /> :
+                    <MediaDot key={index} index={index} onClickDot={this.handleOnClickMediaDot} />;
         });
 
-        const isSmallScreen = this.props.windowWidth < 720;
+        //const isSmallScreen = this.props.windowWidth < 720;
         const size = (this.props.windowWidth < 720 || this.props.SmallFormat)? "sm" : (this.props.windowWidth < 1280)? "md" : "lg";
 
         //if (!this.props.SmallFormat)
-        {
+        //{
             return  <div>
                         <Grid 
                         container 
@@ -178,7 +214,7 @@ class ModalContent extends Component {
                             </Grid>
                         </Grid>
                     </div>;
-        }
+        //}
         /*
         else
         {

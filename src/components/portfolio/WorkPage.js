@@ -10,10 +10,6 @@ Modal.setAppElement(document.getElementById("root"));
 
 class WorkPage extends Component {
 
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         const currWorkData = this.props.currWorkData;
         return (
@@ -35,7 +31,7 @@ class WorkPage extends Component {
 }
 
 WorkPage.propTypes = {
-    currWorkData: PropTypes.string.isRequired,
+    currWorkData: PropTypes.object.isRequired,
 };
 
 export default withWindowSize(WorkPage);
