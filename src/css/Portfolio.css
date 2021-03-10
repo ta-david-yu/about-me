@@ -1050,7 +1050,8 @@ tr:nth-child(odd) {
 .media-index-set {
     padding-left: 10%;
     padding-right: 10%;
-    margin: 0 auto;
+    
+    text-align:center;
 }
 
 .media-index-dot.active {
@@ -1093,12 +1094,14 @@ tr:nth-child(odd) {
 .media-left-button {
     z-index: 2;
 
+    float: left;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     image-rendering: pixelated;
     image-rendering: -moz-crisp-edges;
     image-rendering: crisp-edges;
     background: url("./img/left-arrow-inactive.png") no-repeat;
+
     width: 14px;
     height: 32px;
     padding-left: 14px;
