@@ -111,16 +111,12 @@ class ModalContent extends Component {
                 if (media.type === "video") {
                     jsx = 
                     <div id={index} className={"modal-media " + mediaClassName}>
-                        {mediaTable.length > 1 && <img alt={"left-btn"} src={"./img/left-arrow-inactive.png"} className="left-button" onClick={this.handleOnMediaLeft}/>}
-                        {mediaTable.length > 1 && <img alt={"right-btn"} src={"./img/right-arrow-inactive.png"} className="right-button" onClick={this.handleOnMediaRight}/>}
                         {mediaTable.length > 1 && <span className={"media-page-number"}>{pageNumber + 1}/{pageCount}</span>}
 
                         {!this.state.isMediaLoaded? 
                                 <span className={"modal-media-loading " + mediaClassName}>loading video</span> :
                                 <span className={"modal-media-loading exit " + mediaClassName}>loading video</span> }
-                        <ReactPlayer
-                        width={"100%"}
-                        height={"100%"}
+                        <ReactPlayer width={"100%"} height={"100%"}
                         onProgress={this.handleOnVideoProgress}
                         onReady={this.handleOnMediaReady}
                         playing={true}
@@ -135,8 +131,6 @@ class ModalContent extends Component {
                 else if (media.type === "image") {
                     jsx = 
                     <div id={index} className={"modal-media " + mediaClassName}>
-                        {mediaTable.length > 1 && <img alt={"left-btn"} src={"./img/left-arrow-inactive.png"} className="left-button" onClick={this.handleOnMediaLeft}/>}
-                        {mediaTable.length > 1 && <img alt={"right-btn"} src={"./img/right-arrow-inactive.png"} className="right-button" onClick={this.handleOnMediaRight}/>}
                         {mediaTable.length > 1 && <span className={"media-page-number"}>{pageNumber + 1}/{pageCount}</span>}
 
                         <img alt="work-img" src={media.src} onLoad={this.handleOnMediaReady} className={"modal-img " + mediaClassName} />
@@ -164,66 +158,33 @@ class ModalContent extends Component {
 
         const mediaTable = this.props.mediaTable;
         const currentMediaIndex = this.state.currentMediaIndex;
-        //const numOfMedia = mediaTable.length;
-        
+
         const mediaIndexDots = mediaTable.map((media, index) => { 
             return (index === currentMediaIndex)? 
                     <img key={index} alt={"media-dot"} className={"media-index-dot.active"} src={"./img/media-index-dot-active.png"} /> :
                     <MediaDot key={index} index={index} onClickDot={this.handleOnClickMediaDot} />;
         });
 
-        //const isSmallScreen = this.props.windowWidth < 720;
         const size = (this.props.windowWidth < 720 || this.props.SmallFormat)? "sm" : (this.props.windowWidth < 1280)? "md" : "lg";
 
-        //if (!this.props.SmallFormat)
-        //{
-            return  <div>
-                        <Grid 
-                        container 
-                        spacing={8}
-                        direction="column"
-                        justify="center"
-                        alignItems="center">
-                            <GridOffset/><GridOffset/><GridOffset/><GridOffset/>
-                            <Grid item className={"modal-media-box " + size}>
-                                {this.mediaJSX[this.state.currentMediaIndex]}
-                                <div className="media-index-set">
-                                    {mediaTable.length > 1 && <img alt={"left-btn"} className="media-left-button" src={"./img/left-arrow-inactive.png"} onClick={this.handleOnMediaLeft}/>}
-                                    {mediaTable.length > 1 && mediaIndexDots}
-                                    {mediaTable.length > 1 && <img alt={"right-btn"} className="media-right-button" src={"./img/right-arrow-inactive.png"} onClick={this.handleOnMediaRight}/>}
-                                </div>
-                                <div className="modal-game-title">
-                                    {this.props.title}
-                                </div>
-                                <div className="modal-job">
-                                    {this.props.job}
-                                </div>
-                                <div className="center-align">
-                                    <span className="modal-date">
-                                        <img alt="date-icon" src="./img/clock-x13.png" className="modal-time-icon"/>
-                                        {this.props.date} 
-                                    </span>
-                                    <span className="modal-team-size">
-                                        <img alt="date-icon" src="./img/person-x13.png" className="modal-team-icon"/>
-                                        {(parseInt(this.props.team) > 1)? this.props.team + "-person team" : "Solo"} 
-                                    </span>
-                                </div>
-                            </Grid>
-                            <Grid item className={"modal-description-box " + size}>
-                                <div className="modal-information">{this.props.information}</div>
-                            </Grid>
-                        </Grid>
-                    </div>;
-        //}
-        /*
-        else
-        {
-            return <div>
-                        <div className={"modal-media-box sp"}>
+        return  <div>
+                    <Grid 
+                    container 
+                    spacing={8}
+                    direction="column"
+                    justify="center"
+                    alignItems="center">
+                        <GridOffset/><GridOffset/><GridOffset/><GridOffset/>
+                        <Grid item className={"modal-media-box " + size}>
+                            {this.mediaJSX[this.state.currentMediaIndex]}
+                            <div className="media-index-set">
+                                {mediaTable.length > 1 && <img alt={"left-btn"} className="media-left-button" src={"./img/left-arrow-inactive.png"} onClick={this.handleOnMediaLeft}/>}
+                                {mediaTable.length > 1 && mediaIndexDots}
+                                {mediaTable.length > 1 && <img alt={"right-btn"} className="media-right-button" src={"./img/right-arrow-inactive.png"} onClick={this.handleOnMediaRight}/>}
+                            </div>
                             <div className="modal-game-title">
                                 {this.props.title}
                             </div>
-                            <div className="modal-information">{this.props.information}</div>
                             <div className="modal-job">
                                 {this.props.job}
                             </div>
@@ -237,14 +198,12 @@ class ModalContent extends Component {
                                     {(parseInt(this.props.team) > 1)? this.props.team + "-person team" : "Solo"} 
                                 </span>
                             </div>
-                        </div>
-                        <div className={"modal-description-box sp"}>
-                            <CustomScrollbar>
-                                <Markdown source={this.props.description} className="modal-description"/>
-                            </CustomScrollbar>
-                        </div>
-                    </div>;
-        }*/
+                        </Grid>
+                        <Grid item className={"modal-description-box " + size}>
+                            <div className="modal-information">{this.props.information}</div>
+                        </Grid>
+                    </Grid>
+                </div>;
     }
 }
 
