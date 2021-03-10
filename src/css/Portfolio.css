@@ -1047,61 +1047,6 @@ tr:nth-child(odd) {
     color: #f6d6bd;
 }
 
-.left-button {
-    position: absolute;
-
-    z-index: 2;
-
-    top: 50%;
-    transform: translate(0%, -50%);
-
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    image-rendering: pixelated;
-    image-rendering: -moz-crisp-edges;
-    image-rendering: crisp-edges;
-    background: url("./img/left-arrow-inactive.png") no-repeat;
-    width: 14px;
-    height: 32px;
-    padding-left: 14px;
-}
-
-.left-button:active {
-    background: url("./img/left-arrow-active.png") no-repeat;
-}
-
-.left-button:hover {
-    cursor: pointer;
-}
-
-.right-button {
-    position: absolute;
-    
-    z-index: 2;
-    
-    top: 50%;
-    left: 100%;
-    transform: translate(-100%, -50%);
-
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    image-rendering: pixelated;
-    image-rendering: -moz-crisp-edges;
-    image-rendering: crisp-edges;
-    background: url("./img/right-arrow-inactive.png") no-repeat;
-    width: 14px;
-    height: 32px;
-    padding-left: 14px;
-}
-
-.right-button:active {
-    background: url("./img/right-arrow-active.png") no-repeat;
-}
-
-.right-button:hover {
-    cursor: pointer;
-}
-
 .media-index-set {
     padding-left: 10%;
     padding-right: 10%;
@@ -1126,7 +1071,7 @@ tr:nth-child(odd) {
 
 .media-index-dot {
     z-index: 2;
-    
+
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     image-rendering: pixelated;

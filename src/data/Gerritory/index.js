@@ -93,12 +93,9 @@ Some of the notable features I implemented
 |  | Description |
 | --------- | ------- |
 | Switch Porting | Optimize and port Gerritory to nintendo switch in Unity. |
-| Tween Manager | A small library simliar to DOTween but simplified. Allow users to play easing animation sequence easily. Make use of object pooling to improve performance. |
-| Layered Audio System | Sort audio sources into layers so player can adjust volume for different layers. Make use of event queue to avoid duplicated sound effects in the same frame. |
-| Collectables Editor | Make use of the Unity Editor API to create a custom editor for editing in-game collectables. |
-| Asynchronous Task Queue | Users can push tasks to task queue which will be executed during scene loading asynchronously. Most of these tasks would take over a second to complete such as loading assetbundles, procedural content generation, internet connection. |
 | Runtime Level Editor | Implement an in-game level editor with undo / redo feature using Command pattern. |
-| Shader Effects | Some special effects using UnityShader. |
+| Tween Manager | A small library simliar to DOTween but simplified. Allow users to play easing animation sequence easily. Make use of object pooling to improve performance. |
+| Asynchronous Task Queue | Users can push tasks to task queue which will be executed during scene loading asynchronously. Most of these tasks would take over a second to complete such as loading assetbundles, procedural content generation, internet connection. |
 
 Other notable non-programming stuff I did  
 

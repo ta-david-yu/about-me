@@ -69,8 +69,8 @@ Notable features
 
 |  | Description |
 | --------- | ------- |
-| Switch Porting | Optimize and port Gerritory to nintendo switch in Unity. |
-| Tween Manager | A small library simliar to DOTween but simplified. Allow users to play easing animation sequence easily. Make use of object pooling to improve performance. |
+| Level Tiles Editor | An offline level editor extended from Unity built-in Tilemap editor, allowing designers to place hexagonal tiles smoothly. It's also integrated with GPU Instancer so tiles that share the same material and mesh can be instanced. |
+| Scene Metadata & Editor | A per-scene metadata saves addtional information of a scene (similar to lighting data). It also keeps tracks of the important objects of that scene which can be referenced by other different scenes/levels. |
 `}/>
         </Collapsible>
     </div>
