@@ -4,6 +4,7 @@ import RollingRocker_EagleSimulator from './RollingRocker_EagleSimulator';
 import HeeXHoo from './HeeXHoo';
 import Boomeranger from './Boomeranger';
 import TwoDPlatformerHunter from './2DPlatformerHunter';
+import SryNoJumpForYou from './SryNoJumpForYou';
 
 const works = [
     {
@@ -11,7 +12,7 @@ const works = [
         "title": "Gerritory",
         "img": "./img/work/gerritory-preview.png",
         "gif": "./img/work/gerritory-preview.gif",
-        "date": "2017 - 2020",
+        "date": "2017.11 - 2020.10",
         "job": "Designer, Programmer, Visual Design",
         "team": "4",
 
@@ -31,7 +32,7 @@ const works = [
         "title": "Out Of the Mist",
         "img": "./img/work/ootm-preview.png",
         "gif": "./img/work/ootm-preview.gif",
-        "date": "2020 - present",
+        "date": "2020.1 - present",
         "job": "Programmer",
         "team": "5",
 
@@ -43,6 +44,26 @@ const works = [
         "information": {
             "type": "file",
             "src": OutOfTheMist.information
+        }
+    },
+
+    {
+        "type": "tool",
+        "title": "Sry, No Jump For You",
+        "img": "./img/work/sry-nojumpforyou-preview.png",
+        "gif": "./img/work/sry-nojumpforyou-preview.gif",
+        "date": "2019.10 - 2020.2",
+        "job": "Designer, Programmer, Artist",
+        "team": "1",
+
+        "mediaTable": SryNoJumpForYou.medias,
+        "description": {
+            "type": "file",
+            "src": SryNoJumpForYou.description 
+        },
+        "information": {
+            "type": "file",
+            "src": SryNoJumpForYou.information
         }
     },
 
@@ -107,26 +128,6 @@ const works = [
     },
 
     {
-        "type": "tool",
-        "title": "Boomeranger",
-        "img": "./img/work/boomeranger-preview.png",
-        "gif": "./img/work/boomeranger-preview.gif",
-        "date": "2016.3 - 2016.6",
-        "job": "Designer, Programmer",
-        "team": "3",
-
-        "mediaTable": Boomeranger.medias,
-        "description": {
-            "type": "file",
-            "src": Boomeranger.description 
-        },
-        "information": {
-            "type": "file",
-            "src": Boomeranger.information
-        }
-    },
-
-    {
         "ignore": true,
         "type": "tool",
         "title": "Nothing Lasts Forever",
@@ -152,7 +153,7 @@ const works = [
         "title": "2D Platformer Hunter (Unity Plugin)",
         "img": "./img/work/platformer-preview.png",
         "gif": "./img/work/platformer-preview.gif",
-        "date": "2018 - present",
+        "date": "2018.10 - present",
         "job": "Programmer",
         "team": "1",
 

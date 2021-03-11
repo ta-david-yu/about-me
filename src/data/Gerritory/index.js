@@ -68,6 +68,9 @@ information:
     <div>This is our first commercial project and has been released on both Steam and Switch. </div>
     <div>Although four of us are all programmers, another teammate and I were also in charge of the art materials in the game.</div>
 
+    <div>--</div>
+    <div>Music composed by <a href="https://www.waterflame.com/">Waterflame</a></div>
+
     <span style={{margin: '50px'}} />
     <div style={{textAlign: 'left', fontSize: '16px'}}>
         <Collapsible 
@@ -86,7 +89,7 @@ Factsheet
 | Genre | 4-player online (steam only) & local party game |
 | Made with | Unity |
 | Team | Cheng-Kai Chiu, Ta David Yu, Yu-Han Lu, Yun-Xuan Lin |
-| Additional Staff | Glen Zhang, Ken Wei, Paus Chen, Waterflame |
+| Digital Crafter (Publisher) | Glen Zhang, Ken Wei, Paus Chen |
 
 Some of the notable features I implemented  
 

@@ -59,11 +59,11 @@ class WorkListItem extends Component {
                             {workData.job}
                         </div>
                         <Grid container direction="row">
-                            <Grid item xs={3} className="work-team">
+                            <Grid item xs={2} className="work-team">
                                 <img alt={workData.team} src="./img/person-x13.png" className="team-icon" />
                                 {workData.team}
                             </Grid>
-                            <Grid item xs={6} className="work-date">
+                            <Grid item xs={8} className="work-date">
                                 {workData.date}
                             </Grid>
                         </Grid>
