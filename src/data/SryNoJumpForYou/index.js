@@ -55,6 +55,7 @@ Factsheet
 
 | | Information |
 | --------- | ------- |
+| Status | Prototype |
 | Platforms | Windows PC |
 | Genre | 2D puzzle platformer |
 | Made with | Unity |
