@@ -88,12 +88,13 @@ class ListPage extends Component {
                         {currListName === "tool" && 
                             <div>
                                 <div className="page-title left show">small-but-sweet games</div>
-                                <div className="page-description">a list of small and quirky games, most of them are short or experimental prototypes</div>
+                                <div className="page-description">a list of small/experimental games and prototypes,</div>
+                                <div className="page-description">although not all of them are complete, I still want to show them because I think they are cool</div>
                             </div>}
                         {currListName === "art" && 
                             <div>
                                 <div className="page-title left show">artworks</div>
-                                <div className="page-description">some pixel art pieces I made</div>
+                                <div className="page-description">some pixel art pieces I made (UNDER CONSTRUCTION RIP)</div>
                             </div>}
                     </Grid>
                     <Grid item lg={lgContainerSpan} md={12} sm={12} xs={12}>

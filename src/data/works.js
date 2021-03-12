@@ -5,6 +5,8 @@ import HeeXHoo from './HeeXHoo';
 import Boomeranger from './Boomeranger';
 import TwoDPlatformerHunter from './2DPlatformerHunter';
 import SryNoJumpForYou from './SryNoJumpForYou';
+import RhythmInvaders from './RhythmInvaders';
+import NSShaft from './NS-Shaft-Console';
 
 const works = [
     {
@@ -52,7 +54,7 @@ const works = [
         "title": "Sry, No Jump For You",
         "img": "./img/work/sry-nojumpforyou-preview.png",
         "gif": "./img/work/sry-nojumpforyou-preview.gif",
-        "date": "2019.10 - 2020.2",
+        "date": "2019.11 - 2020.2",
         "job": "Designer, Programmer, Artist",
         "team": "1",
 
@@ -89,6 +91,26 @@ const works = [
 
     {
         "type": "tool",
+        "title": "NS-Shaft console",
+        "img": "./img/work/nsshaft-preview_0.png",
+        "gif": "./img/work/nsshaft-preview.gif",
+        "date": "2019.10",
+        "job": "Designer, Programmer",
+        "team": "1",
+
+        "mediaTable": NSShaft.medias,
+        "description": {
+            "type": "file",
+            "src": NSShaft.description
+        },
+        "information": {
+            "type": "file",
+            "src": NSShaft.information
+        }
+    },
+
+    {
+        "type": "tool",
         "title": "Hee X Hoo",
         "img": "./img/work/hee-hoo-preview.png",
         "gif": "./img/work/hee-hoo-preview.gif",
@@ -108,6 +130,27 @@ const works = [
     },
 
     {
+        "type": "tool",
+        "title": "Rhythm Invaders",
+        "img": "./img/work/rhythm-invaders-preview.png",
+        "gif": "./img/work/rhythm-invaders-preview.gif",
+        "date": "2019.11",
+        "job": "Designer, Programmer",
+        "team": "1",
+
+        "mediaTable": RhythmInvaders.medias,
+        "description": {
+            "type": "file",
+            "src": RhythmInvaders.description 
+        },
+        "information": {
+            "type": "file",
+            "src": RhythmInvaders.information
+        }
+    },
+
+    {
+        "ignore": true,
         "type": "tool",
         "title": "Boomeranger",
         "img": "./img/work/boomeranger-preview.png",

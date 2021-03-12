@@ -6,7 +6,7 @@ export default {
 medias: [
     {
         "type": "video",
-        "src": "https://youtu.be/Vsg9K_Cnhaw",
+        "src": "https://youtu.be/YSH--V63RQ8",
     },
     {
         "type": "image",

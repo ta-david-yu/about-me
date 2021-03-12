@@ -59,7 +59,7 @@ information:
 <div>
     <div style={{textAlign: 'center'}}>
         <div>
-            <a href="https://github.com/ta-david-yu/2D-Platformer-Hunter"><img alt="gh-icon" src="./img/github-x26.png" className="icon-26-no-hover" /></a>
+            <a href="https://github.com/ta-david-yu/2D-Platformer-Hunter"><img alt="gh-icon" src="./img/github-x26.png" className="icon-26" /></a>
         </div>
         <div>2D Platformer Hunter is a customizable 2D platformer controller Unity plugin using reliable raycast-based detection method.</div>
     </div>
