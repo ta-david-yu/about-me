@@ -10,14 +10,15 @@ import NSShaft from './NS-Shaft-Console';
 
 const works = [
     {
-        "type": "game",
+        "type": "long-term",
         "title": "Gerritory",
         "img": "./img/work/gerritory-preview.png",
         "gif": "./img/work/gerritory-preview.gif",
         "date": "2017.11 - 2020.10",
         "job": "Designer, Programmer, Visual Design",
         "team": "4",
-
+        
+        "linksInfo": Gerritory.linksInfo,
         "mediaTable": Gerritory.medias,
         "description": {
             "type": "file",
@@ -30,7 +31,7 @@ const works = [
     },
 
     {
-        "type": "game",
+        "type": "long-term",
         "title": "Out Of the Mist",
         "img": "./img/work/ootm-preview.png",
         "gif": "./img/work/ootm-preview.gif",
@@ -38,6 +39,7 @@ const works = [
         "job": "Programmer",
         "team": "5",
 
+        "linksInfo": OutOfTheMist.linksInfo,
         "mediaTable": OutOfTheMist.medias,
         "description": {
             "type": "file",
@@ -50,7 +52,7 @@ const works = [
     },
 
     {
-        "type": "tool",
+        "type": "experimental",
         "title": "Sry, No Jump For You",
         "img": "./img/work/sry-nojumpforyou-preview.png",
         "gif": "./img/work/sry-nojumpforyou-preview.gif",
@@ -58,6 +60,7 @@ const works = [
         "job": "Designer, Programmer, Artist",
         "team": "1",
 
+        "linksInfo": SryNoJumpForYou.linksInfo,
         "mediaTable": SryNoJumpForYou.medias,
         "description": {
             "type": "file",
@@ -70,14 +73,15 @@ const works = [
     },
 
     {
-        "type": "tool",
+        "type": "experimental",
         "title": "Rolling Rocker & Eagle Simulator",
         "img": "./img/work/es-rr-preview.png",
         "gif": "./img/work/es-rr-preview.gif",
         "date": "2017.3 - 2017.4",
         "job": "Designer, Programmer",
-        "team": "1",
+        "team": "1", 
 
+        "linksInfo": RollingRocker_EagleSimulator.linksInfo,
         "mediaTable": RollingRocker_EagleSimulator.medias,
         "description": {
             "type": "file",
@@ -90,7 +94,7 @@ const works = [
     },
 
     {
-        "type": "tool",
+        "type": "experimental",
         "title": "NS-Shaft console",
         "img": "./img/work/nsshaft-preview_0.png",
         "gif": "./img/work/nsshaft-preview.gif",
@@ -98,6 +102,7 @@ const works = [
         "job": "Designer, Programmer",
         "team": "1",
 
+        "linksInfo": NSShaft.linksInfo,
         "mediaTable": NSShaft.medias,
         "description": {
             "type": "file",
@@ -110,7 +115,7 @@ const works = [
     },
 
     {
-        "type": "tool",
+        "type": "experimental",
         "title": "Hee X Hoo",
         "img": "./img/work/hee-hoo-preview.png",
         "gif": "./img/work/hee-hoo-preview.gif",
@@ -118,6 +123,7 @@ const works = [
         "job": "Level Designer, Programmer",
         "team": "5",
 
+        "linksInfo": HeeXHoo.linksInfo,
         "mediaTable": HeeXHoo.medias,
         "description": {
             "type": "file",
@@ -130,7 +136,7 @@ const works = [
     },
 
     {
-        "type": "tool",
+        "type": "experimental",
         "title": "Rhythm Invaders",
         "img": "./img/work/rhythm-invaders-preview.png",
         "gif": "./img/work/rhythm-invaders-preview.gif",
@@ -138,6 +144,7 @@ const works = [
         "job": "Designer, Programmer",
         "team": "1",
 
+        "linksInfo": RhythmInvaders.linksInfo,
         "mediaTable": RhythmInvaders.medias,
         "description": {
             "type": "file",
@@ -151,7 +158,7 @@ const works = [
 
     {
         "ignore": true,
-        "type": "tool",
+        "type": "experimental",
         "title": "Boomeranger",
         "img": "./img/work/boomeranger-preview.png",
         "gif": "./img/work/boomeranger-preview.gif",
@@ -172,7 +179,7 @@ const works = [
 
     {
         "ignore": true,
-        "type": "tool",
+        "type": "experimental",
         "title": "Nothing Lasts Forever",
         "img": "./img/work/nothing-last-forever-preview.png",
         "gif": "./img/work/nothing-last-forever-preview.gif",
@@ -192,7 +199,7 @@ const works = [
     },
 
     {
-        "type": "game",
+        "type": "long-term",
         "title": "2D Platformer Hunter (Unity Plugin)",
         "img": "./img/work/platformer-preview.png",
         "gif": "./img/work/platformer-preview.gif",
@@ -200,6 +207,7 @@ const works = [
         "job": "Programmer",
         "team": "1",
 
+        "linksInfo": TwoDPlatformerHunter.linksInfo,
         "mediaTable": TwoDPlatformerHunter.medias,
         "description": {
             "type": "file",

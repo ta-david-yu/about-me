@@ -80,12 +80,12 @@ class ListPage extends Component {
                 justify="center"
                 alignItems="center">
                     <Grid item lg={lgContainerSpan} md={12} sm={12} xs={12}>
-                        {currListName === "game" && 
+                        {currListName === "long-term" && 
                             <div>
                                 <div className="page-title left show">long-term projects</div>
                                 <div className="page-description">a list of projects with longer development cycles or released commercially</div>
                             </div>}
-                        {currListName === "tool" && 
+                        {currListName === "experimental" && 
                             <div>
                                 <div className="page-title left show">small-but-sweet games</div>
                                 <div className="page-description">a list of small/experimental games and prototypes,</div>

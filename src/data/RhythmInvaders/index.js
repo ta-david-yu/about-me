@@ -1,6 +1,5 @@
 import React from 'react';
 import Markdown from 'react-markdown';
-import Collapsible from 'react-collapsible';
 
 export default {
 medias: [
@@ -14,30 +13,15 @@ medias: [
     },
 ],
 
-information:
+linksInfo:
 <div>
-    <div style={{textAlign: 'center'}}>
-        <div>
-            <a href="https://functionoverflu.itch.io/rhythem-invaders"><img alt="itch-icon" src="./img/itchio-x26.png" className="icon-26" /></a>
-        </div>
-        <div>(UNDER CONSTRUCTION RIP)</div>
-    </div>
-    
-    <div style={{textAlign: 'center', fontSize: '16px'}}>
-        <div>--</div>
-        <div>Music from <a href="https://maoudamashii.jokersounds.com/">魔王魂</a></div>
-    </div>
+    <a href="https://functionoverflu.itch.io/rhythem-invaders"><img alt="itch-icon" src="./img/itchio-x26.png" className="icon-26" /></a>
+</div>
+,
 
-
-    <span style={{margin: '50px'}} />
-    <div style={{textAlign: 'left', fontSize: '16px'}}>
-        <Collapsible 
-        trigger="more information +" 
-        triggerWhenOpen="more information -"
-        transitionTime='100'
-        transitionCloseTime='100'>
-            <Markdown children={`
-
+information:
+<div style={{textAlign: 'center'}}>
+    <Markdown children={`
 Factsheet  
 
 | | Information |
@@ -49,10 +33,15 @@ Factsheet
 | Team | Ta David Yu |
 
 `}/>
-        </Collapsible>
-    </div>
 </div>,
 
 description: 
-``,
+<div style={{textAlign: 'center'}}>
+    <div style={{fontWeight: 'bold'}}>
+        <div>About Rhythm Invaders</div>
+    </div>
+    <div>(UNDER CONSTRUCTION RIP)(UNDER CONSTRUCTION RIP)(UNDER CONSTRUCTION RIP)</div>
+    <div>--</div>
+    <div>Music from <a href="https://maoudamashii.jokersounds.com/">魔王魂</a></div>
+</div>,
 }

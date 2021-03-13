@@ -1,6 +1,5 @@
 import React from 'react';
 import Markdown from 'react-markdown';
-import Collapsible from 'react-collapsible';
 
 export default {
 medias: [
@@ -24,34 +23,15 @@ medias: [
     },
 ],
 
-information:
+linksInfo: 
 <div>
-    <div style={{textAlign: 'center'}}>
-        <div>
             <a href="https://functionoverflu.itch.io/sorry-no-jump-for-you"><img alt="itch-icon" src="./img/itchio-x26.png" className="icon-26" /></a>
-        </div>
-        <div>A 10-minute 2d puzzle platformer where you cannot jump.</div>
-        <div>There are currently 16 levels in the game.</div>
-        <div>I made this during my first semester at CGL.</div>
-    </div>
-    
-    <div style={{textAlign: 'center', fontSize: '16px'}}>
-        <div>--</div>
-        <div>Music by <a href="http://loyaltyfreakmusic.com/about">Monplaisir</a></div>
-        <div>Font by <a href="https://managore.itch.io/">Daniel Linssen</a></div>
-    </div>
+</div>,
 
-
-    <span style={{margin: '50px'}} />
-    <div style={{textAlign: 'left', fontSize: '16px'}}>
-        <Collapsible 
-        trigger="more information +" 
-        triggerWhenOpen="more information -"
-        transitionTime='100'
-        transitionCloseTime='100'>
-            <Markdown children={`
-
-Factsheet  
+information:
+<div style={{textAlign: 'center'}}>
+    <Markdown children={`
+** Factsheet **
 
 | | Information |
 | --------- | ------- |
@@ -62,10 +42,22 @@ Factsheet
 | Team | Ta David Yu |
 
 `}/>
-        </Collapsible>
-    </div>
 </div>,
 
-description: 
-``,
+description:
+<div style={{textAlign: 'center'}}>
+
+    <div style={{fontWeight: 'bold'}}>
+        <div>About Sorry, No Jump For You</div>
+    </div>
+
+    <div>A 10-minute 2d puzzle platformer where you cannot jump.</div>
+    <div>There are currently 16 levels in the game.</div>
+    <div>I made this during my first semester at CGL.</div>
+
+    <span style={{margin: '50px'}} />
+    <div>--</div>
+    <div>Music by <a href="http://loyaltyfreakmusic.com/about">Monplaisir</a></div>
+    <div>Font by <a href="https://managore.itch.io/">Daniel Linssen</a></div>
+</div>,
 }

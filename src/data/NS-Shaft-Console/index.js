@@ -1,6 +1,5 @@
 import React from 'react';
 import Markdown from 'react-markdown';
-import Collapsible from 'react-collapsible';
 
 export default {
 medias: [
@@ -25,32 +24,16 @@ medias: [
     },
 ],
 
-information:
+linksInfo:
 <div>
-    <div style={{textAlign: 'center'}}>
-        <div>
-            <a href="https://functionoverflu.itch.io/ns-shaft-console"><img alt="itch-icon" src="./img/itchio-x26.png" className="icon-26" /></a>
-        </div>
-        <div>A recreation / demake of the famous arcade game - NS-Shaft.</div>
-        <div>Originally made by Akihiko Kusanagi.</div>
-        <div>(UNDER CONSTRUCTION RIP)</div>
-    </div>
-    
-    <div style={{textAlign: 'center', fontSize: '16px'}}>
-        <div>--</div>
-        <div>Original game by <a href="https://www.nagi-p.com/v1/eng/">Nagi-P Software</a></div>
-    </div>
+    <a href="https://functionoverflu.itch.io/ns-shaft-console"><img alt="itch-icon" src="./img/itchio-x26.png" className="icon-26" /></a>
+</div>
+,
 
-    <span style={{margin: '50px'}} />
-    <div style={{textAlign: 'left', fontSize: '16px'}}>
-        <Collapsible 
-        trigger="more information +" 
-        triggerWhenOpen="more information -"
-        transitionTime='100'
-        transitionCloseTime='100'>
-            <Markdown children={`
-
-Factsheet  
+information:
+<div style={{textAlign: 'center'}}>
+    <Markdown children={`
+** Factsheet **
 
 | | Information |
 | --------- | ------- |
@@ -61,10 +44,21 @@ Factsheet
 | Team | Ta David Yu |
 
 `}/>
-        </Collapsible>
-    </div>
 </div>,
 
 description: 
-``,
+<div style={{textAlign: 'center'}}>
+
+    <div style={{fontWeight: 'bold'}}>
+        <div>About NS-Shaft console</div>
+    </div>
+
+    <div>A recreation / demake of the famous arcade game - NS-Shaft.</div>
+    <div>Originally made by Akihiko Kusanagi.</div>
+    <div>(UNDER CONSTRUCTION RIP)</div>
+    
+    <span style={{margin: '50px'}} />
+    <div>--</div>
+    <div>Original game by <a href="https://www.nagi-p.com/v1/eng/">Nagi-P Software</a></div>
+</div>,
 }

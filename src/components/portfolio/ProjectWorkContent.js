@@ -197,10 +197,22 @@ class ProjectWorkContent extends Component {
                                     <img alt="date-icon" src="./img/person-x13.png" className="modal-team-icon"/>
                                     {(parseInt(this.props.team) > 1)? this.props.team + "-person team" : "Solo"} 
                                 </span>
+                                {this.props.linksInfo}
                             </div>
                         </Grid>
-                        <Grid item className={"modal-description-box " + size}>
-                            <div className="modal-information">{this.props.information}</div>
+                        <Grid item lg={10} md={10} sm={12} xs={12}>
+                            <Grid 
+                            container
+                            spacing={32}
+                            direction="row">
+                                <Grid item lg={6}>
+                                    <div className="modal-information">{this.props.information}</div>
+                                </Grid>
+                                <Grid item lg={6}>
+                                    <span style={{margin: '50px'}} />
+                                    <div className="modal-information">{this.props.description}</div>
+                                </Grid>
+                            </Grid>
                         </Grid>
                     </Grid>
                 </div>;
@@ -213,6 +225,7 @@ ProjectWorkContent.propTypes = {
     date: PropTypes.string.isRequired,
     team: PropTypes.string.isRequired,
     job: PropTypes.string.isRequired,
+    linksInfo: PropTypes.object.isRequired,
     mediaTable: PropTypes.array.isRequired,
     description: PropTypes.string.isRequired,
     information: PropTypes.object.isRequired

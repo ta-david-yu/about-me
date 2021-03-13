@@ -21,6 +21,7 @@ class WorkPage extends Component {
                     team={currWorkData.team}
                     job={currWorkData.job}
                     mediaTable={currWorkData.mediaTable}
+                    linksInfo={currWorkData.linksInfo}
                     description={currWorkData.description.src}
                     information={currWorkData.information.src}
                     SmallFormat={false}

@@ -1,6 +1,5 @@
 import React from 'react';
 import Markdown from 'react-markdown';
-import Collapsible from 'react-collapsible';
 
 export default {
 medias: [
@@ -35,13 +34,57 @@ medias: [
     },
 ],
 
+linksInfo: 
+<div>
+    <a href="https://store.steampowered.com/app/1175720/Gerritory/"><img alt="steam-icon" src="./img/steam-x26.png" className="icon-26" /></a>
+    <a href="https://www.nintendo.com/games/detail/gerritory-switch/"><img alt="switch-icon" src="./img/switch-x26.png" className="icon-26" /></a>
+    <a href="https://partygoosestudio.wixsite.com/gerritorythegame"><img alt="globe-icon" src="./img/globe-x26.png" className="icon-26" /></a>
+</div>,
+
 information:
 <div style={{textAlign: 'center'}}>
-    <div>
-        <a href="https://store.steampowered.com/app/1175720/Gerritory/"><img alt="steam-icon" src="./img/steam-x26.png" className="icon-26" /></a>
-        <a href="https://www.nintendo.com/games/detail/gerritory-switch/"><img alt="switch-icon" src="./img/switch-x26.png" className="icon-26" /></a>
-        <a href="https://partygoosestudio.wixsite.com/gerritorythegame"><img alt="globe-icon" src="./img/globe-x26.png" className="icon-26" /></a>
+    <Markdown children={`
+** Factsheet **
+
+| | Information |
+| --------- | ------- |
+| Status | Released |
+| Platforms | Windows PC, Nintendo Switch |
+| Genre | 4-player online (steam only) & local party game |
+| Made with | Unity |
+| Team | Cheng-Kai Chiu, Ta David Yu, Yu-Han Lu, Yun-Xuan Lin |
+| Digital Crafter (Publisher) | Glen Zhang, Ken Wei, Paus Chen |
+
+** Some of the notable features I implemented **
+
+|  | Description |
+| --------- | ------- |
+| Switch Porting | Optimize and port Gerritory to nintendo switch in Unity. |
+| Runtime Level Editor | Implement an in-game level editor with undo / redo feature using Command pattern. |
+| Tween Manager | A small library simliar to DOTween but simplified. Allow users to play easing animation sequence easily. Make use of object pooling to improve performance. |
+| Asynchronous Task Queue | Users can push tasks to task queue which will be executed during scene loading asynchronously. Most of these tasks would take over a second to complete such as loading assetbundles, procedural content generation, internet connection. |
+
+** Other notable non-programming stuff I did **
+
+|  | Description |
+| --------- | ------- |
+| Core Mechanics | Design the core game mechanics. |
+| Level Design | Design some of the built-in levels in game. |
+| Visual Feedback | Add subtle motions in game to make it feel juicy. |
+| 3D Modeling | Model some of the cubic models with blender. |
+| Sound Design | Record & mix several in-game sound effects. |
+| Game Trailer Editing | Edit the game teaser using Adobe Premiere. |
+`}/>
+</div>,
+
+
+description: 
+<div style={{textAlign: 'center'}}>
+
+    <div style={{fontWeight: 'bold'}}>
+        <div>About Gerritory</div>
     </div>
+
     <div>Gerritory is a 4-player action party game with unique game rules and minimalistic visuals.</div>
     <div>You and your friends move cube characters in various levels and color tiles to score points.</div>
 
@@ -55,6 +98,15 @@ information:
     <div>- Small > Big -</div>
     <div>Players with less territory can kill players with more territory by stepping on them.</div>
 
+    <span style={{margin: '50px'}} />
+    <div>--</div>
+    <div>Gerritory is made by three of my friends and I in our leisure time</div>
+    <div>during our study in National Chiao Tung University. </div>
+    <div>This is our first commercial project and has been released on both Steam and Switch. </div>
+    <div>Although four of us are all programmers, another teammate and I were also in charge of the art materials in the game.</div>
+
+    <div>Music composed by <a href="https://www.waterflame.com/">Waterflame</a></div>
+
     <Markdown children={`
 ** Awards & Recognition **  
 [![trophy](./img/trophy-x13.png) 2018 Vision Get Wild - Sliver in PC game genre and several sponsor awards](https://dcaward-vgw.org.tw/About/AwardDetail/20838?year=2018&type=1052)  
@@ -62,60 +114,10 @@ information:
 [![trophy](./img/trophy-x13.png) 2018 The MIX Indie Showcase At TGDF - Official Selection](https://www.mediaindieexchange.com/event/the-mix-indie-showcase-at-tgdf/)  
 [![trophy](./img/trophy-x13.png) 2019 Taipei Game Show IGA - Best Design](http://tgs.tca.org.tw/indie_award_winners.php?b=2b_e)  `} />
 
-    <div>--</div>
-    <div>Gerritory is made by three of my friends and I in our leisure time</div>
-    <div>during our study in National Chiao Tung University. </div>
-    <div>This is our first commercial project and has been released on both Steam and Switch. </div>
-    <div>Although four of us are all programmers, another teammate and I were also in charge of the art materials in the game.</div>
+</div>
+,
 
-    <div>--</div>
-    <div>Music composed by <a href="https://www.waterflame.com/">Waterflame</a></div>
-
-    <span style={{margin: '50px'}} />
-    <div style={{textAlign: 'left', fontSize: '16px'}}>
-        <Collapsible 
-        trigger="more information +" 
-        triggerWhenOpen="more information -"
-        transitionTime='100'
-        transitionCloseTime='100'>
-            <Markdown children={`
-
-Factsheet  
-
-| | Information |
-| --------- | ------- |
-| Status | Released |
-| Platforms | Windows PC, Nintendo Switch |
-| Genre | 4-player online (steam only) & local party game |
-| Made with | Unity |
-| Team | Cheng-Kai Chiu, Ta David Yu, Yu-Han Lu, Yun-Xuan Lin |
-| Digital Crafter (Publisher) | Glen Zhang, Ken Wei, Paus Chen |
-
-Some of the notable features I implemented  
-
-|  | Description |
-| --------- | ------- |
-| Switch Porting | Optimize and port Gerritory to nintendo switch in Unity. |
-| Runtime Level Editor | Implement an in-game level editor with undo / redo feature using Command pattern. |
-| Tween Manager | A small library simliar to DOTween but simplified. Allow users to play easing animation sequence easily. Make use of object pooling to improve performance. |
-| Asynchronous Task Queue | Users can push tasks to task queue which will be executed during scene loading asynchronously. Most of these tasks would take over a second to complete such as loading assetbundles, procedural content generation, internet connection. |
-
-Other notable non-programming stuff I did  
-
-|  | Description |
-| --------- | ------- |
-| Core Mechanics | Design the core game mechanics. |
-| Level Design | Design some of the built-in levels in game. |
-| Visual Feedback | Add subtle motions in game to make it feel juicy. |
-| 3D Modeling | Model some of the cubic models with blender. |
-| Sound Design | Record & mix several in-game sound effects. |
-| Game Trailer Editing | Edit the game teaser using Adobe Premiere. |
-`}/>
-        </Collapsible>
-    </div>
-</div>,
-
-description: 
+oldDescription: 
 `Gerritory is a multiplayer party game I made with three of my friends using Unity Engine. This is my first commercial project and will be released on Steam. 
 Although four of us are all programmers, another teammate and I are also in charge of the art materials in the game.
 

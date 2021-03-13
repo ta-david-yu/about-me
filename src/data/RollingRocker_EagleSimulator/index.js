@@ -1,6 +1,5 @@
 import React from 'react';
 import Markdown from 'react-markdown';
-import Collapsible from 'react-collapsible';
 
 export default {
 medias: [
@@ -25,51 +24,49 @@ medias: [
     },
 ],
 
-information:
+linksInfo:
 <div>
-    <div style={{textAlign: 'center'}}>
-        <div>
-            <a href="https://functionoverflu.itch.io/rolling-rocker-eagle-simulator"><img alt="itch-icon" src="./img/itchio-x26.png" className="icon-26" /></a>
-        </div>
-        <div>This is an alt-ctrl game using a custom wand controller and an RGB camera.</div>
-        <div>The wand controller can be anything that has two colors.</div>
-        <div>Each color acts as one end of the wand.</div>
+    <a href="https://functionoverflu.itch.io/rolling-rocker-eagle-simulator"><img alt="itch-icon" src="./img/itchio-x26.png" className="icon-26" /></a>
+</div>
+,
 
-        <span style={{margin: '50px'}} />
-        <div style={{fontWeight: 'bold'}}>The project includes two arcade games</div>
+description: 
+<div style={{textAlign: 'center'}}>
 
-        <div>- Rolling Rocker -</div>
-        <div>An endless runner game where you control the ball on a rod by tilting the wand controller. The goal is to avoid falling into the holes along the way and survive as long as possible.</div>
-
-        <div>- Eagle Simulator -</div>
-        <div>A vertical scroller where you control an eagle to gather coins and avoid obstacles. The sooner you finish the level, the more extra points you get.</div>
-        <div>The angle of the wand controller determines the moving direction of the eagle.</div>
-        <div>Players can swing the wand controller to accelerate the eagle.</div>
-
-        <span style={{margin: '50px'}} />
-        <div>--</div>
-        <div>This is a personal academic project for my human-computer interaction class back in National Chiao Tung University.</div>
-        <div>Everything was made by myself using modern Visual C++ and OpenCV.</div>
-    </div>
-    
-    <div style={{textAlign: 'center', fontSize: '16px'}}>
-        <span style={{margin: '50px'}} />
-        <div>--</div>
-        <div>Music in the video is composed by <a href="http://loyaltyfreakmusic.com/about">Monplaisir</a>, Poupi Great Adventures : The Arcade Game</div>
-        <div>Some art assets are assets from RPG maker forums</div>
+    <div style={{fontWeight: 'bold'}}>
+        <div>About Rolling Rocker & Eagle Simulator</div>
     </div>
 
+    <div>This is an alt-ctrl game using a custom wand controller and an RGB camera.</div>
+    <div>The wand controller can be anything that has two colors.</div>
+    <div>Each color acts as one end of the wand.</div>
 
     <span style={{margin: '50px'}} />
-    <div style={{textAlign: 'left', fontSize: '16px'}}>
-        <Collapsible 
-        trigger="more information +" 
-        triggerWhenOpen="more information -"
-        transitionTime='100'
-        transitionCloseTime='100'>
-            <Markdown children={`
+    <div style={{fontWeight: 'bold'}}>The project includes two arcade games</div>
 
-Factsheet  
+    <div>- Rolling Rocker -</div>
+    <div>An endless runner game where you control the ball on a rod by tilting the wand controller. The goal is to avoid falling into the holes along the way and survive as long as possible.</div>
+
+    <div>- Eagle Simulator -</div>
+    <div>A vertical scroller where you control an eagle to gather coins and avoid obstacles. The sooner you finish the level, the more extra points you get.</div>
+    <div>The angle of the wand controller determines the moving direction of the eagle.</div>
+    <div>Players can swing the wand controller to accelerate the eagle.</div>
+
+    <span style={{margin: '50px'}} />
+    <div>--</div>
+    <div>This is a personal academic project for my human-computer interaction class back in National Chiao Tung University.</div>
+    <div>Everything was made by myself using modern Visual C++ and OpenCV.</div>
+    
+    <span style={{margin: '50px'}} />
+    <div>--</div>
+    <div>Music in the video is composed by <a href="http://loyaltyfreakmusic.com/about">Monplaisir</a>, Poupi Great Adventures : The Arcade Game</div>
+    <div>Some art assets are assets from RPG maker forums</div>
+</div>,
+
+information:
+<div style={{textAlign: 'center'}}>
+    <Markdown children={`
+** Factsheet **
 
 | | Information |
 | --------- | ------- |
@@ -79,7 +76,7 @@ Factsheet
 | Made with | Visual C++, OpenCV |
 | Team | Ta David Yu |
 
-Notable features 
+** Notable features **
 
 |  | Description |
 | --------- | ------- |
@@ -87,13 +84,10 @@ Notable features
 | RGB Camera Color Tracking | Track colored area as input using OpenCV. |
 | Optimization using Multithreading | Separate camera input thread from main game loop thread to avoid possible frame rate drops due to camera capturing delay. |
 | 2D World Streaming | Split 2D tile worlds into chunks to improve performance. |
-
 `}/>
-        </Collapsible>
-    </div>
 </div>,
 
-description: 
+oldDescription: 
 `Rolling Rocker & Eagle Simulator is a personal academic project for my human-computer interaction class in college. It includes two arcade games.
 Everything was made by myself using modern C++ and OpenCV. This is an alt-ctrl game using a custom wand controller and an RGB camera.
 The wand controller can actually be anything that has two colors. Each color acts as one end of the wand.

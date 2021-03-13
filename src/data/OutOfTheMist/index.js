@@ -1,6 +1,5 @@
 import React from 'react';
 import Markdown from 'react-markdown';
-import Collapsible from 'react-collapsible';
 
 export default {
 medias: [
@@ -25,17 +24,23 @@ medias: [
     },
 ],
 
-description: 
-``,
+linksInfo:
+<div>
+    <a href="https://deathbybroccoli.itch.io/out-of-the-mist"><img alt="itch-icon" src="./img/itchio-x26.png" className="icon-26" /></a>
+    <a href="https://dbbstudio.com/"><img alt="globe-icon" src="./img/globe-x26.png" className="icon-26" /></a>
+</div>
+,
 
-information:
+description: 
 <div style={{textAlign: 'center'}}>
-    <div>
-        <a href="https://deathbybroccoli.itch.io/out-of-the-mist"><img alt="itch-icon" src="./img/itchio-x26.png" className="icon-26" /></a>
-        <a href="https://dbbstudio.com/"><img alt="globe-icon" src="./img/globe-x26.png" className="icon-26" /></a>
+    
+    <div style={{fontWeight: 'bold'}}>
+        <div>About Out Of the Mist</div>
     </div>
+
     <div>Out of the Mist is a unique game where you need to control the environment,</div>
     <div>and not your character, to complete challenging platforming levels.</div>
+
     <span style={{margin: '50px'}} />
     <div>Explore a world torn apart by a failed experiment with inter-dimensional crystals and learn more about the civilizations that once thrived.</div>
 
@@ -45,17 +50,12 @@ information:
     <div>After the first semester, we decided to keep working on the game together </div>
     <div>and possibly release it in the future.</div>
     <div>We are also one of the teams in CGL Incubator.</div>
+</div>,
 
-    <span style={{margin: '50px'}} />
-    <div style={{textAlign: 'left', fontSize: '16px'}}>
-        <Collapsible 
-        trigger="more information +" 
-        triggerWhenOpen="more information -"
-        transitionTime='100'
-        transitionCloseTime='100'>
-            <Markdown children={`
-
-Factsheet  
+information:
+<div style={{textAlign: 'center'}}>
+    <Markdown children={`
+** Factsheet **
 
 | | Information |
 | --------- | ------- |
@@ -65,14 +65,12 @@ Factsheet
 | Made with | Unity |
 | Team | Arkadijs Gribacovs, Georgios Lindaris, Ta David Yu, Trey Ramm, Vanessa Ptak |
 
-Notable features  
+** Notable features **
 
 |  | Description |
 | --------- | ------- |
 | Level Tiles Editor | An offline level editor extended from Unity built-in Tilemap editor, allowing designers to place hexagonal tiles smoothly. It's also integrated with GPU Instancer so tiles that share the same material and mesh can be instanced. |
 | Scene Metadata & Editor | A per-scene metadata saves addtional information of a scene (similar to lighting data). It also keeps tracks of the important objects of that scene which can be referenced by other different scenes/levels. |
 `}/>
-        </Collapsible>
-    </div>
 </div>
 }

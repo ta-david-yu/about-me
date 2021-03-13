@@ -42,7 +42,7 @@ class Portoflio extends Component {
         this.handleOnClickOnWorkListItem = this.handleOnClickOnWorkListItem.bind(this);
 
         const initialPageType = "list";
-        const initialListName = "game";
+        const initialListName = "long-term";
         this.state = { 
             currPageType: initialPageType,
             currListName: initialListName,
@@ -127,8 +127,8 @@ class Portoflio extends Component {
                             <div className="center-align">
                                 {currPageType === "list" &&
                                     <div>
-                                        <PageTab tabName="game" imgName="game" isActive={currListName === "game"} onClick={this.changeListName} />
-                                        <PageTab tabName="tool" imgName="tool" isActive={currListName === "tool"} onClick={this.changeListName} />
+                                        <PageTab tabName="long-term" imgName="game" isActive={currListName === "long-term"} onClick={this.changeListName} />
+                                        <PageTab tabName="experimental" imgName="tool" isActive={currListName === "experimental"} onClick={this.changeListName} />
                                         <PageTab tabName="art" imgName="art" isActive={currListName === "art"} onClick={this.changeListName} />
                                     </div>
                                 }
