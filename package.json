@@ -12,10 +12,12 @@
     "react-dom": "^16.14.0",
     "react-markdown": "^4.3.1",
     "react-modal": "^3.12.1",
+    "react-photo-collage": "^1.0.7",
     "react-player": "^1.15.3",
     "react-router-dom": "^4.3.1",
     "react-scripts": "^2.1.8",
-    "react-transition-group": "^2.9.0"
+    "react-transition-group": "^2.9.0",
+    "styled-components": "^5.2.1"
   },
   "scripts": {
     "start": "react-scripts start",

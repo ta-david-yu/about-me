@@ -3,9 +3,9 @@ import Modal from "react-modal";
 import PropTypes from "prop-types";
 import { Grid } from "@material-ui/core";
 import withWindowSize from '../withWindowSize';
+import { ReactPhotoCollage } from "react-photo-collage";
 
 import WorkListItem from "./WorkListItem";
-//import ModalContent from "./ModalContent";
 
 import works from "../../data/works"
 
@@ -62,13 +62,35 @@ class ListPage extends Component {
         const currListName = this.props.currListName;
         const worksTable = this.generateWorksItem(currListName);
 
-        const itemSpan = (worksTable.length >= 3)? ((worksTable.length >= 4)? 3 : 4) : 
-        6;
+        const itemSpan = (worksTable.length >= 3)? ((worksTable.length >= 4)? 3 : 4) : 6;
         const worksItem = worksTable.map((work) => {
-            //return <WorkListItem key={work.title} workData={work} span={itemSpan} onClick={this.openModal}/>
             return <WorkListItem key={work.title} workData={work} span={itemSpan} onClick={this.props.onClickOnListItem}/>
         });
         
+        const collageMaxWidth = 720;
+        const collageTopMaxHeight = 384;
+
+        let collageWidth = collageMaxWidth;
+        let collageTopHeight = collageTopMaxHeight;
+
+        if (window.innerWidth * 0.8 < collageMaxWidth)
+        {
+            collageWidth = window.innerWidth * 0.8;
+            collageTopHeight = collageTopMaxHeight * 0.8;
+        }
+
+        const artCollage = {
+            width: collageWidth + 'px',
+            height: [collageTopHeight + 'px', '192px'],
+            layout: [1, 3],
+            photos: [
+                { src: "./img/art/TreeMoonCat.png"},
+                { src: "./img/art/stranded-social-media.png"},
+                { src: "./img/art/MissYouDayNNight-social-media-x2.png"},
+                { src: "./img/art/ootm-social-media-x2.png"},
+            ]
+        }
+
         let lgContainerSpan = (this.props.windowWidth > 1600)? 7 : 12;
 
         return (
@@ -94,45 +116,21 @@ class ListPage extends Component {
                         {currListName === "art" && 
                             <div>
                                 <div className="page-title left show">artworks</div>
-                                <div className="page-description">some pixel art pieces I made (UNDER CONSTRUCTION RIP)</div>
+                                <div className="page-description">some pixel art pieces I drew</div>
                             </div>}
                     </Grid>
                     <Grid item lg={lgContainerSpan} md={12} sm={12} xs={12}>
-                        <Grid 
-                        container
-                        spacing={16}
-                        direction="row">
-                            {worksItem}
-                        </Grid>
+                        {currListName !== "art"? 
+                            <Grid 
+                            container
+                            spacing={16}
+                            direction="row">
+                                {worksItem}
+                            </Grid> : 
+                            <ReactPhotoCollage {...artCollage}/>}
                     </Grid>
                 </Grid>
             </div>
-            /*
-                <Modal 
-                contentLabel={"work-modal"}
-                isOpen={this.state.isModalShown}
-                onRequestClose={this.closeModal}
-                shouldCloseOnOverlayClick={true}
-                className={modalClassName}
-                overlayClassName="modal-overlay"
-                closeTimeoutMS={300}>
-                        <div>
-                            {this.state.currentModalWork && 
-                                <ModalContent 
-                                title={this.state.currentModalWork.title}
-                                type={this.state.currentModalWork.type}
-                                date={this.state.currentModalWork.date}
-                                team={this.state.currentModalWork.team}
-                                job={this.state.currentModalWork.job}
-                                mediaTable={this.state.currentModalWork.mediaTable}
-                                description={this.state.currentModalWork.description.src}
-                                information={this.state.currentModalWork.information.src}
-                                SmallFormat={isSpecialFormat}
-                                />}
-                        </div>
-                        <img alt="return" className={isSpecialFormat? "sp-modal-close-button" : "modal-close-button"} onClick={this.closeModal} src="./img/return-btn.png" />
-                </Modal>
-            */
         );
     }
 }

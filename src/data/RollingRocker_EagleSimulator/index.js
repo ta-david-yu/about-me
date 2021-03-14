@@ -37,7 +37,7 @@ description:
         <div>About Rolling Rocker & Eagle Simulator</div>
     </div>
 
-    <div>This is an alt-ctrl game using a custom wand controller and an RGB camera.</div>
+    <div>An alt-ctrl game uses a custom wand controller and an RGB camera.</div>
     <div>The wand controller can be anything that has two colors.</div>
     <div>Each color acts as one end of the wand.</div>
 
@@ -54,7 +54,7 @@ description:
 
     <span style={{margin: '50px'}} />
     <div>--</div>
-    <div>This is a personal academic project for my human-computer interaction class back in National Chiao Tung University.</div>
+    <div>This is an individual academic project for my human-computer interaction class back in National Chiao Tung University.</div>
     <div>Everything was made by myself using modern Visual C++ and OpenCV.</div>
     
     <span style={{margin: '50px'}} />

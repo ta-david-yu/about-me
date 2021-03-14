@@ -11,6 +11,11 @@ medias: [
         "type": "image",
         "src": "./img/work/rhythm-invaders-00.png",
     },
+    {
+        "type": "image",
+        "src": "./img/work/rhythm-invaders-01.png",
+        "comment": "level editor in Unity"
+    },
 ],
 
 linksInfo:
@@ -22,7 +27,7 @@ linksInfo:
 information:
 <div style={{textAlign: 'center'}}>
     <Markdown children={`
-Factsheet  
+** Factsheet ** 
 
 | | Information |
 | --------- | ------- |
@@ -32,15 +37,31 @@ Factsheet
 | Made with | Unity |
 | Team | Ta David Yu |
 
+** Notable features **
+
+|  | Description |
+| --------- | ------- |
+| Level editor | Implement a level editor in Unity that lets the user insert actions or events on beats. |
+
 `}/>
 </div>,
 
 description: 
 <div style={{textAlign: 'center'}}>
+
     <div style={{fontWeight: 'bold'}}>
         <div>About Rhythm Invaders</div>
     </div>
-    <div>(UNDER CONSTRUCTION RIP)(UNDER CONSTRUCTION RIP)(UNDER CONSTRUCTION RIP)</div>
+
+    <div>A rhythm game where you have to bring down the enemy spaceships before they reach the end of the track.</div>
+    <div>The player has to observe the enemies' action patterns and deflect the laser beam on-beat to take them down.</div>
+
+    <span style={{margin: '50px'}} />
+    <div>--</div>
+    <div>This project is an individual academic project made for the programming lecture in my first semester at CGL.</div>
+    <div>The original requirement is to remake Space Invader in Unity.</div>
+    <div>I always wanted to try out making rhythm games after playing Vectronom and Rhythm Doctor's demo, so I put my own twist on the original Space Invader and made it into a rhythm action game.</div>
+
     <div>--</div>
     <div>Music from <a href="https://maoudamashii.jokersounds.com/">魔王魂</a></div>
 </div>,

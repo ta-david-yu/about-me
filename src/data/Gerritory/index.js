@@ -14,7 +14,7 @@ medias: [
     },
     {
         "type": "image",
-        "src": "./img/work/gerritory-media-02.png",
+        "src": "./img/work/gerritory-media-05.png",
         "comment": "In-game level editor"
     },
     {
@@ -60,7 +60,8 @@ information:
 |  | Description |
 | --------- | ------- |
 | Switch Porting | Optimize and port Gerritory to nintendo switch in Unity. |
-| Runtime Level Editor | Implement an in-game level editor with undo / redo feature using Command pattern. |
+| Runtime Level Editor | Implement an in-game level editor with rect copying and undo/redo feature using Command pattern. |
+| Png Level Metadata | Use steganography to save level data inside the screenshot image of that level. Similar to how [Spore](https://en.wikipedia.org/wiki/Spore_(2008_video_game)) stores creatures data in png files. |
 | Tween Manager | A small library simliar to DOTween but simplified. Allow users to play easing animation sequence easily. Make use of object pooling to improve performance. |
 | Asynchronous Task Queue | Users can push tasks to task queue which will be executed during scene loading asynchronously. Most of these tasks would take over a second to complete such as loading assetbundles, procedural content generation, internet connection. |
 

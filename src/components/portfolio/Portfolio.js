@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import { Grid } from "@material-ui/core";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
+import Collapsible from 'react-collapsible';
 
 import ListPage from "./ListPage";
 import WorkPage from "./WorkPage";
