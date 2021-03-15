@@ -1,7 +1,6 @@
 import React, { Component } from "react"
 import { Grid } from "@material-ui/core";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
-import { HashRouter, Route, Link } from "react-router-dom";
 
 import ListPage from "./ListPage";
 import WorkPage from "./WorkPage";
@@ -16,17 +15,19 @@ const about = (<div>
     <div className="subheader-text">game developer, game programmer</div>
     <div className="about-text">
         <p>
-                Hello! I am from Taiwan. I have a bachelor's degree in <span className="about-text-h">Computer Science</span> (NCTU) 
-                <br />Currently studying <span className="about-text-h">B.A. Digital Games</span> in Cologne Game Lab
+            Hello! I am from Taiwan. I have a bachelor's degree in <span className="about-text-h">Computer Science</span> (NCTU) 
+            <br />Currently studying <span className="about-text-h">B.A. Digital Games</span> in Cologne Game Lab
         </p>
         <p>
-                My main interests are <span className="about-text-h">gameplay programming</span> and making <span className="about-text-h">tools</span> to improve development process,
-                <br />I also really enjoy making <span className="about-text-h">juicy visual feedbacks & procedural animations</span>
+            My main interests are <span className="about-text-h">gameplay programming</span> and making <span className="about-text-h">tools</span> to improve development process,
+            <br />I also really enjoy making <span className="about-text-h">juicy visual feedbacks & procedural animations</span>
         </p>
         <p>
-                I mostly use Unity to make games and have been doing so for more than <span className="about-text-h">4 years</span>, 
-                <br />I have experience in shipping games on <span className="about-text-h">Steam</span> + porting games to <span className="about-text-h">Nintendo Switch</span>
+            I mostly use Unity to make games and have been doing so for more than <span className="about-text-h">4 years</span>, 
+            <br />I have experience in shipping games on <span className="about-text-h">Steam</span> + porting games to <span className="about-text-h">Nintendo Switch</span>
         </p>
+        
+        <a type="button" href="/CV.pdf">CV</a>
         <p>
             <span className="following-text">Following are some of my games & tools & artworks <br />(roughly in order of completeness)</span>
         </p>
@@ -107,7 +108,9 @@ class Portoflio extends Component {
                             <a href="mailto: ta.yu.gamedev@gmail.com"><img alt="email" src="./img/gmail-x26.png" className="icon-26"/></a>
                         </Grid>
                         <Grid item lg={6} md={12} sm={12} xs>
-                            <div className="center-align">{about}</div>
+                            <div className="center-align">
+                                {about}
+                            </div>
                         </Grid>
                     </Grid>
                 </div>
