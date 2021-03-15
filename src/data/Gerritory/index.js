@@ -69,9 +69,9 @@ information:
 
 |  | Description |
 | --------- | ------- |
-| Core Mechanics | Design the core game mechanics. |
+| Core Mechanics | Design and propose the core game mechanics. |
 | Level Design | Design some of the built-in levels in game. |
-| Visual Feedback | Add subtle motions in game to make it feel juicy. |
+| Motion Design | Design most of the UI animations and in-game dynamic visual elements. |
 | 3D Modeling | Model some of the cubic models with blender. |
 | Sound Design | Record & mix several in-game sound effects. |
 | Game Trailer Editing | Edit the game teaser using Adobe Premiere. |

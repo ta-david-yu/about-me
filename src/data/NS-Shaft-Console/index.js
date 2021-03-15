@@ -72,6 +72,6 @@ description:
     <div>--</div>
     <div>This project is an individual academic project made for the programming lecture in my first semester at CGL.</div>
     <div>The original requirement is to make a game where the player can move an ASCII character around in a level. Therefore I ported the plaform game that was once very famous in Taiwan to console!</div>
-    <div>It replicates every feature the original game has (including exploits).</div>
+    <div>It replicates most of the features the original game have (including exploits).</div>
 </div>,
 }

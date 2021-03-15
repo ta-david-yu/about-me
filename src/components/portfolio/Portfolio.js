@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import { Grid } from "@material-ui/core";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
-import Collapsible from 'react-collapsible';
+import { HashRouter, Route, Link } from "react-router-dom";
 
 import ListPage from "./ListPage";
 import WorkPage from "./WorkPage";
@@ -16,16 +16,16 @@ const about = (<div>
     <div className="subheader-text">game developer, game programmer</div>
     <div className="about-text">
         <p>
-            <span className="following-text">
-                Hello! I am from Taiwan. I have a bachelor's degree in Computer Science (NCTU) 
-                <br />Currently studying B.A. Digital Games in Cologne Game Lab
-            </span>
+                Hello! I am from Taiwan. I have a bachelor's degree in <span className="about-text-h">Computer Science</span> (NCTU) 
+                <br />Currently studying <span className="about-text-h">B.A. Digital Games</span> in Cologne Game Lab
         </p>
         <p>
-            <span className="following-text">
-                I mostly use Unity to make games and have been doing so for more than 4 years, 
-                <br />I also have experience in shipping games on Steam + porting games to Nintendo Switch
-            </span>
+                My main interests are <span className="about-text-h">gameplay programming</span> and making <span className="about-text-h">tools</span> to improve development process,
+                <br />I also really enjoy making <span className="about-text-h">juicy visual feedbacks & procedural animations</span>
+        </p>
+        <p>
+                I mostly use Unity to make games and have been doing so for more than <span className="about-text-h">4 years</span>, 
+                <br />I have experience in shipping games on <span className="about-text-h">Steam</span> + porting games to <span className="about-text-h">Nintendo Switch</span>
         </p>
         <p>
             <span className="following-text">Following are some of my games & tools & artworks <br />(roughly in order of completeness)</span>

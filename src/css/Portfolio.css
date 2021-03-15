@@ -113,8 +113,11 @@ a {
 }
 
 .subheader-text {
-    font-family: "m5x7";
-    font-size: 36px;
+    font-family: 'Anonymous Pro', monospace;
+    /*font-family: "m5x7";*/
+    /*font-size: 36px;*/
+    font-size: 28px;
+    
     font-weight: normal;
     font-style: normal;
     
@@ -123,19 +126,22 @@ a {
 }
 
 .about-text {
-    font-family: 'm5x7';
-    font-size: 24px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
     font-weight: normal;
     font-style: normal;
     
+    line-height: 1.5;
+    color: #c3a38a;
+}
+
+.about-text-h {
     color: #f6d6bd;
+    font-weight: bold;
 }
 
 .following-text {
-    font-family: 'm5x7';
-    font-size: 24px;
-    font-weight: normal;
-    font-style: normal;
+    font-size: 16px;
     
     color: #f6d6bd;
 }
@@ -145,8 +151,10 @@ a {
 }
 
 .page-title {
-    font-family: "m6x11";
-    font-size: 24px;
+    font-family: 'Anonymous Pro', monospace;
+    /*font-family: "m6x11";*/
+    /*font-size: 24px;*/
+    font-size: 20px;
     font-weight: normal;
     font-style: normal;
 
@@ -160,6 +168,8 @@ a {
 
     opacity: 0;
     visibility: hidden;
+
+    line-height: 1.5;
 }
 
 .page-title.left {
@@ -181,14 +191,18 @@ a {
 }
 
 .page-description {
-    font-family: 'm5x7';
-    font-size: 24px;
+    font-family: 'Ubuntu', sans-serif;
+    /*font-family: "m5x7";*/
+    /*font-size: 24px;*/
+    font-size: 16px;
     font-weight: normal;
     font-style: normal;
     
     text-align: center;
 
     color: #f6d6bd;
+
+    line-height: 1.2;
 }
 
 .box-white {

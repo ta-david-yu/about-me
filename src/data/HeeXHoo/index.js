@@ -73,7 +73,7 @@ description:
     <div>--</div>
     <div>This is an alt-ctrl game using BOSS-ME-80, but it is also playable with mouse & keyboard.</div>
     <div>I did most of the programming and level design.</div>
-    <div>There are two artists and two sound designers in our team.</div>
+    <div>Beisdes me, there are two artists and two sound designers in our team.</div>
 </div>
 ,
 

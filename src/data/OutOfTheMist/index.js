@@ -35,10 +35,10 @@ description:
 <div style={{textAlign: 'center'}}>
     
     <div style={{fontWeight: 'bold'}}>
-        <div>About Out Of the Mist</div>
+        <div>About Out Of The Mist</div>
     </div>
 
-    <div>Out of the Mist is a unique game where you need to control the environment,</div>
+    <div>Out of The Mist is a unique game where you need to control the environment,</div>
     <div>and not your character, to complete challenging platforming levels.</div>
 
     <span style={{margin: '50px'}} />
@@ -46,7 +46,8 @@ description:
 
     <span style={{margin: '50px'}} />
     <div>--</div>
-    <div>Out Of the Mist is originally our first semester project in Cologne Game Lab.</div>
+    <div>Out Of The Mist is originally our first-semester project in Cologne Game Lab.</div>
+    <div>The team is composed of one designer, one 2D artist, two 3D artists, and a programmer, which is me.</div>
     <div>After the first semester, we decided to keep working on the game together </div>
     <div>and possibly release it in the future.</div>
     <div>We are also one of the teams in CGL Incubator.</div>
