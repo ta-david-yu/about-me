@@ -54,7 +54,8 @@ footer {
     
     color: #816271;
 
-    padding-top: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 
     text-align: center;
 }
@@ -92,7 +93,7 @@ a {
 .bot-content {
     padding-top: 30px;
 
-    min-height: 900px;
+    min-height: 800px;
 }
 
 .logo {
@@ -123,6 +124,9 @@ a {
     
     /* color: #f6d6bd; */
     color: #c3a38a;
+    color: #f6d6bd;
+
+    padding-top: 5px;
 }
 
 .about-text {
@@ -131,18 +135,22 @@ a {
     font-weight: normal;
     font-style: normal;
     
+    padding-bottom: 20px;
+
     line-height: 1.5;
     color: #c3a38a;
+    color: #f6d6bd;
 }
 
 .about-text-h {
+    color: #c3a38a;
     color: #f6d6bd;
     font-weight: bold;
 }
 
 .following-text {
     font-size: 16px;
-    
+
     color: #f6d6bd;
 }
 
@@ -719,6 +727,7 @@ a {
 
 .modal-job {
     padding-top: 8px;
+    padding-bottom: 4px;
 
     font-family: 'Anonymous Pro', monospace;
     font-size: 14px;
@@ -728,6 +737,11 @@ a {
     text-align: center;
 
     color: #f6d6bd;
+}
+
+.modal-date-team {
+    text-align: center;
+    padding-bottom: 8px;
 }
 
 .modal-date {
@@ -1062,6 +1076,7 @@ tr:nth-child(odd) {
 }
 
 .media-index-set {
+    padding-top: 10px;
     padding-left: 10%;
     padding-right: 10%;
     

@@ -188,7 +188,7 @@ class ProjectWorkContent extends Component {
                             <div className="modal-job">
                                 {this.props.job}
                             </div>
-                            <div className="center-align">
+                            <div className="modal-date-team">
                                 <span className="modal-date">
                                     <img alt="date-icon" src="./img/clock-x13.png" className="modal-time-icon"/>
                                     {this.props.date} 
@@ -197,6 +197,8 @@ class ProjectWorkContent extends Component {
                                     <img alt="date-icon" src="./img/person-x13.png" className="modal-team-icon"/>
                                     {(parseInt(this.props.team) > 1)? this.props.team + "-person team" : "Solo"} 
                                 </span>
+                            </div>
+                            <div className="center-align">
                                 {this.props.linksInfo}
                             </div>
                         </Grid>

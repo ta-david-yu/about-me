@@ -27,10 +27,10 @@ const about = (<div>
             <br />I have experience in shipping games on <span className="about-text-h">Steam</span> + porting games to <span className="about-text-h">Nintendo Switch</span>
         </p>
         
-        <a type="button" href="/CV.pdf">CV</a>
-        <p>
-            <span className="following-text">Following are some of my games & tools & artworks <br />(roughly in order of completeness)</span>
-        </p>
+        You can check out my resume <a href="./download/TaDavidYu_GameProgrammer_CV.pdf">here</a>
+
+        <div>--</div>
+        <span className="following-text">Following are some of my games & tools & artworks <br />(roughly in order of completeness)</span>
     </div>
 </div>);
 
@@ -162,11 +162,14 @@ class Portoflio extends Component {
                     </TransitionGroup>
 
                 </div>
-                <footer>website designed & created by Ta David Yu ~ <span/>
+                <footer>
+                    website designed & created by Ta David Yu ~ 
                     <a className="footer-link" href="https://github.com/ta-david-yu/about-me"> view source</a>
-                </footer>
-                <footer>fonts made by <span/>
-                    <a className="footer-link" href="https://managore.itch.io/">Daniel Linssen</a>, social icons made by <span/>
+                    
+                    <br/>
+                    
+                    fonts made by <span/>
+                    <a className="footer-link" href="https://managore.itch.io/">Daniel Linssen</a>, social icons made by
                     <a className="footer-link" href="https://kronbits.itch.io/matriax-free-assets">Davit Masia</a>
                 </footer>
             </div>
