@@ -163,13 +163,13 @@ class Portoflio extends Component {
 
                 </div>
                 <footer>
-                    website designed & created by Ta David Yu ~ 
-                    <a className="footer-link" href="https://github.com/ta-david-yu/about-me"> view source</a>
+                    website designed & created by Ta David Yu ~ <span/>
+                    <a className="footer-link" href="https://github.com/ta-david-yu/about-me">view source</a>
                     
                     <br/>
                     
                     fonts made by <span/>
-                    <a className="footer-link" href="https://managore.itch.io/">Daniel Linssen</a>, social icons made by
+                    <a className="footer-link" href="https://managore.itch.io/">Daniel Linssen</a>, social icons made by <span/>
                     <a className="footer-link" href="https://kronbits.itch.io/matriax-free-assets">Davit Masia</a>
                 </footer>
             </div>
