@@ -76,16 +76,21 @@ information:
 </div>,
 
 description:
-<div style={{textAlign: 'center'}}>
+<div style={{textAlign: 'left'}}>
 
     <div style={{fontWeight: 'bold'}}>
         <div>About 2D Platformer Hunter</div>
     </div>
 
-    <div>2D Platformer Hunter is a customizable 2D platformer controller Unity plugin using reliable raycast-based detection method.</div>
-    <div>--</div>
-    <div>Example art materials is made by rvros - <a href="https://rvros.itch.io/animated-pixel-hero">Animated Pixel Adventurer</a></div>
-    <div>Music in the demo video is composed by <a href="http://loyaltyfreakmusic.com/about">Monplaisir</a>, Tale on the Late - The road we use to travel when we were kids</div>
+    <div style={{margin: '12px'}} />
+
+    2D Platformer Hunter is a customizable 2D platformer controller Unity plugin using reliable raycast-based detection method.
+    <br/>
+    <br/>
+
+    Example art materials is made by rvros - <a href="https://rvros.itch.io/animated-pixel-hero">Animated Pixel Adventurer</a>.
+    <br/>
+    Music in the demo video is composed by <a href="http://loyaltyfreakmusic.com/about">Monplaisir</a>, Tale on the Late - The road we use to travel when we were kids.
 </div>
 ,
 

@@ -42,38 +42,41 @@ information:
 | Platforms | Windows PC |
 | Genre | 2D action adventure |
 | Made with | Unity |
-| Team | Aier Geleisi, A Wei, Ian Wang, Littleear Ga, Ta David Yu |
+| Team | Aier Geleisi (Sound Designer), A Wei (Sound Designer), Ian Wang (2D Artist), Littleear Ga (2D Artist), Ta David Yu (Programmer/Level Designer) |
 
 ** Notable features I implemented **
 
 | Feature   | Description |
 | --------- | ------- |
-| Steering Behaviour AI | Control autonomous characters using steering behaviour such as Pursuit and Wander.  |
+| Steering Behaviour AI | I made use of steering behaviours such as Pursuit and Wander to control autonomous characters in the game.  |
 
 ** Other non-programming stuff **
 
 | Feature   | Description |
 | --------- | ------- |
-| Level Design | Design 4 levels during game jam. |
+| Level Design | I designed 4 levels during game jam. |
 
 `}/>
 </div>,
 
 description: 
-<div style={{textAlign: 'center'}}>
+<div style={{textAlign: 'left'}}>
     <div style={{fontWeight: 'bold'}}>
         <div>About Hee X Hoo</div>
     </div>
 
-    <div>Hee X Hoo is a 2D adventure game made for Global Game Jam 2018 "TRANSMISSION".</div>
-    <div>You play as a plankton that can only move by inhaling and exhaling.</div>
-    <div>Throughout the journey, you will encounter several hostiles and obstacles. Your goal is to keep your plankton alive and reach the goal.</div>
+    <div style={{margin: '12px'}} />
+
+    Hee X Hoo is a 2D adventure game made for Global Game Jam 2018 "TRANSMISSION".
+    You play as a plankton that can only move by inhaling and exhaling.
+    Throughout the journey, you will encounter several hostiles and obstacles. Your goal is to keep your plankton alive and reach the goal.
     
-    <span style={{margin: '50px'}} />
+    <br/>
+    <br/>
     <div>--</div>
-    <div>This is an alt-ctrl game using BOSS-ME-80, but it is also playable with mouse & keyboard.</div>
-    <div>I did most of the programming and level design.</div>
-    <div>Beisdes me, there are two artists and two sound designers in our team.</div>
+    This is an alt-ctrl game using BOSS-ME-80, but it is also playable with a mouse & keyboard.
+    I did most of the programming and level design.
+    Besides me, there are two artists and two sound designers on our team.
 </div>
 ,
 

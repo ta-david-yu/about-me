@@ -45,29 +45,32 @@ information:
 
 |  | Description |
 | --------- | ------- |
-| Raycast-based character controller | Use the character controller [plugin](https://github.com/ta-david-yu/2D-Platformer-Hunter) that I made myself for the objects/characters that could move in game. |
+| Raycast-based character controller | I made use of the character controller [plugin](https://github.com/ta-david-yu/2D-Platformer-Hunter) that I built myself for the objects/characters that could move in game. |
 
 `}/>
 </div>,
 
 description:
-<div style={{textAlign: 'center'}}>
+<div style={{textAlign: 'left'}}>
 
     <div style={{fontWeight: 'bold'}}>
         <div>About Sorry, No Jump For You</div>
     </div>
 
-    <div>A 10-minute 2d puzzle platformer where you cannot jump but can rotate the level to move objects through gravity.</div>
-    <div>The goal of each level is to reach the floating orb.</div>
-    <div>There are currently 16 levels in the game.</div>
+    <div style={{margin: '12px'}} />
 
-    <span style={{margin: '50px'}} />
-    <div>--</div>
-    <div>I made this in my leisure time during the first semester at CGL.</div>
+    A 10-minute 2d puzzle platformer where you cannot jump but can rotate the level to move objects through gravity.
+    The goal of each level is to reach the floating orb.
+    There are currently 16 levels in the game.
 
-    <span style={{margin: '50px'}} />
+    <br/>
+    <br/>
     <div>--</div>
-    <div>Music by <a href="http://loyaltyfreakmusic.com/about">Monplaisir</a></div>
-    <div>Font by <a href="https://managore.itch.io/">Daniel Linssen</a></div>
+    I made this game in my leisure time during the first semester at CGL.
+
+    <br/>
+    <br/>
+    <div>Music made by <a href="http://loyaltyfreakmusic.com/about">Monplaisir</a>.</div>
+    <div>Font create by <a href="https://managore.itch.io/">Daniel Linssen</a>.</div>
 </div>,
 }

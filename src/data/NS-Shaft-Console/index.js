@@ -47,31 +47,35 @@ information:
 
 |  | Description |
 | --------- | ------- |
-| Component-based ASCII Rendering Framework | A custom-made ASCII rendering framework engine that utilizes tree structure and component-based system. |
-| Grid-based collision detection | Use ray marching technique with the unit size of ASCII character to do collision detection. |
+| Component-based ASCII Rendering Framework | I made a custom ASCII rendering framework that utilizes tree structure and component-based system. |
+| Grid-based collision detection | I used ray marching technique with the unit size of ASCII character to do collision detection. |
 `}/>
 </div>,
 
 description: 
-<div style={{textAlign: 'center'}}>
+<div style={{textAlign: 'left'}}>
 
     <div style={{fontWeight: 'bold'}}>
         <div>About NS-Shaft console</div>
     </div>
 
-    <div>A recreation / demake of the famous arcade plaform game - <a href="https://en.wikipedia.org/wiki/NS-Shaft">NS-Shaft</a>.</div>
-    <div>Original game created by <a href="https://www.nagi-p.com/v1/eng/">Nagi-P Software</a>.</div>
+    <div style={{margin: '12px'}} />
 
-    <span style={{margin: '50px'}} />
-    <div>In NS-Shaft, the player attempts to descend into a cave by moving left and right.</div>
-    <div>The platforms move up the screen at a slowly accelerating rate.</div>
-    <div>A ceiling of spikes hovers at the top of the screen.</div>
-    <div>The goal is to fall from platform to platform rapidly enough to not be hit by the ceiling spikes, but slowly enough not to fall off the bottom of the screen. - Wikipedia</div>
+    A recreation / demake of the famous arcade plaform game - <a href="https://en.wikipedia.org/wiki/NS-Shaft">NS-Shaft</a>.
+    <br/>
+    <br/>
+
+    The original NS-Shaft is created by <a href="https://www.nagi-p.com/v1/eng/">Nagi-P Software</a>.
+    In the game, the player attempts to descend into a cave by moving left and right.
+    The platforms move up the screen at a slowly accelerating rate.
+    A ceiling of spikes hovers at the top of the screen.
+    The goal is to fall from platform to platform rapidly enough to not be hit by the ceiling spikes, but slowly enough not to fall off the bottom of the screen. - Wikipedia
     
-    <span style={{margin: '50px'}} />
+    <br/>
+    <br/>
     <div>--</div>
-    <div>This project is an individual academic project made for the programming lecture in my first semester at CGL.</div>
-    <div>The original requirement is to make a game where the player can move an ASCII character around in a level. Therefore I ported the plaform game that was once very famous in Taiwan to console!</div>
-    <div>It replicates most of the features the original game have (including exploits).</div>
+    This project is an individual academic project made for the programming lecture in my first semester at CGL.
+    The original requirement is to make a game where the player can move an ASCII character around in a level in the console window. Therefore I ported the plaform game that was once very famous in Taiwan to console!
+    It replicates most of the features the original game have (including exploits).
 </div>,
 }

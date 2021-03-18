@@ -131,7 +131,7 @@ a {
 
 .about-text {
     font-family: 'Ubuntu', sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: normal;
     font-style: normal;
     
@@ -149,7 +149,7 @@ a {
 }
 
 .following-text {
-    font-size: 16px;
+    font-size: 18px;
 
     color: #f6d6bd;
 }
@@ -374,7 +374,7 @@ a {
 
 .work-title {
     font-family: 'Anonymous Pro', monospace;;
-    font-size: 15px;
+    font-size: 18px;
     font-weight: normal;
     font-style: normal;
     
@@ -385,7 +385,7 @@ a {
 
 .work-job {
     font-family: 'Anonymous Pro', monospace;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: normal;
     font-style: normal;
     
@@ -799,7 +799,7 @@ a {
 
     font-family: 'Ubuntu', sans-serif;
     color: #f6d6bd;
-    font-size: 16px;
+    font-size: 18px;
 
     line-height: 1.5;
 }

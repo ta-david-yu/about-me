@@ -15,7 +15,7 @@ const works = [
         "img": "./img/work/gerritory-preview.png",
         "gif": "./img/work/gerritory-preview.gif",
         "date": "2017.11 - 2020.10",
-        "job": "Designer, Programmer, Visual Design",
+        "job": "Designer, Programmer, Artist",
         "team": "4",
         
         "linksInfo": Gerritory.linksInfo,

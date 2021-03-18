@@ -41,28 +41,33 @@ information:
 
 |  | Description |
 | --------- | ------- |
-| Level editor | Implement a level editor in Unity that lets the user insert actions or events on beats. |
+| Level editor | I implemented a level editor in Unity that lets the user insert actions or events on beats. |
 
 `}/>
 </div>,
 
 description: 
-<div style={{textAlign: 'center'}}>
+<div style={{textAlign: 'left'}}>
 
     <div style={{fontWeight: 'bold'}}>
         <div>About Rhythm Invaders</div>
     </div>
 
-    <div>A rhythm game where you have to bring down the enemy spaceships before they reach the end of the track.</div>
-    <div>The player has to observe the enemies' action patterns and deflect the laser beam on-beat to take them down.</div>
+    <div style={{margin: '12px'}} />
 
-    <span style={{margin: '50px'}} />
-    <div>--</div>
-    <div>This project is an individual academic project made for the programming lecture in my first semester at CGL.</div>
-    <div>The original requirement is to remake Space Invader in Unity.</div>
-    <div>I always wanted to try out making rhythm games after playing Vectronom and Rhythm Doctor's demo, so I put my own twist on the original Space Invader and made it into a rhythm action game.</div>
+    A rhythm game where you have to bring down the enemy spaceships before they reach the end of the track.
+    The player has to observe the enemies' action patterns and deflect the laser beam on-beat to take them down.
 
+    <br/>
+    <br/>
     <div>--</div>
-    <div>Music from <a href="https://maoudamashii.jokersounds.com/">魔王魂</a></div>
+    This project is an individual academic project made for the programming lecture in my first semester at CGL.
+    The original requirement is to remake Space Invader in Unity.
+    I always wanted to try out making rhythm games after playing Vectronom and Rhythm Doctor's demo, 
+    so I put my own spin on the original Space Invader and made it into a rhythm action game.
+
+    <br/>
+    <br/>
+    The music is from <a href="https://maoudamashii.jokersounds.com/">魔王魂</a>.
 </div>,
 }

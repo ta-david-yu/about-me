@@ -32,25 +32,29 @@ linksInfo:
 ,
 
 description: 
-<div style={{textAlign: 'center'}}>
+<div style={{textAlign: 'left'}}>
     
     <div style={{fontWeight: 'bold'}}>
         <div>About Out Of The Mist</div>
     </div>
 
-    <div>Out of The Mist is a unique game where you need to control the environment,</div>
-    <div>and not your character, to complete challenging platforming levels.</div>
+    <div style={{margin: '12px'}} />
+    
+    Out of The Mist is a unique game where you need to control the environment,
+    and not your character, to complete challenging platforming levels. 
+    Explore a world torn apart by a failed experiment with inter-dimensional crystals and learn more about the civilizations that once thrived.
 
-    <span style={{margin: '50px'}} />
-    <div>Explore a world torn apart by a failed experiment with inter-dimensional crystals and learn more about the civilizations that once thrived.</div>
-
-    <span style={{margin: '50px'}} />
+    <br/>
+    <br/>
+    
     <div>--</div>
-    <div>Out Of The Mist is originally our first-semester project in Cologne Game Lab.</div>
-    <div>The team is composed of one designer, one 2D artist, two 3D artists, and a programmer, which is me.</div>
-    <div>After the first semester, we decided to keep working on the game together </div>
-    <div>and possibly release it in the future.</div>
-    <div>We are also one of the teams in CGL Incubator.</div>
+    Out Of The Mist is originally our first-semester project in Cologne Game Lab.
+    After the first semester, we decided to keep working on the game together
+    and possibly release it in the future.
+
+    <br/>
+    <br/>
+    We are also one of the teams in CGL Incubator.
 </div>,
 
 information:
@@ -64,14 +68,14 @@ information:
 | Platforms | Windows PC |
 | Genre | Single-player exploration game |
 | Made with | Unity |
-| Team | Arkadijs Gribacovs, Georgios Lindaris, Ta David Yu, Trey Ramm, Vanessa Ptak |
+| Team | Arkadijs Gribacovs (3D Artist), Georgios Lindaris (Designer/Writer), Ta David Yu (Programmer), Trey Ramm (3D Artist/Project Manager), Vanessa Ptak (Concept Artist/2D Artist) |
 
 ** Notable features **
 
 |  | Description |
 | --------- | ------- |
-| Level Tiles Editor | An offline level editor extended from Unity built-in Tilemap editor, allowing designers to place hexagonal tiles smoothly. It's also integrated with GPU Instancer so tiles that share the same material and mesh can be instanced. |
-| Scene Metadata & Editor | A per-scene metadata saves addtional information of a scene (similar to lighting data). It also keeps tracks of the important objects of that scene which can be referenced by other different scenes/levels. |
+| Level Tiles Editor | I extended the built-in tilemap editor in Unity to fit our needs. Due to the nature of our game, there could be 1000+ tile prefabs in one scene. Therefore, the level editor is also integrated with GPU Instancer so the tiles that share the same mesh and material can be instanced easily. |
+| Scene Metadata & Editor | I implemented a system that creates per-scene metadata saving additional information of a scene (similar to lighting data). The metadata keeps tracks of the important objects of that scene which can be referenced by other different scenes/levels so the designer can connect related props across different scenes easily. |
 `}/>
 </div>
 }

@@ -19,8 +19,8 @@ const about = (<div>
             <br />Currently studying <span className="about-text-h">B.A. Digital Games</span> in Cologne Game Lab, Germany
         </p>
         <p>
-            My main interests are <span className="about-text-h">gameplay programming</span> and making <span className="about-text-h">tools</span> to improve development process,
-            <br />I also really enjoy making <span className="about-text-h">juicy visual feedbacks & procedural animations</span>
+            My main interests are <span className="about-text-h">gameplay programming</span> and making <span className="about-text-h">tools</span> to improve the development process for my teammates,
+            <br />I also really enjoy creating <span className="about-text-h">juicy visual feedbacks & procedural animations</span>
         </p>
         <p>
             I mostly use Unity to make games and have been doing so for more than <span className="about-text-h">4 years</span>, 
