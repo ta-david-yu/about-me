@@ -15,8 +15,8 @@ const about = (<div>
     <div className="subheader-text">game developer, game programmer</div>
     <div className="about-text">
         <p>
-            Hello! I am from Taiwan. I have a bachelor's degree in <span className="about-text-h">Computer Science</span> (NCTU) 
-            <br />Currently studying <span className="about-text-h">B.A. Digital Games</span> in Cologne Game Lab
+            Hello! I am a game developer/programmer from Taiwan. I have a bachelor's degree in <span className="about-text-h">Computer Science</span> 
+            <br />Currently studying <span className="about-text-h">B.A. Digital Games</span> in Cologne Game Lab, Germany
         </p>
         <p>
             My main interests are <span className="about-text-h">gameplay programming</span> and making <span className="about-text-h">tools</span> to improve development process,

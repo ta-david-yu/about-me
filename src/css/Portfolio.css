@@ -842,6 +842,7 @@ tr:nth-child(even) {
 
 tr:nth-child(odd) {
     background: #816271;
+    background: #585369;
 }
 
 /* React Modal */
