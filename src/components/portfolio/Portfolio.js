@@ -19,7 +19,7 @@ const about = (<div>
             <br />Currently studying <span className="about-text-h">B.A. Digital Games</span> in Cologne Game Lab, Germany
         </p>
         <p>
-            My main interests are <span className="about-text-h">gameplay programming</span> and making <span className="about-text-h">tools</span> to improve the development process for my teammates,
+            My main interests are <span className="about-text-h">gameplay programming</span> and making <span className="about-text-h">tools</span> to improve the development process for my team,
             <br />I also really enjoy creating <span className="about-text-h">juicy visual feedbacks & procedural animations</span>
         </p>
         <p>
