@@ -109,7 +109,8 @@ description:
     It ended up becoming our first commercial project and has been released on both Steam and Nintendo Switch. 
     Since none of us is a specialized artist, we went for minimalistic aesthetics for the game. 
     Therefore another teammate and I managed to create a simple but consistent art style that makes the game look pleasant.
-
+    Throughout the development, we worked one day a week remotely.
+    
     <br/>
     <br/>
     <div>The soundtrack is composed by <a href="https://www.waterflame.com/">Waterflame</a>.</div>
