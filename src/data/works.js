@@ -115,6 +115,7 @@ const works = [
     },
 
     {
+        "ignore": true,
         "type": "experimental",
         "title": "Hee X Hoo",
         "img": "./img/work/hee-hoo-preview.png",
@@ -136,6 +137,7 @@ const works = [
     },
 
     {
+        "ignore": true,
         "type": "experimental",
         "title": "Rhythm Invaders",
         "img": "./img/work/rhythm-invaders-preview.png",

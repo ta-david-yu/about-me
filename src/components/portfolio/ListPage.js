@@ -111,7 +111,7 @@ class ListPage extends Component {
                             <div>
                                 <div className="page-title left show">small-but-sweet games</div>
                                 <div className="page-description">a list of small/experimental games and prototypes,</div>
-                                <div className="page-description">although not all of them are complete, I still want to show them because I think they are cool</div>
+                                <div className="page-description">although not all of them are fully complete, I still want to show them because I think they are cool</div>
                             </div>}
                         {currListName === "art" && 
                             <div>

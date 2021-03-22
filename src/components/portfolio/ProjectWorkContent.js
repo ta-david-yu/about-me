@@ -119,7 +119,7 @@ class ProjectWorkContent extends Component {
                         <ReactPlayer width={"100%"} height={"100%"}
                         onProgress={this.handleOnVideoProgress}
                         onReady={this.handleOnMediaReady}
-                        playing={true}
+                        playing={false}
                         volume={0.3}
                         light={false}
                         controls={true}
