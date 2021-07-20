@@ -92,7 +92,7 @@ information:
 | --------- | ------- |
 | Component-based Game Framework | I coded a simple entity-component-based game engine all from scratch in Visual C++, which allows me to make two different games reusing shared components. |
 | RGB Camera Color Tracking | I implemented a colored area tracking algorithm as input using OpenCV. |
-| Optimization using Multithreading | To achieve non-blocking camera frame capturing, I separated the camera input from the main game loop thread to another thread. As a result, the game has a stable framerate, and the camera input is still delivered consistently.  |
+| Delayed Result Gathering for Camera Capture Input | To achieve non-blocking camera frame capturing, I separated the camera input from the main game loop thread to another thread. As a result, the game has a stable framerate, and the camera input is still delivered consistently.  |
 `}/>
 </div>,
 

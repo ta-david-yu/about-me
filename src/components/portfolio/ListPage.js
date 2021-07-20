@@ -82,12 +82,13 @@ class ListPage extends Component {
         const artCollage = {
             width: collageWidth + 'px',
             height: [collageTopHeight + 'px', '192px'],
-            layout: [1, 3],
+            layout: [1, 4],
             photos: [
+                { src: "./img/art/Wolf-Fullmoon-Lowerx4.png"},
                 { src: "./img/art/TreeMoonCat.png"},
                 { src: "./img/art/stranded-social-media.png"},
                 { src: "./img/art/MissYouDayNNight-social-media-x2.png"},
-                { src: "./img/art/ootm-social-media-x2.png"},
+                { src: "./img/art/ootm-social-media-x2.png"}
             ]
         }
 
