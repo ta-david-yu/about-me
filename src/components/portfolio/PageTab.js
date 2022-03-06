@@ -16,21 +16,22 @@ class PageTab extends Component {
     }
 
     handleOnClick(e) {
-        this.props.onClick(this.props.pageName);
+        this.props.onClick(this.props.tabName);
     }
  
     render() {
-        const pageName = this.props.pageName;
-        const className = pageName + "-button".concat(this.props.isActive? " is-active" : "");
+        const imgName = this.props.imgName;
+        const className = imgName + "-button".concat(this.props.isActive? " is-active" : "");
 
         return (
-            <img alt={pageName.concat("-tab")} src={"./img/game-button-active.png"} className={className} onClick={this.handleOnClick}/>
+            <img alt={imgName.concat("-tab")} src={"./img/game-button-active.png"} className={className} onClick={this.handleOnClick}/>
         );
     }
 }
 
 PageTab.propTypes = {
-    pageName: PropTypes.string.isRequired,
+    tabName: PropTypes.string.isRequired,
+    imgName: PropTypes.string.isRequired,
     isActive: PropTypes.bool.isRequired,
     onClick: PropTypes.func.isRequired,
 };
