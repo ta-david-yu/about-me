@@ -1,20 +1,23 @@
 import React, { Component } from "react";
 import Modal from "react-modal";
 import PropTypes from "prop-types";
-import ProjectWorkContent from './ProjectWorkContent';
+import ProjectPageContent from './ProjectPageContent';
 import withWindowSize from '../withWindowSize';
 
 import '../../css/Portfolio.css';
 
 Modal.setAppElement(document.getElementById("root"));
 
-class WorkPage extends Component {
+/** 
+ * A page component that shows the details of the given project
+ */
+class ProjectPage extends Component {
 
     render() {
         const currWorkData = this.props.currWorkData;
         return (
             <div>
-                <ProjectWorkContent 
+                <ProjectPageContent 
                     title={currWorkData.title}
                     type={currWorkData.type}
                     date={currWorkData.date}
@@ -31,8 +34,8 @@ class WorkPage extends Component {
     }
 }
 
-WorkPage.propTypes = {
+ProjectPage.propTypes = {
     currWorkData: PropTypes.object.isRequired,
 };
 
-export default withWindowSize(WorkPage);
+export default withWindowSize(ProjectPage);

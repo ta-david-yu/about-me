@@ -2,8 +2,9 @@ import React, { Component } from "react"
 import { Grid } from "@material-ui/core";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 
-import ListPage from "./ListPage";
-import WorkPage from "./WorkPage";
+import Constants from "./Constants";
+import ProjectListPage from "./ProjectListPage";
+import ProjectPage from "./ProjectPage";
 import PageTab from "./PageTab";
 import withWindowSize from '../withWindowSize';
 
@@ -34,17 +35,19 @@ const about = (<div>
     </div>
 </div>);
 
-class Portoflio extends Component {
+class Main extends Component {
 
     constructor(props) {
         super(props);
         
-        this.changePageType = this.changePageType.bind(this);
-        this.changeListName = this.changeListName.bind(this);
+        this.handleOnClickLongTermPageTab = this.handleOnClickLongTermPageTab.bind(this);
+        this.handleOnClickExperimentalPageTab = this.handleOnClickExperimentalPageTab.bind(this);
+        this.handleOnClickMiscPageTab = this.handleOnClickMiscPageTab.bind(this);
+        this.handleOnClickHomeButton = this.handleOnClickHomeButton.bind(this);
         this.handleOnClickOnWorkListItem = this.handleOnClickOnWorkListItem.bind(this);
 
-        const initialPageType = "list";
-        const initialListName = "long-term";
+        const initialPageType = Constants.PageType.ProjectList;
+        const initialListName = Constants.ProjectCategory.LongTerm;
         this.state = { 
             currPageType: initialPageType,
             currListName: initialListName,
@@ -52,20 +55,41 @@ class Portoflio extends Component {
         };
     }
 
-    changePageType(pageType)
+    handleOnClickLongTermPageTab()
     {
         this.setState(
             {
-                currPageType: pageType
+                currPageType: Constants.PageType.ProjectList, 
+                currListName: Constants.ProjectCategory.LongTerm
             }
         );
     }
 
-    changeListName(listName)
+    handleOnClickExperimentalPageTab()
     {
         this.setState(
             {
-                currListName: listName
+                currPageType: Constants.PageType.ProjectList, 
+                currListName: Constants.ProjectCategory.Experimental
+            }
+        );
+    }
+
+    handleOnClickMiscPageTab()
+    {
+        this.setState(
+            {
+                currPageType: Constants.PageType.ProjectList, 
+                currListName: Constants.ProjectCategory.Art
+            }
+        );
+    }
+
+    handleOnClickHomeButton()
+    {
+        this.setState(
+            {
+                currPageType: Constants.PageType.ProjectList
             }
         );
     }
@@ -74,7 +98,7 @@ class Portoflio extends Component {
     {
         this.setState(
             {
-                currPageType: "work",
+                currPageType: Constants.PageType.Project,
                 currWorkData: workData
             }
         );
@@ -129,16 +153,16 @@ class Portoflio extends Component {
                         }}
                         classNames="page-tab-transition">
                             <div className="center-align">
-                                {currPageType === "list" &&
+                                {(currPageType === Constants.PageType.ProjectList) &&
                                     <div>
-                                        <PageTab tabName="long-term" imgName="game" isActive={currListName === "long-term"} onClick={this.changeListName} />
-                                        <PageTab tabName="experimental" imgName="tool" isActive={currListName === "experimental"} onClick={this.changeListName} />
-                                        <PageTab tabName="art" imgName="art" isActive={currListName === "art"} onClick={this.changeListName} />
+                                        <PageTab tabName={Constants.ProjectCategory.LongTerm} imgName="game" isActive={currListName === Constants.ProjectCategory.LongTerm} onClick={this.handleOnClickLongTermPageTab} />
+                                        <PageTab tabName={Constants.ProjectCategory.Experimental} imgName="tool" isActive={currListName === Constants.ProjectCategory.Experimental} onClick={this.handleOnClickExperimentalPageTab} />
+                                        <PageTab tabName={Constants.ProjectCategory.Art} imgName="art" isActive={currListName === Constants.ProjectCategory.Art} onClick={this.handleOnClickMiscPageTab} />
                                     </div>
                                 }
-                                {currPageType === "work" &&
+                                {currPageType === Constants.PageType.Project &&
                                     <div>
-                                        <PageTab tabName="list" imgName="home" isActive={false} onClick={this.changePageType} />
+                                        <PageTab tabName={Constants.PageType.ProjectList} imgName="home" isActive={false} onClick={this.handleOnClickHomeButton} />
                                     </div>
                                 }
                             </div>
@@ -155,8 +179,8 @@ class Portoflio extends Component {
                         }}
                         classNames={currPageType + "-page-transition"}>
                             <div>
-                                {currPageType === "list" && <ListPage currListName={currListName} onClickOnListItem={this.handleOnClickOnWorkListItem}/>}
-                                {currPageType === "work" && <WorkPage currWorkData={currWorkData}/>}
+                                {currPageType === Constants.PageType.ProjectList && <ProjectListPage currListName={currListName} onClickOnListItem={this.handleOnClickOnWorkListItem}/>}
+                                {currPageType === Constants.PageType.Project && <ProjectPage currWorkData={currWorkData}/>}
                             </div>
                         </CSSTransition>
                     </TransitionGroup>
@@ -177,4 +201,4 @@ class Portoflio extends Component {
     }
 }
 
-export default withWindowSize(Portoflio);
+export default withWindowSize(Main);

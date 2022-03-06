@@ -4,7 +4,7 @@ import { Grid } from "@material-ui/core";
 
 import '../../css/Portfolio.css';
 
-class WorkListItem extends Component {
+class ProjectListItem extends Component {
 
     constructor(props) {
         super(props);
@@ -74,10 +74,10 @@ class WorkListItem extends Component {
     }
 }
 
-WorkListItem.propTypes = {
+ProjectListItem.propTypes = {
     workData: PropTypes.object.isRequired,
     span: PropTypes.number.isRequired,
     onClick: PropTypes.func
 };
 
-export default WorkListItem;
+export default ProjectListItem;

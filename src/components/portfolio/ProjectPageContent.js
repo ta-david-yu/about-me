@@ -35,7 +35,7 @@ MediaDot.propTypes = {
     onClickDot: PropTypes.func
 }
 
-class ProjectWorkContent extends Component {
+class ProjectPageContent extends Component {
     constructor(props) {
         super(props);
 
@@ -221,7 +221,7 @@ class ProjectWorkContent extends Component {
     }
 }
 
-ProjectWorkContent.propTypes = {
+ProjectPageContent.propTypes = {
     type: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     date: PropTypes.string.isRequired,
@@ -233,4 +233,4 @@ ProjectWorkContent.propTypes = {
     information: PropTypes.object.isRequired
 };
 
-export default withWindowSize(ProjectWorkContent);
+export default withWindowSize(ProjectPageContent);
