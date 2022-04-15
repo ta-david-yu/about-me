@@ -7,17 +7,17 @@
     "@material-ui/core": "^3.9.4",
     "create-react-app": "^2.1.8",
     "react": "^16.14.0",
-    "react-collapsible": "^2.8.3",
+    "react-collapsible": "^2.8.4",
     "react-custom-scrollbars": "^4.2.1",
     "react-dom": "^16.14.0",
     "react-markdown": "^4.3.1",
-    "react-modal": "^3.12.1",
-    "react-photo-collage": "^1.0.7",
+    "react-modal": "^3.14.4",
+    "react-photo-collage": "^1.0.9",
     "react-player": "^1.15.3",
     "react-router-dom": "^4.3.1",
     "react-scripts": "^2.1.8",
     "react-transition-group": "^2.9.0",
-    "styled-components": "^5.2.1"
+    "styled-components": "^5.3.5"
   },
   "scripts": {
     "start": "react-scripts start",
