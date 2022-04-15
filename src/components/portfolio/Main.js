@@ -21,11 +21,12 @@ const about = (<div>
         </p>
         <p>
             My main interests are <span className="about-text-h">gameplay programming</span> and making <span className="about-text-h">tools</span> to improve the development process for my team,
-            <br />I also really enjoy creating <span className="about-text-h">juicy visual feedbacks & procedural animations</span>
+            <br />Besides that, I also enjoy creating <span className="about-text-h">juicy visual feedbacks & procedural animations</span>
         </p>
         <p>
-            I mostly use Unity to make games and have been doing so for more than <span className="about-text-h">4 years</span>, 
+            I specialize in Unity and have been making games with it for more than <span className="about-text-h">5 years</span>, 
             <br />I have experience in shipping games on <span className="about-text-h">Steam</span> + porting games to <span className="about-text-h">Nintendo Switch</span>
+            <br />And I gained some experience in <span className="about-text-h">Xbox</span> development while working as a programming intern at <span className="about-text-h">Codeglue</span>.
         </p>
         
         You can check out my resume <a href="./download/TaDavidYu_GameProgrammer_CV.pdf">here</a>
